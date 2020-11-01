@@ -138,3 +138,223 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.d
 
 !ENTRY SOLVER 1 0 2020-11-01 17:04:28.227
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2020-11-01 19:49:35.260 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation -data c:\Workspaces\GitHub\embedded\infineon\ -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.equinox.ds 1 0 2020-11-01 19:49:38.989
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY DAVE CE 4 0 2020-11-01 19:49:42.242
+!MESSAGE 
+
+***START of Exception Info***
+java.io.FileNotFoundException: C:\cp\DAVE442\D_LibraryStore_4.4\DeviceFeatures\XMC4500DeviceFeatures.xml (The system cannot find the path specified)
+com.ifx.utilities.xml.IfxXmlDoc.loadXmlDocument(IfxXmlDoc.java:103)
+com.dave.mbs.xmc4000.config.XMC4000DeviceDataAccessor.<init>(XMC4000DeviceDataAccessor.java:36)
+com.dave.mbs.xmc4000.provider.XMC4000MbsProvider.updateDaveDeviceDataAccessor(XMC4000MbsProvider.java:122)
+com.dave.mbs.xmc4000.provider.XMC4000MbsProvider.getAdapter(XMC4000MbsProvider.java:281)
+com.dave.common.utils.MBSUtil.getDevicesMap(MBSUtil.java:1397)
+com.ifx.davex.ce.ui.DavexToolStartup.earlyStartup(DavexToolStartup.java:128)
+org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2835)
+org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+***END of Exception Info***
+
+
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:49:42.245
+!MESSAGE 
+
+!ENTRY DAVE CE 4 0 2020-11-01 19:49:42.249
+!MESSAGE 
+
+***START of Exception Info***
+null
+com.dave.common.utils.MBSUtil.getDevicesMap(MBSUtil.java:1398)
+com.ifx.davex.ce.ui.DavexToolStartup.earlyStartup(DavexToolStartup.java:128)
+org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+org.eclipse.ui.internal.Workbench$55.run(Workbench.java:2835)
+org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+***END of Exception Info***
+
+
+
+!ENTRY SOLVER 1 0 2020-11-01 19:49:43.590
+!MESSAGE USER_ACTION : Default solver exe path is: C:\!CP\DAVE_4-4-2_64bit_2018-02-23\DAVE-IDE-4.4.2-64Bit\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2020-11-01 19:49:43.653
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2020-11-01 19:49:43.655
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2020-11-01 19:49:44.131
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2020-11-01 19:49:44.137
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC1.1.00.Q024.ALL] is: 0 msec 
+
+!ENTRY APPSTORE 1 0 2020-11-01 19:49:44.186
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC1.1.00.Q024.ALL] is: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:44.209
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 5 msec 
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-11-01 19:49:44.384
+!MESSAGE Indexed 'XMC1100_SPI_Master2' (29 sources, 43 headers) in 2,14 sec: 4.298 declarations; 8.327 references; 8 unresolved inclusions; 316 syntax errors; 2.232 unresolved names (15 %)
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:44.875
+!MESSAGE USER_ACTION : Active project:XMC1100_UART[ Software ID:XMC1.1.00.Q024.ALL]
+
+!ENTRY COMMON 1 0 2020-11-01 19:49:46.381
+!MESSAGE Time Taken By De-Serialization  : 878 ms :: C:\Workspaces\GitHub\embedded\infineon\XMC1100_UART\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:49:46.386
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:46.512
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 1637 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:46.542
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 24 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:46.561
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 17 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:46.573
+!MESSAGE USER_ACTION : Time taken for updating views is: 10 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:48.029
+!MESSAGE USER_ACTION : Time taken for rendering views is: 1453 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:48.482
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 4279 msec 
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-11-01 19:49:49.428
+!MESSAGE Indexed 'xmc1100_freertos_spi_master' (51 sources, 111 headers) in 1,79 sec: 8.336 declarations; 23.216 references; 9 unresolved inclusions; 0 syntax errors; 1.124 unresolved names (3,4 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-11-01 19:49:50.830
+!MESSAGE Indexed 'xmc1100_freertos_spi_slave' (58 sources, 121 headers) in 1,39 sec: 8.728 declarations; 25.100 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:49:51.321
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2020-11-01 19:49:51.345
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2020-11-01 19:49:51.975
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.4//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2020-11-01 19:49:52.660
+!MESSAGE HTTP Server Unknown HTTP Response Code (302):http://dev.eclipse.org/svnroot/dsdp/org.eclipse.tm.tcf/releases/0.4.0/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: General connection error with response code=302
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:134)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.ecf.identity 4 0 2020-11-01 19:49:52.661
+!MESSAGE General connection error with response code=302
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2020-11-01 19:49:52.877
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.4//daveSite.xml
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-11-01 19:49:53.133
+!MESSAGE Indexed 'XMC1100_UART' (42 sources, 94 headers) in 1,28 sec: 6.242 declarations; 14.595 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0,0048 %)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-11-01 19:49:53.542
+!MESSAGE Unable to read repository at http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139.
+!STACK 0
+java.io.IOException: http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1139 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-11-01 19:49:54.891
+!MESSAGE Indexed 'xmc1100_freertos' (49 sources, 110 headers) in 1,05 sec: 8.163 declarations; 22.209 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-11-01 19:49:55.895
+!MESSAGE Indexed 'xmc1100_freertos_voltdiv' (49 sources, 110 headers) in 0,997 sec: 7.900 declarations; 20.952 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:50:28.190
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:50:28.239
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-01 19:50:28.312
+!MESSAGE Time Taken By Serialization  : 70 ms :: C:\Workspaces\GitHub\embedded\infineon\XMC1100_UART\Dave\Model\projectData.bin
+
+!ENTRY SOLVER 1 0 2020-11-01 19:50:28.389
+!MESSAGE 
+
+!ENTRY APPSTORE 1 0 2020-11-01 19:50:28.391
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC1.1.00.Q024.ALL] is: 0 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:50:28.555
+!MESSAGE ****************Cleaning project data:XMC1100_UART*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:28.601
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 199 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:28.994
+!MESSAGE USER_ACTION : Active project:xmc1100_freertos_spi_slave[ Software ID:XMC1.1.00.Q024.ALL]
+
+!ENTRY COMMON 1 0 2020-11-01 19:50:29.812
+!MESSAGE Time Taken By De-Serialization  : 734 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:50:29.815
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:29.886
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 893 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:29.892
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 3 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:29.909
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 14 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:29.912
+!MESSAGE USER_ACTION : Time taken for updating views is: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:30.406
+!MESSAGE USER_ACTION : Time taken for rendering views is: 490 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:30.663
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 2261 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:50:54.723
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:50:54.768
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-01 19:50:54.843
+!MESSAGE Time Taken By Serialization  : 71 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-01 19:50:55.115
+!MESSAGE ****************Cleaning project data:xmc1100_freertos_spi_slave*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 19:50:55.121
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 236 msec 
+
+!ENTRY SOLVER 1 0 2020-11-01 19:50:55.124
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2020-11-01 19:50:55.390
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
