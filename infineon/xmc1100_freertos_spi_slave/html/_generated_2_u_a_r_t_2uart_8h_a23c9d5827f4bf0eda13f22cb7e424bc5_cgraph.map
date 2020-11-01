@@ -1,4 +1,0 @@
-<map id="UART_SetTXFIFOTriggerLimit" name="UART_SetTXFIFOTriggerLimit">
-<area shape="rect" id="node1" title="Configures trigger limit for the transmit FIFO." alt="" coords="5,13,199,39"/>
-<area shape="rect" id="node2" href="$group___u_s_i_c.html#ga6f77f046f48083e3e86735636e86490b" title=" " alt="" coords="247,5,408,47"/>
-</map>

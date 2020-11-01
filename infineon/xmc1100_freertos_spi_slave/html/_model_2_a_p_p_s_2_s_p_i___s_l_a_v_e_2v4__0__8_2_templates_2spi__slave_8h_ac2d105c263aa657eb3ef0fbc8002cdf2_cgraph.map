@@ -1,4 +1,0 @@
-<map id="SPI_SLAVE_GetRXFIFOStatus" name="SPI_SLAVE_GetRXFIFOStatus">
-<area shape="rect" id="node1" title="Gets the status of event flags related to receive FIFO." alt="" coords="5,13,209,39"/>
-<area shape="rect" id="node2" href="$group___u_s_i_c.html#gab860b55616f2c108817561a0c0030999" title=" " alt="" coords="257,5,420,47"/>
-</map>

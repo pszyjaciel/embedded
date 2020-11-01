@@ -1,4 +1,0 @@
-<map id="INT_UART_Receive_ISR" name="INT_UART_Receive_ISR">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" href="$_generated_2_u_a_r_t_2uart_8c.html#a5cf72330e7e70ddedfd08e7ea269349f" title="Registers a request for receiving data over UART channel." alt="" coords="216,5,324,32"/>
-</map>

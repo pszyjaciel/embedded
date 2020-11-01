@@ -1,4 +1,0 @@
-<map id="UART_IsRXFIFOEmpty" name="UART_IsRXFIFOEmpty">
-<area shape="rect" id="node1" title="Checks if the receive FIFO is empty." alt="" coords="5,13,161,39"/>
-<area shape="rect" id="node2" href="$group___u_s_i_c.html#gaa3808cea45d587a3e5533313cc250e59" title=" " alt="" coords="209,5,372,47"/>
-</map>

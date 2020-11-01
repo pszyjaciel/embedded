@@ -1,8 +1,0 @@
-<map id="UART_Transmit" name="UART_Transmit">
-<area shape="rect" id="node1" title="Registers a request for transmitting data over UART channel." alt="" coords="5,97,119,124"/>
-<area shape="rect" id="node2" href="$_generated_2_u_a_r_t_2uart_8c.html#a3f8f9ddaf9c0f3c8e18d97c8cac6112e" title="Registers a request for transmitting data over UART channel." alt="" coords="167,97,329,124"/>
-<area shape="rect" id="node3" href="$group___u_s_i_c.html#ga2f3975d1b1d480982f8f7fb8934eda2a" title=" " alt="" coords="381,5,572,32"/>
-<area shape="rect" id="node4" href="$group___u_s_i_c.html#ga22718c9a9ae2003c9ebca94f218a56cc" title=" " alt="" coords="377,57,576,98"/>
-<area shape="rect" id="node5" href="$group___u_s_i_c.html#gada209c5ea97fbdc1031f5280035bbb94" title=" " alt="" coords="396,122,557,163"/>
-<area shape="rect" id="node6" href="$group___u_s_i_c.html#ga193ef138d483148c4209e62b4507b46d" title=" " alt="" coords="396,187,557,229"/>
-</map>

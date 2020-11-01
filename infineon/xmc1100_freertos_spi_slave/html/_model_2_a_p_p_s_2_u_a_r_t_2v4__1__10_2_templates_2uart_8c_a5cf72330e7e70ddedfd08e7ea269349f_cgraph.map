@@ -1,9 +1,0 @@
-<map id="UART_Receive" name="UART_Receive">
-<area shape="rect" id="node1" title="Registers a request for receiving data over UART channel." alt="" coords="5,93,113,119"/>
-<area shape="rect" id="node2" href="$_generated_2_u_a_r_t_2uart_8c.html#a3581ebeecc774d6ef80a8cb7fa6e4d17" title="Registers a request for receiving data over UART channel." alt="" coords="161,93,320,119"/>
-<area shape="rect" id="node3" href="$_generated_2_u_a_r_t_2uart_8c.html#a3b9692c7b1bec205a1fdc2817f1c3d0d" title=" " alt="" coords="374,13,553,39"/>
-<area shape="rect" id="node5" href="$group___u_s_i_c.html#ga2f3975d1b1d480982f8f7fb8934eda2a" title=" " alt="" coords="368,63,559,90"/>
-<area shape="rect" id="node6" href="$group___u_s_i_c.html#ga0c9e6437eeef6140268eb1b9f0a7b502" title=" " alt="" coords="382,115,545,156"/>
-<area shape="rect" id="node7" href="$group___u_s_i_c.html#ga36b1fc72769a9faba1e553eb4d6d2277" title=" " alt="" coords="382,180,545,221"/>
-<area shape="rect" id="node4" href="$group___u_s_i_c.html#gae9984f496fe787c05b84dc6d1d65ee2e" title=" " alt="" coords="607,5,769,47"/>
-</map>

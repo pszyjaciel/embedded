@@ -1,6 +1,0 @@
-<map id="SystemCoreClockSetup" name="SystemCoreClockSetup">
-<area shape="rect" id="node1" title="Initialize clock." alt="" coords="5,31,167,57"/>
-<area shape="rect" id="node2" href="$system___x_m_c1100_8c.html#a4e8484c19e19484f2850f02fd6f2503a" title="Update SystemCoreClock variable." alt="" coords="215,5,383,32"/>
-<area shape="rect" id="node3" href="$group___s_c_u.html#ga08c337e8a728604e7eb54dff78ae2d9d" title=" " alt="" coords="219,56,378,83"/>
-<area shape="rect" id="node4" href="$xmc1__scu_8c.html#af5f8c85b07d19150aaf04992923315b6" title=" " alt="" coords="431,56,484,83"/>
-</map>

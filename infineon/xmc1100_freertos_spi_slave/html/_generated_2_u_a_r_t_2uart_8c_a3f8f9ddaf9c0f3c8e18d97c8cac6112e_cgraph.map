@@ -1,7 +1,0 @@
-<map id="UART_StartTransmitIRQ" name="UART_StartTransmitIRQ">
-<area shape="rect" id="node1" title="Registers a request for transmitting data over UART channel." alt="" coords="5,97,168,124"/>
-<area shape="rect" id="node2" href="$group___u_s_i_c.html#ga2f3975d1b1d480982f8f7fb8934eda2a" title=" " alt="" coords="220,5,411,32"/>
-<area shape="rect" id="node3" href="$group___u_s_i_c.html#ga22718c9a9ae2003c9ebca94f218a56cc" title=" " alt="" coords="216,57,415,98"/>
-<area shape="rect" id="node4" href="$group___u_s_i_c.html#gada209c5ea97fbdc1031f5280035bbb94" title=" " alt="" coords="235,122,396,163"/>
-<area shape="rect" id="node5" href="$group___u_s_i_c.html#ga193ef138d483148c4209e62b4507b46d" title=" " alt="" coords="235,187,396,229"/>
-</map>

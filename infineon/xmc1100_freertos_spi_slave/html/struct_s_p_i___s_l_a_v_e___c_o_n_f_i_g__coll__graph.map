@@ -1,5 +1,0 @@
-<map id="SPI_SLAVE_CONFIG" name="SPI_SLAVE_CONFIG">
-<area shape="rect" id="node1" title="Structure for holding the configuration parameters of SPI_SLAVE channel." alt="" coords="106,204,274,457"/>
-<area shape="rect" id="node2" href="$struct_s_p_i___s_l_a_v_e___p_i_n___c_o_n_f_i_g.html" title="Structure for transmit pin configuration." alt="" coords="5,5,183,127"/>
-<area shape="rect" id="node3" href="$struct_x_m_c___s_p_i___c_h___c_o_n_f_i_g.html" title=" " alt="" coords="207,5,365,127"/>
-</map>

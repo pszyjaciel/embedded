@@ -1,5 +1,0 @@
-<map id="DIGITAL_IO_Init" name="DIGITAL_IO_Init">
-<area shape="rect" id="node1" title="Function to initialize the port pin as per UI settings." alt="" coords="5,31,120,57"/>
-<area shape="rect" id="node2" href="$group___g_p_i_o.html#ga05749322fa717f789b178838955b8c5b" title=" " alt="" coords="217,5,329,32"/>
-<area shape="rect" id="node3" href="$group___g_p_i_o.html#ga90b8519a240ddb93289d8960c6c276b1" title=" " alt="" coords="168,56,379,83"/>
-</map>
