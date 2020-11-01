@@ -1,0 +1,12 @@
+<map id="Dave/Model/APPS/CPU_CTRL_XMC1/v4_0_8/Templates/cpu_ctrl_xmc1.h" name="Dave/Model/APPS/CPU_CTRL_XMC1/v4_0_8/Templates/cpu_ctrl_xmc1.h">
+<area shape="rect" id="node1" title=" " alt="" coords="346,5,557,61"/>
+<area shape="rect" id="node2" href="$xmc__common_8h.html" title=" " alt="" coords="167,109,282,136"/>
+<area shape="rect" id="node8" href="$_d_a_v_e___common_8h.html" title=" " alt="" coords="306,109,434,136"/>
+<area shape="rect" id="node9" href="$cpu__ctrl__xmc1__conf_8h.html" title=" " alt="" coords="458,109,607,136"/>
+<area shape="rect" id="node10" href="$cpu__ctrl__xmc1__extern_8h.html" title=" " alt="" coords="632,109,793,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,184,73,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="97,184,163,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="187,184,262,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="287,184,352,211"/>
+<area shape="rect" id="node7" href="$xmc__device_8h.html" title=" " alt="" coords="377,184,478,211"/>
+</map>

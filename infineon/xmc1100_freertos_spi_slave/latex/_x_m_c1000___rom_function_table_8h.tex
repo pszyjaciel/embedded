@@ -1,0 +1,187 @@
+\hypertarget{_x_m_c1000___rom_function_table_8h}{}\doxysection{Libraries/\+C\+M\+S\+I\+S/\+Infineon/\+X\+M\+C1100\+\_\+series/\+Include/\+X\+M\+C1000\+\_\+\+Rom\+Function\+Table.h File Reference}
+\label{_x_m_c1000___rom_function_table_8h}\index{Libraries/CMSIS/Infineon/XMC1100\_series/Include/XMC1000\_RomFunctionTable.h@{Libraries/CMSIS/Infineon/XMC1100\_series/Include/XMC1000\_RomFunctionTable.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}{R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT}}~(0x00000100U)
+\item 
+\#define \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_aa4218c270ab73e2b4576f349f774b477}{\+\_\+\+Nvm\+Erase}}~(\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}{R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT}} + 0x00U)
+\item 
+\#define \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ab7da0201729c77a2f94cf297cc0034e8}{\+\_\+\+Nvm\+Prog\+Verify}}~(\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}{R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT}} + 0x04U)
+\item 
+\#define \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ab15dc706e57319f8243a64bffc87f75d}{\+\_\+\+Bmi\+Installation\+Req}}~(\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}{R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT}} + 0x08U)
+\item 
+\#define \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ad550c76d686ca6dec9954ed1e944a62c}{X\+M\+C1000\+\_\+\+Nvm\+Erase\+Page}}
+\item 
+\#define \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a2e134025f4af5ae6573ae91061ad954f}{X\+M\+C1000\+\_\+\+Nvm\+Prog\+Verify}}
+\item 
+\#define \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a39334c672d0a3a10c6cbc7a57c800ece}{X\+M\+C1000\+\_\+\+Bmi\+Installation\+Req}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531}{Tag\+N\+V\+M\+Status}} \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_acc009ef7cb392691d263dfd46d1144c1}{N\+V\+M\+\_\+\+S\+T\+A\+T\+US}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531}{Tag\+N\+V\+M\+Status}} \{ \newline
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a11c11187dd479164aaac6a40759d5333}{N\+V\+M\+\_\+\+P\+A\+SS}} = (int32\+\_\+t)0x00010000U, 
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531abdb56aea6c7dc77b9cbd8305928bdeb3}{N\+V\+M\+\_\+\+E\+\_\+\+F\+A\+IL}} = (int32\+\_\+t)0x80010001U, 
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a41a93b0ef5bb891d081c83ad74092988}{N\+V\+M\+\_\+\+E\+\_\+\+S\+R\+C\+\_\+\+A\+R\+E\+A\+\_\+\+E\+X\+C\+C\+E\+ED}} = (int32\+\_\+t)0x80010003U, 
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a0f90fe39092968f6b9ee5bd1e9620349}{N\+V\+M\+\_\+\+E\+\_\+\+S\+R\+C\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}} = (int32\+\_\+t)0x80010004U, 
+\newline
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a4d8928bef59c7317ac6708faedaa6389}{N\+V\+M\+\_\+\+E\+\_\+\+N\+V\+M\+\_\+\+F\+A\+IL}} = (int32\+\_\+t)0x80010005U, 
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a88ec1066cce3fb1f5aa638ec9bbf3c5c}{N\+V\+M\+\_\+\+E\+\_\+\+V\+E\+R\+I\+FY}} = (int32\+\_\+t)0x80010006U, 
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a7f336ae09b819ceca30191f27e86ae8e}{N\+V\+M\+\_\+\+E\+\_\+\+D\+S\+T\+\_\+\+A\+R\+E\+A\+\_\+\+E\+X\+C\+E\+ED}} = (int32\+\_\+t)0x80010009U, 
+\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531aab04d44f22bcb20347ee00199f7484ad}{N\+V\+M\+\_\+\+E\+\_\+\+D\+S\+T\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}} = (int32\+\_\+t)0x80010010U
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_ab15dc706e57319f8243a64bffc87f75d}\label{_x_m_c1000___rom_function_table_8h_ab15dc706e57319f8243a64bffc87f75d}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!\_BmiInstallationReq@{\_BmiInstallationReq}}
+\index{\_BmiInstallationReq@{\_BmiInstallationReq}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{\_BmiInstallationReq}{\_BmiInstallationReq}}
+{\footnotesize\ttfamily \#define \+\_\+\+Bmi\+Installation\+Req~(\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}{R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT}} + 0x08U)}
+
+
+
+Definition at line 63 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_aa4218c270ab73e2b4576f349f774b477}\label{_x_m_c1000___rom_function_table_8h_aa4218c270ab73e2b4576f349f774b477}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!\_NvmErase@{\_NvmErase}}
+\index{\_NvmErase@{\_NvmErase}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{\_NvmErase}{\_NvmErase}}
+{\footnotesize\ttfamily \#define \+\_\+\+Nvm\+Erase~(\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}{R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT}} + 0x00U)}
+
+
+
+Definition at line 57 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_ab7da0201729c77a2f94cf297cc0034e8}\label{_x_m_c1000___rom_function_table_8h_ab7da0201729c77a2f94cf297cc0034e8}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!\_NvmProgVerify@{\_NvmProgVerify}}
+\index{\_NvmProgVerify@{\_NvmProgVerify}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{\_NvmProgVerify}{\_NvmProgVerify}}
+{\footnotesize\ttfamily \#define \+\_\+\+Nvm\+Prog\+Verify~(\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}{R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT}} + 0x04U)}
+
+
+
+Definition at line 60 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}\label{_x_m_c1000___rom_function_table_8h_ac24e7240df869b3845eb3e23ae50e0dd}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!ROM\_FUNCTION\_TABLE\_START@{ROM\_FUNCTION\_TABLE\_START}}
+\index{ROM\_FUNCTION\_TABLE\_START@{ROM\_FUNCTION\_TABLE\_START}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{ROM\_FUNCTION\_TABLE\_START}{ROM\_FUNCTION\_TABLE\_START}}
+{\footnotesize\ttfamily \#define R\+O\+M\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+RT~(0x00000100U)}
+
+
+
+Definition at line 54 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a39334c672d0a3a10c6cbc7a57c800ece}\label{_x_m_c1000___rom_function_table_8h_a39334c672d0a3a10c6cbc7a57c800ece}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!XMC1000\_BmiInstallationReq@{XMC1000\_BmiInstallationReq}}
+\index{XMC1000\_BmiInstallationReq@{XMC1000\_BmiInstallationReq}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{XMC1000\_BmiInstallationReq}{XMC1000\_BmiInstallationReq}}
+{\footnotesize\ttfamily \#define X\+M\+C1000\+\_\+\+Bmi\+Installation\+Req}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                          (*((uint32\_t (**) (uint16\_t)) \(\backslash\)}
+\DoxyCodeLine{                                                          \_BmiInstallationReq))}
+
+\end{DoxyCode}
+
+
+Definition at line 170 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_ad550c76d686ca6dec9954ed1e944a62c}\label{_x_m_c1000___rom_function_table_8h_ad550c76d686ca6dec9954ed1e944a62c}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!XMC1000\_NvmErasePage@{XMC1000\_NvmErasePage}}
+\index{XMC1000\_NvmErasePage@{XMC1000\_NvmErasePage}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{XMC1000\_NvmErasePage}{XMC1000\_NvmErasePage}}
+{\footnotesize\ttfamily \#define X\+M\+C1000\+\_\+\+Nvm\+Erase\+Page}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                   (*((\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_acc009ef7cb392691d263dfd46d1144c1}{NVM\_STATUS}} (**) (uint32\_t * )) \(\backslash\)}
+\DoxyCodeLine{                                                                   \_NvmErase))}
+
+\end{DoxyCode}
+
+
+Definition at line 122 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a2e134025f4af5ae6573ae91061ad954f}\label{_x_m_c1000___rom_function_table_8h_a2e134025f4af5ae6573ae91061ad954f}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!XMC1000\_NvmProgVerify@{XMC1000\_NvmProgVerify}}
+\index{XMC1000\_NvmProgVerify@{XMC1000\_NvmProgVerify}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{XMC1000\_NvmProgVerify}{XMC1000\_NvmProgVerify}}
+{\footnotesize\ttfamily \#define X\+M\+C1000\+\_\+\+Nvm\+Prog\+Verify}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                   (*((\mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_acc009ef7cb392691d263dfd46d1144c1}{NVM\_STATUS}} (**) (\textcolor{keyword}{const} uint32\_t * ,\(\backslash\)}
+\DoxyCodeLine{                                                   uint32\_t * ))\(\backslash\)}
+\DoxyCodeLine{                                                               \_NvmProgVerify))}
+
+\end{DoxyCode}
+
+
+Definition at line 150 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_acc009ef7cb392691d263dfd46d1144c1}\label{_x_m_c1000___rom_function_table_8h_acc009ef7cb392691d263dfd46d1144c1}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_STATUS@{NVM\_STATUS}}
+\index{NVM\_STATUS@{NVM\_STATUS}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{NVM\_STATUS}{NVM\_STATUS}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531}{Tag\+N\+V\+M\+Status}} \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_acc009ef7cb392691d263dfd46d1144c1}{N\+V\+M\+\_\+\+S\+T\+A\+T\+US}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531}} 
+\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!TagNVMStatus@{TagNVMStatus}}
+\index{TagNVMStatus@{TagNVMStatus}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}
+\doxysubsubsection{\texorpdfstring{TagNVMStatus}{TagNVMStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531}{Tag\+N\+V\+M\+Status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_PASS@{NVM\_PASS}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_PASS@{NVM\_PASS}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a11c11187dd479164aaac6a40759d5333}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a11c11187dd479164aaac6a40759d5333}} 
+N\+V\+M\+\_\+\+P\+A\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_E\_FAIL@{NVM\_E\_FAIL}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_E\_FAIL@{NVM\_E\_FAIL}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531abdb56aea6c7dc77b9cbd8305928bdeb3}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531abdb56aea6c7dc77b9cbd8305928bdeb3}} 
+N\+V\+M\+\_\+\+E\+\_\+\+F\+A\+IL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_E\_SRC\_AREA\_EXCCEED@{NVM\_E\_SRC\_AREA\_EXCCEED}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_E\_SRC\_AREA\_EXCCEED@{NVM\_E\_SRC\_AREA\_EXCCEED}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a41a93b0ef5bb891d081c83ad74092988}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a41a93b0ef5bb891d081c83ad74092988}} 
+N\+V\+M\+\_\+\+E\+\_\+\+S\+R\+C\+\_\+\+A\+R\+E\+A\+\_\+\+E\+X\+C\+C\+E\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_E\_SRC\_ALIGNMENT@{NVM\_E\_SRC\_ALIGNMENT}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_E\_SRC\_ALIGNMENT@{NVM\_E\_SRC\_ALIGNMENT}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a0f90fe39092968f6b9ee5bd1e9620349}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a0f90fe39092968f6b9ee5bd1e9620349}} 
+N\+V\+M\+\_\+\+E\+\_\+\+S\+R\+C\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_E\_NVM\_FAIL@{NVM\_E\_NVM\_FAIL}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_E\_NVM\_FAIL@{NVM\_E\_NVM\_FAIL}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a4d8928bef59c7317ac6708faedaa6389}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a4d8928bef59c7317ac6708faedaa6389}} 
+N\+V\+M\+\_\+\+E\+\_\+\+N\+V\+M\+\_\+\+F\+A\+IL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_E\_VERIFY@{NVM\_E\_VERIFY}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_E\_VERIFY@{NVM\_E\_VERIFY}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a88ec1066cce3fb1f5aa638ec9bbf3c5c}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a88ec1066cce3fb1f5aa638ec9bbf3c5c}} 
+N\+V\+M\+\_\+\+E\+\_\+\+V\+E\+R\+I\+FY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_E\_DST\_AREA\_EXCEED@{NVM\_E\_DST\_AREA\_EXCEED}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_E\_DST\_AREA\_EXCEED@{NVM\_E\_DST\_AREA\_EXCEED}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a7f336ae09b819ceca30191f27e86ae8e}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531a7f336ae09b819ceca30191f27e86ae8e}} 
+N\+V\+M\+\_\+\+E\+\_\+\+D\+S\+T\+\_\+\+A\+R\+E\+A\+\_\+\+E\+X\+C\+E\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NVM\_E\_DST\_ALIGNMENT@{NVM\_E\_DST\_ALIGNMENT}!XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}}\index{XMC1000\_RomFunctionTable.h@{XMC1000\_RomFunctionTable.h}!NVM\_E\_DST\_ALIGNMENT@{NVM\_E\_DST\_ALIGNMENT}}}\mbox{\Hypertarget{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531aab04d44f22bcb20347ee00199f7484ad}\label{_x_m_c1000___rom_function_table_8h_a76cd3533d8e86a4c85a20a6ca8da3531aab04d44f22bcb20347ee00199f7484ad}} 
+N\+V\+M\+\_\+\+E\+\_\+\+D\+S\+T\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 68 of file X\+M\+C1000\+\_\+\+Rom\+Function\+Table.\+h.
+

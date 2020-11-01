@@ -1,0 +1,161 @@
+\hypertarget{typelib_8h}{}\section{typelib.\+h File Reference}
+\label{typelib_8h}\index{typelib.\+h@{typelib.\+h}}
+{\ttfamily \#include \char`\"{}my\+\_\+alloc.\+h\char`\"{}}\\*
+Include dependency graph for typelib.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{typelib_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{typelib_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structst__typelib}{st\+\_\+typelib}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{typelib_8h_afb4ead8806e46e24402e5bbf0d412dc4}{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+I\+C}~0
+\item 
+\#define \hyperlink{typelib_8h_a60285ac2997d01b487c39aed17e96c2f}{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+I\+X}~(1 $<$$<$ 0)
+\item 
+\#define \hyperlink{typelib_8h_a70d837aaab543d572a28d4f712c45d42}{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+E}~(1 $<$$<$ 1)
+\item 
+\#define \hyperlink{typelib_8h_a0c72eb6cd13589471fa2e9e4aba025cf}{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+N\+U\+M\+B\+E\+R}~(1 $<$$<$ 2)
+\item 
+\#define \hyperlink{typelib_8h_a9a25853cbee8966ed9cb4594ad55dbad}{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+M\+A\+\_\+\+T\+E\+R\+M}~(1 $<$$<$ 3)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structst__typelib}{st\+\_\+typelib} \hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{typelib_8h_a126abd11d8111639258b67db4098523c}{find\+\_\+typeset} (char $\ast$x, \hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$typelib, int $\ast$error\+\_\+position)
+\item 
+int \hyperlink{typelib_8h_a33e0461bb2a89a5df44cd3bc218eb379}{find\+\_\+type\+\_\+or\+\_\+exit} (const char $\ast$x, \hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$typelib, const char $\ast$option)
+\item 
+int \hyperlink{typelib_8h_aa467cecbd3bf70384a4254cf346c4bc2}{find\+\_\+type} (const char $\ast$x, const \hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$typelib, unsigned int flags)
+\item 
+void \hyperlink{typelib_8h_a8cd24ba8c6c554be1859f939e72fe97b}{make\+\_\+type} (char $\ast$to, unsigned int nr, \hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$typelib)
+\item 
+const char $\ast$ \hyperlink{typelib_8h_a278dd21e8caff88fbe707765cb9846be}{get\+\_\+type} (\hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$typelib, unsigned int nr)
+\item 
+\hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$ \hyperlink{typelib_8h_ad23e8664ccc3c0c985cf74281fb788a5}{copy\+\_\+typelib} (\hyperlink{my__alloc_8h_ac59e289b254a2c5ac634ffcedda3f823}{M\+E\+M\+\_\+\+R\+O\+O\+T} $\ast$root, \hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$from)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{typelib_8h_acd9291bd5b7a11a34124dd6458705a35}{find\+\_\+set\+\_\+from\+\_\+flags} (const \hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} $\ast$lib, unsigned int default\+\_\+name, \hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} cur\+\_\+set, \hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} default\+\_\+set, const char $\ast$str, unsigned int length, char $\ast$$\ast$err\+\_\+pos, unsigned int $\ast$err\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{T\+Y\+P\+E\+L\+I\+B} \hyperlink{typelib_8h_aae95b10469763a75fb4f2e56d04c5365}{sql\+\_\+protocol\+\_\+typelib}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{typelib_8h_a0c72eb6cd13589471fa2e9e4aba025cf}{}\index{typelib.\+h@{typelib.\+h}!F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+N\+U\+M\+B\+E\+R@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+N\+U\+M\+B\+E\+R}}
+\index{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+N\+U\+M\+B\+E\+R@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+N\+U\+M\+B\+E\+R}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+N\+U\+M\+B\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+N\+U\+M\+B\+E\+R~(1 $<$$<$ 2)}\label{typelib_8h_a0c72eb6cd13589471fa2e9e4aba025cf}
+makes {\ttfamily \hyperlink{typelib_8h_aa467cecbd3bf70384a4254cf346c4bc2}{find\+\_\+type()}} accept a number \hypertarget{typelib_8h_afb4ead8806e46e24402e5bbf0d412dc4}{}\index{typelib.\+h@{typelib.\+h}!F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+I\+C@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+I\+C}}
+\index{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+I\+C@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+I\+C}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+I\+C~0}\label{typelib_8h_afb4ead8806e46e24402e5bbf0d412dc4}
+\hypertarget{typelib_8h_a9a25853cbee8966ed9cb4594ad55dbad}{}\index{typelib.\+h@{typelib.\+h}!F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+M\+A\+\_\+\+T\+E\+R\+M@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+M\+A\+\_\+\+T\+E\+R\+M}}
+\index{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+M\+A\+\_\+\+T\+E\+R\+M@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+M\+A\+\_\+\+T\+E\+R\+M}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+M\+A\+\_\+\+T\+E\+R\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+M\+A\+\_\+\+T\+E\+R\+M~(1 $<$$<$ 3)}\label{typelib_8h_a9a25853cbee8966ed9cb4594ad55dbad}
+makes {\ttfamily \hyperlink{typelib_8h_aa467cecbd3bf70384a4254cf346c4bc2}{find\+\_\+type()}} treat \textquotesingle{},\textquotesingle{} as terminator \hypertarget{typelib_8h_a70d837aaab543d572a28d4f712c45d42}{}\index{typelib.\+h@{typelib.\+h}!F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+E@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+E}}
+\index{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+E@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+E}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+O\+V\+E\+R\+W\+R\+I\+T\+E~(1 $<$$<$ 1)}\label{typelib_8h_a70d837aaab543d572a28d4f712c45d42}
+always implicitely on, so unused, but old code may pass it \hypertarget{typelib_8h_a60285ac2997d01b487c39aed17e96c2f}{}\index{typelib.\+h@{typelib.\+h}!F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+I\+X@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+I\+X}}
+\index{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+I\+X@{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+I\+X}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+I\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+N\+D\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+I\+X~(1 $<$$<$ 0)}\label{typelib_8h_a60285ac2997d01b487c39aed17e96c2f}
+makes {\ttfamily \hyperlink{typelib_8h_aa467cecbd3bf70384a4254cf346c4bc2}{find\+\_\+type()}} require the whole name, no prefix 
+
+\subsection{Typedef Documentation}
+\hypertarget{typelib_8h_ab89ec075c5be74420fdf771c0f391876}{}\index{typelib.\+h@{typelib.\+h}!T\+Y\+P\+E\+L\+I\+B@{T\+Y\+P\+E\+L\+I\+B}}
+\index{T\+Y\+P\+E\+L\+I\+B@{T\+Y\+P\+E\+L\+I\+B}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{T\+Y\+P\+E\+L\+I\+B}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+typelib}  {\bf T\+Y\+P\+E\+L\+I\+B}}\label{typelib_8h_ab89ec075c5be74420fdf771c0f391876}
+
+
+\subsection{Function Documentation}
+\hypertarget{typelib_8h_ad23e8664ccc3c0c985cf74281fb788a5}{}\index{typelib.\+h@{typelib.\+h}!copy\+\_\+typelib@{copy\+\_\+typelib}}
+\index{copy\+\_\+typelib@{copy\+\_\+typelib}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{copy\+\_\+typelib(\+M\+E\+M\+\_\+\+R\+O\+O\+T $\ast$root, T\+Y\+P\+E\+L\+I\+B $\ast$from)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+Y\+P\+E\+L\+I\+B}$\ast$ copy\+\_\+typelib (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+E\+M\+\_\+\+R\+O\+O\+T} $\ast$}]{root, }
+\item[{{\bf T\+Y\+P\+E\+L\+I\+B} $\ast$}]{from}
+\end{DoxyParamCaption}
+)}\label{typelib_8h_ad23e8664ccc3c0c985cf74281fb788a5}
+\hypertarget{typelib_8h_acd9291bd5b7a11a34124dd6458705a35}{}\index{typelib.\+h@{typelib.\+h}!find\+\_\+set\+\_\+from\+\_\+flags@{find\+\_\+set\+\_\+from\+\_\+flags}}
+\index{find\+\_\+set\+\_\+from\+\_\+flags@{find\+\_\+set\+\_\+from\+\_\+flags}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{find\+\_\+set\+\_\+from\+\_\+flags(const T\+Y\+P\+E\+L\+I\+B $\ast$lib, unsigned int default\+\_\+name, my\+\_\+ulonglong cur\+\_\+set, my\+\_\+ulonglong default\+\_\+set, const char $\ast$str, unsigned int length, char $\ast$$\ast$err\+\_\+pos, unsigned int $\ast$err\+\_\+len)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} find\+\_\+set\+\_\+from\+\_\+flags (
+\begin{DoxyParamCaption}
+\item[{const {\bf T\+Y\+P\+E\+L\+I\+B} $\ast$}]{lib, }
+\item[{unsigned int}]{default\+\_\+name, }
+\item[{{\bf my\+\_\+ulonglong}}]{cur\+\_\+set, }
+\item[{{\bf my\+\_\+ulonglong}}]{default\+\_\+set, }
+\item[{const char $\ast$}]{str, }
+\item[{unsigned int}]{length, }
+\item[{char $\ast$$\ast$}]{err\+\_\+pos, }
+\item[{unsigned int $\ast$}]{err\+\_\+len}
+\end{DoxyParamCaption}
+)}\label{typelib_8h_acd9291bd5b7a11a34124dd6458705a35}
+\hypertarget{typelib_8h_aa467cecbd3bf70384a4254cf346c4bc2}{}\index{typelib.\+h@{typelib.\+h}!find\+\_\+type@{find\+\_\+type}}
+\index{find\+\_\+type@{find\+\_\+type}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{find\+\_\+type(const char $\ast$x, const T\+Y\+P\+E\+L\+I\+B $\ast$typelib, unsigned int flags)}]{\setlength{\rightskip}{0pt plus 5cm}int find\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{x, }
+\item[{const {\bf T\+Y\+P\+E\+L\+I\+B} $\ast$}]{typelib, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{typelib_8h_aa467cecbd3bf70384a4254cf346c4bc2}
+\hypertarget{typelib_8h_a33e0461bb2a89a5df44cd3bc218eb379}{}\index{typelib.\+h@{typelib.\+h}!find\+\_\+type\+\_\+or\+\_\+exit@{find\+\_\+type\+\_\+or\+\_\+exit}}
+\index{find\+\_\+type\+\_\+or\+\_\+exit@{find\+\_\+type\+\_\+or\+\_\+exit}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{find\+\_\+type\+\_\+or\+\_\+exit(const char $\ast$x, T\+Y\+P\+E\+L\+I\+B $\ast$typelib, const char $\ast$option)}]{\setlength{\rightskip}{0pt plus 5cm}int find\+\_\+type\+\_\+or\+\_\+exit (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{x, }
+\item[{{\bf T\+Y\+P\+E\+L\+I\+B} $\ast$}]{typelib, }
+\item[{const char $\ast$}]{option}
+\end{DoxyParamCaption}
+)}\label{typelib_8h_a33e0461bb2a89a5df44cd3bc218eb379}
+\hypertarget{typelib_8h_a126abd11d8111639258b67db4098523c}{}\index{typelib.\+h@{typelib.\+h}!find\+\_\+typeset@{find\+\_\+typeset}}
+\index{find\+\_\+typeset@{find\+\_\+typeset}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{find\+\_\+typeset(char $\ast$x, T\+Y\+P\+E\+L\+I\+B $\ast$typelib, int $\ast$error\+\_\+position)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} find\+\_\+typeset (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{x, }
+\item[{{\bf T\+Y\+P\+E\+L\+I\+B} $\ast$}]{typelib, }
+\item[{int $\ast$}]{error\+\_\+position}
+\end{DoxyParamCaption}
+)}\label{typelib_8h_a126abd11d8111639258b67db4098523c}
+\hypertarget{typelib_8h_a278dd21e8caff88fbe707765cb9846be}{}\index{typelib.\+h@{typelib.\+h}!get\+\_\+type@{get\+\_\+type}}
+\index{get\+\_\+type@{get\+\_\+type}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{get\+\_\+type(\+T\+Y\+P\+E\+L\+I\+B $\ast$typelib, unsigned int nr)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ get\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+Y\+P\+E\+L\+I\+B} $\ast$}]{typelib, }
+\item[{unsigned int}]{nr}
+\end{DoxyParamCaption}
+)}\label{typelib_8h_a278dd21e8caff88fbe707765cb9846be}
+\hypertarget{typelib_8h_a8cd24ba8c6c554be1859f939e72fe97b}{}\index{typelib.\+h@{typelib.\+h}!make\+\_\+type@{make\+\_\+type}}
+\index{make\+\_\+type@{make\+\_\+type}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{make\+\_\+type(char $\ast$to, unsigned int nr, T\+Y\+P\+E\+L\+I\+B $\ast$typelib)}]{\setlength{\rightskip}{0pt plus 5cm}void make\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{to, }
+\item[{unsigned int}]{nr, }
+\item[{{\bf T\+Y\+P\+E\+L\+I\+B} $\ast$}]{typelib}
+\end{DoxyParamCaption}
+)}\label{typelib_8h_a8cd24ba8c6c554be1859f939e72fe97b}
+
+
+\subsection{Variable Documentation}
+\hypertarget{typelib_8h_aae95b10469763a75fb4f2e56d04c5365}{}\index{typelib.\+h@{typelib.\+h}!sql\+\_\+protocol\+\_\+typelib@{sql\+\_\+protocol\+\_\+typelib}}
+\index{sql\+\_\+protocol\+\_\+typelib@{sql\+\_\+protocol\+\_\+typelib}!typelib.\+h@{typelib.\+h}}
+\subsubsection[{sql\+\_\+protocol\+\_\+typelib}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+Y\+P\+E\+L\+I\+B} sql\+\_\+protocol\+\_\+typelib}\label{typelib_8h_aae95b10469763a75fb4f2e56d04c5365}

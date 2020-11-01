@@ -1,0 +1,8 @@
+<map id="getAllValues" name="getAllValues">
+<area shape="rect" id="node2" href="$usscalc_8c.html#a0d092db893cddedce1266d2971f2cd7f" title="getValue" alt="" coords="148,31,221,57"/>
+<area shape="rect" id="node3" href="$usscalc_8c.html#ac734b72553a80042ac173bfebf6b5185" title="prepTelegram" alt="" coords="297,5,397,32"/>
+<area shape="rect" id="node5" href="$my_uart_8c.html#a9b1299202b28a668b8039f538539efb1" title="RS485_QueryTelegram" alt="" coords="269,56,425,83"/>
+<area shape="rect" id="node4" href="$usscalc_8c.html#a3758bfbaa4494e65cabf188a026502de" title="calcBCC" alt="" coords="500,5,573,32"/>
+<area shape="rect" id="node6" href="$my_uart_8c.html#ab56f53b4e7d6fe7165cdef32270c7a39" title="RS485_ReadChar" alt="" coords="474,56,599,83"/>
+<area shape="rect" id="node7" href="$my_uart_8c.html#aeb49100d16c0c1b323128896ed286558" title="RS485_WriteChar" alt="" coords="473,107,600,133"/>
+</map>

@@ -1,0 +1,229 @@
+version=4.7
+revision:1
+customer:999
+layer
+  {
+  name:		comp_p
+  class:	outer
+  thickness:	0.018
+  data:		U:\jobs\999\999-007\enut13h.5
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	4000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  }
+layer
+  {
+  name:		lag2_p
+  class:	inner
+  thickness:	0.035
+  data:		U:\jobs\999\999-007\enut13h.6
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	DOWN
+    resolution:	4000
+    uscale:	10000000
+    xscale:	10001500
+    yscale:	10001500
+    mirror:	X
+    film:	agfa
+    }
+  }
+layer
+  {
+  name:		lag3_p
+  class:	inner
+  readable:	bot
+  thickness:	-0.035
+  data:		U:\jobs\999\999-007\enut13h.7
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	4000
+    uscale:	10000000
+    xscale:	10001500
+    yscale:	10001500
+    film:	agfa
+    }
+  }
+layer
+  {
+  name:		sold_p
+  class:	outer
+  readable:	bot
+  thickness:	-0.018
+  data:		U:\jobs\999\999-007\enut13h.8
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	DOWN
+    resolution:	4000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    mirror:	X
+    film:	agfa
+    }
+  }
+drill
+  {
+  name:		dr_p
+  class:	drill
+  top:		1
+  bot:		4
+  thickness:	1.5
+  data:		U:\jobs\999\999-007\enut13h.9
+  wheel:		C:\Documents and Settings\root\Ustawienia lokalne\Temp\excellon2_tmp_merged_wheel25537.whe
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	4000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  }
+extra
+  {
+  name:		ktcomp_p
+  class:	silk
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.7
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  attach:	top
+  }
+extra
+  {
+  name:		m1comp_p
+  class:	mask
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.1
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  attach:	top
+  }
+extra
+  {
+  name:		m1sold_p
+  class:	mask
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.2
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	DOWN
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    mirror:	X
+    film:	agfa
+    }
+  attach:	bot
+  }
+extra
+  {
+  name:		fr_p
+  class:	rout
+  num:		1
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  }
+extra
+  {
+  name:		outline_p
+  class:	outline
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.9
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  }
+feedback 
+  {
+  name:		lag2_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+feedback 
+  {
+  name:		lag3_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+feedback 
+  {
+  name:		comp_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+feedback 
+  {
+  name:		sold_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+datum
+  {
+  drill:	0,0
+  }
+ate
+  {
+  fixture:	DSA
+  machine:	
+  }
+attributes
+  {
+  uJobSize:mm,0,0
+  }
+drc:U:\ucam-cfg\cfg\setup\smartdrc\Standard.cfg

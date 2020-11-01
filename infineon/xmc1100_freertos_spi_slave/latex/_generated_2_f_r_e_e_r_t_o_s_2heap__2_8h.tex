@@ -1,0 +1,296 @@
+\hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h}{}\doxysection{Dave/\+Generated/\+F\+R\+E\+E\+R\+T\+O\+S/heap\+\_\+2.h File Reference}
+\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h}\index{Dave/Generated/FREERTOS/heap\_2.h@{Dave/Generated/FREERTOS/heap\_2.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+Include dependency graph for heap\+\_\+2.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+NK}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_ab622d8c674f2a417a666a7ed89109e79}{M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE}}
+\item 
+\#define \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a3e68bebe7509a99550e1358cbca8e23f}{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}}~( \mbox{\hyperlink{_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}} -\/ \mbox{\hyperlink{_keil_2_a_r_m___c_m4_f_2portmacro__mpu_8h_ab9091ce3940d8bd93ec850122a2c6a1c}{port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}} )
+\item 
+\#define \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_ab71bae5a95671265c828339d44c44b25}{heap\+M\+I\+N\+I\+M\+U\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}~( ( size\+\_\+t ) ( \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2heap__2_8h_a10691c3939df51f3b227369827076687}{heap\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE}} $\ast$ 2 ) )
+\item 
+\#define \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a55396870242c952746147671bf78a149}{prv\+Insert\+Block\+Into\+Free\+List}}(px\+Block\+To\+Insert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+NK}} \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a3e55181f788f17d9a3e7d226a5206e4f}{prv\+Heap\+Init}} (void)
+\item 
+void $\ast$ \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a0379669d07d76cc81e3028123113b271}{pv\+Port\+Malloc}} (size\+\_\+t x\+Wanted\+Size)
+\item 
+void \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a1e7cea2fd1bc894ea3b5f5e8179d259b}{v\+Port\+Free}} (void $\ast$pv)
+\item 
+size\+\_\+t \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a0c28a12b313bc248be0cb7a37ed81bb7}{x\+Port\+Get\+Free\+Heap\+Size}} (void)
+\item 
+void \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a8bf103ce32ce8473574e9920af8b4eec}{v\+Port\+Initialise\+Blocks}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a286aa29b13471f0d9f5a7ce688682694}{uc\+Heap}} \mbox{[}\mbox{\hyperlink{_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+static const uint16\+\_\+t \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a10691c3939df51f3b227369827076687}{heap\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE}} = ( ( sizeof ( \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}} ) + ( \mbox{\hyperlink{_keil_2_a_r_m___c_m4_f_2portmacro__mpu_8h_ab9091ce3940d8bd93ec850122a2c6a1c}{port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}} -\/ 1 ) ) \& $\sim$port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+M\+A\+SK )
+\item 
+static \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}} \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a02f2ab4cbfe2167dc3bbdaf9b6c629c9}{x\+Start}}
+\item 
+static \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}} \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a327bc354b43d50b80986aecd259bc5cf}{x\+End}}
+\item 
+static size\+\_\+t \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a338244e3e604d3b290a3ef1903e97e4b}{x\+Free\+Bytes\+Remaining}} = \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2heap__2_8h_a3e68bebe7509a99550e1358cbca8e23f}{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a3e68bebe7509a99550e1358cbca8e23f}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a3e68bebe7509a99550e1358cbca8e23f}} 
+\index{heap\_2.h@{heap\_2.h}!configADJUSTED\_HEAP\_SIZE@{configADJUSTED\_HEAP\_SIZE}}
+\index{configADJUSTED\_HEAP\_SIZE@{configADJUSTED\_HEAP\_SIZE}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{configADJUSTED\_HEAP\_SIZE}{configADJUSTED\_HEAP\_SIZE}}
+{\footnotesize\ttfamily \#define config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE~( \mbox{\hyperlink{_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}} -\/ \mbox{\hyperlink{_keil_2_a_r_m___c_m4_f_2portmacro__mpu_8h_ab9091ce3940d8bd93ec850122a2c6a1c}{port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}} )}
+
+
+
+Definition at line 55 of file heap\+\_\+2.\+h.
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_ab71bae5a95671265c828339d44c44b25}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_ab71bae5a95671265c828339d44c44b25}} 
+\index{heap\_2.h@{heap\_2.h}!heapMINIMUM\_BLOCK\_SIZE@{heapMINIMUM\_BLOCK\_SIZE}}
+\index{heapMINIMUM\_BLOCK\_SIZE@{heapMINIMUM\_BLOCK\_SIZE}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{heapMINIMUM\_BLOCK\_SIZE}{heapMINIMUM\_BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define heap\+M\+I\+N\+I\+M\+U\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE~( ( size\+\_\+t ) ( \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2heap__2_8h_a10691c3939df51f3b227369827076687}{heap\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE}} $\ast$ 2 ) )}
+
+
+
+Definition at line 82 of file heap\+\_\+2.\+h.
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_ab622d8c674f2a417a666a7ed89109e79}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_ab622d8c674f2a417a666a7ed89109e79}} 
+\index{heap\_2.h@{heap\_2.h}!MPU\_WRAPPERS\_INCLUDED\_FROM\_API\_FILE@{MPU\_WRAPPERS\_INCLUDED\_FROM\_API\_FILE}}
+\index{MPU\_WRAPPERS\_INCLUDED\_FROM\_API\_FILE@{MPU\_WRAPPERS\_INCLUDED\_FROM\_API\_FILE}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_WRAPPERS\_INCLUDED\_FROM\_API\_FILE}{MPU\_WRAPPERS\_INCLUDED\_FROM\_API\_FILE}}
+{\footnotesize\ttfamily \#define M\+P\+U\+\_\+\+W\+R\+A\+P\+P\+E\+R\+S\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+A\+P\+I\+\_\+\+F\+I\+LE}
+
+
+
+Definition at line 43 of file heap\+\_\+2.\+h.
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a55396870242c952746147671bf78a149}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a55396870242c952746147671bf78a149}} 
+\index{heap\_2.h@{heap\_2.h}!prvInsertBlockIntoFreeList@{prvInsertBlockIntoFreeList}}
+\index{prvInsertBlockIntoFreeList@{prvInsertBlockIntoFreeList}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{prvInsertBlockIntoFreeList}{prvInsertBlockIntoFreeList}}
+{\footnotesize\ttfamily \#define prv\+Insert\+Block\+Into\+Free\+List(\begin{DoxyParamCaption}\item[{}]{px\+Block\+To\+Insert }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{                                                                                   \(\backslash\)}
+\DoxyCodeLine{BlockLink\_t *pxIterator;                                                            \(\backslash\)}
+\DoxyCodeLine{size\_t xBlockSize;                                                                  \(\backslash\)}
+\DoxyCodeLine{                                                                                    \(\backslash\)}
+\DoxyCodeLine{    xBlockSize = pxBlockToInsert-\/>xBlockSize;                                       \(\backslash\)}
+\DoxyCodeLine{                                                                                    \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* Iterate through the list until a block is found that has a larger size */}    \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* than the block we are inserting. */}                                          \(\backslash\)}
+\DoxyCodeLine{    for( pxIterator = \&\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a02f2ab4cbfe2167dc3bbdaf9b6c629c9}{xStart}}; pxIterator-\/>\mbox{\hyperlink{struct_a___b_l_o_c_k___l_i_n_k_aaef1b26e95b0b7b7ebffc91fa6ce874f}{pxNextFreeBlock}}-\/>\mbox{\hyperlink{struct_a___b_l_o_c_k___l_i_n_k_ad5dcf5df03d8be6186c567be9e2c657b}{xBlockSize}} < xBlockSize; pxIterator = pxIterator-\/>pxNextFreeBlock )  \(\backslash\)}
+\DoxyCodeLine{    \{                                                                               \(\backslash\)}
+\DoxyCodeLine{        \textcolor{comment}{/* There is nothing to do here -\/ just iterate to the correct position. */}   \(\backslash\)}
+\DoxyCodeLine{    \}                                                                               \(\backslash\)}
+\DoxyCodeLine{                                                                                    \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* Update the list to include the block being inserted in the correct */}        \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* position. */}                                                                 \(\backslash\)}
+\DoxyCodeLine{    pxBlockToInsert-\/>pxNextFreeBlock = pxIterator-\/>pxNextFreeBlock;                 \(\backslash\)}
+\DoxyCodeLine{    pxIterator-\/>pxNextFreeBlock = pxBlockToInsert;                                  \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 98 of file heap\+\_\+2.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}} 
+\index{heap\_2.h@{heap\_2.h}!BlockLink\_t@{BlockLink\_t}}
+\index{BlockLink\_t@{BlockLink\_t}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{BlockLink\_t}{BlockLink\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_a___b_l_o_c_k___l_i_n_k}{A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+NK}} \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a3e55181f788f17d9a3e7d226a5206e4f}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a3e55181f788f17d9a3e7d226a5206e4f}} 
+\index{heap\_2.h@{heap\_2.h}!prvHeapInit@{prvHeapInit}}
+\index{prvHeapInit@{prvHeapInit}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{prvHeapInit()}{prvHeapInit()}}
+{\footnotesize\ttfamily static void prv\+Heap\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 249 of file heap\+\_\+2.\+h.
+
+
+
+References config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE, port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT, port\+P\+O\+I\+N\+T\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+T\+Y\+PE, A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+N\+K\+::px\+Next\+Free\+Block, uc\+Heap, A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+N\+K\+::x\+Block\+Size, x\+End, and x\+Start.
+
+
+
+Referenced by pv\+Port\+Malloc().
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a0379669d07d76cc81e3028123113b271}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a0379669d07d76cc81e3028123113b271}} 
+\index{heap\_2.h@{heap\_2.h}!pvPortMalloc@{pvPortMalloc}}
+\index{pvPortMalloc@{pvPortMalloc}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{pvPortMalloc()}{pvPortMalloc()}}
+{\footnotesize\ttfamily void$\ast$ pv\+Port\+Malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x\+Wanted\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 118 of file heap\+\_\+2.\+h.
+
+
+
+References config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE, heap\+M\+I\+N\+I\+M\+U\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE, heap\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE, pd\+F\+A\+L\+SE, pd\+T\+R\+UE, port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT, prv\+Heap\+Init(), prv\+Insert\+Block\+Into\+Free\+List, A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+N\+K\+::px\+Next\+Free\+Block, trace\+M\+A\+L\+L\+OC, v\+Application\+Malloc\+Failed\+Hook(), v\+Task\+Suspend\+All(), A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+N\+K\+::x\+Block\+Size, x\+End, x\+Free\+Bytes\+Remaining, x\+Start, and x\+Task\+Resume\+All().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a0379669d07d76cc81e3028123113b271_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a1e7cea2fd1bc894ea3b5f5e8179d259b}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a1e7cea2fd1bc894ea3b5f5e8179d259b}} 
+\index{heap\_2.h@{heap\_2.h}!vPortFree@{vPortFree}}
+\index{vPortFree@{vPortFree}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{vPortFree()}{vPortFree()}}
+{\footnotesize\ttfamily void v\+Port\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 210 of file heap\+\_\+2.\+h.
+
+
+
+References heap\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE, prv\+Insert\+Block\+Into\+Free\+List, trace\+F\+R\+EE, v\+Task\+Suspend\+All(), A\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+N\+K\+::x\+Block\+Size, x\+Free\+Bytes\+Remaining, and x\+Task\+Resume\+All().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a1e7cea2fd1bc894ea3b5f5e8179d259b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a8bf103ce32ce8473574e9920af8b4eec}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a8bf103ce32ce8473574e9920af8b4eec}} 
+\index{heap\_2.h@{heap\_2.h}!vPortInitialiseBlocks@{vPortInitialiseBlocks}}
+\index{vPortInitialiseBlocks@{vPortInitialiseBlocks}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{vPortInitialiseBlocks()}{vPortInitialiseBlocks()}}
+{\footnotesize\ttfamily void v\+Port\+Initialise\+Blocks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 243 of file heap\+\_\+2.\+h.
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a0c28a12b313bc248be0cb7a37ed81bb7}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a0c28a12b313bc248be0cb7a37ed81bb7}} 
+\index{heap\_2.h@{heap\_2.h}!xPortGetFreeHeapSize@{xPortGetFreeHeapSize}}
+\index{xPortGetFreeHeapSize@{xPortGetFreeHeapSize}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{xPortGetFreeHeapSize()}{xPortGetFreeHeapSize()}}
+{\footnotesize\ttfamily size\+\_\+t x\+Port\+Get\+Free\+Heap\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 237 of file heap\+\_\+2.\+h.
+
+
+
+References x\+Free\+Bytes\+Remaining.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a10691c3939df51f3b227369827076687}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a10691c3939df51f3b227369827076687}} 
+\index{heap\_2.h@{heap\_2.h}!heapSTRUCT\_SIZE@{heapSTRUCT\_SIZE}}
+\index{heapSTRUCT\_SIZE@{heapSTRUCT\_SIZE}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{heapSTRUCT\_SIZE}{heapSTRUCT\_SIZE}}
+{\footnotesize\ttfamily const uint16\+\_\+t heap\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE = ( ( sizeof ( \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}} ) + ( \mbox{\hyperlink{_keil_2_a_r_m___c_m4_f_2portmacro__mpu_8h_ab9091ce3940d8bd93ec850122a2c6a1c}{port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}} -\/ 1 ) ) \& $\sim$port\+B\+Y\+T\+E\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+M\+A\+SK )\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 80 of file heap\+\_\+2.\+h.
+
+
+
+Referenced by pv\+Port\+Malloc(), and v\+Port\+Free().
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a286aa29b13471f0d9f5a7ce688682694}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a286aa29b13471f0d9f5a7ce688682694}} 
+\index{heap\_2.h@{heap\_2.h}!ucHeap@{ucHeap}}
+\index{ucHeap@{ucHeap}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{ucHeap}{ucHeap}}
+{\footnotesize\ttfamily uint8\+\_\+t uc\+Heap\mbox{[}\mbox{\hyperlink{_free_r_t_o_s_config_8h_a9f213227674effff0122a75d94d87938}{config\+T\+O\+T\+A\+L\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 67 of file heap\+\_\+2.\+h.
+
+
+
+Referenced by prv\+Heap\+Init().
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a327bc354b43d50b80986aecd259bc5cf}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a327bc354b43d50b80986aecd259bc5cf}} 
+\index{heap\_2.h@{heap\_2.h}!xEnd@{xEnd}}
+\index{xEnd@{xEnd}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{xEnd}{xEnd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}} x\+End\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 84 of file heap\+\_\+2.\+h.
+
+
+
+Referenced by prv\+Heap\+Init(), and pv\+Port\+Malloc().
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a338244e3e604d3b290a3ef1903e97e4b}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a338244e3e604d3b290a3ef1903e97e4b}} 
+\index{heap\_2.h@{heap\_2.h}!xFreeBytesRemaining@{xFreeBytesRemaining}}
+\index{xFreeBytesRemaining@{xFreeBytesRemaining}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{xFreeBytesRemaining}{xFreeBytesRemaining}}
+{\footnotesize\ttfamily size\+\_\+t x\+Free\+Bytes\+Remaining = \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2heap__2_8h_a3e68bebe7509a99550e1358cbca8e23f}{config\+A\+D\+J\+U\+S\+T\+E\+D\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+ZE}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 88 of file heap\+\_\+2.\+h.
+
+
+
+Referenced by pv\+Port\+Malloc(), v\+Port\+Free(), and x\+Port\+Get\+Free\+Heap\+Size().
+
+\mbox{\Hypertarget{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a02f2ab4cbfe2167dc3bbdaf9b6c629c9}\label{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a02f2ab4cbfe2167dc3bbdaf9b6c629c9}} 
+\index{heap\_2.h@{heap\_2.h}!xStart@{xStart}}
+\index{xStart@{xStart}!heap\_2.h@{heap\_2.h}}
+\doxysubsubsection{\texorpdfstring{xStart}{xStart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2heap__2_8h_a5867d4b64d89c6ab51e4783687f8960a}{Block\+Link\+\_\+t}} x\+Start\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 84 of file heap\+\_\+2.\+h.
+
+
+
+Referenced by prv\+Heap\+Init(), and pv\+Port\+Malloc().
+

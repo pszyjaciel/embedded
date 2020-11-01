@@ -1,0 +1,4 @@
+<map id="UART_ClearFlag" name="UART_ClearFlag">
+<area shape="rect" id="node1" title="Clears the event status in the register(PSR_ASCMode)." alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node2" href="$group___u_a_r_t.html#ga36271f8ffec2a2c1b077ec2786f574c6" title=" " alt="" coords="172,5,387,32"/>
+</map>

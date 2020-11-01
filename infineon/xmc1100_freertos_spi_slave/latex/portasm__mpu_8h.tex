@@ -1,0 +1,201 @@
+\hypertarget{portasm__mpu_8h}{}\doxysection{Dave/\+Model/\+A\+P\+P\+S/\+F\+R\+E\+E\+R\+T\+O\+S/v4\+\_\+1\+\_\+2/\+Templates/portable/\+I\+A\+R/\+A\+R\+M\+\_\+\+C\+M4\+F/portasm\+\_\+mpu.h File Reference}
+\label{portasm__mpu_8h}\index{Dave/Model/APPS/FREERTOS/v4\_1\_2/Templates/portable/IAR/ARM\_CM4F/portasm\_mpu.h@{Dave/Model/APPS/FREERTOS/v4\_1\_2/Templates/portable/IAR/ARM\_CM4F/portasm\_mpu.h}}
+{\ttfamily \#include \char`\"{}F\+R\+E\+E\+R\+T\+O\+S/\+Free\+R\+T\+O\+S\+Config.\+h\char`\"{}}\newline
+Include dependency graph for portasm\+\_\+mpu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{portasm__mpu_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_acab39580f1d9ee1ad1e81328cc9ee79d}{C\+O\+DE}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb \mbox{\hyperlink{portasm__mpu_8h_a9aa6710dd342172a8f80299233af565e}{sp}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_a864ab2264de6ae07e38fc818e26ba505}{basepri}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add \mbox{\hyperlink{portasm__mpu_8h_ad41690af61c1019ceb37251ba4fc058b}{r1}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a61676af66ca4dea21a560ba50c541a56}{r2}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} \mbox{\hyperlink{portasm__mpu_8h_a834715accaafb0ba8885ca2f76ec8a7c}{v\+Port\+S\+V\+C\+Handler}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq msp mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}}
+\item 
+R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq control stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}}
+\item 
+R\+S\+EG psp isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne psp b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldr ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} msr \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{portasm__mpu_8h_a864ab2264de6ae07e38fc818e26ba505}\label{portasm__mpu_8h_a864ab2264de6ae07e38fc818e26ba505}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!basepri@{basepri}}
+\index{basepri@{basepri}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{basepri}{basepri}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldr ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr basepri}
+
+
+
+Definition at line 67 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Restore\+Context\+Of\+First\+Task(), ul\+Port\+Raise\+B\+A\+S\+E\+P\+R\+I(), v\+Port\+Clear\+B\+A\+S\+E\+P\+R\+I\+From\+I\+S\+R(), v\+Port\+Raise\+B\+A\+S\+E\+P\+R\+I(), v\+Port\+Set\+B\+A\+S\+E\+P\+R\+I(), and x\+Port\+Pend\+S\+V\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_acab39580f1d9ee1ad1e81328cc9ee79d}\label{portasm__mpu_8h_acab39580f1d9ee1ad1e81328cc9ee79d}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!CODE@{CODE}}
+\index{CODE@{CODE}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{CODE}{CODE}}
+{\footnotesize\ttfamily R\+S\+EG C\+O\+DE}
+
+
+
+Definition at line 30 of file portasm\+\_\+mpu.\+h.
+
+\mbox{\Hypertarget{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}\label{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!control@{control}}
+\index{control@{control}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq control stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr control}
+
+
+
+Definition at line 129 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by \+\_\+\+\_\+set\+\_\+\+C\+O\+N\+T\+R\+O\+L(), prv\+Restore\+Context\+Of\+First\+Task(), prv\+Start\+First\+Task(), prv\+S\+V\+C\+Handler(), v\+Port\+Reset\+Privilege(), v\+Port\+Switch\+To\+User\+Mode(), x\+Port\+Pend\+S\+V\+Handler(), and x\+Port\+Raise\+Privilege().
+
+\mbox{\Hypertarget{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}\label{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!msp@{msp}}
+\index{msp@{msp}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{msp}{msp}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq msp mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr msp}
+
+
+
+Definition at line 123 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Restore\+Context\+Of\+First\+Task(), prv\+Start\+First\+Task(), and v\+Port\+S\+V\+C\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}\label{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!psp@{psp}}
+\index{psp@{psp}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{psp}{psp}}
+{\footnotesize\ttfamily R\+S\+EG psp isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne psp b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldr ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} msr psp}
+
+
+
+Definition at line 163 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Restore\+Context\+Of\+First\+Task(), v\+Port\+S\+V\+C\+Handler(), and x\+Port\+Pend\+S\+V\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}\label{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!r0@{r0}}
+\index{r0@{r0}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{r0}{r0}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr r0 dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr r0 ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq r0 isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr r0 mov msr r0 cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr r0 ldr ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} msr r0 mov msr r0 bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} \mbox{\hyperlink{_keil_2_a_r_m___c_m4_f_2port__mpu_8h_a6f5cb447f3560f9722f4f117d723184a}{v\+Port\+Enable\+V\+FP}} ldr w orr str bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} \mbox{\hyperlink{_keil_2_a_r_m___c_m4_f_2port__mpu_8h_ac42aa31652a6e8158f8ea8a88aad8275}{x\+Port\+Raise\+Privilege}} mrs \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} tst itte ne movne svcne moveq r0}
+
+
+
+Definition at line 56 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Port\+Get\+I\+P\+S\+R(), prv\+Restore\+Context\+Of\+First\+Task(), prv\+Start\+First\+Task(), v\+Port\+Enable\+V\+F\+P(), v\+Port\+S\+V\+C\+Handler(), v\+Port\+Switch\+To\+User\+Mode(), x\+Port\+Pend\+S\+V\+Handler(), and x\+Port\+Raise\+Privilege().
+
+\mbox{\Hypertarget{portasm__mpu_8h_ad41690af61c1019ceb37251ba4fc058b}\label{portasm__mpu_8h_ad41690af61c1019ceb37251ba4fc058b}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!r1@{r1}}
+\index{r1@{r1}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{r1}{r1}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldr ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} \mbox{\hyperlink{_keil_2_a_r_m___c_m4_f_2port__mpu_8h_a6f5cb447f3560f9722f4f117d723184a}{v\+Port\+Enable\+V\+FP}} ldr w orr str r1}
+
+
+
+Definition at line 79 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Restore\+Context\+Of\+First\+Task(), v\+Port\+Enable\+V\+F\+P(), and x\+Port\+Pend\+S\+V\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}\label{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!r14@{r14}}
+\index{r14@{r14}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{r14}{r14}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst r14}
+
+
+
+Definition at line 54 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Port\+Get\+I\+P\+S\+R(), prv\+Restore\+Context\+Of\+First\+Task(), v\+Port\+Enable\+V\+F\+P(), v\+Port\+Switch\+To\+User\+Mode(), and x\+Port\+Pend\+S\+V\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_a61676af66ca4dea21a560ba50c541a56}\label{portasm__mpu_8h_a61676af66ca4dea21a560ba50c541a56}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!r2@{r2}}
+\index{r2@{r2}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{r2}{r2}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldr ldr add ldr r2}
+
+
+
+Definition at line 81 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Restore\+Context\+Of\+First\+Task(), and x\+Port\+Pend\+S\+V\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}\label{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!r3@{r3}}
+\index{r3@{r3}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{r3}{r3}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr r3 tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} ite eq mrseq \mbox{\hyperlink{portasm__mpu_8h_a8ceac5eac5866e7d2daab2c458fb8c1c}{msp}} mrsne \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} b \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_ab620761336a86016a92fe379d409ac4b}{v\+Port\+S\+V\+C\+Handler\+\_\+C}} \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_af64e1d94c315eeda3ccf941ec0bcb579}{v\+Port\+Start\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} cpsie i cpsie f dsb isb svc \mbox{\hyperlink{_i_a_r_2_a_r_m___c_m4_f_2port__mpu_8h_a3b9ca89bea1639d6dad074cee491b60b}{v\+Port\+Restore\+Context\+Of\+First\+Task}} ldr ldr msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldr r3}
+
+
+
+Definition at line 50 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by prv\+Restore\+Context\+Of\+First\+Task(), and x\+Port\+Pend\+S\+V\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_a9aa6710dd342172a8f80299233af565e}\label{portasm__mpu_8h_a9aa6710dd342172a8f80299233af565e}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!sp@{sp}}
+\index{sp@{sp}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{sp}{sp}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia sp}
+
+
+
+Definition at line 65 of file portasm\+\_\+mpu.\+h.
+
+
+
+Referenced by x\+Port\+Pend\+S\+V\+Handler().
+
+\mbox{\Hypertarget{portasm__mpu_8h_a834715accaafb0ba8885ca2f76ec8a7c}\label{portasm__mpu_8h_a834715accaafb0ba8885ca2f76ec8a7c}} 
+\index{portasm\_mpu.h@{portasm\_mpu.h}!vPortSVCHandler@{vPortSVCHandler}}
+\index{vPortSVCHandler@{vPortSVCHandler}!portasm\_mpu.h@{portasm\_mpu.h}}
+\doxysubsubsection{\texorpdfstring{vPortSVCHandler}{vPortSVCHandler}}
+{\footnotesize\ttfamily R\+S\+EG \mbox{\hyperlink{portasm__mpu_8h_a969e33de7c456ce35cb35d342930b117}{psp}} isb ldr tst it eq vstmdbeq \mbox{\hyperlink{portasm__mpu_8h_a74c2020176ad9adfbe1f144348dc39e4}{control}} stmdb stmdb msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} dsb isb bl \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2tasks_8c_a9c86137bc3c1cbffc39fff22627cb885}{v\+Task\+Switch\+Context}} mov msr \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} ldmia ldr add ldr \mbox{\hyperlink{portasm__mpu_8h_a0152a99572909a24318f8abe1473a18b}{r3}} tst it eq vldmiaeq \mbox{\hyperlink{portasm__mpu_8h_ad4557f79eb7284c5a3f8bbbbd4b7be20}{r0}} isb bx \mbox{\hyperlink{portasm__mpu_8h_aab48038750bdfe34947e4b1e8b28b21c}{r14}} v\+Port\+S\+V\+C\+Handler}
+
+
+
+Definition at line 104 of file portasm\+\_\+mpu.\+h.
+

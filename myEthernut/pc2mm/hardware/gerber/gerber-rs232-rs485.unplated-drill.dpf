@@ -1,0 +1,15 @@
+U=MIL X196,324Y479.9,1197.9
+;;GeneratedBy: Ucam v9.2.3-120127
+;;Licensed to: EPT
+;;Hostname: desktop
+;;User: tomek
+;;Date: Wed Mar 18 20:25:36 2015
+;;Digest: dbdaccd8d6e9e699969d9b98ed818187838989fe9ea1b7b0a9e5a7a3abbf
+;$0 uTool_Type
+;$1 uHole_Diameter
+;$2 uTool_Index
+;#0 "DRILL"
+;#1 "0.128 inch"
+;#2 "57"
+A57=CIRCLE,128 F260,543.9;$0=0,1=1,2=2
+F,1133.9;$0=0,1=1,2=2

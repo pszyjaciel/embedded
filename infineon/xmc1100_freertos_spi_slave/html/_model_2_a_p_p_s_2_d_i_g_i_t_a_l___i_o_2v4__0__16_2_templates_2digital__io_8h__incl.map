@@ -1,0 +1,13 @@
+<map id="Dave/Model/APPS/DIGITAL_IO/v4_0_16/Templates/digital_io.h" name="Dave/Model/APPS/DIGITAL_IO/v4_0_16/Templates/digital_io.h">
+<area shape="rect" id="node1" title=" " alt="" coords="339,5,521,61"/>
+<area shape="rect" id="node2" href="$xmc__gpio_8h.html" title=" " alt="" coords="180,109,269,136"/>
+<area shape="rect" id="node9" href="$_d_a_v_e___common_8h.html" title=" " alt="" coords="294,109,422,136"/>
+<area shape="rect" id="node10" href="$digital__io__conf_8h.html" title=" " alt="" coords="446,109,561,136"/>
+<area shape="rect" id="node11" href="$digital__io__extern_8h.html" title=" " alt="" coords="585,109,712,136"/>
+<area shape="rect" id="node3" href="$xmc__common_8h.html" title=" " alt="" coords="167,184,282,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,259,73,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="97,259,163,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="187,259,262,285"/>
+<area shape="rect" id="node7" title=" " alt="" coords="287,259,352,285"/>
+<area shape="rect" id="node8" href="$xmc__device_8h.html" title=" " alt="" coords="377,259,478,285"/>
+</map>

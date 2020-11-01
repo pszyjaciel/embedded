@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "m1280_7segment_SPI3", "m1280_7segment_SPI3\m1280_7segment_SPI3.cproj", "{75B47E28-FA2F-4A32-B2F5-8ADD4B982FAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75B47E28-FA2F-4A32-B2F5-8ADD4B982FAB}.Debug|AVR.ActiveCfg = Debug|AVR
+		{75B47E28-FA2F-4A32-B2F5-8ADD4B982FAB}.Debug|AVR.Build.0 = Debug|AVR
+		{75B47E28-FA2F-4A32-B2F5-8ADD4B982FAB}.Release|AVR.ActiveCfg = Release|AVR
+		{75B47E28-FA2F-4A32-B2F5-8ADD4B982FAB}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

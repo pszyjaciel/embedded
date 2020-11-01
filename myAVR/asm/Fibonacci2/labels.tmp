@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega644P</DEVICE>
+ <WORKING_DIR>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\Fibonacci2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\M644PDEF.INC</FILE>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\fib_call.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\Fibonacci2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\Fibonacci2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\Fibonacci2.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <FIB><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\fib_call.asm</FILE><LINE>3</LINE></FIB>
+  <BEGIN><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\Fibonacci2.asm</FILE><LINE>14</LINE></BEGIN>
+  <LOOP2><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Fibonacci2\Fibonacci2.asm</FILE><LINE>20</LINE></LOOP2>
+ </LABELS>
+</ASSEMBLER_INFO>

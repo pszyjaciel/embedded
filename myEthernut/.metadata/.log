@@ -1,0 +1,37 @@
+!SESSION 2020-11-01 16:58:19.364 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation -application com.ifx.davex.product.daveApplication -showlocation -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation -application com.ifx.davex.product.daveApplication -showlocation -data c:\Workspaces\GitHub\embedded\myEthernut -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY SOLVER 1 0 2020-11-01 16:58:35.677
+!MESSAGE USER_ACTION : Default solver exe path is: C:\cp\DAVE442\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2020-11-01 16:58:35.911
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2020-11-01 16:58:35.911
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2020-11-01 16:58:36.271
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-01 16:58:37.333
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2020-11-01 16:58:37.614
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2020-11-01 16:58:39.270
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.4//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2020-11-01 16:58:42.582
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.4//daveSite.xml
+
+!ENTRY SOLVER 1 0 2020-11-01 16:59:13.081
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2020-11-01 16:59:13.331
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED

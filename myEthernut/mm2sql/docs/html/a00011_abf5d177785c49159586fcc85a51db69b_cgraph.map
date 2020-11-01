@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$a00018.html#a3bcc2d3f20cb923e4eaa70e5d2195359" title="Function make an attempt to connect to the mySQL database. It calls internally functions from the lib..." alt="" coords="100,5,205,31"/>
+<area shape="rect" id="node3" href="$a00014.html#a2642c74dbe4f4d6d391253ce55b4ad02" title="This function initializes the serial port for both directions (reading/writing) with fixed parameters..." alt="" coords="119,55,186,80"/>
+<area shape="rect" id="node4" href="$a00011.html#ad4facf5ba5f923526c013960071736f8" title="This function cleans the buffer which will be filled out with data from serial port. " alt="" coords="111,104,194,129"/>
+<area shape="rect" id="node5" href="$a00011.html#a88bc34280b9c32397b0fd8d8f431d4e6" title="This function parse an incomming message into two arrays: one as a string&#45;array, another as an array ..." alt="" coords="104,153,201,179"/>
+<area shape="rect" id="node6" href="$a00018.html#acfcbcaa2f6f2cbc3d57bd53a4d673d13" title="This function prepares a SQL&#45;statement and inserts data into the table myTable of mySQL&#45;database..." alt="" coords="105,203,200,228"/>
+</map>

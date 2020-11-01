@@ -1,0 +1,205 @@
+\hypertarget{pksql_8h}{}\section{pksql.\+h File Reference}
+\label{pksql_8h}\index{pksql.\+h@{pksql.\+h}}
+{\ttfamily \#include \char`\"{}mysql.\+h\char`\"{}}\\*
+Include dependency graph for pksql.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pksql_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{pksql_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pksql_8h_a7485233945887459d65005a7669104a6}{D\+B\+N\+A\+M\+E}~\char`\"{}maintenance\char`\"{}
+\item 
+\#define \hyperlink{pksql_8h_acfc12278a87672861e438f8841a7a713}{L\+O\+C\+A\+L\+H\+O\+S\+T}~\char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+\#define \hyperlink{pksql_8h_a8bfbbf31b7d3c07215440d18a064b7f4}{U\+S\+E\+R}~\char`\"{}root\char`\"{}
+\item 
+\#define \hyperlink{pksql_8h_aba5c54fadff8d880b1945dde87496e31}{P\+A\+S\+S}~\char`\"{}admin\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+B\+O\+O\+L \hyperlink{pksql_8h_a8b909a723dc6d0092907c796276a08ec}{display\+All\+From\+Table} (char $\ast$table, int id)
+\item 
+B\+O\+O\+L \hyperlink{pksql_8h_a3bcc2d3f20cb923e4eaa70e5d2195359}{My\+S\+Q\+L\+Connect} ()
+\item 
+B\+O\+O\+L \hyperlink{pksql_8h_acfcbcaa2f6f2cbc3d57bd53a4d673d13}{insert\+M\+M\+Data} (char $\ast$my\+Table)
+\item 
+B\+O\+O\+L \hyperlink{pksql_8h_aa0890e5a0157dcc938d6fb7b43e9c7f1}{insert\+Into\+Table} (char $\ast$table, char $\ast$machine, int r131, int r132, int r133, int r134, int r135)
+\item 
+B\+O\+O\+L \hyperlink{pksql_8h_adbba85b021fda9020527f0128df3967f}{insert\+Time\+Stamp} (char $\ast$table, char $\ast$column)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{pksql_8h_a73c8ca1876a58205f1826be52730108a}{sz\+S\+Q\+L} \mbox{[}1024\mbox{]}
+\item 
+\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$ \hyperlink{pksql_8h_af823d2b4dfbe0ce4969622878ccaab48}{g\+\_\+p\+My\+S\+Q\+L}
+\item 
+static char $\ast$ \hyperlink{pksql_8h_a7efa7eb2a557374c6f6bef7cf729744d}{g\+\_\+p\+My\+S\+Q\+L\+Options} \mbox{[}$\,$\mbox{]}
+\item 
+static char $\ast$ \hyperlink{pksql_8h_afff3fd7dbfa3cc8cbb449cdf72b7d413}{g\+\_\+p\+My\+S\+Q\+L\+Option\+Groups} \mbox{[}$\,$\mbox{]}
+\item 
+unsigned short \hyperlink{pksql_8h_aded104d45b5a4e3f8c13631ef0108f58}{mm\+Values} \mbox{[}1024\mbox{]}
+\item 
+unsigned char $\ast$ \hyperlink{pksql_8h_a128323d9598c2ea56dd6ae1e32a94210}{mm\+Values\+Ptr} \mbox{[}1024\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pksql_8h_a7485233945887459d65005a7669104a6}{}\index{pksql.\+h@{pksql.\+h}!D\+B\+N\+A\+M\+E@{D\+B\+N\+A\+M\+E}}
+\index{D\+B\+N\+A\+M\+E@{D\+B\+N\+A\+M\+E}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{D\+B\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+B\+N\+A\+M\+E~\char`\"{}maintenance\char`\"{}}\label{pksql_8h_a7485233945887459d65005a7669104a6}
+\hypertarget{pksql_8h_acfc12278a87672861e438f8841a7a713}{}\index{pksql.\+h@{pksql.\+h}!L\+O\+C\+A\+L\+H\+O\+S\+T@{L\+O\+C\+A\+L\+H\+O\+S\+T}}
+\index{L\+O\+C\+A\+L\+H\+O\+S\+T@{L\+O\+C\+A\+L\+H\+O\+S\+T}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{L\+O\+C\+A\+L\+H\+O\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+C\+A\+L\+H\+O\+S\+T~\char`\"{}127.\+0.\+0.\+1\char`\"{}}\label{pksql_8h_acfc12278a87672861e438f8841a7a713}
+\hypertarget{pksql_8h_aba5c54fadff8d880b1945dde87496e31}{}\index{pksql.\+h@{pksql.\+h}!P\+A\+S\+S@{P\+A\+S\+S}}
+\index{P\+A\+S\+S@{P\+A\+S\+S}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{P\+A\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+S\+S~\char`\"{}admin\char`\"{}}\label{pksql_8h_aba5c54fadff8d880b1945dde87496e31}
+\hypertarget{pksql_8h_a8bfbbf31b7d3c07215440d18a064b7f4}{}\index{pksql.\+h@{pksql.\+h}!U\+S\+E\+R@{U\+S\+E\+R}}
+\index{U\+S\+E\+R@{U\+S\+E\+R}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{U\+S\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+E\+R~\char`\"{}root\char`\"{}}\label{pksql_8h_a8bfbbf31b7d3c07215440d18a064b7f4}
+
+
+\subsection{Function Documentation}
+\hypertarget{pksql_8h_a8b909a723dc6d0092907c796276a08ec}{}\index{pksql.\+h@{pksql.\+h}!display\+All\+From\+Table@{display\+All\+From\+Table}}
+\index{display\+All\+From\+Table@{display\+All\+From\+Table}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{display\+All\+From\+Table(char $\ast$table, int id)}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L display\+All\+From\+Table (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{table, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{pksql_8h_a8b909a723dc6d0092907c796276a08ec}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{pksql_8h_a8b909a723dc6d0092907c796276a08ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pksql_8h_aa0890e5a0157dcc938d6fb7b43e9c7f1}{}\index{pksql.\+h@{pksql.\+h}!insert\+Into\+Table@{insert\+Into\+Table}}
+\index{insert\+Into\+Table@{insert\+Into\+Table}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{insert\+Into\+Table(char $\ast$table, char $\ast$machine, int r131, int r132, int r133, int r134, int r135)}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L insert\+Into\+Table (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{table, }
+\item[{char $\ast$}]{machine, }
+\item[{int}]{r131, }
+\item[{int}]{r132, }
+\item[{int}]{r133, }
+\item[{int}]{r134, }
+\item[{int}]{r135}
+\end{DoxyParamCaption}
+)}\label{pksql_8h_aa0890e5a0157dcc938d6fb7b43e9c7f1}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{pksql_8h_aa0890e5a0157dcc938d6fb7b43e9c7f1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pksql_8h_acfcbcaa2f6f2cbc3d57bd53a4d673d13}{}\index{pksql.\+h@{pksql.\+h}!insert\+M\+M\+Data@{insert\+M\+M\+Data}}
+\index{insert\+M\+M\+Data@{insert\+M\+M\+Data}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{insert\+M\+M\+Data(char $\ast$my\+Table)}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L insert\+M\+M\+Data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{my\+Table}
+\end{DoxyParamCaption}
+)}\label{pksql_8h_acfcbcaa2f6f2cbc3d57bd53a4d673d13}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{pksql_8h_acfcbcaa2f6f2cbc3d57bd53a4d673d13_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pksql_8h_adbba85b021fda9020527f0128df3967f}{}\index{pksql.\+h@{pksql.\+h}!insert\+Time\+Stamp@{insert\+Time\+Stamp}}
+\index{insert\+Time\+Stamp@{insert\+Time\+Stamp}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{insert\+Time\+Stamp(char $\ast$table, char $\ast$column)}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L insert\+Time\+Stamp (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{table, }
+\item[{char $\ast$}]{column}
+\end{DoxyParamCaption}
+)}\label{pksql_8h_adbba85b021fda9020527f0128df3967f}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{pksql_8h_adbba85b021fda9020527f0128df3967f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pksql_8h_a3bcc2d3f20cb923e4eaa70e5d2195359}{}\index{pksql.\+h@{pksql.\+h}!My\+S\+Q\+L\+Connect@{My\+S\+Q\+L\+Connect}}
+\index{My\+S\+Q\+L\+Connect@{My\+S\+Q\+L\+Connect}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{My\+S\+Q\+L\+Connect()}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L My\+S\+Q\+L\+Connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{pksql_8h_a3bcc2d3f20cb923e4eaa70e5d2195359}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{pksql_8h_a3bcc2d3f20cb923e4eaa70e5d2195359_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{pksql_8h_af823d2b4dfbe0ce4969622878ccaab48}{}\index{pksql.\+h@{pksql.\+h}!g\+\_\+p\+My\+S\+Q\+L@{g\+\_\+p\+My\+S\+Q\+L}}
+\index{g\+\_\+p\+My\+S\+Q\+L@{g\+\_\+p\+My\+S\+Q\+L}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{g\+\_\+p\+My\+S\+Q\+L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L}$\ast$ g\+\_\+p\+My\+S\+Q\+L}\label{pksql_8h_af823d2b4dfbe0ce4969622878ccaab48}
+\hypertarget{pksql_8h_afff3fd7dbfa3cc8cbb449cdf72b7d413}{}\index{pksql.\+h@{pksql.\+h}!g\+\_\+p\+My\+S\+Q\+L\+Option\+Groups@{g\+\_\+p\+My\+S\+Q\+L\+Option\+Groups}}
+\index{g\+\_\+p\+My\+S\+Q\+L\+Option\+Groups@{g\+\_\+p\+My\+S\+Q\+L\+Option\+Groups}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{g\+\_\+p\+My\+S\+Q\+L\+Option\+Groups}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ g\+\_\+p\+My\+S\+Q\+L\+Option\+Groups\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{pksql_8h_afff3fd7dbfa3cc8cbb449cdf72b7d413}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{ \textcolor{stringliteral}{"MyTimeStamp"}, NULL \}
+\end{DoxyCode}
+\hypertarget{pksql_8h_a7efa7eb2a557374c6f6bef7cf729744d}{}\index{pksql.\+h@{pksql.\+h}!g\+\_\+p\+My\+S\+Q\+L\+Options@{g\+\_\+p\+My\+S\+Q\+L\+Options}}
+\index{g\+\_\+p\+My\+S\+Q\+L\+Options@{g\+\_\+p\+My\+S\+Q\+L\+Options}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{g\+\_\+p\+My\+S\+Q\+L\+Options}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ g\+\_\+p\+My\+S\+Q\+L\+Options\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{pksql_8h_a7efa7eb2a557374c6f6bef7cf729744d}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{ \textcolor{stringliteral}{"MyTimeStamp"}, \textcolor{stringliteral}{"--datadir=./data"}, \textcolor{stringliteral}{"--language=./language"}, \textcolor{stringliteral}{"--skip-innodb"}, \textcolor{stringliteral}{"--key-buffer-size=64M"}, \textcolor{stringliteral}{"
+      --console"},
+        NULL \}
+\end{DoxyCode}
+\hypertarget{pksql_8h_aded104d45b5a4e3f8c13631ef0108f58}{}\index{pksql.\+h@{pksql.\+h}!mm\+Values@{mm\+Values}}
+\index{mm\+Values@{mm\+Values}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{mm\+Values}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short mm\+Values\mbox{[}1024\mbox{]}}\label{pksql_8h_aded104d45b5a4e3f8c13631ef0108f58}
+\hypertarget{pksql_8h_a128323d9598c2ea56dd6ae1e32a94210}{}\index{pksql.\+h@{pksql.\+h}!mm\+Values\+Ptr@{mm\+Values\+Ptr}}
+\index{mm\+Values\+Ptr@{mm\+Values\+Ptr}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{mm\+Values\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ mm\+Values\+Ptr\mbox{[}1024\mbox{]}}\label{pksql_8h_a128323d9598c2ea56dd6ae1e32a94210}
+\hypertarget{pksql_8h_a73c8ca1876a58205f1826be52730108a}{}\index{pksql.\+h@{pksql.\+h}!sz\+S\+Q\+L@{sz\+S\+Q\+L}}
+\index{sz\+S\+Q\+L@{sz\+S\+Q\+L}!pksql.\+h@{pksql.\+h}}
+\subsubsection[{sz\+S\+Q\+L}]{\setlength{\rightskip}{0pt plus 5cm}char sz\+S\+Q\+L\mbox{[}1024\mbox{]}}\label{pksql_8h_a73c8ca1876a58205f1826be52730108a}

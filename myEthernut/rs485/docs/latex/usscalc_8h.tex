@@ -1,0 +1,107 @@
+\section{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/usscalc.h File Reference}
+\label{usscalc_8h}\index{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/usscalc.\+h@{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/usscalc.\+h}}
+{\ttfamily \#include \char`\"{}my\+Uart.\+h\char`\"{}}\\*
+Include dependency graph for usscalc.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{usscalc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{usscalc_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t {\bf get\+Value} (uint16\+\_\+t my\+Param)
+\item 
+void {\bf get\+All\+Values} (uint16\+\_\+t $\ast$my\+Param\+Arr, uint8\+\_\+t length)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t {\bf my\+Telegram} [14]
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{usscalc.\+h@{usscalc.\+h}!get\+All\+Values@{get\+All\+Values}}
+\index{get\+All\+Values@{get\+All\+Values}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{get\+All\+Values(uint16\+\_\+t $\ast$my\+Param\+Arr, uint8\+\_\+t length)}]{\setlength{\rightskip}{0pt plus 5cm}void get\+All\+Values (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t $\ast$}]{my\+Param\+Arr, }
+\item[{uint8\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\label{usscalc_8h_ad7a9eba4da373dcceca0624ff97121d4}
+
+
+Definition at line 106 of file usscalc.\+c.
+
+
+
+References get\+Value().
+
+
+
+Referenced by main().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8h_ad7a9eba4da373dcceca0624ff97121d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{usscalc.\+h@{usscalc.\+h}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{get\+Value(uint16\+\_\+t my\+Param)}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t get\+Value (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{my\+Param}
+\end{DoxyParamCaption}
+)}\label{usscalc_8h_a0d092db893cddedce1266d2971f2cd7f}
+
+
+Definition at line 100 of file usscalc.\+c.
+
+
+
+References my\+Telegram, prep\+Telegram(), and R\+S485\+\_\+\+Query\+Telegram().
+
+
+
+Referenced by get\+All\+Values().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8h_a0d092db893cddedce1266d2971f2cd7f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{usscalc.\+h@{usscalc.\+h}!my\+Telegram@{my\+Telegram}}
+\index{my\+Telegram@{my\+Telegram}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{my\+Telegram}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t my\+Telegram[14]}\label{usscalc_8h_ace4b9a76218fd1cc485563419811a46b}
+
+
+Definition at line 6 of file usscalc.\+h.
+
+
+
+Referenced by calc\+B\+C\+C(), get\+Value(), prep\+Telegram(), and R\+S485\+\_\+\+Query\+Telegram().
+

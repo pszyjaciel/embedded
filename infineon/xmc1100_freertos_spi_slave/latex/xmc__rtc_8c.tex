@@ -1,0 +1,187 @@
+\hypertarget{xmc__rtc_8c}{}\doxysection{Libraries/\+X\+M\+C\+Lib/src/xmc\+\_\+rtc.c File Reference}
+\label{xmc__rtc_8c}\index{Libraries/XMCLib/src/xmc\_rtc.c@{Libraries/XMCLib/src/xmc\_rtc.c}}
+{\ttfamily \#include \char`\"{}xmc\+\_\+scu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xmc\+\_\+rtc.\+h\char`\"{}}\newline
+Include dependency graph for xmc\+\_\+rtc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{xmc__rtc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_afa291a82981dc39ac5f0aaaafd680773}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+S\+E\+C\+O\+N\+DS}}~(59U)
+\begin{DoxyCompactList}\small\item\em R\+TC driver for X\+MC microcontroller family. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_aae2a21f1c703bb3530f9f91ba982166e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+I\+N\+U\+T\+ES}}~(59U)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_afbf62d1bd33352e0e33ea83dd8d535dc}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+H\+O\+U\+RS}}~(23U)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_a531c267f9b96eb128fd2b21a5b9dfd26}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+D\+A\+YS}}~(31U)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_a07ceb3aa89af717cb461fcdc7bbe9174}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+D\+A\+Y\+S\+O\+F\+W\+E\+EK}}~(7U)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_aa2becbb800bcb4159967c817d64fb135}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+O\+N\+TH}}~(12U)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_a2d013fd624ba54362ca18f5dfbc56c0c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+Y\+E\+AR}}~(0x\+F\+F\+F\+FU)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_a8c42547450f9dbcd5e491d4e14649a48}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+P\+R\+E\+S\+C\+A\+L\+ER}}~(0x\+F\+F\+F\+FU)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_af47b94f32e091e40eec58172406214f5}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+O\+F\+F\+S\+ET}}~(1900U)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_ac81639794c17b5a67346f6f1a6df817d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+I\+N\+I\+T\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}~(1U)
+\item 
+\#define \mbox{\hyperlink{xmc__rtc_8c_ac81639794c17b5a67346f6f1a6df817d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+I\+N\+I\+T\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}}~(0U)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga154a51800df4635e2ab026b3c89b3678}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Start}} (void)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop}} (void)
+\item 
+void \mbox{\hyperlink{group___r_t_c_gae593067f20d83f3bfb78f9fbb55f2b66}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Prescaler}} (uint16\+\_\+t prescaler)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}} (const \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} $\ast$const time)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}} (\mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} $\ast$const time)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga6ed60ac9d9ba537b8373be7c35cf7da2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Std\+Format}} (const struct tm $\ast$const stdtime)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga7ea79333ab81d7595d2d36f65d693c1c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time\+Std\+Format}} (struct tm $\ast$const stdtime)
+\item 
+void \mbox{\hyperlink{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm}} (const \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} $\ast$const alarm)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm}} (\mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} $\ast$const alarm)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga9b7300d074526315c349c4de2b655948}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format}} (const struct tm $\ast$const stdtime)
+\item 
+void \mbox{\hyperlink{group___r_t_c_gab7e150db371758a584a7efaf778ec65e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format}} (struct tm $\ast$const stdtime)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___r_t_c_ga303f3ef19eaacd57fd05e4c65759c503}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Event\+Status}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyDate}{Date}
+2015-\/05-\/19 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xmc__rtc_8c_ac81639794c17b5a67346f6f1a6df817d}\label{xmc__rtc_8c_ac81639794c17b5a67346f6f1a6df817d}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_INIT\_SEQUENCE@{XMC\_RTC\_INIT\_SEQUENCE}}
+\index{XMC\_RTC\_INIT\_SEQUENCE@{XMC\_RTC\_INIT\_SEQUENCE}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_INIT\_SEQUENCE}{XMC\_RTC\_INIT\_SEQUENCE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+I\+N\+I\+T\+\_\+\+S\+E\+Q\+U\+E\+N\+CE~(1U)}
+
+
+
+Definition at line 84 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_ac81639794c17b5a67346f6f1a6df817d}\label{xmc__rtc_8c_ac81639794c17b5a67346f6f1a6df817d}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_INIT\_SEQUENCE@{XMC\_RTC\_INIT\_SEQUENCE}}
+\index{XMC\_RTC\_INIT\_SEQUENCE@{XMC\_RTC\_INIT\_SEQUENCE}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_INIT\_SEQUENCE}{XMC\_RTC\_INIT\_SEQUENCE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+I\+N\+I\+T\+\_\+\+S\+E\+Q\+U\+E\+N\+CE~(0U)}
+
+
+
+Definition at line 84 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_a531c267f9b96eb128fd2b21a5b9dfd26}\label{xmc__rtc_8c_a531c267f9b96eb128fd2b21a5b9dfd26}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXDAYS@{XMC\_RTC\_MAXDAYS}}
+\index{XMC\_RTC\_MAXDAYS@{XMC\_RTC\_MAXDAYS}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXDAYS}{XMC\_RTC\_MAXDAYS}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+D\+A\+YS~(31U)}
+
+R\+TC time \+: Maximum days 
+
+Definition at line 73 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_a07ceb3aa89af717cb461fcdc7bbe9174}\label{xmc__rtc_8c_a07ceb3aa89af717cb461fcdc7bbe9174}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXDAYSOFWEEK@{XMC\_RTC\_MAXDAYSOFWEEK}}
+\index{XMC\_RTC\_MAXDAYSOFWEEK@{XMC\_RTC\_MAXDAYSOFWEEK}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXDAYSOFWEEK}{XMC\_RTC\_MAXDAYSOFWEEK}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+D\+A\+Y\+S\+O\+F\+W\+E\+EK~(7U)}
+
+R\+TC time \+: Maximum days of week 
+
+Definition at line 74 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_afbf62d1bd33352e0e33ea83dd8d535dc}\label{xmc__rtc_8c_afbf62d1bd33352e0e33ea83dd8d535dc}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXHOURS@{XMC\_RTC\_MAXHOURS}}
+\index{XMC\_RTC\_MAXHOURS@{XMC\_RTC\_MAXHOURS}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXHOURS}{XMC\_RTC\_MAXHOURS}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+H\+O\+U\+RS~(23U)}
+
+R\+TC time \+: Maximum hours 
+
+Definition at line 72 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_aae2a21f1c703bb3530f9f91ba982166e}\label{xmc__rtc_8c_aae2a21f1c703bb3530f9f91ba982166e}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXMINUTES@{XMC\_RTC\_MAXMINUTES}}
+\index{XMC\_RTC\_MAXMINUTES@{XMC\_RTC\_MAXMINUTES}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXMINUTES}{XMC\_RTC\_MAXMINUTES}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+I\+N\+U\+T\+ES~(59U)}
+
+R\+TC time \+: Maximum minutes 
+
+Definition at line 71 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_aa2becbb800bcb4159967c817d64fb135}\label{xmc__rtc_8c_aa2becbb800bcb4159967c817d64fb135}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXMONTH@{XMC\_RTC\_MAXMONTH}}
+\index{XMC\_RTC\_MAXMONTH@{XMC\_RTC\_MAXMONTH}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXMONTH}{XMC\_RTC\_MAXMONTH}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+O\+N\+TH~(12U)}
+
+R\+TC time \+: Maximum month 
+
+Definition at line 75 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_a8c42547450f9dbcd5e491d4e14649a48}\label{xmc__rtc_8c_a8c42547450f9dbcd5e491d4e14649a48}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXPRESCALER@{XMC\_RTC\_MAXPRESCALER}}
+\index{XMC\_RTC\_MAXPRESCALER@{XMC\_RTC\_MAXPRESCALER}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXPRESCALER}{XMC\_RTC\_MAXPRESCALER}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+P\+R\+E\+S\+C\+A\+L\+ER~(0x\+F\+F\+F\+FU)}
+
+R\+TC time \+: Maximum prescaler 
+
+Definition at line 77 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_afa291a82981dc39ac5f0aaaafd680773}\label{xmc__rtc_8c_afa291a82981dc39ac5f0aaaafd680773}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXSECONDS@{XMC\_RTC\_MAXSECONDS}}
+\index{XMC\_RTC\_MAXSECONDS@{XMC\_RTC\_MAXSECONDS}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXSECONDS}{XMC\_RTC\_MAXSECONDS}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+S\+E\+C\+O\+N\+DS~(59U)}
+
+
+
+R\+TC driver for X\+MC microcontroller family. 
+
+R\+TC time \+: Maximum seconds 
+
+Definition at line 70 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_a2d013fd624ba54362ca18f5dfbc56c0c}\label{xmc__rtc_8c_a2d013fd624ba54362ca18f5dfbc56c0c}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_MAXYEAR@{XMC\_RTC\_MAXYEAR}}
+\index{XMC\_RTC\_MAXYEAR@{XMC\_RTC\_MAXYEAR}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MAXYEAR}{XMC\_RTC\_MAXYEAR}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+Y\+E\+AR~(0x\+F\+F\+F\+FU)}
+
+R\+TC time \+: Maximum year 
+
+Definition at line 76 of file xmc\+\_\+rtc.\+c.
+
+\mbox{\Hypertarget{xmc__rtc_8c_af47b94f32e091e40eec58172406214f5}\label{xmc__rtc_8c_af47b94f32e091e40eec58172406214f5}} 
+\index{xmc\_rtc.c@{xmc\_rtc.c}!XMC\_RTC\_YEAR\_OFFSET@{XMC\_RTC\_YEAR\_OFFSET}}
+\index{XMC\_RTC\_YEAR\_OFFSET@{XMC\_RTC\_YEAR\_OFFSET}!xmc\_rtc.c@{xmc\_rtc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_YEAR\_OFFSET}{XMC\_RTC\_YEAR\_OFFSET}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+O\+F\+F\+S\+ET~(1900U)}
+
+R\+TC year offset \+: Year offset 
+
+Definition at line 78 of file xmc\+\_\+rtc.\+c.
+

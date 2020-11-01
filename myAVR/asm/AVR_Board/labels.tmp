@@ -1,0 +1,25 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8515</DEVICE>
+ <WORKING_DIR>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\delay2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\AVR_Board.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\AVR_Board.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\AVR_Board.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Delay><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\delay2.asm</FILE><LINE>22</LINE></Delay>
+  <loop><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\delay2.asm</FILE><LINE>23</LINE></loop>
+ </LABELS>
+</ASSEMBLER_INFO>

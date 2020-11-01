@@ -1,0 +1,533 @@
+\hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c}{}\doxysection{Dave/\+Model/\+A\+P\+P\+S/\+S\+P\+I\+\_\+\+S\+L\+A\+V\+E/v4\+\_\+0\+\_\+8/\+Templates/spi\+\_\+slave.c File Reference}
+\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c}\index{Dave/Model/APPS/SPI\_SLAVE/v4\_0\_8/Templates/spi\_slave.c@{Dave/Model/APPS/SPI\_SLAVE/v4\_0\_8/Templates/spi\_slave.c}}
+{\ttfamily \#include \char`\"{}spi\+\_\+slave.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+Include dependency graph for spi\+\_\+slave.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a9c0981cc519af73fc0dfde405a7b1269}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+O\+R\+T\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+E\+\_\+\+F\+N\+\_\+\+M\+SK}}~(0x0f\+UL $<$$<$ \mbox{\hyperlink{group___device___peripheral___registers_ga4cfff18018c89b6cc224b43694e9f999}{P\+O\+R\+T0\+\_\+\+I\+O\+C\+R0\+\_\+\+P\+C0\+\_\+\+Pos}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a310a18eaf0173e9d095793561cb4437d}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Validate\+Mode\+Change}} (const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const handle, \mbox{\hyperlink{group___s_p_i_gad590d901ed01f4b5a196542efc34e576}{X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+t}} mode)
+\item 
+\mbox{\hyperlink{_d_a_v_e___common_8h_af1cdc711b2247d97c01f6b71d0d0f2f8}{D\+A\+V\+E\+\_\+\+A\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+t}} \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_aa9fb8a3f79eb27a7ccabc15f26b952fd}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+App\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} A\+PP version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Init}} (const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const handle)
+\begin{DoxyCompactList}\small\item\em Initializes the U\+S\+IC channel as S\+PI slave. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a42d815df1f42c013b4934177228e7e19}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit}} (const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const handle, uint8\+\_\+t $\ast$data\+\_\+ptr, uint32\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Registers a request for transmitting data over S\+PI channel as a slave device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a2736850bf622c755c9a8c927970fa2a7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Receive}} (const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const handle, uint8\+\_\+t $\ast$data\+\_\+ptr, uint32\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Registers a request for receiving data over \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a868de041a4c38386c975bba7012acfff}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode}} (const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const handle, \mbox{\hyperlink{group___s_p_i_gad590d901ed01f4b5a196542efc34e576}{X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+t}} mode)
+\begin{DoxyCompactList}\small\item\em Changes the operation mode of the S\+PI slave channel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a12276fbda8cda39cf5638beef006cff5}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transfer}} (const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const handle, uint8\+\_\+t $\ast$tx\+\_\+dataptr, uint8\+\_\+t $\ast$rx\+\_\+dataptr, uint32\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Registers a request for transmitting and receiving data simultaneously over S\+PI channel as a slave device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyDate}{Date}
+2015-\/12-\/17
+\end{DoxyDate}
+N\+O\+TE\+: This file is generated by D\+A\+VE. Any manual modification done to this file will be lost when the code is regenerated. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a9c0981cc519af73fc0dfde405a7b1269}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a9c0981cc519af73fc0dfde405a7b1269}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_PORT\_ALTERNATE\_FN\_MSK@{SPI\_SLAVE\_PORT\_ALTERNATE\_FN\_MSK}}
+\index{SPI\_SLAVE\_PORT\_ALTERNATE\_FN\_MSK@{SPI\_SLAVE\_PORT\_ALTERNATE\_FN\_MSK}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_PORT\_ALTERNATE\_FN\_MSK}{SPI\_SLAVE\_PORT\_ALTERNATE\_FN\_MSK}}
+{\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+O\+R\+T\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+E\+\_\+\+F\+N\+\_\+\+M\+SK~(0x0f\+UL $<$$<$ \mbox{\hyperlink{group___device___peripheral___registers_ga4cfff18018c89b6cc224b43694e9f999}{P\+O\+R\+T0\+\_\+\+I\+O\+C\+R0\+\_\+\+P\+C0\+\_\+\+Pos}})}
+
+
+
+Definition at line 62 of file spi\+\_\+slave.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_aa9fb8a3f79eb27a7ccabc15f26b952fd}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_aa9fb8a3f79eb27a7ccabc15f26b952fd}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_GetAppVersion@{SPI\_SLAVE\_GetAppVersion}}
+\index{SPI\_SLAVE\_GetAppVersion@{SPI\_SLAVE\_GetAppVersion}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_GetAppVersion()}{SPI\_SLAVE\_GetAppVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_d_a_v_e___common_8h_af1cdc711b2247d97c01f6b71d0d0f2f8}{D\+A\+V\+E\+\_\+\+A\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+t}} S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+App\+Version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} A\+PP version. 
+
+\begin{DoxyReturn}{Returns}
+D\+A\+V\+E\+\_\+\+A\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+t A\+PP version information (major, minor and patch number)
+\end{DoxyReturn}
+Example Usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_d_a_v_e_8h}{DAVE.h}}>}}
+\DoxyCodeLine{\textcolor{comment}{//Example below, transmits data to master only if the version of the SPI\_SLAVE APP is v4.0.x}}
+\DoxyCodeLine{\textcolor{comment}{//Value of x can be anything.}}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}} init\_status;}
+\DoxyCodeLine{  \mbox{\hyperlink{struct_d_a_v_e___a_p_p___v_e_r_s_i_o_n}{DAVE\_APP\_VERSION\_t}} spi\_slave\_version;}
+\DoxyCodeLine{  uint8\_t valid\_data[] = \{0x55, 0xaa, 0x5a, 0xa5\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{  init\_status = (\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}})\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}{SPI\_SLAVE\_Init}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}});}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}(init\_status == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{SPI\_SLAVE\_STATUS\_SUCCESS}})}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    spi\_slave\_version = \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_aa9fb8a3f79eb27a7ccabc15f26b952fd}{SPI\_SLAVE\_GetAppVersion}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{//Check the APP version}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}((spi\_slave\_version.\mbox{\hyperlink{struct_d_a_v_e___a_p_p___v_e_r_s_i_o_n_ac0919cab9e3656da0427f23f9a53dc35}{major}} == 4) \&\&}
+\DoxyCodeLine{      (spi\_slave\_version.\mbox{\hyperlink{struct_d_a_v_e___a_p_p___v_e_r_s_i_o_n_a56569cf0698e7815530195bdae9a1084}{minor}} == 0))}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{      \textcolor{comment}{//Transmit data}}
+\DoxyCodeLine{      \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a42d815df1f42c013b4934177228e7e19}{SPI\_SLAVE\_Transmit}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, valid\_data, \textcolor{keyword}{sizeof}(valid\_data));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{else}}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \mbox{\hyperlink{group___c_o_m_m_o_n_ga6d01dd58e9748e537c15f5f187bbaa90}{XMC\_DEBUG}}(\textcolor{stringliteral}{"main: Application initialization failed"});}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(1U)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} 1U;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Definition at line 111 of file spi\+\_\+slave.\+c.
+
+
+
+References D\+A\+V\+E\+\_\+\+A\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+::major, D\+A\+V\+E\+\_\+\+A\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+::minor, D\+A\+V\+E\+\_\+\+A\+P\+P\+\_\+\+V\+E\+R\+S\+I\+O\+N\+::patch, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON, and S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+A\+T\+C\+H\+\_\+\+V\+E\+R\+S\+I\+ON.
+
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_Init@{SPI\_SLAVE\_Init}}
+\index{SPI\_SLAVE\_Init@{SPI\_SLAVE\_Init}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_Init()}{SPI\_SLAVE\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const}]{handle }\end{DoxyParamCaption})}
+
+
+
+Initializes the U\+S\+IC channel as S\+PI slave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Pointer to static and dynamic attributes of A\+PP configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t\+: Status of \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} driver initialization.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}} -\/ on successful initialization.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa2b61f64597a5a173131aadb5bcfba98b}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}} -\/ if initialization fails.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa7cd58e96cab2a4169d5397860d97f84f}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}} -\/ if \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} channel is busy.~\newline
+ 
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Initializes IO pins used for the \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} communication, configures U\+S\+IC registers based on the G\+UI modifications. It also configures selected interrupts, D\+MA channels and peripheral register bitfields. ~\newline
+
+\end{DoxyParagraph}
+Example Usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{ \#include <\mbox{\hyperlink{_d_a_v_e_8h}{DAVE.h}}>}         \textcolor{comment}{//Declarations from DAVE Code Generation (includes SFR declaration)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{ \{}
+\DoxyCodeLine{   \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}} init\_status;}
+\DoxyCodeLine{}
+\DoxyCodeLine{   init\_status = (\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}})\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}{SPI\_SLAVE\_Init}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}});}
+\DoxyCodeLine{   \textcolor{keywordflow}{if}(init\_status == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{SPI\_SLAVE\_STATUS\_SUCCESS}})}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{       \textcolor{keywordflow}{while}(1U)}
+\DoxyCodeLine{       \{}
+\DoxyCodeLine{       \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{    \mbox{\hyperlink{group___c_o_m_m_o_n_ga6d01dd58e9748e537c15f5f187bbaa90}{XMC\_DEBUG}}(\textcolor{stringliteral}{"main: Application initialization failed"});}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(1U)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1U;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Definition at line 132 of file spi\+\_\+slave.\+c.
+
+
+
+References S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::fptr\+\_\+spi\+\_\+slave\+\_\+config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::runtime, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS, and X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a310a18eaf0173e9d095793561cb4437d}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a310a18eaf0173e9d095793561cb4437d}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_lValidateModeChange@{SPI\_SLAVE\_lValidateModeChange}}
+\index{SPI\_SLAVE\_lValidateModeChange@{SPI\_SLAVE\_lValidateModeChange}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_lValidateModeChange()}{SPI\_SLAVE\_lValidateModeChange()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Validate\+Mode\+Change (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const}]{handle,  }\item[{\mbox{\hyperlink{group___s_p_i_gad590d901ed01f4b5a196542efc34e576}{X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+t}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 422 of file spi\+\_\+slave.\+c.
+
+
+
+References S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+I\+N\+\_\+\+C\+O\+N\+F\+I\+G\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::dx0\+\_\+source, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::mosi0\+\_\+pin\+\_\+config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::mosi1\+\_\+pin\+\_\+config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::spi\+\_\+configured\+\_\+mode, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+I\+N\+P\+U\+T\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+O\+R\+T\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+E\+\_\+\+F\+N\+\_\+\+M\+SK, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS, X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD, and X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+H\+A\+L\+F\+D\+U\+P\+L\+EX.
+
+
+
+Referenced by S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode().
+
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a2736850bf622c755c9a8c927970fa2a7}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a2736850bf622c755c9a8c927970fa2a7}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_Receive@{SPI\_SLAVE\_Receive}}
+\index{SPI\_SLAVE\_Receive@{SPI\_SLAVE\_Receive}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_Receive()}{SPI\_SLAVE\_Receive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Receive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const}]{handle,  }\item[{uint8\+\_\+t $\ast$}]{data\+\_\+ptr,  }\item[{uint32\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Registers a request for receiving data over \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Pointer to S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t handle structure \\
+\hline
+{\em data\+\_\+ptr} & Pointer to data of type uint8\+\_\+t. \\
+\hline
+{\em count} & Total no of bytes to be received.~\newline
+ {\bfseries{Range\+:}} minimum= 1, maximum= maximum value supported by type uint32\+\_\+t.~\newline
+ In D\+MA mode, a maximum of 4095 words can be received in one attempt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t\+: Status for receive request.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}} if the request is accepted.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa7cd58e96cab2a4169d5397860d97f84f}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}} if a reception is in progress.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa47144456271484b41a6abc5bbe4e7005}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+V\+A\+L\+ID}} if the data\+\_\+ptr is N\+U\+LL or count is 0. ~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Data will be received from the S\+PI master synchronously. After the requested number of data bytes are received, optionally, the user configured callback function will be executed. Data reception is accomplished using the receive mode selected in the UI. {\bfseries{Interrupt\+:}}~\newline
+ Based on the UI configuration, either standard receive buffer(\+R\+B\+U\+F) or receive F\+I\+F\+O(\+O\+U\+T) is used for data reception. An interrupt is configured for reading received data from the bus. This function only registers a request to receive a number of data bytes from a U\+S\+IC channel. If F\+I\+FO is configured for reception, the F\+I\+FO limit is dynamically configured to optimally utilize the C\+PU load. Before starting data reception, the receive buffers are flushed. So only those data, received after calling the A\+PI, will be placed in the user buffer. When all the requested number of data bytes are received, the configured callback function will be executed. If a callback function is not configured, the user has to poll for the value of the variable, {\itshape handle-\/$>$runtime-\/$>$rx\+\_\+busy} to be false. The value is updated to {\itshape false} when all the requested number of data bytes are received. ~\newline
+ {\bfseries{D\+MA\+:}}~\newline
+ D\+MA mode is available only in X\+M\+C4x family of microcontrollers. In this mode, a D\+MA channel is configured for receiving data from standard receive buffer(\+R\+B\+U\+F) to the user buffer. By calling this A\+PI, the D\+MA channel destination address is configured to the user buffer and the channel is enabled. Receive F\+I\+FO will not be used when the receive mode is D\+MA. Before starting data reception, the receive buffers are flushed. So only those data, received after calling the A\+PI, will be placed in the user buffer. When all the requested number of data bytes are received, the configured callback function will be executed. If a callback function is not configured, the user has to poll for the value of the variable, {\itshape handle-\/$>$runtime-\/$>$rx\+\_\+busy} to be false. The value is updated to {\itshape false} when all the requested number of data bytes are received. ~\newline
+ {\bfseries{Direct}}~\newline
+ In Direct receive mode, neither interrupt nor D\+MA is used. The A\+PI polls the receive flag to read the received data and waits for all the requested number of bytes to be received. Based on F\+I\+FO configuration, either R\+B\+UF or O\+UT register is used for reading received data. Before starting data reception, the receive buffers are flushed. So only those data, received after calling the A\+PI, will be placed in the user buffer. {\itshape {\bfseries{ Note\+:}} In Direct mode, the A\+PI blocks the C\+PU until the count of bytes requested is received. If this behaviour is not desired, use other A\+P\+Is like \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_ac594595d2a6825e686fea00519ac8894}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+Received\+Word}}, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+Protocol\+Status etc.}
+\end{DoxyParagraph}
+Example Usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{ \#include <\mbox{\hyperlink{_d_a_v_e_8h}{DAVE.h}}>}         \textcolor{comment}{//Declarations from DAVE Code Generation (includes SFR declaration)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{//Pre-\/condition:}}
+\DoxyCodeLine{ \textcolor{comment}{//Receive mode should be configured as "Direct".}}
+\DoxyCodeLine{ \textcolor{comment}{//Description:}}
+\DoxyCodeLine{ \textcolor{comment}{//Receives 10 bytes from master.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{ \{}
+\DoxyCodeLine{   \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}} init\_status;}
+\DoxyCodeLine{   uint8\_t ReadData[10];}
+\DoxyCodeLine{}
+\DoxyCodeLine{   init\_status = (\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}})\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}{SPI\_SLAVE\_Init}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}});}
+\DoxyCodeLine{   \textcolor{keywordflow}{if}(init\_status == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{SPI\_SLAVE\_STATUS\_SUCCESS}})}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a2736850bf622c755c9a8c927970fa2a7}{SPI\_SLAVE\_Receive}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, ReadData, 10) == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{SPI\_SLAVE\_STATUS\_SUCCESS}})}
+\DoxyCodeLine{     \{}
+\DoxyCodeLine{       \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a42d815df1f42c013b4934177228e7e19}{SPI\_SLAVE\_Transmit}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, ReadData, 10);}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{    \mbox{\hyperlink{group___c_o_m_m_o_n_ga6d01dd58e9748e537c15f5f187bbaa90}{XMC\_DEBUG}}(\textcolor{stringliteral}{"main: Application initialization failed"});}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(1U)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1U;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Definition at line 207 of file spi\+\_\+slave.\+c.
+
+
+
+References S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::receive\+\_\+mode, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::runtime, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::rx\+\_\+busy, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Receive\+I\+R\+Q(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+O\+D\+E\+\_\+\+M\+I\+S\+M\+A\+T\+CH, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+R\+E\+CT, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+D\+MA, and S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a2736850bf622c755c9a8c927970fa2a7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a868de041a4c38386c975bba7012acfff}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a868de041a4c38386c975bba7012acfff}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_SetMode@{SPI\_SLAVE\_SetMode}}
+\index{SPI\_SLAVE\_SetMode@{SPI\_SLAVE\_SetMode}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_SetMode()}{SPI\_SLAVE\_SetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const}]{handle,  }\item[{\mbox{\hyperlink{group___s_p_i_gad590d901ed01f4b5a196542efc34e576}{X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+t}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Changes the operation mode of the S\+PI slave channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} A\+PP handle pointer of type \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} \\
+\hline
+{\em mode} & Operation mode to be configured.~\newline
+{\bfseries{Range\+:}} X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD -\/ Full duplex ~\newline
+ X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+H\+A\+L\+F\+D\+U\+P\+L\+EX -\/ Half duplex ~\newline
+ X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+D\+U\+AL -\/ Dual S\+PI ~\newline
+ X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+Q\+U\+AD -\/ Quad S\+PI ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t\+: Status of transmit request.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}} if the request is accepted.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa7cd58e96cab2a4169d5397860d97f84f}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}} if a transmission or reception is in progress.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa2b61f64597a5a173131aadb5bcfba98b}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}} if the mode change is not possible.~\newline
+ {\itshape Imp Note\+:} Return value should be validated by user to ensure that the operation mode is changed.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Tries to change the operation mode of the S\+PI channel. Mode change is possible when the operation mode configured in the G\+UI uses higher number of pins than the new mode requested. Mode change is not possible when the G\+UI configured operation mode is \textquotesingle{}Full Duplex\textquotesingle{} or \textquotesingle{}Half Duplex\textquotesingle{}. This is due to the connection between M\+O\+SI and M\+I\+SO pins. In \textquotesingle{}Full Duplex\textquotesingle{} mode, M\+O\+SI pin of the S\+PI slave device will be configured as input. But in \textquotesingle{}Half Duplex\textquotesingle{} mode, the same pin has to be configured as output pin with the alternate function of U\+S\+IC channel D\+O\+U\+T0. Information about the output alternate function will not be available with the A\+PP at runtime. So change of operation mode from \textquotesingle{}Full Duplex\textquotesingle{} to \textquotesingle{}Half Duplex\textquotesingle{} is not possible. Mode change is possible from \textquotesingle{}Quad S\+PI\textquotesingle{} to \textquotesingle{}Dual S\+PI\textquotesingle{} or to \textquotesingle{}Half Duplex\textquotesingle{} or to \textquotesingle{}Full Duplex\textquotesingle{}. Mode change is also possible from \textquotesingle{}Dual S\+PI\textquotesingle{} to \textquotesingle{}Half Duplex\textquotesingle{} or \textquotesingle{}Full Duplex\textquotesingle{}. But mode change from \textquotesingle{}Dual S\+PI\textquotesingle{} to \textquotesingle{}Quad S\+PI\textquotesingle{} is not possible. When the mode change is not possible, the A\+PI will return the status \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa2b61f64597a5a173131aadb5bcfba98b}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+A\+I\+L\+U\+RE}}.
+\end{DoxyParagraph}
+Example Usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{ \#include <\mbox{\hyperlink{_d_a_v_e_8h}{DAVE.h}}>}         \textcolor{comment}{//Declarations from DAVE Code Generation (includes SFR declaration)}}
+\DoxyCodeLine{ \textcolor{comment}{//Precondition:}}
+\DoxyCodeLine{ \textcolor{comment}{//Configure the SPI\_SLAVE APP operation mode as 'Quad SPI'.}}
+\DoxyCodeLine{ \textcolor{comment}{//Description:}}
+\DoxyCodeLine{ \textcolor{comment}{//The following code expects a command from SPI master device (0x08, 0x01) to change the operation mode to 'Half Duplex'}}
+\DoxyCodeLine{ \textcolor{comment}{//After receiving the code, slave device changes opeation mode and starts waiting for 4 words of data.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{ \{}
+\DoxyCodeLine{   \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}} init\_status;}
+\DoxyCodeLine{   uint8\_t Send\_Data[10];}
+\DoxyCodeLine{   uint8\_t Rec\_Data[10];}
+\DoxyCodeLine{}
+\DoxyCodeLine{   init\_status = (\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}})\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}{SPI\_SLAVE\_Init}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}});}
+\DoxyCodeLine{   \textcolor{keywordflow}{if}(init\_status == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{SPI\_SLAVE\_STATUS\_SUCCESS}})}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{     \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a2736850bf622c755c9a8c927970fa2a7}{SPI\_SLAVE\_Receive}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, Rec\_Data, 2);}
+\DoxyCodeLine{     \textcolor{keywordflow}{while}(\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}.\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e_a2d9288cf4952fb01810b84eef243ae59}{runtime}}-\/>\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e___r_u_n_t_i_m_e_ac9855e04281ce4a8cada27f92f888529}{rx\_busy}})}
+\DoxyCodeLine{     \{}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{     \textcolor{keywordflow}{if}((Rec\_Data[0] == 0x08) \&\& (Rec\_Data[1] == 0x01))}
+\DoxyCodeLine{     \{}
+\DoxyCodeLine{       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a868de041a4c38386c975bba7012acfff}{SPI\_SLAVE\_SetMode}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, \mbox{\hyperlink{group___s_p_i_ggaf98c04927b561a5ebeff4ae44c127673a17c7eb1a23dd44233a32bc40e1d91d7b}{XMC\_SPI\_CH\_MODE\_STANDARD\_HALFDUPLEX}}) == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa2b61f64597a5a173131aadb5bcfba98b}{SPI\_SLAVE\_STATUS\_FAILURE}})}
+\DoxyCodeLine{       \{}
+\DoxyCodeLine{         \textcolor{keywordflow}{while}(1);}
+\DoxyCodeLine{       \}}
+\DoxyCodeLine{       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{       \{}
+\DoxyCodeLine{         \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a2736850bf622c755c9a8c927970fa2a7}{SPI\_SLAVE\_Receive}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, Rec\_Data, 4);}
+\DoxyCodeLine{         \textcolor{keywordflow}{while}(\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}.\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e_a2d9288cf4952fb01810b84eef243ae59}{runtime}}-\/>\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e___r_u_n_t_i_m_e_ac9855e04281ce4a8cada27f92f888529}{rx\_busy}})}
+\DoxyCodeLine{         \{}
+\DoxyCodeLine{         \}}
+\DoxyCodeLine{       \}}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{    \mbox{\hyperlink{group___c_o_m_m_o_n_ga6d01dd58e9748e537c15f5f187bbaa90}{XMC\_DEBUG}}(\textcolor{stringliteral}{"main: Application initialization failed"});}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(1U)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1U;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Definition at line 379 of file spi\+\_\+slave.\+c.
+
+
+
+References S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::channel, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+I\+N\+\_\+\+C\+O\+N\+F\+I\+G\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::dx0\+\_\+source, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+I\+N\+\_\+\+C\+O\+N\+F\+I\+G\+::hw\+\_\+control, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::mosi0\+\_\+pin\+\_\+config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::mosi1\+\_\+pin\+\_\+config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+I\+N\+\_\+\+C\+O\+N\+F\+I\+G\+::pin, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+P\+I\+N\+\_\+\+C\+O\+N\+F\+I\+G\+::port, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::runtime, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::rx\+\_\+busy, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::spi\+\_\+current\+\_\+mode, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Validate\+Mode\+Change(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::tx\+\_\+busy, X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+\+D\+I\+S\+A\+B\+L\+ED, X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Init(), X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Hardware\+Control(), X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode(), X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+I\+N0, X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+D\+U\+AL, X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+Q\+U\+AD, X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD, X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+H\+A\+L\+F\+D\+U\+P\+L\+EX, and X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+Set\+Input\+Source().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a868de041a4c38386c975bba7012acfff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a12276fbda8cda39cf5638beef006cff5}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a12276fbda8cda39cf5638beef006cff5}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_Transfer@{SPI\_SLAVE\_Transfer}}
+\index{SPI\_SLAVE\_Transfer@{SPI\_SLAVE\_Transfer}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_Transfer()}{SPI\_SLAVE\_Transfer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transfer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const}]{handle,  }\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+dataptr,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+dataptr,  }\item[{uint32\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Registers a request for transmitting and receiving data simultaneously over S\+PI channel as a slave device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} A\+PP handle pointer of type \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} \\
+\hline
+{\em tx\+\_\+dataptr} & Pointer to data of type uint8\+\_\+t. \\
+\hline
+{\em rx\+\_\+dataptr} & Pointer to data of type uint8\+\_\+t. \\
+\hline
+{\em count} & Total no of words to be transmitted and received.~\newline
+{\bfseries{Range\+:}} minimum= 1, maximum= maximum supported by uint32\+\_\+t.~\newline
+ In D\+MA mode, a maximum of 4095 words can be transferred in one attempt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t\+: Status of transmit request.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}} if the request is accepted.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa7cd58e96cab2a4169d5397860d97f84f}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}} if a transmission is in progress.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa47144456271484b41a6abc5bbe4e7005}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+V\+A\+L\+ID}} if the data\+\_\+ptr is N\+U\+LL or count is 0.~\newline
+ {\itshape Imp Note\+:} Return value should be validated by user to ensure that the request is registered.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Transmits and receives data simultaneously using the S\+PI channel as a slave device. A\+PI is applicable only in {\itshape Full duplex$<$/$>$ operation mode. Data transfer happens based on the individual modes configured for transmission and reception.~\newline
+ Two data pins M\+O\+SI and M\+I\+SO will be used for receiving and transmitting data respectively. A callback function can be configured to execute after completing the transfer when \textquotesingle{}Interrupt\textquotesingle{} or \textquotesingle{}D\+MA\textquotesingle{} mode is used. The callback function should be configured for {\itshape End of receive/transfer callback} in the \textquotesingle{}Interrupt Settings\textquotesingle{} tab. The callback function will be executed when the last word of data is received.}
+\end{DoxyParagraph}
+Example Usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{  \#include <\mbox{\hyperlink{_d_a_v_e_8h}{DAVE.h}}>}         \textcolor{comment}{//Declarations from DAVE Code Generation (includes SFR declaration)}}
+\DoxyCodeLine{\textcolor{comment}{//Precondition: Operation mode should be 'Full Duplex"}}
+\DoxyCodeLine{\textcolor{comment}{//Description: Transmit and receive 9 bytes of data from master in parallel.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}} init\_status;}
+\DoxyCodeLine{    uint8\_t Send\_Data[] = \{1,2,3,4,5,6,7,8,9\};}
+\DoxyCodeLine{    uint8\_t Rec\_Data[10];}
+\DoxyCodeLine{}
+\DoxyCodeLine{    init\_status = (\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}})\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}{SPI\_SLAVE\_Init}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}});}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(init\_status == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{SPI\_SLAVE\_STATUS\_SUCCESS}})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{      \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a12276fbda8cda39cf5638beef006cff5}{SPI\_SLAVE\_Transfer}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, Send\_Data, Rec\_Data, \textcolor{keyword}{sizeof}(Send\_Data));}
+\DoxyCodeLine{      \textcolor{keywordflow}{while}(\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}.\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e_a2d9288cf4952fb01810b84eef243ae59}{runtime}}-\/>\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e___r_u_n_t_i_m_e_ac9855e04281ce4a8cada27f92f888529}{rx\_busy}})}
+\DoxyCodeLine{      \{}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{     \mbox{\hyperlink{group___c_o_m_m_o_n_ga6d01dd58e9748e537c15f5f187bbaa90}{XMC\_DEBUG}}(\textcolor{stringliteral}{"main: Application initialization failed"});}
+\DoxyCodeLine{     \textcolor{keywordflow}{while}(1U)}
+\DoxyCodeLine{     \{}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 1U;}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+ 
+
+Definition at line 801 of file spi\+\_\+slave.\+c.
+
+
+
+References S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::receive\+\_\+mode, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::runtime, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::rx\+\_\+busy, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::spi\+\_\+current\+\_\+mode, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Receive(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+O\+D\+E\+\_\+\+M\+I\+S\+M\+A\+T\+CH, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+R\+E\+CT, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::tx\+\_\+busy, X\+M\+C\+\_\+\+A\+S\+S\+E\+RT, and X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a12276fbda8cda39cf5638beef006cff5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a42d815df1f42c013b4934177228e7e19}\label{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a42d815df1f42c013b4934177228e7e19}} 
+\index{spi\_slave.c@{spi\_slave.c}!SPI\_SLAVE\_Transmit@{SPI\_SLAVE\_Transmit}}
+\index{SPI\_SLAVE\_Transmit@{SPI\_SLAVE\_Transmit}!spi\_slave.c@{spi\_slave.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_SLAVE\_Transmit()}{SPI\_SLAVE\_Transmit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} $\ast$const}]{handle,  }\item[{uint8\+\_\+t $\ast$}]{data\+\_\+ptr,  }\item[{uint32\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Registers a request for transmitting data over S\+PI channel as a slave device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} A\+PP handle pointer of type \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_ad567e5203603becc992942df93ff54f7}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+t}} \\
+\hline
+{\em data\+\_\+ptr} & Pointer to data of type uint8\+\_\+t. \\
+\hline
+{\em count} & Total no of words to be transmitted.~\newline
+{\bfseries{Range\+:}} minimum= 1, maximum= maximum supported by uint32\+\_\+t.~\newline
+ In D\+MA mode, a maximum of 4095 words can be transmitted in one attempt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t\+: Status of transmit request.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS}} if the request is accepted.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa7cd58e96cab2a4169d5397860d97f84f}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}} if a transmission is in progress.~\newline
+ \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aa47144456271484b41a6abc5bbe4e7005}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+V\+A\+L\+ID}} if the data\+\_\+ptr is N\+U\+LL or count is 0.~\newline
+ {\itshape Imp Note\+:} Return value should be validated by user to ensure that the request is registered.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Transmits data using the S\+PI channel as a slave device. Transmission is accomplished using the transmit mode as configured in the UI.~\newline
+ {\bfseries{Interrupt\+:}}~\newline
+ The data transmission is accomplished using transmit interrupt. User can configure a callback function in the A\+PP UI. When the data is fully transmitted, the callback function will be executed. If transmit F\+I\+FO is enabled, the trigger limit is set to 1. So the transmit interrupt will be generated when all the data in F\+I\+FO is moved out of F\+I\+FO. The A\+PP handle\textquotesingle{}s runtime structure is used to store the data pointer, count, data index and status of transmission. This function only registers a data transmission request if there is no active transmission in progress. Actual data transmission happens in the transmit interrupt service routine. A trigger is generated for the transmit interrupt to start loading the data to the transmit buffer. If transmit F\+I\+FO is configured, the data is filled into the F\+I\+FO. Transmit interrupt will be generated subsequently when the transmit F\+I\+FO is empty. At this point of time, if there is some more data to be transmitted, it is loaded to the F\+I\+FO again. When F\+I\+FO is not enabled, data is transmitted one byte at a time. On transmission of each byte an interrupt is generated and the next byte is transmitted in the interrupt service routine. Callback function is executed when all the data bytes are transmitted. If a callback function is not configured, user has to poll for the value of {\itshape tx\+\_\+busy} flag of the A\+PP handle structure( {\itshape handle-\/$>$runtime-\/$>$tx\+\_\+busy} ) to check for the completion of data transmission.~\newline
+ {\bfseries{D\+MA\+:}}~\newline
+ A D\+MA channel is configured to provide data to the S\+PI channel transmit buffer. This removes the load off the C\+PU. This A\+PI will only configure and enable the D\+MA channel by specifying the data buffer and count of bytes to transmit. Rest is taken care without the C\+PU\textquotesingle{}s intervention. User can configure a callback function in the A\+PP UI. When the transmission is complete, the callback function will be executed. F\+I\+FO will not be used in D\+MA mode. Receive start interrupt is configured for triggering the D\+MA channel. So each byte is transmitted in the background through the D\+MA channel. If the callback function is not configured, {\itshape handle-\/$>$runtime-\/$>$tx\+\_\+busy} flag can be checked to verify if the transmission is complete. {\bfseries{Direct\+:}}~\newline
+ Data will be transmitted using polling method. Status flags are used to check if data can be transmitted. {\itshape {\bfseries{ Note\+:}} In Direct mode, the A\+PI blocks the C\+PU until the count of bytes requested is transmitted. If this behavior is not desired, use other A\+P\+Is like \mbox{\hyperlink{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8h_a825941e82869ed00dd4b3104df28ec17}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit\+Word}}, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+Protocol\+Status etc.}
+\end{DoxyParagraph}
+Example Usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{ \#include <\mbox{\hyperlink{_d_a_v_e_8h}{DAVE.h}}>}         \textcolor{comment}{//Declarations from DAVE Code Generation (includes SFR declaration)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{//Pre-\/condition:}}
+\DoxyCodeLine{ \textcolor{comment}{//Transmit mode should be configured as "Direct".}}
+\DoxyCodeLine{ \textcolor{comment}{//Description:}}
+\DoxyCodeLine{ \textcolor{comment}{//Transmits 9 bytes to the master.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{ \{}
+\DoxyCodeLine{   \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}} init\_status;}
+\DoxyCodeLine{   uint8\_t Send\_Data[] = \{1,2,3,4,5,6,7,8,9\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{   init\_status = (\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_adb20e134f4551b23e6f4d0e6ff1f7c0e}{SPI\_SLAVE\_STATUS\_t}})\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a3af5e9264c3207f6c399b49c903616db}{SPI\_SLAVE\_Init}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}});}
+\DoxyCodeLine{   \textcolor{keywordflow}{if}(init\_status == \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_a1ea09b4e1ba0c9a15d5618a1eac9907aac4fa1d678cafce28be1fa6daa95ca4c3}{SPI\_SLAVE\_STATUS\_SUCCESS}})}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{     \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c_a42d815df1f42c013b4934177228e7e19}{SPI\_SLAVE\_Transmit}}(\&\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}, Send\_Data, \textcolor{keyword}{sizeof}(Send\_Data));}
+\DoxyCodeLine{     \textcolor{keywordflow}{while}(\mbox{\hyperlink{spi__slave__conf_8c_a271b28af54fc7e2d8cda61e0c01f0268}{SPI\_SLAVE\_0}}.\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e_a2d9288cf4952fb01810b84eef243ae59}{runtime}}-\/>\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e___r_u_n_t_i_m_e_a87cec495862e175ab503d9d8cddf4bec}{tx\_busy}})}
+\DoxyCodeLine{     \{}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{   \{}
+\DoxyCodeLine{    \mbox{\hyperlink{group___c_o_m_m_o_n_ga6d01dd58e9748e537c15f5f187bbaa90}{XMC\_DEBUG}}(\textcolor{stringliteral}{"main: Application initialization failed"});}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(1U)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1U;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Definition at line 158 of file spi\+\_\+slave.\+c.
+
+
+
+References S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::config, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::runtime, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Transmit\+I\+R\+Q(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+O\+D\+E\+\_\+\+M\+I\+S\+M\+A\+T\+CH, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+R\+E\+CT, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+D\+MA, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT, S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+::transmit\+\_\+mode, and S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::tx\+\_\+busy.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_model_2_a_p_p_s_2_s_p_i___s_l_a_v_e_2v4__0__8_2_templates_2spi__slave_8c_a42d815df1f42c013b4934177228e7e19_cgraph}
+\end{center}
+\end{figure}

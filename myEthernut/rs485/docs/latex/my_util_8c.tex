@@ -1,0 +1,197 @@
+\section{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/my\+Util.c File Reference}
+\label{my_util_8c}\index{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/my\+Util.\+c@{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/my\+Util.\+c}}
+{\ttfamily \#include \char`\"{}my\+Util.\+h\char`\"{}}\\*
+Include dependency graph for my\+Util.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{my_util_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf print\+\_\+bin\+Byte} (uint8\+\_\+t my\+Byte)
+\item 
+void {\bf print\+\_\+hex\+Byte} (uint8\+\_\+t my\+Byte)
+\item 
+void {\bf print\+\_\+hex\+Word} (uint16\+\_\+t hword)
+\item 
+void {\bf print\+\_\+hex\+Address} (uint16\+\_\+t address)
+\item 
+void {\bf print\+Str\+In\+Hex} (char $\ast$a\+String)
+\item 
+void {\bf deb\+\_\+print} (char $\ast$a\+String, uint8\+\_\+t byte)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{my\+Util.\+c@{my\+Util.\+c}!deb\+\_\+print@{deb\+\_\+print}}
+\index{deb\+\_\+print@{deb\+\_\+print}!my\+Util.\+c@{my\+Util.\+c}}
+\subsubsection[{deb\+\_\+print(char $\ast$a\+String, uint8\+\_\+t byte)}]{\setlength{\rightskip}{0pt plus 5cm}void deb\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{a\+String, }
+\item[{uint8\+\_\+t}]{byte}
+\end{DoxyParamCaption}
+)}\label{my_util_8c_a2f9f5b067182da7e5194b95dd69796d5}
+
+
+Definition at line 179 of file my\+Util.\+c.
+
+
+
+References R\+S232\+\_\+putstring().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_util_8c_a2f9f5b067182da7e5194b95dd69796d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Util.\+c@{my\+Util.\+c}!print\+\_\+bin\+Byte@{print\+\_\+bin\+Byte}}
+\index{print\+\_\+bin\+Byte@{print\+\_\+bin\+Byte}!my\+Util.\+c@{my\+Util.\+c}}
+\subsubsection[{print\+\_\+bin\+Byte(uint8\+\_\+t my\+Byte)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+bin\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{my\+Byte}
+\end{DoxyParamCaption}
+)}\label{my_util_8c_a446d5fa92eead663eb3c401c3728b49f}
+
+
+Definition at line 16 of file my\+Util.\+c.
+
+
+
+References R\+S232\+\_\+putstring(), and R\+S232\+\_\+\+Write\+Char().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_util_8c_a446d5fa92eead663eb3c401c3728b49f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Util.\+c@{my\+Util.\+c}!print\+\_\+hex\+Address@{print\+\_\+hex\+Address}}
+\index{print\+\_\+hex\+Address@{print\+\_\+hex\+Address}!my\+Util.\+c@{my\+Util.\+c}}
+\subsubsection[{print\+\_\+hex\+Address(uint16\+\_\+t address)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+hex\+Address (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{address}
+\end{DoxyParamCaption}
+)}\label{my_util_8c_afb61822546c6e61b88e5e165764a3ccb}
+
+
+Definition at line 109 of file my\+Util.\+c.
+
+
+
+References R\+S232\+\_\+putstring().
+
+
+
+Referenced by read\+R\+T\+L\+Memory(), and test\+Memory().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_util_8c_afb61822546c6e61b88e5e165764a3ccb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Util.\+c@{my\+Util.\+c}!print\+\_\+hex\+Byte@{print\+\_\+hex\+Byte}}
+\index{print\+\_\+hex\+Byte@{print\+\_\+hex\+Byte}!my\+Util.\+c@{my\+Util.\+c}}
+\subsubsection[{print\+\_\+hex\+Byte(uint8\+\_\+t my\+Byte)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+hex\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{my\+Byte}
+\end{DoxyParamCaption}
+)}\label{my_util_8c_aebd073f6dad448b0012eef8a8fd982fb}
+
+
+Definition at line 35 of file my\+Util.\+c.
+
+
+
+References R\+S232\+\_\+putstring().
+
+
+
+Referenced by display\+Telegram(), print\+Str\+In\+Hex(), and Test\+External\+Ram().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_util_8c_aebd073f6dad448b0012eef8a8fd982fb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Util.\+c@{my\+Util.\+c}!print\+\_\+hex\+Word@{print\+\_\+hex\+Word}}
+\index{print\+\_\+hex\+Word@{print\+\_\+hex\+Word}!my\+Util.\+c@{my\+Util.\+c}}
+\subsubsection[{print\+\_\+hex\+Word(uint16\+\_\+t hword)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+hex\+Word (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{hword}
+\end{DoxyParamCaption}
+)}\label{my_util_8c_a462f788430a8411cca8cfe2116118e31}
+
+
+Definition at line 49 of file my\+Util.\+c.
+
+
+
+References R\+S232\+\_\+putstring().
+
+
+
+Referenced by main(), read\+R\+T\+L\+Memory(), test\+Memory(), and Test\+Realtek().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_util_8c_a462f788430a8411cca8cfe2116118e31_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Util.\+c@{my\+Util.\+c}!print\+Str\+In\+Hex@{print\+Str\+In\+Hex}}
+\index{print\+Str\+In\+Hex@{print\+Str\+In\+Hex}!my\+Util.\+c@{my\+Util.\+c}}
+\subsubsection[{print\+Str\+In\+Hex(char $\ast$a\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Str\+In\+Hex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{a\+String}
+\end{DoxyParamCaption}
+)}\label{my_util_8c_a6d7f0f873267ba014418802d89b68eb1}
+
+
+Definition at line 169 of file my\+Util.\+c.
+
+
+
+References print\+\_\+hex\+Byte().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_util_8c_a6d7f0f873267ba014418802d89b68eb1_cgraph}
+\end{center}
+\end{figure}
+
+

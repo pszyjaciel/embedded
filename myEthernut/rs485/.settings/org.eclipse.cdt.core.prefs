@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/AVRDUDEPATH/delimiter=;
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/AVRDUDEPATH/operation=replace
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/AVRDUDEPATH/value=c\:\\WinAVR\\bin
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/PATH/delimiter=;
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/PATH/operation=replace
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/PATH/value=C\:\\WinAVR\\bin;C\:\\WinAVR\\utils\\bin;c\:/Program Files/Java/jre1.8.0_45/bin/server;c\:/Program Files/Java/jre1.8.0_45/bin;c\:/Program Files/Java/jre1.8.0_45/lib/amd64;c\:\\Program Files (x86)\\Microsoft F\#\\v4.0\\;c\:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VSTSDB\\Deploy;c\:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\Common7\\IDE\\;c\:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\BIN;c\:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\Common7\\Tools;c\:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;c\:\\Windows\\Microsoft.NET\\Framework\\v3.5;c\:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\VCPackages;C\:\\Program Files (x86)\\HTML Help Workshop;c\:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v7.0A\\bin\\NETFX 4.0 Tools;c\:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v7.0A\\bin;c\:\\Windows\\System32;c\:\\eclipse\\cygwin\\bin;c\:\\Program Files\\Java\\jre1.8.0_45\\bin;c\:\\PROGRA~2\\MICROS~2.0\\VC;c\:\\PROGRA~2\\MICROS~2.0\\VC\\bin\\amd64;c\:\\PROGRA~2\\MICROS~2.0\\VC\\lib;c\:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/append=true
+environment/project/de.innot.avreclipse.configuration.app.debug.1923169971/appendContributed=true

@@ -1,0 +1,243 @@
+\section{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/my\+Uart.c File Reference}
+\label{my_uart_8c}\index{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/my\+Uart.\+c@{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/my\+Uart.\+c}}
+{\ttfamily \#include \char`\"{}my\+Uart.\+h\char`\"{}}\\*
+Include dependency graph for my\+Uart.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{my_uart_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char {\bf R\+S232\+\_\+\+Read\+Char} (void)
+\item 
+unsigned char {\bf R\+S485\+\_\+\+Read\+Char} (void)
+\item 
+void {\bf R\+S232\+\_\+\+Write\+Char} (unsigned char data)
+\item 
+void {\bf R\+S485\+\_\+\+Write\+Char} (unsigned char data)
+\item 
+void {\bf display\+Telegram} (char $\ast$message, uint8\+\_\+t $\ast${\bf my\+Telegram})
+\item 
+uint8\+\_\+t $\ast$ {\bf R\+S485\+\_\+\+Query\+Telegram} (uint8\+\_\+t $\ast${\bf my\+Telegram})
+\item 
+void {\bf R\+S232\+\_\+putstring} (char $\ast$String\+Ptr)
+\item 
+void {\bf R\+S485\+\_\+putstring} (char $\ast$String\+Ptr)
+\item 
+void {\bf R\+S232\+\_\+init} (uint32\+\_\+t baudrate)
+\item 
+void {\bf R\+S485\+\_\+init} (uint32\+\_\+t baudrate)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{my\+Uart.\+c@{my\+Uart.\+c}!display\+Telegram@{display\+Telegram}}
+\index{display\+Telegram@{display\+Telegram}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{display\+Telegram(char $\ast$message, uint8\+\_\+t $\ast$my\+Telegram)}]{\setlength{\rightskip}{0pt plus 5cm}void display\+Telegram (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{message, }
+\item[{uint8\+\_\+t $\ast$}]{my\+Telegram}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_abb3edba44fb4fb37ad1aa38cce413c3a}
+
+
+Definition at line 39 of file my\+Uart.\+c.
+
+
+
+References print\+\_\+hex\+Byte(), and R\+S232\+\_\+putstring().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{my_uart_8c_abb3edba44fb4fb37ad1aa38cce413c3a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S232\+\_\+init@{R\+S232\+\_\+init}}
+\index{R\+S232\+\_\+init@{R\+S232\+\_\+init}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S232\+\_\+init(uint32\+\_\+t baudrate)}]{\setlength{\rightskip}{0pt plus 5cm}void R\+S232\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{baudrate}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_a06c2a1060a933565013c7e5977139244}
+
+
+Definition at line 92 of file my\+Uart.\+c.
+
+
+
+References F\+\_\+\+C\+P\+U.
+
+
+
+Referenced by main().
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S232\+\_\+putstring@{R\+S232\+\_\+putstring}}
+\index{R\+S232\+\_\+putstring@{R\+S232\+\_\+putstring}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S232\+\_\+putstring(char $\ast$\+String\+Ptr)}]{\setlength{\rightskip}{0pt plus 5cm}void R\+S232\+\_\+putstring (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{String\+Ptr}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_a60eaeaa21312415e8b5c05f5376f3541}
+
+
+Definition at line 77 of file my\+Uart.\+c.
+
+
+
+References R\+S232\+\_\+\+Write\+Char().
+
+
+
+Referenced by deb\+\_\+print(), display\+Telegram(), main(), print\+\_\+bin\+Byte(), print\+\_\+hex\+Address(), print\+\_\+hex\+Byte(), print\+\_\+hex\+Word(), read\+R\+T\+L\+Memory(), Test\+External\+Ram(), test\+Memory(), and Test\+Realtek().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{my_uart_8c_a60eaeaa21312415e8b5c05f5376f3541_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S232\+\_\+\+Read\+Char@{R\+S232\+\_\+\+Read\+Char}}
+\index{R\+S232\+\_\+\+Read\+Char@{R\+S232\+\_\+\+Read\+Char}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S232\+\_\+\+Read\+Char(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char R\+S232\+\_\+\+Read\+Char (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_a50356f8980826894751733073e37ec41}
+
+
+Definition at line 6 of file my\+Uart.\+c.
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S232\+\_\+\+Write\+Char@{R\+S232\+\_\+\+Write\+Char}}
+\index{R\+S232\+\_\+\+Write\+Char@{R\+S232\+\_\+\+Write\+Char}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S232\+\_\+\+Write\+Char(unsigned char data)}]{\setlength{\rightskip}{0pt plus 5cm}void R\+S232\+\_\+\+Write\+Char (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_a1a99be79a25c05250ff2eca4cbbf9fc5}
+
+
+Definition at line 24 of file my\+Uart.\+c.
+
+
+
+Referenced by print\+\_\+bin\+Byte(), and R\+S232\+\_\+putstring().
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S485\+\_\+init@{R\+S485\+\_\+init}}
+\index{R\+S485\+\_\+init@{R\+S485\+\_\+init}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S485\+\_\+init(uint32\+\_\+t baudrate)}]{\setlength{\rightskip}{0pt plus 5cm}void R\+S485\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{baudrate}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_a27f5340823874f42a318aab1e8b4ed50}
+
+
+Definition at line 103 of file my\+Uart.\+c.
+
+
+
+References F\+\_\+\+C\+P\+U.
+
+
+
+Referenced by main().
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S485\+\_\+putstring@{R\+S485\+\_\+putstring}}
+\index{R\+S485\+\_\+putstring@{R\+S485\+\_\+putstring}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S485\+\_\+putstring(char $\ast$\+String\+Ptr)}]{\setlength{\rightskip}{0pt plus 5cm}void R\+S485\+\_\+putstring (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{String\+Ptr}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_accde78cd49a35a1dbb5100640334492b}
+
+
+Definition at line 84 of file my\+Uart.\+c.
+
+
+
+References R\+S485\+\_\+\+Write\+Char().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{my_uart_8c_accde78cd49a35a1dbb5100640334492b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S485\+\_\+\+Query\+Telegram@{R\+S485\+\_\+\+Query\+Telegram}}
+\index{R\+S485\+\_\+\+Query\+Telegram@{R\+S485\+\_\+\+Query\+Telegram}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S485\+\_\+\+Query\+Telegram(uint8\+\_\+t $\ast$my\+Telegram)}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ R\+S485\+\_\+\+Query\+Telegram (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{my\+Telegram}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_a9b1299202b28a668b8039f538539efb1}
+
+
+Definition at line 52 of file my\+Uart.\+c.
+
+
+
+References my\+Telegram, R\+S485\+\_\+\+Read\+Char(), and R\+S485\+\_\+\+Write\+Char().
+
+
+
+Referenced by get\+Value().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{my_uart_8c_a9b1299202b28a668b8039f538539efb1_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S485\+\_\+\+Read\+Char@{R\+S485\+\_\+\+Read\+Char}}
+\index{R\+S485\+\_\+\+Read\+Char@{R\+S485\+\_\+\+Read\+Char}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S485\+\_\+\+Read\+Char(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char R\+S485\+\_\+\+Read\+Char (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_ab56f53b4e7d6fe7165cdef32270c7a39}
+
+
+Definition at line 14 of file my\+Uart.\+c.
+
+
+
+Referenced by R\+S485\+\_\+\+Query\+Telegram().
+
+\index{my\+Uart.\+c@{my\+Uart.\+c}!R\+S485\+\_\+\+Write\+Char@{R\+S485\+\_\+\+Write\+Char}}
+\index{R\+S485\+\_\+\+Write\+Char@{R\+S485\+\_\+\+Write\+Char}!my\+Uart.\+c@{my\+Uart.\+c}}
+\subsubsection[{R\+S485\+\_\+\+Write\+Char(unsigned char data)}]{\setlength{\rightskip}{0pt plus 5cm}void R\+S485\+\_\+\+Write\+Char (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data}
+\end{DoxyParamCaption}
+)}\label{my_uart_8c_aeb49100d16c0c1b323128896ed286558}
+
+
+Definition at line 32 of file my\+Uart.\+c.
+
+
+
+Referenced by R\+S485\+\_\+putstring(), and R\+S485\+\_\+\+Query\+Telegram().
+

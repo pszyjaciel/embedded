@@ -1,0 +1,35 @@
+\hypertarget{group___a_c_m_p}{}\doxysection{A\+C\+MP}
+\label{group___a_c_m_p}\index{ACMP@{ACMP}}
+
+
+Analog Comparator(\+A\+C\+M\+P) low level driver for X\+M\+C1 family of microcontrollers. ~\newline
+  
+
+
+Collaboration diagram for A\+C\+MP\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{group___a_c_m_p}
+\end{center}
+\end{figure}
+Analog Comparator(\+A\+C\+M\+P) low level driver for X\+M\+C1 family of microcontrollers. ~\newline
+ 
+
+The A\+C\+MP module consists of minimum of 3 analog comparators. Each analog comparator has two inputs, I\+NP and I\+NN. Input I\+NP is compared with input I\+NN in the pad voltage domain. It generates a digital comparator output signal. The digital comparator output signal is shifted down from V\+D\+DP power supply voltage level to V\+D\+DC core voltage level. The A\+C\+MP module provides the following functionalities.~\newline
+
+\begin{DoxyEnumerate}
+\item Monitor external voltage level
+\item Operates in low power mode
+\item Provides Inverted ouput option~\newline
+ \begin{DoxyParagraph}{The A\+C\+MP low level driver funtionalities}
+
+\begin{DoxyEnumerate}
+\item Initializes an instance of analog comparator module with the X\+M\+C\+\_\+\+A\+C\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t configuration structure using the A\+PI X\+M\+C\+\_\+\+A\+C\+M\+P\+\_\+\+Init(). 
+\item Programs the source of input(\+I\+N\+P) specified by X\+M\+C\+\_\+\+A\+C\+M\+P\+\_\+\+I\+N\+P\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+t parameter using the A\+PI X\+M\+C\+\_\+\+A\+C\+M\+P\+\_\+\+Set\+Input().  
+\item Sets the low power mode of operation using X\+M\+C\+\_\+\+A\+C\+M\+P\+\_\+\+Set\+Low\+Power\+Mode() A\+PI. 
+\end{DoxyEnumerate}
+\end{DoxyParagraph}
+
+\end{DoxyEnumerate}

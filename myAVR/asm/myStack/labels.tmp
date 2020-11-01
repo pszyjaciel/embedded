@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega644P</DEVICE>
+ <WORKING_DIR>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m644Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.asm</FILE><LINE>50</LINE></start>
+  <delay><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.asm</FILE><LINE>13</LINE></delay>
+  <loop><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.asm</FILE><LINE>27</LINE></loop>
+  <begin2><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.asm</FILE><LINE>71</LINE></begin2>
+  <nie_zero><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\myStack\myStack.asm</FILE><LINE>80</LINE></nie_zero>
+ </LABELS>
+</ASSEMBLER_INFO>

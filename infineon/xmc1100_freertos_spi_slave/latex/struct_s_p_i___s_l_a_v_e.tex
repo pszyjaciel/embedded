@@ -1,0 +1,87 @@
+\hypertarget{struct_s_p_i___s_l_a_v_e}{}\doxysection{S\+P\+I\+\_\+\+S\+L\+A\+VE Struct Reference}
+\label{struct_s_p_i___s_l_a_v_e}\index{SPI\_SLAVE@{SPI\_SLAVE}}
+
+
+Handler structure with pointers to dynamic and static parameters.  
+
+
+
+
+{\ttfamily \#include $<$spi\+\_\+slave.\+h$>$}
+
+
+
+Collaboration diagram for S\+P\+I\+\_\+\+S\+L\+A\+VE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_s_p_i___s_l_a_v_e__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e_a9ae2f55384be7ad44a0718636f3c48e2}{channel}}
+\item 
+const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_aa852af523a47a3240ba85374d27b261a}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$const \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e_accd63fd5559e6323e624dacb8255aba3}{config}}
+\item 
+\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_abe4e8e40717449dae11184b4567cd150}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+\_\+t}} $\ast$const \mbox{\hyperlink{struct_s_p_i___s_l_a_v_e_a2d9288cf4952fb01810b84eef243ae59}{runtime}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handler structure with pointers to dynamic and static parameters. 
+
+Definition at line 252 of file spi\+\_\+slave.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_p_i___s_l_a_v_e_a9ae2f55384be7ad44a0718636f3c48e2}\label{struct_s_p_i___s_l_a_v_e_a9ae2f55384be7ad44a0718636f3c48e2}} 
+\index{SPI\_SLAVE@{SPI\_SLAVE}!channel@{channel}}
+\index{channel@{channel}!SPI\_SLAVE@{SPI\_SLAVE}}
+\doxysubsubsection{\texorpdfstring{channel}{channel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::channel}
+
+U\+S\+IC channel 
+
+Definition at line 254 of file spi\+\_\+slave.\+h.
+
+
+
+Referenced by S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Abort\+Receive(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Abort\+Transmit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Clear\+Flag(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Clear\+R\+X\+F\+I\+F\+O\+Status(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Clear\+T\+X\+F\+I\+F\+O\+Status(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Disable\+Event(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Enable\+Event(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+Flag\+Status(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+Received\+Word(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+R\+X\+F\+I\+F\+O\+Status(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Get\+T\+X\+F\+I\+F\+O\+Status(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Is\+R\+X\+F\+I\+F\+O\+Empty(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Is\+T\+X\+F\+I\+F\+O\+Full(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Receive\+Handler(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Reconfigure\+Rx\+F\+I\+F\+O(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Transmit\+Handler(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+R\+X\+F\+I\+F\+O\+Trigger\+Limit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+T\+X\+F\+I\+F\+O\+Trigger\+Limit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Receive\+I\+R\+Q(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Transmit\+I\+R\+Q(), S\+P\+I\+\_\+\+Slave\+\_\+\+Task(), and S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit\+Word().
+
+\mbox{\Hypertarget{struct_s_p_i___s_l_a_v_e_accd63fd5559e6323e624dacb8255aba3}\label{struct_s_p_i___s_l_a_v_e_accd63fd5559e6323e624dacb8255aba3}} 
+\index{SPI\_SLAVE@{SPI\_SLAVE}!config@{config}}
+\index{config@{config}!SPI\_SLAVE@{SPI\_SLAVE}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_aa852af523a47a3240ba85374d27b261a}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$const S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::config}
+
+\mbox{\hyperlink{struct_s_p_i___s_l_a_v_e}{S\+P\+I\+\_\+\+S\+L\+A\+VE}} configuration structure pointer 
+
+Definition at line 255 of file spi\+\_\+slave.\+h.
+
+
+
+Referenced by S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Abort\+Receive(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Abort\+Transmit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Init(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Receive\+Handler(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Reconfigure\+Rx\+F\+I\+F\+O(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Transmit\+Handler(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Validate\+Mode\+Change(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Receive(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+R\+X\+F\+I\+F\+O\+Trigger\+Limit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+T\+X\+F\+I\+F\+O\+Trigger\+Limit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Receive\+I\+R\+Q(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Transmit\+I\+R\+Q(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transfer(), and S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit().
+
+\mbox{\Hypertarget{struct_s_p_i___s_l_a_v_e_a2d9288cf4952fb01810b84eef243ae59}\label{struct_s_p_i___s_l_a_v_e_a2d9288cf4952fb01810b84eef243ae59}} 
+\index{SPI\_SLAVE@{SPI\_SLAVE}!runtime@{runtime}}
+\index{runtime@{runtime}!SPI\_SLAVE@{SPI\_SLAVE}}
+\doxysubsubsection{\texorpdfstring{runtime}{runtime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h_abe4e8e40717449dae11184b4567cd150}{S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+U\+N\+T\+I\+M\+E\+\_\+t}} $\ast$const S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+::runtime}
+
+Pointer to the structure holding all variables, that can change at runtime 
+
+Definition at line 256 of file spi\+\_\+slave.\+h.
+
+
+
+Referenced by S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+0\+\_\+init(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Abort\+Receive(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Abort\+Transmit(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Init(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Is\+Rx\+Busy(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Is\+Tx\+Busy(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Receive\+Handler(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+l\+Transmit\+Handler(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Receive(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Receive\+I\+R\+Q(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Start\+Transmit\+I\+R\+Q(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transfer(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit(), and S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Transmit\+Word().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dave/\+Generated/\+S\+P\+I\+\_\+\+S\+L\+A\+V\+E/\mbox{\hyperlink{_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8h}{spi\+\_\+slave.\+h}}\end{DoxyCompactItemize}

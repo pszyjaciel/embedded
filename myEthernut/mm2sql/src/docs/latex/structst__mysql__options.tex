@@ -1,0 +1,229 @@
+\hypertarget{structst__mysql__options}{}\section{st\+\_\+mysql\+\_\+options Struct Reference}
+\label{structst__mysql__options}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+
+
+{\ttfamily \#include $<$mysql.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structst__mysql__options_aa8475fa207a033461041fbfd868fe3c6}{connect\+\_\+timeout}
+\item 
+unsigned int \hyperlink{structst__mysql__options_a6fbcc8e03aa4c489bfa23de7f4e0d8f8}{read\+\_\+timeout}
+\item 
+unsigned int \hyperlink{structst__mysql__options_a8956fca97f0263e415546f5624a614d2}{write\+\_\+timeout}
+\item 
+unsigned int \hyperlink{structst__mysql__options_a1403738b86df8bc7056a33b50bd8aff5}{port}
+\item 
+unsigned int \hyperlink{structst__mysql__options_a85283d4471c23b3773ca0c4c01ffb1f7}{protocol}
+\item 
+unsigned long \hyperlink{structst__mysql__options_a92c47dfe1c8de03a65b81863a88c9355}{client\+\_\+flag}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a79fc433d16a9cd4b913a6490fc612bf3}{host}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a9889ada2bcc6e077b8ee984a9c7be6e1}{user}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a76f9c11ae054459cabfc89d30928b786}{password}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a6d4f1507ec3907eda109548da49ee850}{unix\+\_\+socket}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a82f5dcf8b83007fafa33a45583f87ce8}{db}
+\item 
+struct st\+\_\+dynamic\+\_\+array $\ast$ \hyperlink{structst__mysql__options_a6f9eb2e4acb59618e0843bb3c63f58f4}{init\+\_\+commands}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a4cc1dad4e2d110efa24865a636613b6e}{my\+\_\+cnf\+\_\+file}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a28e998c549cbbc33d7d1eba197f1d52f}{my\+\_\+cnf\+\_\+group}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a8e4ad7ebde4a8956788247faf4da20fb}{charset\+\_\+dir}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a965be4c3b508a911b575fc0aa8fc3345}{charset\+\_\+name}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a43176d9b1d3e5e54ac0b2c263ec4441a}{ssl\+\_\+key}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a4723de8759d3e167f5690fe2abfb98a9}{ssl\+\_\+cert}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a418b114edbc344a140c90df9d1f2cd39}{ssl\+\_\+ca}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a19477c3410299535e086c5fe482f06f4}{ssl\+\_\+capath}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_a79dd7a4b9bec6d8d6fb17027dcc49c9e}{ssl\+\_\+cipher}
+\item 
+char $\ast$ \hyperlink{structst__mysql__options_abd61d3820e3904dd30ad1c4c44887d10}{shared\+\_\+memory\+\_\+base\+\_\+name}
+\item 
+unsigned long \hyperlink{structst__mysql__options_a70de1a0467629fc3ccb1b0c12431fb41}{max\+\_\+allowed\+\_\+packet}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_a4c429488249a27b52cbd3757e15c17c9}{use\+\_\+ssl}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_ab142434a4e128b82feeebbe6e2dd5e00}{compress}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_ab653028194e8666e5d7d16194f88675e}{named\+\_\+pipe}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_aba1f9319c86456a855b662ae4b8de31a}{unused1}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_addcd685e426bca0f3aca8dbbe1ffe427}{unused2}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_a961daa92001900751dd15073e7dcfb21}{unused3}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_a23ea8e676bc687b865b5842254e88e6d}{unused4}
+\item 
+enum \hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836}{mysql\+\_\+option} \hyperlink{structst__mysql__options_a76fecd9908ce3203903d987e4b3c5599}{methods\+\_\+to\+\_\+use}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>char $\ast$ \hyperlink{structst__mysql__options_a303edbbc594a8ccbfa3de34aa85ae509}{client\_ip}\\
+\>char $\ast$ \hyperlink{structst__mysql__options_a91d2448d2fd587a02752f34e64f9680d}{bind\_address}\\
+\} \hyperlink{structst__mysql__options_a9ffe17c90b136c23df2cabd2e0eac835}{ci}\\
+
+\end{tabbing}\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_a6a2e197dd368bd0c110ab2e962369abd}{unused5}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__options_a095ec6fb5b58914a518522376a0d49ba}{report\+\_\+data\+\_\+truncation}
+\item 
+int($\ast$ \hyperlink{structst__mysql__options_a3524e3b6573ae25e1b3f26b19d818f10}{local\+\_\+infile\+\_\+init} )(void $\ast$$\ast$, const char $\ast$, void $\ast$)
+\item 
+int($\ast$ \hyperlink{structst__mysql__options_adff315c42cebf0390d3d14f1bee762bc}{local\+\_\+infile\+\_\+read} )(void $\ast$, char $\ast$, unsigned int)
+\item 
+void($\ast$ \hyperlink{structst__mysql__options_a45658a7c3298bbd90e9dc61cee282f05}{local\+\_\+infile\+\_\+end} )(void $\ast$)
+\item 
+int($\ast$ \hyperlink{structst__mysql__options_a79b831a574398e1ba37f0c7052318269}{local\+\_\+infile\+\_\+error} )(void $\ast$, char $\ast$, unsigned int)
+\item 
+void $\ast$ \hyperlink{structst__mysql__options_a54cbdc47b238a839eff42269b871380d}{local\+\_\+infile\+\_\+userdata}
+\item 
+struct st\+\_\+mysql\+\_\+options\+\_\+extention $\ast$ \hyperlink{structst__mysql__options_ac16c1d9c8c28b3daeabb7222cda5e8c2}{extension}
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structst__mysql__options_a91d2448d2fd587a02752f34e64f9680d}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!bind\+\_\+address@{bind\+\_\+address}}
+\index{bind\+\_\+address@{bind\+\_\+address}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{bind\+\_\+address}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::bind\+\_\+address}\label{structst__mysql__options_a91d2448d2fd587a02752f34e64f9680d}
+\hypertarget{structst__mysql__options_a8e4ad7ebde4a8956788247faf4da20fb}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!charset\+\_\+dir@{charset\+\_\+dir}}
+\index{charset\+\_\+dir@{charset\+\_\+dir}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{charset\+\_\+dir}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ st\+\_\+mysql\+\_\+options\+::charset\+\_\+dir}\label{structst__mysql__options_a8e4ad7ebde4a8956788247faf4da20fb}
+\hypertarget{structst__mysql__options_a965be4c3b508a911b575fc0aa8fc3345}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!charset\+\_\+name@{charset\+\_\+name}}
+\index{charset\+\_\+name@{charset\+\_\+name}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{charset\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ st\+\_\+mysql\+\_\+options\+::charset\+\_\+name}\label{structst__mysql__options_a965be4c3b508a911b575fc0aa8fc3345}
+\hypertarget{structst__mysql__options_a9ffe17c90b136c23df2cabd2e0eac835}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!ci@{ci}}
+\index{ci@{ci}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{ci}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   st\+\_\+mysql\+\_\+options\+::ci}\label{structst__mysql__options_a9ffe17c90b136c23df2cabd2e0eac835}
+\hypertarget{structst__mysql__options_a92c47dfe1c8de03a65b81863a88c9355}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!client\+\_\+flag@{client\+\_\+flag}}
+\index{client\+\_\+flag@{client\+\_\+flag}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{client\+\_\+flag}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+options\+::client\+\_\+flag}\label{structst__mysql__options_a92c47dfe1c8de03a65b81863a88c9355}
+\hypertarget{structst__mysql__options_a303edbbc594a8ccbfa3de34aa85ae509}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!client\+\_\+ip@{client\+\_\+ip}}
+\index{client\+\_\+ip@{client\+\_\+ip}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{client\+\_\+ip}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::client\+\_\+ip}\label{structst__mysql__options_a303edbbc594a8ccbfa3de34aa85ae509}
+\hypertarget{structst__mysql__options_ab142434a4e128b82feeebbe6e2dd5e00}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!compress@{compress}}
+\index{compress@{compress}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{compress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::compress}\label{structst__mysql__options_ab142434a4e128b82feeebbe6e2dd5e00}
+\hypertarget{structst__mysql__options_aa8475fa207a033461041fbfd868fe3c6}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!connect\+\_\+timeout@{connect\+\_\+timeout}}
+\index{connect\+\_\+timeout@{connect\+\_\+timeout}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{connect\+\_\+timeout}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+options\+::connect\+\_\+timeout}\label{structst__mysql__options_aa8475fa207a033461041fbfd868fe3c6}
+\hypertarget{structst__mysql__options_a82f5dcf8b83007fafa33a45583f87ce8}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!db@{db}}
+\index{db@{db}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{db}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ st\+\_\+mysql\+\_\+options\+::db}\label{structst__mysql__options_a82f5dcf8b83007fafa33a45583f87ce8}
+\hypertarget{structst__mysql__options_ac16c1d9c8c28b3daeabb7222cda5e8c2}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!extension@{extension}}
+\index{extension@{extension}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}struct st\+\_\+mysql\+\_\+options\+\_\+extention$\ast$ st\+\_\+mysql\+\_\+options\+::extension}\label{structst__mysql__options_ac16c1d9c8c28b3daeabb7222cda5e8c2}
+\hypertarget{structst__mysql__options_a79fc433d16a9cd4b913a6490fc612bf3}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!host@{host}}
+\index{host@{host}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{host}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::host}\label{structst__mysql__options_a79fc433d16a9cd4b913a6490fc612bf3}
+\hypertarget{structst__mysql__options_a6f9eb2e4acb59618e0843bb3c63f58f4}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!init\+\_\+commands@{init\+\_\+commands}}
+\index{init\+\_\+commands@{init\+\_\+commands}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{init\+\_\+commands}]{\setlength{\rightskip}{0pt plus 5cm}struct st\+\_\+dynamic\+\_\+array$\ast$ st\+\_\+mysql\+\_\+options\+::init\+\_\+commands}\label{structst__mysql__options_a6f9eb2e4acb59618e0843bb3c63f58f4}
+\hypertarget{structst__mysql__options_a45658a7c3298bbd90e9dc61cee282f05}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!local\+\_\+infile\+\_\+end@{local\+\_\+infile\+\_\+end}}
+\index{local\+\_\+infile\+\_\+end@{local\+\_\+infile\+\_\+end}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{local\+\_\+infile\+\_\+end}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ st\+\_\+mysql\+\_\+options\+::local\+\_\+infile\+\_\+end) (void $\ast$)}\label{structst__mysql__options_a45658a7c3298bbd90e9dc61cee282f05}
+\hypertarget{structst__mysql__options_a79b831a574398e1ba37f0c7052318269}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!local\+\_\+infile\+\_\+error@{local\+\_\+infile\+\_\+error}}
+\index{local\+\_\+infile\+\_\+error@{local\+\_\+infile\+\_\+error}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{local\+\_\+infile\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ st\+\_\+mysql\+\_\+options\+::local\+\_\+infile\+\_\+error) (void $\ast$, char $\ast$, unsigned int)}\label{structst__mysql__options_a79b831a574398e1ba37f0c7052318269}
+\hypertarget{structst__mysql__options_a3524e3b6573ae25e1b3f26b19d818f10}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!local\+\_\+infile\+\_\+init@{local\+\_\+infile\+\_\+init}}
+\index{local\+\_\+infile\+\_\+init@{local\+\_\+infile\+\_\+init}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{local\+\_\+infile\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ st\+\_\+mysql\+\_\+options\+::local\+\_\+infile\+\_\+init) (void $\ast$$\ast$, const char $\ast$, void $\ast$)}\label{structst__mysql__options_a3524e3b6573ae25e1b3f26b19d818f10}
+\hypertarget{structst__mysql__options_adff315c42cebf0390d3d14f1bee762bc}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!local\+\_\+infile\+\_\+read@{local\+\_\+infile\+\_\+read}}
+\index{local\+\_\+infile\+\_\+read@{local\+\_\+infile\+\_\+read}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{local\+\_\+infile\+\_\+read}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ st\+\_\+mysql\+\_\+options\+::local\+\_\+infile\+\_\+read) (void $\ast$, char $\ast$, unsigned int)}\label{structst__mysql__options_adff315c42cebf0390d3d14f1bee762bc}
+\hypertarget{structst__mysql__options_a54cbdc47b238a839eff42269b871380d}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!local\+\_\+infile\+\_\+userdata@{local\+\_\+infile\+\_\+userdata}}
+\index{local\+\_\+infile\+\_\+userdata@{local\+\_\+infile\+\_\+userdata}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{local\+\_\+infile\+\_\+userdata}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ st\+\_\+mysql\+\_\+options\+::local\+\_\+infile\+\_\+userdata}\label{structst__mysql__options_a54cbdc47b238a839eff42269b871380d}
+\hypertarget{structst__mysql__options_a70de1a0467629fc3ccb1b0c12431fb41}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!max\+\_\+allowed\+\_\+packet@{max\+\_\+allowed\+\_\+packet}}
+\index{max\+\_\+allowed\+\_\+packet@{max\+\_\+allowed\+\_\+packet}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{max\+\_\+allowed\+\_\+packet}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+options\+::max\+\_\+allowed\+\_\+packet}\label{structst__mysql__options_a70de1a0467629fc3ccb1b0c12431fb41}
+\hypertarget{structst__mysql__options_a76fecd9908ce3203903d987e4b3c5599}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!methods\+\_\+to\+\_\+use@{methods\+\_\+to\+\_\+use}}
+\index{methods\+\_\+to\+\_\+use@{methods\+\_\+to\+\_\+use}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{methods\+\_\+to\+\_\+use}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mysql\+\_\+option} st\+\_\+mysql\+\_\+options\+::methods\+\_\+to\+\_\+use}\label{structst__mysql__options_a76fecd9908ce3203903d987e4b3c5599}
+\hypertarget{structst__mysql__options_a4cc1dad4e2d110efa24865a636613b6e}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!my\+\_\+cnf\+\_\+file@{my\+\_\+cnf\+\_\+file}}
+\index{my\+\_\+cnf\+\_\+file@{my\+\_\+cnf\+\_\+file}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{my\+\_\+cnf\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::my\+\_\+cnf\+\_\+file}\label{structst__mysql__options_a4cc1dad4e2d110efa24865a636613b6e}
+\hypertarget{structst__mysql__options_a28e998c549cbbc33d7d1eba197f1d52f}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!my\+\_\+cnf\+\_\+group@{my\+\_\+cnf\+\_\+group}}
+\index{my\+\_\+cnf\+\_\+group@{my\+\_\+cnf\+\_\+group}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{my\+\_\+cnf\+\_\+group}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ st\+\_\+mysql\+\_\+options\+::my\+\_\+cnf\+\_\+group}\label{structst__mysql__options_a28e998c549cbbc33d7d1eba197f1d52f}
+\hypertarget{structst__mysql__options_ab653028194e8666e5d7d16194f88675e}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!named\+\_\+pipe@{named\+\_\+pipe}}
+\index{named\+\_\+pipe@{named\+\_\+pipe}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{named\+\_\+pipe}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::named\+\_\+pipe}\label{structst__mysql__options_ab653028194e8666e5d7d16194f88675e}
+\hypertarget{structst__mysql__options_a76f9c11ae054459cabfc89d30928b786}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!password@{password}}
+\index{password@{password}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ st\+\_\+mysql\+\_\+options\+::password}\label{structst__mysql__options_a76f9c11ae054459cabfc89d30928b786}
+\hypertarget{structst__mysql__options_a1403738b86df8bc7056a33b50bd8aff5}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!port@{port}}
+\index{port@{port}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+options\+::port}\label{structst__mysql__options_a1403738b86df8bc7056a33b50bd8aff5}
+\hypertarget{structst__mysql__options_a85283d4471c23b3773ca0c4c01ffb1f7}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!protocol@{protocol}}
+\index{protocol@{protocol}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{protocol}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+options\+::protocol}\label{structst__mysql__options_a85283d4471c23b3773ca0c4c01ffb1f7}
+\hypertarget{structst__mysql__options_a6fbcc8e03aa4c489bfa23de7f4e0d8f8}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!read\+\_\+timeout@{read\+\_\+timeout}}
+\index{read\+\_\+timeout@{read\+\_\+timeout}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{read\+\_\+timeout}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+options\+::read\+\_\+timeout}\label{structst__mysql__options_a6fbcc8e03aa4c489bfa23de7f4e0d8f8}
+\hypertarget{structst__mysql__options_a095ec6fb5b58914a518522376a0d49ba}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!report\+\_\+data\+\_\+truncation@{report\+\_\+data\+\_\+truncation}}
+\index{report\+\_\+data\+\_\+truncation@{report\+\_\+data\+\_\+truncation}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{report\+\_\+data\+\_\+truncation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::report\+\_\+data\+\_\+truncation}\label{structst__mysql__options_a095ec6fb5b58914a518522376a0d49ba}
+\hypertarget{structst__mysql__options_abd61d3820e3904dd30ad1c4c44887d10}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!shared\+\_\+memory\+\_\+base\+\_\+name@{shared\+\_\+memory\+\_\+base\+\_\+name}}
+\index{shared\+\_\+memory\+\_\+base\+\_\+name@{shared\+\_\+memory\+\_\+base\+\_\+name}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{shared\+\_\+memory\+\_\+base\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::shared\+\_\+memory\+\_\+base\+\_\+name}\label{structst__mysql__options_abd61d3820e3904dd30ad1c4c44887d10}
+\hypertarget{structst__mysql__options_a418b114edbc344a140c90df9d1f2cd39}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!ssl\+\_\+ca@{ssl\+\_\+ca}}
+\index{ssl\+\_\+ca@{ssl\+\_\+ca}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{ssl\+\_\+ca}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::ssl\+\_\+ca}\label{structst__mysql__options_a418b114edbc344a140c90df9d1f2cd39}
+\hypertarget{structst__mysql__options_a19477c3410299535e086c5fe482f06f4}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!ssl\+\_\+capath@{ssl\+\_\+capath}}
+\index{ssl\+\_\+capath@{ssl\+\_\+capath}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{ssl\+\_\+capath}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::ssl\+\_\+capath}\label{structst__mysql__options_a19477c3410299535e086c5fe482f06f4}
+\hypertarget{structst__mysql__options_a4723de8759d3e167f5690fe2abfb98a9}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!ssl\+\_\+cert@{ssl\+\_\+cert}}
+\index{ssl\+\_\+cert@{ssl\+\_\+cert}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{ssl\+\_\+cert}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::ssl\+\_\+cert}\label{structst__mysql__options_a4723de8759d3e167f5690fe2abfb98a9}
+\hypertarget{structst__mysql__options_a79dd7a4b9bec6d8d6fb17027dcc49c9e}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!ssl\+\_\+cipher@{ssl\+\_\+cipher}}
+\index{ssl\+\_\+cipher@{ssl\+\_\+cipher}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{ssl\+\_\+cipher}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::ssl\+\_\+cipher}\label{structst__mysql__options_a79dd7a4b9bec6d8d6fb17027dcc49c9e}
+\hypertarget{structst__mysql__options_a43176d9b1d3e5e54ac0b2c263ec4441a}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!ssl\+\_\+key@{ssl\+\_\+key}}
+\index{ssl\+\_\+key@{ssl\+\_\+key}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{ssl\+\_\+key}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ st\+\_\+mysql\+\_\+options\+::ssl\+\_\+key}\label{structst__mysql__options_a43176d9b1d3e5e54ac0b2c263ec4441a}
+\hypertarget{structst__mysql__options_a6d4f1507ec3907eda109548da49ee850}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!unix\+\_\+socket@{unix\+\_\+socket}}
+\index{unix\+\_\+socket@{unix\+\_\+socket}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{unix\+\_\+socket}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ st\+\_\+mysql\+\_\+options\+::unix\+\_\+socket}\label{structst__mysql__options_a6d4f1507ec3907eda109548da49ee850}
+\hypertarget{structst__mysql__options_aba1f9319c86456a855b662ae4b8de31a}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!unused1@{unused1}}
+\index{unused1@{unused1}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{unused1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::unused1}\label{structst__mysql__options_aba1f9319c86456a855b662ae4b8de31a}
+\hypertarget{structst__mysql__options_addcd685e426bca0f3aca8dbbe1ffe427}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!unused2@{unused2}}
+\index{unused2@{unused2}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{unused2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::unused2}\label{structst__mysql__options_addcd685e426bca0f3aca8dbbe1ffe427}
+\hypertarget{structst__mysql__options_a961daa92001900751dd15073e7dcfb21}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!unused3@{unused3}}
+\index{unused3@{unused3}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{unused3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::unused3}\label{structst__mysql__options_a961daa92001900751dd15073e7dcfb21}
+\hypertarget{structst__mysql__options_a23ea8e676bc687b865b5842254e88e6d}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!unused4@{unused4}}
+\index{unused4@{unused4}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{unused4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::unused4}\label{structst__mysql__options_a23ea8e676bc687b865b5842254e88e6d}
+\hypertarget{structst__mysql__options_a6a2e197dd368bd0c110ab2e962369abd}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!unused5@{unused5}}
+\index{unused5@{unused5}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{unused5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::unused5}\label{structst__mysql__options_a6a2e197dd368bd0c110ab2e962369abd}
+\hypertarget{structst__mysql__options_a4c429488249a27b52cbd3757e15c17c9}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!use\+\_\+ssl@{use\+\_\+ssl}}
+\index{use\+\_\+ssl@{use\+\_\+ssl}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{use\+\_\+ssl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+options\+::use\+\_\+ssl}\label{structst__mysql__options_a4c429488249a27b52cbd3757e15c17c9}
+\hypertarget{structst__mysql__options_a9889ada2bcc6e077b8ee984a9c7be6e1}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!user@{user}}
+\index{user@{user}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{user}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ st\+\_\+mysql\+\_\+options\+::user}\label{structst__mysql__options_a9889ada2bcc6e077b8ee984a9c7be6e1}
+\hypertarget{structst__mysql__options_a8956fca97f0263e415546f5624a614d2}{}\index{st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}!write\+\_\+timeout@{write\+\_\+timeout}}
+\index{write\+\_\+timeout@{write\+\_\+timeout}!st\+\_\+mysql\+\_\+options@{st\+\_\+mysql\+\_\+options}}
+\subsubsection[{write\+\_\+timeout}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+options\+::write\+\_\+timeout}\label{structst__mysql__options_a8956fca97f0263e415546f5624a614d2}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mysql_8h}{mysql.\+h}\end{DoxyCompactItemize}

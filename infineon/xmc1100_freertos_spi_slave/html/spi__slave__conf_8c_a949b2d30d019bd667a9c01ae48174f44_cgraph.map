@@ -1,0 +1,28 @@
+<map id="SPI_SLAVE_0_init" name="SPI_SLAVE_0_init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,351,136,377"/>
+<area shape="rect" id="node2" href="$group___g_p_i_o.html#ga05749322fa717f789b178838955b8c5b" title=" " alt="" coords="241,5,353,32"/>
+<area shape="rect" id="node3" href="$group___g_p_i_o.html#ga90b8519a240ddb93289d8960c6c276b1" title=" " alt="" coords="192,56,403,83"/>
+<area shape="rect" id="node4" href="$group___s_p_i.html#ga564d521ad28281f2476c7e396b9c0e7a" title=" " alt="" coords="184,107,411,133"/>
+<area shape="rect" id="node6" href="$group___s_p_i.html#ga8b16f43a349603e746885a6d0d00b312" title=" " alt="" coords="234,157,361,184"/>
+<area shape="rect" id="node13" href="$group___s_p_i.html#gaff2d02ea8bb6134c17c766c7a0c59c04" title=" " alt="" coords="196,209,399,250"/>
+<area shape="rect" id="node14" href="$group___s_p_i.html#ga52e6177c2885b2456cacbc26d2eaaaae" title=" " alt="" coords="195,275,400,301"/>
+<area shape="rect" id="node16" href="$group___s_p_i.html#ga427979d23a0325fa4f4f3c38d84f4127" title=" " alt="" coords="198,325,397,352"/>
+<area shape="rect" id="node18" href="$group___s_p_i.html#ga16ee7fa348155fd43fc58c18787110db" title=" " alt="" coords="198,376,397,403"/>
+<area shape="rect" id="node20" href="$group___s_p_i.html#gacc7f1ad4ff8a6ae93bd2a466656ad864" title=" " alt="" coords="229,427,366,453"/>
+<area shape="rect" id="node22" href="$group___u_s_i_c.html#ga4ba419dd17bdb7e7be5f5ca757910a00" title=" " alt="" coords="216,478,379,519"/>
+<area shape="rect" id="node23" href="$group___u_s_i_c.html#ga0cce6b36f9c5fc6b9487dcee14a04e1a" title=" " alt="" coords="214,543,381,585"/>
+<area shape="rect" id="node24" href="$group___u_s_i_c.html#ga52f9fc18049dbc906b127e1f3662b4b3" title=" " alt="" coords="205,609,390,650"/>
+<area shape="rect" id="node25" href="$group___u_s_i_c.html#ga7cfe52daa733ba40e9b93fec60b04406" title=" " alt="" coords="217,674,378,715"/>
+<area shape="rect" id="node26" href="$group___u_s_i_c.html#ga63e10af0afcde1c73c39cd6522ac0614" title=" " alt="" coords="214,739,381,781"/>
+<area shape="rect" id="node5" href="$group___u_s_i_c.html#ga64b170120669643099c27e079570c85b" title=" " alt="" coords="459,107,695,133"/>
+<area shape="rect" id="node7" href="$group___u_s_i_c.html#ga0567321036170adb335fef9b36dc3b71" title=" " alt="" coords="497,157,656,184"/>
+<area shape="rect" id="node11" href="$group___u_s_i_c.html#gac9feec95c73b09889e494ec6d6898f4f" title=" " alt="" coords="481,212,672,239"/>
+<area shape="rect" id="node8" href="$group___u_s_i_c.html#ga48113f030b655f6eaa3b9f6b73474785" title=" " alt="" coords="786,107,919,133"/>
+<area shape="rect" id="node10" href="$group___u_s_i_c.html#ga06f5a5054d12901cf9dfa3114dcb8f2e" title=" " alt="" coords="763,157,942,184"/>
+<area shape="rect" id="node9" href="$group___s_c_u.html#ga702904d10b6e6c6a55db381763fd322f" title=" " alt="" coords="1011,99,1251,141"/>
+<area shape="rect" id="node12" href="$group___s_c_u.html#ga55a1be4f0e96fcda7b2c0feb542af250" title=" " alt="" coords="743,209,963,250"/>
+<area shape="rect" id="node15" href="$group___u_s_i_c.html#ga6db0d0eb1bf6f9a26c9c8cde1fc2c14d" title=" " alt="" coords="469,275,684,301"/>
+<area shape="rect" id="node17" href="$group___u_s_i_c.html#gacf5e581d5937dbe1bbfba846d4899675" title=" " alt="" coords="473,325,680,352"/>
+<area shape="rect" id="node19" href="$group___u_s_i_c.html#ga048a1560b7d5eaafe0c0c029d77a47b1" title=" " alt="" coords="473,376,681,403"/>
+<area shape="rect" id="node21" href="$group___u_s_i_c.html#ga8557961a3ad8f13044675bd791d77dab" title=" " alt="" coords="491,427,662,453"/>
+</map>

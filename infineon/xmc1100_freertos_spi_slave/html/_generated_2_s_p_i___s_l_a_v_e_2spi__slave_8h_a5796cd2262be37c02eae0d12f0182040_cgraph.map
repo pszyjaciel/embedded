@@ -1,0 +1,8 @@
+<map id="SPI_SLAVE_StartTransmitIRQ" name="SPI_SLAVE_StartTransmitIRQ">
+<area shape="rect" id="node1" title="Registers a request for transmitting data over SPI channel as a slave device." alt="" coords="5,129,205,156"/>
+<area shape="rect" id="node2" href="$group___s_p_i.html#ga91fef97e4d595f37fbfb60a4fd5624e4" title=" " alt="" coords="273,5,455,32"/>
+<area shape="rect" id="node3" href="$group___u_s_i_c.html#ga29a88baf5a86b4e3654608918cc83dd7" title=" " alt="" coords="253,57,475,98"/>
+<area shape="rect" id="node4" href="$group___u_s_i_c.html#ga22718c9a9ae2003c9ebca94f218a56cc" title=" " alt="" coords="265,122,463,163"/>
+<area shape="rect" id="node5" href="$group___u_s_i_c.html#gada209c5ea97fbdc1031f5280035bbb94" title=" " alt="" coords="283,187,445,229"/>
+<area shape="rect" id="node6" href="$group___u_s_i_c.html#ga193ef138d483148c4209e62b4507b46d" title=" " alt="" coords="283,253,445,294"/>
+</map>

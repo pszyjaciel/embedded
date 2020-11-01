@@ -1,0 +1,7 @@
+<map id="DAVE_Init" name="DAVE_Init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,88,108"/>
+<area shape="rect" id="node2" href="$_generated_2_c_l_o_c_k___x_m_c1_2clock__xmc1_8c.html#ad2750b9fa64fc826712702b824feb081" title="Initializes a CLOCK_XMC1 APP instance." alt="" coords="136,5,267,32"/>
+<area shape="rect" id="node3" href="$_generated_2_d_i_g_i_t_a_l___i_o_2digital__io_8c.html#ae15baf3287659db3ffbd57db6384ae73" title="Function to initialize the port pin as per UI settings." alt="" coords="144,56,259,83"/>
+<area shape="rect" id="node4" href="$_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c.html#a3af5e9264c3207f6c399b49c903616db" title="Initializes the USIC channel as SPI slave." alt="" coords="143,107,260,133"/>
+<area shape="rect" id="node5" href="$_generated_2_u_a_r_t_2uart_8c.html#a553981ef731dd0f57b732e18c9bb58a9" title="Initializes the UART module as per the configuration made in UI." alt="" coords="161,157,241,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SPI_SLAVE_AbortReceive" name="SPI_SLAVE_AbortReceive">
+<area shape="rect" id="node1" title="Stops the active data reception sequence." alt="" coords="5,35,181,61"/>
+<area shape="rect" id="node2" href="$group___s_p_i.html#ga8f3bb2759c5dc83f4df9674bc7521dfa" title=" " alt="" coords="229,5,413,32"/>
+<area shape="rect" id="node3" href="$group___u_s_i_c.html#gaba3a2a1a0a12f9e238f672cda10bcefa" title=" " alt="" coords="240,57,403,98"/>
+</map>

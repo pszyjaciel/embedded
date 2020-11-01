@@ -1,0 +1,4 @@
+<map id="DIGITAL_IO_GetInput" name="DIGITAL_IO_GetInput">
+<area shape="rect" id="node1" title="Function to read input level of port pin." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$group___g_p_i_o.html#gaaff7c47a24959071ce0815d23b9f319f" title=" " alt="" coords="200,5,344,32"/>
+</map>

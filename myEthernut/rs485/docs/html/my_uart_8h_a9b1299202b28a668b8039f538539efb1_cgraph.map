@@ -1,0 +1,4 @@
+<map id="RS485_QueryTelegram" name="RS485_QueryTelegram">
+<area shape="rect" id="node2" href="$my_uart_8c.html#ab56f53b4e7d6fe7165cdef32270c7a39" title="RS485_ReadChar" alt="" coords="210,5,335,32"/>
+<area shape="rect" id="node3" href="$my_uart_8c.html#aeb49100d16c0c1b323128896ed286558" title="RS485_WriteChar" alt="" coords="209,56,336,83"/>
+</map>

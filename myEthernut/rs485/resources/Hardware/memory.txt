@@ -1,0 +1,11 @@
+A15 - A0:	1111 1111 1111 1111	(0xffff, 65535)
+A15: CE/ (memory chip enable)
+
+if A15 = 0 then memory chip is enabled; SA15 on RTL8019 is '1'
+memory address is 0x0000 - 0x7fff (32767)
+RTL address is 0x8000 - 0xffff
+
+if A15 = 1 then memory chip is not enabled; SA15 on RTL8019 is '0'
+RTL address is 0x0000 - 0x7fff
+
+

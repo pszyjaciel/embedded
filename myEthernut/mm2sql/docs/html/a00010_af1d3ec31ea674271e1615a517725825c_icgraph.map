@@ -1,0 +1,4 @@
+<map id="char2short" name="char2short">
+<area shape="rect" id="node2" href="$a00011.html#a6d88e49491f252ab97b341d0f4ee44ed" title="This function parse an incomming string message into array of short values. " alt="" coords="133,5,251,31"/>
+<area shape="rect" id="node3" href="$a00007.html#abf5d177785c49159586fcc85a51db69b" title="In the main function the connection to mySQL is created, the serial port is being initialized..." alt="" coords="299,5,345,31"/>
+</map>

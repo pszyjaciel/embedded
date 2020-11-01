@@ -1,0 +1,2 @@
+u:\!Desktop\plc\drivemonitor\Setup.exe 
+c:\drive_mon.png 

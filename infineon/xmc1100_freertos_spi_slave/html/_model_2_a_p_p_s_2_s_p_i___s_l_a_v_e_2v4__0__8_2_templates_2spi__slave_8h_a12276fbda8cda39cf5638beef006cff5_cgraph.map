@@ -1,0 +1,5 @@
+<map id="SPI_SLAVE_Transfer" name="SPI_SLAVE_Transfer">
+<area shape="rect" id="node1" title="Registers a request for transmitting and receiving data simultaneously over SPI channel as a slave de..." alt="" coords="5,31,152,57"/>
+<area shape="rect" id="node2" href="$_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c.html#a2736850bf622c755c9a8c927970fa2a7" title="Registers a request for receiving data over SPI_SLAVE channel." alt="" coords="203,5,348,32"/>
+<area shape="rect" id="node3" href="$_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c.html#a42d815df1f42c013b4934177228e7e19" title="Registers a request for transmitting data over SPI channel as a slave device." alt="" coords="200,56,351,83"/>
+</map>

@@ -1,0 +1,73 @@
+\hypertarget{group___b_c_c_u}{}\doxysection{B\+C\+CU}
+\label{group___b_c_c_u}\index{BCCU@{BCCU}}
+
+
+Brightness and Color Control Unit (B\+C\+CU) driver for the X\+M\+C1 microcontroller family.  
+
+
+Collaboration diagram for B\+C\+CU\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{group___b_c_c_u}
+\end{center}
+\end{figure}
+Brightness and Color Control Unit (B\+C\+CU) driver for the X\+M\+C1 microcontroller family. 
+
+The Brightness and Color Control Unit (B\+C\+CU) is a dimming control peripheral for L\+ED lighting applications. The B\+C\+CU module can be used to control multiple L\+ED channels. Every channel generates one-\/bit sigma-\/delta bit stream with a user adjustable 12-\/bit average value. The dimming engine changes the brightness gradually (exponential curve) to appear natural to the human eye. It supports color control by adjusting the relative intensity of selected channels using a linear walk scheme for smooth color changes. It also supports high-\/power multi-\/channel L\+ED lamps by optionally packing the bitstream. The optional packer which decreases the average rate of output switching by enforcing a defined on-\/time. The B\+C\+CU module generates two trigger signals to the A\+DC (B\+C\+C\+U\+\_\+\+T\+R\+I\+G\+O\+U\+T0 and B\+C\+C\+U\+\_\+\+T\+R\+I\+G\+O\+U1) to start conversions in a synchronized manner. The module can also be used as a multi-\/channel digital-\/analog converter with low-\/pass filters on the outputs. The B\+C\+CU module supports 3 independent dimming engines, 9 independent channels, Trap functions and 2 A\+DC triggering modes.
+
+The driver is divided into global control (B\+C\+CU), channel control (B\+C\+C\+U\+\_\+\+CH) and dimming control (B\+C\+C\+U\+\_\+\+D\+IM).
+
+B\+C\+CU features\+:
+\begin{DoxyEnumerate}
+\item Configuration structure X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t and initialization function X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Global\+Init()
+\item Allows configuring of clock settings (Fast clock, Bit clock and Dimming clock). X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Set\+Fast\+Clock\+Prescaler(),
+\item X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Select\+Bit\+Clock(), X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Set\+Dim\+Clock\+Prescaler().
+\item Allows configuring global trigger settings. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Config\+Global\+Trigger()
+\item Allows enabling multiple channels together. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Enable\+Channels()
+\item Allows enabling single channel. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Enable\+Channel()
+\item Allows configuring global dimming level. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Set\+Global\+Dimming\+Level()
+\item Starts linear walk for multiple channels together. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Start\+Linear\+Walk().
+\item Starts linear walk for single channel. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Start\+Linear\+Walk().
+\item Starts dimming for multiple dimming engines together. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Start\+Dimming().
+\item Starts dimming for single dimming engine. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Start\+Dimming().
+\end{DoxyEnumerate}
+
+B\+C\+C\+U\+\_\+\+CH features\+:
+\begin{DoxyEnumerate}
+\item Configuration structure (X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+t and initialization function X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Init()
+\item Allows selecting dimming engine. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Select\+Dim\+Engine().
+\item Allows setting target channel intensity. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Set\+Target\+Intensity().
+\item Allows knowing the status of linear walk completion. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Is\+Linear\+Walk\+Complete()
+\item Allows setting flicker watchdog. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Enable\+Flicker\+Watchdog().
+\item Allows configuring packer settings. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Enable\+Packer(), X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Set\+Packer\+Threshold(), X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Set\+Packer\+Off\+Compare(), X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Set\+Packer\+Off\+Counte(), X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Set\+Packer\+On\+Counter()
+\item Allows selecting dimming bypass. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Disable\+Dimming\+Bypass()
+\end{DoxyEnumerate}
+
+B\+C\+C\+U\+\_\+\+D\+IM features\+:
+\begin{DoxyEnumerate}
+\item Configuration structure (X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+t and initialization function X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Init()
+\item Allows setting target dimming engine intensity. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Set\+Target\+Dimming\+Level(). X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Set\+Target\+Dimming\+Level
+\item Allows knowing the status of dimming completion. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Is\+Dimming\+Finished()
+\item Allows configuring dimming divider. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Set\+Dim\+Divider()
+\item Allows configuring dimming curve. X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Config\+Dim\+Curve()
+\end{DoxyEnumerate}
+
+{\bfseries{ Recommended programming sequence\+: }}
+\begin{DoxyEnumerate}
+\item Set output passive and active levels using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Set\+Output\+Passive\+Level() or X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Set\+Output\+Passive\+Level()
+\item Initializes global features using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Global\+Init()
+\item Initializes channel features using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Init()
+\item Initializes dimming engine using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Init()
+\item Enable channels using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Enable\+Channels() or X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Enable\+Channel()
+\item Enable dimming engines using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Enable\+Dimming\+Engine() or X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Enable\+Dimming\+Engine()
+\item Configure channel linear walk prescaler using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Set\+Linear\+Walk\+Prescaler()
+\item Configure dimming divider using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Set\+Dim\+Divider()
+\item Set target intensities of channels using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+C\+H\+\_\+\+Set\+Target\+Intensity()
+\item Set target dim levels of dimming engines using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+D\+I\+M\+\_\+\+Set\+Target\+Dimming\+Level()
+\item Start linear walk of the channels using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Start\+Linear\+Walk() or X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Start\+Linear\+Walk()
+\item Start dimming of the dimming engines using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Concurrent\+Start\+Dimming() or X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Start\+Dimming()
+\item Check the status of linear walk completion using X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Is\+Linear\+Walk\+Complete()
+\item Check the status of dimming completion X\+M\+C\+\_\+\+B\+C\+C\+U\+\_\+\+Is\+Dimming\+Finished() 
+\end{DoxyEnumerate}

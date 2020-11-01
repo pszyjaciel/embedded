@@ -1,0 +1,7 @@
+<map id="displayAllFromTable" name="displayAllFromTable">
+<area shape="rect" id="node2" href="$mysql_8h.html#abc8edade534933593ab605741422b319" title="mysql_query" alt="" coords="210,5,306,32"/>
+<area shape="rect" id="node3" href="$mysql_8h.html#aa4f352a0ef888f350687c48d8acb6180" title="mysql_error" alt="" coords="213,56,303,83"/>
+<area shape="rect" id="node4" href="$mysql_8h.html#a2b719aa756f05a972bce1eee22d701be" title="mysql_fetch_row" alt="" coords="199,107,317,133"/>
+<area shape="rect" id="node5" href="$mysql_8h.html#a11029d06cd3bf4fc76ce4be717146ea3" title="mysql_store_result" alt="" coords="192,157,324,184"/>
+<area shape="rect" id="node6" href="$mysql_8h.html#ada9e5d549970fb10d2fc862739717129" title="mysql_free_result" alt="" coords="196,208,320,235"/>
+</map>

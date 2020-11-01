@@ -1,0 +1,8 @@
+<map id="mysql_error" name="mysql_error">
+<area shape="rect" id="node2" href="$a00037.html#a8b909a723dc6d0092907c796276a08ec" title="This function reads and displays all values from a table myTable, in a row defined by myID..." alt="" coords="139,5,265,31"/>
+<area shape="rect" id="node3" href="$a00037.html#a3bcc2d3f20cb923e4eaa70e5d2195359" title="Function make an attempt to connect to the mySQL database. It calls internally functions from the lib..." alt="" coords="149,55,255,80"/>
+<area shape="rect" id="node5" href="$a00037.html#acfcbcaa2f6f2cbc3d57bd53a4d673d13" title="This function prepares a SQL&#45;statement and inserts data into the table myTable of mySQL&#45;database..." alt="" coords="155,104,249,129"/>
+<area shape="rect" id="node6" href="$a00037.html#aa0890e5a0157dcc938d6fb7b43e9c7f1" title="This function will be replaced later by updateTable() " alt="" coords="149,153,255,179"/>
+<area shape="rect" id="node7" href="$a00037.html#adbba85b021fda9020527f0128df3967f" title="Function inserts into mySQL&#45;Database an actual date and time (called Time Stamp). ..." alt="" coords="145,203,259,228"/>
+<area shape="rect" id="node4" href="$a00026.html#abf5d177785c49159586fcc85a51db69b" title="In the main function the connection to mySQL is created, the serial port is being initialized..." alt="" coords="313,80,360,105"/>
+</map>

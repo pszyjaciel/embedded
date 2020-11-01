@@ -1,0 +1,254 @@
+\hypertarget{structtsk_task_control_block}{}\doxysection{tsk\+Task\+Control\+Block Struct Reference}
+\label{structtsk_task_control_block}\index{tskTaskControlBlock@{tskTaskControlBlock}}
+
+
+Collaboration diagram for tsk\+Task\+Control\+Block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{structtsk_task_control_block__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t}} $\ast$ \mbox{\hyperlink{structtsk_task_control_block_afce90c6cfcc2aab025985e0395988fec}{px\+Top\+Of\+Stack}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_a1a62d469392f9bfe2443e7efab9c8398}{List\+Item\+\_\+t}} \mbox{\hyperlink{structtsk_task_control_block_a16e0d20425d53ac78537e1fdb8834cf6}{x\+State\+List\+Item}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_a1a62d469392f9bfe2443e7efab9c8398}{List\+Item\+\_\+t}} \mbox{\hyperlink{structtsk_task_control_block_a1a1612b6081a13683808284d93a9b28f}{x\+Event\+List\+Item}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structtsk_task_control_block_a79187811e3d2a15595942e3b44237d85}{ux\+Priority}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t}} $\ast$ \mbox{\hyperlink{structtsk_task_control_block_a7fa5e38b946f885903d9bd4759bb50ca}{px\+Stack}}
+\item 
+char \mbox{\hyperlink{structtsk_task_control_block_a10e1ba6c6beb7c9a9bc36e4dfb567d76}{pc\+Task\+Name}} \mbox{[}\mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2_free_r_t_o_s_8h_ac388dc4041aab6997348828eb27fc1a8}{config\+M\+A\+X\+\_\+\+T\+A\+S\+K\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}\mbox{]}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structtsk_task_control_block_a3f3169fa5667af8ee542304f8dd48553}{ux\+T\+C\+B\+Number}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structtsk_task_control_block_a46894d7d546d614cc881212dc8039f41}{ux\+Task\+Number}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structtsk_task_control_block_a3ce2f9306ee315873114616fb49a0ed2}{ux\+Base\+Priority}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structtsk_task_control_block_a405a8451e393290ef92337cd77a3bf1f}{ux\+Mutexes\+Held}}
+\item 
+void $\ast$ \mbox{\hyperlink{structtsk_task_control_block_a8803006ed43d058a5e6ba65cf91c18e1}{pv\+Thread\+Local\+Storage\+Pointers}} \mbox{[}\mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2_free_r_t_o_s_8h_a8d32b5f74e55dfd12c5aa3415e16d75e}{config\+N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+P\+O\+I\+N\+T\+E\+RS}}\mbox{]}
+\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{structtsk_task_control_block_a7c571b992f90bfe77414cab060ca2af8}{ul\+Notified\+Value}}
+\item 
+volatile uint8\+\_\+t \mbox{\hyperlink{structtsk_task_control_block_adab5291f06b774ed8f5bb6f76a77496f}{uc\+Notify\+State}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structtsk_task_control_block_a85013c676520a8fb46b3bec1f33dbfc8}{uc\+Delay\+Aborted}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 268 of file tasks.\+c.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structtsk_task_control_block_a10e1ba6c6beb7c9a9bc36e4dfb567d76}\label{structtsk_task_control_block_a10e1ba6c6beb7c9a9bc36e4dfb567d76}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!pcTaskName@{pcTaskName}}
+\index{pcTaskName@{pcTaskName}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{pcTaskName}{pcTaskName}}
+{\footnotesize\ttfamily char tsk\+Task\+Control\+Block\+::pc\+Task\+Name}
+
+
+
+Definition at line 280 of file tasks.\+c.
+
+
+
+Referenced by pc\+Task\+Get\+Name(), prv\+Initialise\+New\+Task(), prv\+Search\+For\+Name\+Within\+Single\+List(), and v\+Task\+Get\+Info().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a8803006ed43d058a5e6ba65cf91c18e1}\label{structtsk_task_control_block_a8803006ed43d058a5e6ba65cf91c18e1}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!pvThreadLocalStoragePointers@{pvThreadLocalStoragePointers}}
+\index{pvThreadLocalStoragePointers@{pvThreadLocalStoragePointers}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{pvThreadLocalStoragePointers}{pvThreadLocalStoragePointers}}
+{\footnotesize\ttfamily void$\ast$ tsk\+Task\+Control\+Block\+::pv\+Thread\+Local\+Storage\+Pointers\mbox{[}\mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2_free_r_t_o_s_8h_a8d32b5f74e55dfd12c5aa3415e16d75e}{config\+N\+U\+M\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+P\+O\+I\+N\+T\+E\+RS}}\mbox{]}}
+
+
+
+Definition at line 305 of file tasks.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Task(), pv\+Task\+Get\+Thread\+Local\+Storage\+Pointer(), and v\+Task\+Set\+Thread\+Local\+Storage\+Pointer().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a7fa5e38b946f885903d9bd4759bb50ca}\label{structtsk_task_control_block_a7fa5e38b946f885903d9bd4759bb50ca}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!pxStack@{pxStack}}
+\index{pxStack@{pxStack}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{pxStack}{pxStack}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t}} $\ast$ tsk\+Task\+Control\+Block\+::px\+Stack}
+
+
+
+Definition at line 279 of file tasks.\+c.
+
+
+
+Referenced by prv\+Delete\+T\+C\+B(), prv\+Initialise\+New\+Task(), ux\+Task\+Get\+Stack\+High\+Water\+Mark(), and v\+Task\+Get\+Info().
+
+\mbox{\Hypertarget{structtsk_task_control_block_afce90c6cfcc2aab025985e0395988fec}\label{structtsk_task_control_block_afce90c6cfcc2aab025985e0395988fec}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!pxTopOfStack@{pxTopOfStack}}
+\index{pxTopOfStack@{pxTopOfStack}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{pxTopOfStack}{pxTopOfStack}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a84e9a8ba132feed0b2401c1f4e2ac63c}{Stack\+Type\+\_\+t}} $\ast$ tsk\+Task\+Control\+Block\+::px\+Top\+Of\+Stack}
+
+
+
+Definition at line 270 of file tasks.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Task().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a85013c676520a8fb46b3bec1f33dbfc8}\label{structtsk_task_control_block_a85013c676520a8fb46b3bec1f33dbfc8}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!ucDelayAborted@{ucDelayAborted}}
+\index{ucDelayAborted@{ucDelayAborted}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{ucDelayAborted}{ucDelayAborted}}
+{\footnotesize\ttfamily uint8\+\_\+t tsk\+Task\+Control\+Block\+::uc\+Delay\+Aborted}
+
+
+
+Definition at line 335 of file tasks.\+c.
+
+
+
+Referenced by prv\+Add\+Current\+Task\+To\+Delayed\+List(), prv\+Initialise\+New\+Task(), x\+Task\+Abort\+Delay(), and x\+Task\+Check\+For\+Time\+Out().
+
+\mbox{\Hypertarget{structtsk_task_control_block_adab5291f06b774ed8f5bb6f76a77496f}\label{structtsk_task_control_block_adab5291f06b774ed8f5bb6f76a77496f}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!ucNotifyState@{ucNotifyState}}
+\index{ucNotifyState@{ucNotifyState}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{ucNotifyState}{ucNotifyState}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t tsk\+Task\+Control\+Block\+::uc\+Notify\+State}
+
+
+
+Definition at line 325 of file tasks.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Task(), ul\+Task\+Notify\+Take(), v\+Task\+Notify\+Give\+From\+I\+S\+R(), v\+Task\+Suspend(), x\+Task\+Generic\+Notify(), x\+Task\+Generic\+Notify\+From\+I\+S\+R(), x\+Task\+Notify\+State\+Clear(), and x\+Task\+Notify\+Wait().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a7c571b992f90bfe77414cab060ca2af8}\label{structtsk_task_control_block_a7c571b992f90bfe77414cab060ca2af8}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!ulNotifiedValue@{ulNotifiedValue}}
+\index{ulNotifiedValue@{ulNotifiedValue}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{ulNotifiedValue}{ulNotifiedValue}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t tsk\+Task\+Control\+Block\+::ul\+Notified\+Value}
+
+
+
+Definition at line 324 of file tasks.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Task(), ul\+Task\+Notify\+Take(), v\+Task\+Notify\+Give\+From\+I\+S\+R(), x\+Task\+Generic\+Notify(), x\+Task\+Generic\+Notify\+From\+I\+S\+R(), and x\+Task\+Notify\+Wait().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a3ce2f9306ee315873114616fb49a0ed2}\label{structtsk_task_control_block_a3ce2f9306ee315873114616fb49a0ed2}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!uxBasePriority@{uxBasePriority}}
+\index{uxBasePriority@{uxBasePriority}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{uxBasePriority}{uxBasePriority}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} tsk\+Task\+Control\+Block\+::ux\+Base\+Priority}
+
+
+
+Definition at line 296 of file tasks.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Task(), v\+Task\+Get\+Info(), v\+Task\+Priority\+Disinherit\+After\+Timeout(), v\+Task\+Priority\+Set(), x\+Task\+Priority\+Disinherit(), and x\+Task\+Priority\+Inherit().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a405a8451e393290ef92337cd77a3bf1f}\label{structtsk_task_control_block_a405a8451e393290ef92337cd77a3bf1f}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!uxMutexesHeld@{uxMutexesHeld}}
+\index{uxMutexesHeld@{uxMutexesHeld}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{uxMutexesHeld}{uxMutexesHeld}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} tsk\+Task\+Control\+Block\+::ux\+Mutexes\+Held}
+
+
+
+Definition at line 297 of file tasks.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Task(), pv\+Task\+Increment\+Mutex\+Held\+Count(), v\+Task\+Priority\+Disinherit\+After\+Timeout(), and x\+Task\+Priority\+Disinherit().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a79187811e3d2a15595942e3b44237d85}\label{structtsk_task_control_block_a79187811e3d2a15595942e3b44237d85}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!uxPriority@{uxPriority}}
+\index{uxPriority@{uxPriority}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{uxPriority}{uxPriority}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} tsk\+Task\+Control\+Block\+::ux\+Priority}
+
+
+
+Definition at line 278 of file tasks.\+c.
+
+
+
+Referenced by prv\+Add\+Current\+Task\+To\+Delayed\+List(), prv\+Add\+New\+Task\+To\+Ready\+List(), prv\+Initialise\+New\+Task(), ux\+Task\+Priority\+Get(), ux\+Task\+Priority\+Get\+From\+I\+S\+R(), ux\+Task\+Reset\+Event\+Item\+Value(), v\+Task\+Delete(), v\+Task\+Get\+Info(), v\+Task\+Notify\+Give\+From\+I\+S\+R(), v\+Task\+Priority\+Disinherit\+After\+Timeout(), v\+Task\+Priority\+Set(), v\+Task\+Remove\+From\+Unordered\+Event\+List(), v\+Task\+Resume(), v\+Task\+Suspend(), x\+Task\+Abort\+Delay(), x\+Task\+Generic\+Notify(), x\+Task\+Generic\+Notify\+From\+I\+S\+R(), x\+Task\+Increment\+Tick(), x\+Task\+Priority\+Disinherit(), x\+Task\+Priority\+Inherit(), x\+Task\+Remove\+From\+Event\+List(), x\+Task\+Resume\+All(), and x\+Task\+Resume\+From\+I\+S\+R().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a46894d7d546d614cc881212dc8039f41}\label{structtsk_task_control_block_a46894d7d546d614cc881212dc8039f41}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!uxTaskNumber@{uxTaskNumber}}
+\index{uxTaskNumber@{uxTaskNumber}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{uxTaskNumber}{uxTaskNumber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} tsk\+Task\+Control\+Block\+::ux\+Task\+Number}
+
+
+
+Definition at line 292 of file tasks.\+c.
+
+
+
+Referenced by ux\+Task\+Get\+Task\+Number(), and v\+Task\+Set\+Task\+Number().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a3f3169fa5667af8ee542304f8dd48553}\label{structtsk_task_control_block_a3f3169fa5667af8ee542304f8dd48553}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!uxTCBNumber@{uxTCBNumber}}
+\index{uxTCBNumber@{uxTCBNumber}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{uxTCBNumber}{uxTCBNumber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} tsk\+Task\+Control\+Block\+::ux\+T\+C\+B\+Number}
+
+
+
+Definition at line 291 of file tasks.\+c.
+
+
+
+Referenced by prv\+Add\+New\+Task\+To\+Ready\+List(), and v\+Task\+Get\+Info().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a1a1612b6081a13683808284d93a9b28f}\label{structtsk_task_control_block_a1a1612b6081a13683808284d93a9b28f}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!xEventListItem@{xEventListItem}}
+\index{xEventListItem@{xEventListItem}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{xEventListItem}{xEventListItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_a1a62d469392f9bfe2443e7efab9c8398}{List\+Item\+\_\+t}} tsk\+Task\+Control\+Block\+::x\+Event\+List\+Item}
+
+
+
+Definition at line 277 of file tasks.\+c.
+
+
+
+Referenced by e\+Task\+Get\+State(), prv\+Initialise\+New\+Task(), prv\+Task\+Is\+Task\+Suspended(), ux\+Task\+Reset\+Event\+Item\+Value(), v\+Task\+Delete(), v\+Task\+Get\+Info(), v\+Task\+Notify\+Give\+From\+I\+S\+R(), v\+Task\+Place\+On\+Event\+List(), v\+Task\+Place\+On\+Event\+List\+Restricted(), v\+Task\+Place\+On\+Unordered\+Event\+List(), v\+Task\+Priority\+Disinherit\+After\+Timeout(), v\+Task\+Priority\+Set(), v\+Task\+Suspend(), x\+Task\+Abort\+Delay(), x\+Task\+Generic\+Notify(), x\+Task\+Generic\+Notify\+From\+I\+S\+R(), x\+Task\+Increment\+Tick(), x\+Task\+Priority\+Disinherit(), x\+Task\+Priority\+Inherit(), x\+Task\+Remove\+From\+Event\+List(), x\+Task\+Resume\+All(), and x\+Task\+Resume\+From\+I\+S\+R().
+
+\mbox{\Hypertarget{structtsk_task_control_block_a16e0d20425d53ac78537e1fdb8834cf6}\label{structtsk_task_control_block_a16e0d20425d53ac78537e1fdb8834cf6}} 
+\index{tskTaskControlBlock@{tskTaskControlBlock}!xStateListItem@{xStateListItem}}
+\index{xStateListItem@{xStateListItem}!tskTaskControlBlock@{tskTaskControlBlock}}
+\doxysubsubsection{\texorpdfstring{xStateListItem}{xStateListItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_a1a62d469392f9bfe2443e7efab9c8398}{List\+Item\+\_\+t}} tsk\+Task\+Control\+Block\+::x\+State\+List\+Item}
+
+
+
+Definition at line 276 of file tasks.\+c.
+
+
+
+Referenced by e\+Task\+Get\+State(), prv\+Add\+Current\+Task\+To\+Delayed\+List(), prv\+Check\+Tasks\+Waiting\+Termination(), prv\+Initialise\+New\+Task(), prv\+Task\+Is\+Task\+Suspended(), v\+Task\+Delete(), v\+Task\+Notify\+Give\+From\+I\+S\+R(), v\+Task\+Priority\+Disinherit\+After\+Timeout(), v\+Task\+Priority\+Set(), v\+Task\+Remove\+From\+Unordered\+Event\+List(), v\+Task\+Resume(), v\+Task\+Suspend(), x\+Task\+Abort\+Delay(), x\+Task\+Generic\+Notify(), x\+Task\+Generic\+Notify\+From\+I\+S\+R(), x\+Task\+Increment\+Tick(), x\+Task\+Priority\+Disinherit(), x\+Task\+Priority\+Inherit(), x\+Task\+Remove\+From\+Event\+List(), x\+Task\+Resume\+All(), and x\+Task\+Resume\+From\+I\+S\+R().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dave/\+Generated/\+F\+R\+E\+E\+R\+T\+O\+S/\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2tasks_8c}{tasks.\+c}}\end{DoxyCompactItemize}

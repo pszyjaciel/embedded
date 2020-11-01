@@ -1,0 +1,112 @@
+\hypertarget{structst__mysql__bind}{}\section{st\+\_\+mysql\+\_\+bind Struct Reference}
+\label{structst__mysql__bind}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+
+
+{\ttfamily \#include $<$mysql.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long $\ast$ \hyperlink{structst__mysql__bind_a255c7b483665c1d98aaf73606e72cfca}{length}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} $\ast$ \hyperlink{structst__mysql__bind_a04defa2229677eefb0b50ed902358ef5}{is\+\_\+null}
+\item 
+void $\ast$ \hyperlink{structst__mysql__bind_a3ea4a5256c2e8c8f7b80ceea0ed5d3bb}{buffer}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} $\ast$ \hyperlink{structst__mysql__bind_a555fb0921bc7a50e54c863b702a75259}{error}
+\item 
+unsigned char $\ast$ \hyperlink{structst__mysql__bind_a78b2414892e0e1af294bbf773dce201e}{row\+\_\+ptr}
+\item 
+void($\ast$ \hyperlink{structst__mysql__bind_ae7494004e650d528427e906727c22337}{store\+\_\+param\+\_\+func} )(\hyperlink{mysql__com_8h_a6869c9fe9e26bbedea92d6603825d482}{N\+E\+T} $\ast$net, struct \hyperlink{structst__mysql__bind}{st\+\_\+mysql\+\_\+bind} $\ast$param)
+\item 
+void($\ast$ \hyperlink{structst__mysql__bind_a1398006bc3b49e8a61084188976929ae}{fetch\+\_\+result} )(struct \hyperlink{structst__mysql__bind}{st\+\_\+mysql\+\_\+bind} $\ast$, \hyperlink{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$, unsigned char $\ast$$\ast$row)
+\item 
+void($\ast$ \hyperlink{structst__mysql__bind_a5d9670e2a4c8dcc91f3d6b21fbc33e75}{skip\+\_\+result} )(struct \hyperlink{structst__mysql__bind}{st\+\_\+mysql\+\_\+bind} $\ast$, \hyperlink{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$, unsigned char $\ast$$\ast$row)
+\item 
+unsigned long \hyperlink{structst__mysql__bind_a58fff187be9d3e492856a50f970b469f}{buffer\+\_\+length}
+\item 
+unsigned long \hyperlink{structst__mysql__bind_a5e786c095fb2f2c21167db2b08b2eb2a}{offset}
+\item 
+unsigned long \hyperlink{structst__mysql__bind_a3f78eab5d415489c5a0a6cb702974cf2}{length\+\_\+value}
+\item 
+unsigned int \hyperlink{structst__mysql__bind_a3d72263efdf64d9bf2eefe14588e35b3}{param\+\_\+number}
+\item 
+unsigned int \hyperlink{structst__mysql__bind_ae8961b4d8470d6e5b1b06d2c29e28170}{pack\+\_\+length}
+\item 
+enum \hyperlink{mysql__com_8h_a69e798807026a0f7e12b1d6c72374854}{enum\+\_\+field\+\_\+types} \hyperlink{structst__mysql__bind_ad3de66e824b46991edcc4ddbb3747ced}{buffer\+\_\+type}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__bind_ac69cf2bf54564d646fbcf12c6981f18d}{error\+\_\+value}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__bind_ae3a058be75cadc4f8219bbba9c322bad}{is\+\_\+unsigned}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__bind_a31218c0f15b38ba638bcb302dcf50afb}{long\+\_\+data\+\_\+used}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__bind_ae5b4c29062a979ed6039652301015a78}{is\+\_\+null\+\_\+value}
+\item 
+void $\ast$ \hyperlink{structst__mysql__bind_ac8e250bd8df7c1ff2921c3cb5c2ed564}{extension}
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structst__mysql__bind_a3ea4a5256c2e8c8f7b80ceea0ed5d3bb}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!buffer@{buffer}}
+\index{buffer@{buffer}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ st\+\_\+mysql\+\_\+bind\+::buffer}\label{structst__mysql__bind_a3ea4a5256c2e8c8f7b80ceea0ed5d3bb}
+\hypertarget{structst__mysql__bind_a58fff187be9d3e492856a50f970b469f}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!buffer\+\_\+length@{buffer\+\_\+length}}
+\index{buffer\+\_\+length@{buffer\+\_\+length}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+bind\+::buffer\+\_\+length}\label{structst__mysql__bind_a58fff187be9d3e492856a50f970b469f}
+\hypertarget{structst__mysql__bind_ad3de66e824b46991edcc4ddbb3747ced}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!buffer\+\_\+type@{buffer\+\_\+type}}
+\index{buffer\+\_\+type@{buffer\+\_\+type}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{buffer\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf enum\+\_\+field\+\_\+types} st\+\_\+mysql\+\_\+bind\+::buffer\+\_\+type}\label{structst__mysql__bind_ad3de66e824b46991edcc4ddbb3747ced}
+\hypertarget{structst__mysql__bind_a555fb0921bc7a50e54c863b702a75259}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!error@{error}}
+\index{error@{error}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool}$\ast$ st\+\_\+mysql\+\_\+bind\+::error}\label{structst__mysql__bind_a555fb0921bc7a50e54c863b702a75259}
+\hypertarget{structst__mysql__bind_ac69cf2bf54564d646fbcf12c6981f18d}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!error\+\_\+value@{error\+\_\+value}}
+\index{error\+\_\+value@{error\+\_\+value}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{error\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+bind\+::error\+\_\+value}\label{structst__mysql__bind_ac69cf2bf54564d646fbcf12c6981f18d}
+\hypertarget{structst__mysql__bind_ac8e250bd8df7c1ff2921c3cb5c2ed564}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!extension@{extension}}
+\index{extension@{extension}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ st\+\_\+mysql\+\_\+bind\+::extension}\label{structst__mysql__bind_ac8e250bd8df7c1ff2921c3cb5c2ed564}
+\hypertarget{structst__mysql__bind_a1398006bc3b49e8a61084188976929ae}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!fetch\+\_\+result@{fetch\+\_\+result}}
+\index{fetch\+\_\+result@{fetch\+\_\+result}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{fetch\+\_\+result}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ st\+\_\+mysql\+\_\+bind\+::fetch\+\_\+result) (struct {\bf st\+\_\+mysql\+\_\+bind} $\ast$, {\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$, unsigned char $\ast$$\ast$row)}\label{structst__mysql__bind_a1398006bc3b49e8a61084188976929ae}
+\hypertarget{structst__mysql__bind_a04defa2229677eefb0b50ed902358ef5}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!is\+\_\+null@{is\+\_\+null}}
+\index{is\+\_\+null@{is\+\_\+null}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{is\+\_\+null}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool}$\ast$ st\+\_\+mysql\+\_\+bind\+::is\+\_\+null}\label{structst__mysql__bind_a04defa2229677eefb0b50ed902358ef5}
+\hypertarget{structst__mysql__bind_ae5b4c29062a979ed6039652301015a78}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!is\+\_\+null\+\_\+value@{is\+\_\+null\+\_\+value}}
+\index{is\+\_\+null\+\_\+value@{is\+\_\+null\+\_\+value}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{is\+\_\+null\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+bind\+::is\+\_\+null\+\_\+value}\label{structst__mysql__bind_ae5b4c29062a979ed6039652301015a78}
+\hypertarget{structst__mysql__bind_ae3a058be75cadc4f8219bbba9c322bad}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!is\+\_\+unsigned@{is\+\_\+unsigned}}
+\index{is\+\_\+unsigned@{is\+\_\+unsigned}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{is\+\_\+unsigned}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+bind\+::is\+\_\+unsigned}\label{structst__mysql__bind_ae3a058be75cadc4f8219bbba9c322bad}
+\hypertarget{structst__mysql__bind_a255c7b483665c1d98aaf73606e72cfca}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!length@{length}}
+\index{length@{length}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long$\ast$ st\+\_\+mysql\+\_\+bind\+::length}\label{structst__mysql__bind_a255c7b483665c1d98aaf73606e72cfca}
+\hypertarget{structst__mysql__bind_a3f78eab5d415489c5a0a6cb702974cf2}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!length\+\_\+value@{length\+\_\+value}}
+\index{length\+\_\+value@{length\+\_\+value}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{length\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+bind\+::length\+\_\+value}\label{structst__mysql__bind_a3f78eab5d415489c5a0a6cb702974cf2}
+\hypertarget{structst__mysql__bind_a31218c0f15b38ba638bcb302dcf50afb}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!long\+\_\+data\+\_\+used@{long\+\_\+data\+\_\+used}}
+\index{long\+\_\+data\+\_\+used@{long\+\_\+data\+\_\+used}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{long\+\_\+data\+\_\+used}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+bind\+::long\+\_\+data\+\_\+used}\label{structst__mysql__bind_a31218c0f15b38ba638bcb302dcf50afb}
+\hypertarget{structst__mysql__bind_a5e786c095fb2f2c21167db2b08b2eb2a}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!offset@{offset}}
+\index{offset@{offset}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+bind\+::offset}\label{structst__mysql__bind_a5e786c095fb2f2c21167db2b08b2eb2a}
+\hypertarget{structst__mysql__bind_ae8961b4d8470d6e5b1b06d2c29e28170}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!pack\+\_\+length@{pack\+\_\+length}}
+\index{pack\+\_\+length@{pack\+\_\+length}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{pack\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+bind\+::pack\+\_\+length}\label{structst__mysql__bind_ae8961b4d8470d6e5b1b06d2c29e28170}
+\hypertarget{structst__mysql__bind_a3d72263efdf64d9bf2eefe14588e35b3}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!param\+\_\+number@{param\+\_\+number}}
+\index{param\+\_\+number@{param\+\_\+number}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{param\+\_\+number}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+bind\+::param\+\_\+number}\label{structst__mysql__bind_a3d72263efdf64d9bf2eefe14588e35b3}
+\hypertarget{structst__mysql__bind_a78b2414892e0e1af294bbf773dce201e}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!row\+\_\+ptr@{row\+\_\+ptr}}
+\index{row\+\_\+ptr@{row\+\_\+ptr}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{row\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ st\+\_\+mysql\+\_\+bind\+::row\+\_\+ptr}\label{structst__mysql__bind_a78b2414892e0e1af294bbf773dce201e}
+\hypertarget{structst__mysql__bind_a5d9670e2a4c8dcc91f3d6b21fbc33e75}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!skip\+\_\+result@{skip\+\_\+result}}
+\index{skip\+\_\+result@{skip\+\_\+result}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{skip\+\_\+result}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ st\+\_\+mysql\+\_\+bind\+::skip\+\_\+result) (struct {\bf st\+\_\+mysql\+\_\+bind} $\ast$, {\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$, unsigned char $\ast$$\ast$row)}\label{structst__mysql__bind_a5d9670e2a4c8dcc91f3d6b21fbc33e75}
+\hypertarget{structst__mysql__bind_ae7494004e650d528427e906727c22337}{}\index{st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}!store\+\_\+param\+\_\+func@{store\+\_\+param\+\_\+func}}
+\index{store\+\_\+param\+\_\+func@{store\+\_\+param\+\_\+func}!st\+\_\+mysql\+\_\+bind@{st\+\_\+mysql\+\_\+bind}}
+\subsubsection[{store\+\_\+param\+\_\+func}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ st\+\_\+mysql\+\_\+bind\+::store\+\_\+param\+\_\+func) ({\bf N\+E\+T} $\ast$net, struct {\bf st\+\_\+mysql\+\_\+bind} $\ast$param)}\label{structst__mysql__bind_ae7494004e650d528427e906727c22337}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mysql_8h}{mysql.\+h}\end{DoxyCompactItemize}

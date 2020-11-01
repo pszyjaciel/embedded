@@ -1,0 +1,7 @@
+<map id="MySQLConnect" name="MySQLConnect">
+<area shape="rect" id="node2" href="$a00031.html#a8cfaf60163768932f9282649562e95be" title="mysql_init" alt="" coords="187,5,261,31"/>
+<area shape="rect" id="node3" href="$a00031.html#a806a13626ba4ac23d4584b3f7f1f7c8b" title="mysql_error" alt="" coords="181,55,267,80"/>
+<area shape="rect" id="node4" href="$a00031.html#af4c6ee17beea54dcd18f71c373a4cd25" title="mysql_options" alt="" coords="175,104,273,129"/>
+<area shape="rect" id="node5" href="$a00031.html#aea37f62b5bacffc9519980eef7a015dd" title="mysql_real_connect" alt="" coords="159,153,289,179"/>
+<area shape="rect" id="node6" href="$a00031.html#ac026189d2e818a60fa4122aba1c6fdcb" title="mysql_close" alt="" coords="181,203,267,228"/>
+</map>

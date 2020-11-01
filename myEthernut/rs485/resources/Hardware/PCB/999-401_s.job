@@ -1,0 +1,85 @@
+version=4.7
+layer
+  {
+  name:		comp_s
+  class:	outer
+  thickness:	0.018
+  data:		U:\jobs\999\999-007\enut13h.5
+  }
+layer
+  {
+  name:		lag2_s
+  class:	inner
+  thickness:	0.035
+  data:		U:\jobs\999\999-007\enut13h.6
+  }
+layer
+  {
+  name:		lag3_s
+  class:	inner
+  readable:	bot
+  thickness:	-0.035
+  data:		U:\jobs\999\999-007\enut13h.7
+  }
+layer
+  {
+  name:		sold_s
+  class:	outer
+  readable:	bot
+  thickness:	-0.018
+  data:		U:\jobs\999\999-007\enut13h.8
+  }
+drill
+  {
+  name:		dr_s
+  class:	drill
+  top:		1
+  bot:		4
+  thickness:	1.5
+  data:		U:\jobs\999\999-007\enut13h.9
+  wheel:		C:\Documents and Settings\root\Ustawienia lokalne\Temp\excellon2_tmp_merged_wheel25537.whe
+  }
+extra
+  {
+  name:		ktcomp_s
+  class:	silk
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.7
+  attach:	top
+  }
+extra
+  {
+  name:		m1comp_s
+  class:	mask
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.1
+  attach:	top
+  }
+extra
+  {
+  name:		m1sold_s
+  class:	mask
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.2
+  attach:	bot
+  }
+extra
+  {
+  name:		fr_s
+  class:	rout
+  num:		1
+  }
+extra
+  {
+  name:		outline_s
+  class:	outline
+  num:		1
+  }
+datum
+  {
+  }
+ate
+  {
+  fixture:	DSA
+  machine:	
+  }

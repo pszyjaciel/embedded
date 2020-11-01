@@ -1,0 +1,7 @@
+<map id="getValue" name="getValue">
+<area shape="rect" id="node2" href="$usscalc_8c.html#ac734b72553a80042ac173bfebf6b5185" title="prepTelegram" alt="" coords="155,5,255,32"/>
+<area shape="rect" id="node4" href="$my_uart_8c.html#a9b1299202b28a668b8039f538539efb1" title="RS485_QueryTelegram" alt="" coords="127,56,283,83"/>
+<area shape="rect" id="node3" href="$usscalc_8c.html#a3758bfbaa4494e65cabf188a026502de" title="calcBCC" alt="" coords="357,5,431,32"/>
+<area shape="rect" id="node5" href="$my_uart_8c.html#ab56f53b4e7d6fe7165cdef32270c7a39" title="RS485_ReadChar" alt="" coords="331,56,457,83"/>
+<area shape="rect" id="node6" href="$my_uart_8c.html#aeb49100d16c0c1b323128896ed286558" title="RS485_WriteChar" alt="" coords="331,107,457,133"/>
+</map>

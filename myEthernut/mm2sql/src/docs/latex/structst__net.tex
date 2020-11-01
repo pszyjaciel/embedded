@@ -1,0 +1,182 @@
+\hypertarget{structst__net}{}\section{st\+\_\+net Struct Reference}
+\label{structst__net}\index{st\+\_\+net@{st\+\_\+net}}
+
+
+{\ttfamily \#include $<$mysql\+\_\+com.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mysql__com_8h_a398c428bc2e077b9c404e6b81b813c5c}{Vio} $\ast$ \hyperlink{structst__net_a04dd4cfb0c11319b3ced573c160d75d5}{vio}
+\item 
+unsigned char $\ast$ \hyperlink{structst__net_a3acff748ebe3823c50d6c77d09281c79}{buff}
+\item 
+unsigned char $\ast$ \hyperlink{structst__net_ab8bc042e4c3feef2117642cee822dc65}{buff\+\_\+end}
+\item 
+unsigned char $\ast$ \hyperlink{structst__net_af160b75bc1ab06bd72a88ba7417f826e}{write\+\_\+pos}
+\item 
+unsigned char $\ast$ \hyperlink{structst__net_af65adc7b04ff56e008c6f8ca89cc12c2}{read\+\_\+pos}
+\item 
+\hyperlink{mysql_8h_aed973571b4b7eb2facd8c39e8b500bb6}{my\+\_\+socket} \hyperlink{structst__net_aec6de4e9b1fccc6ae611ef83cf06e689}{fd}
+\item 
+unsigned long \hyperlink{structst__net_a99914ead05fefebd1b5033aac14f57c4}{remain\+\_\+in\+\_\+buf}
+\item 
+unsigned long \hyperlink{structst__net_a5b8619539c5be9ee32051f3e063d428e}{length}
+\item 
+unsigned long \hyperlink{structst__net_a4c85ad00063e8dc380d73c61b8556c3a}{buf\+\_\+length}
+\item 
+unsigned long \hyperlink{structst__net_ac77e87598c188a301184a305b2766c9c}{where\+\_\+b}
+\item 
+unsigned long \hyperlink{structst__net_aa992b03f110362b7281ad288326d29e8}{max\+\_\+packet}
+\item 
+unsigned long \hyperlink{structst__net_a519fa13bc0447d4058c9f32b9b34a08a}{max\+\_\+packet\+\_\+size}
+\item 
+unsigned int \hyperlink{structst__net_aee20cf636fc25c58b9da8c9aeabc33a9}{pkt\+\_\+nr}
+\item 
+unsigned int \hyperlink{structst__net_aee8117a193c6eaf0166b6d140fdc7c8e}{compress\+\_\+pkt\+\_\+nr}
+\item 
+unsigned int \hyperlink{structst__net_a178724b62ac9b041f5e21b1b9897b694}{write\+\_\+timeout}
+\item 
+unsigned int \hyperlink{structst__net_a498927f121414f913f35585dbfa2d4b3}{read\+\_\+timeout}
+\item 
+unsigned int \hyperlink{structst__net_a0365f5779e0d4a8052dbd26a04196b5b}{retry\+\_\+count}
+\item 
+int \hyperlink{structst__net_af0e9b81f66c42f6bb55d53608a24d894}{fcntl}
+\item 
+unsigned int $\ast$ \hyperlink{structst__net_a3ce1808fa2c992e291de3012c29c6857}{return\+\_\+status}
+\item 
+unsigned char \hyperlink{structst__net_af097f7a98db2436221b2633daf1e6cba}{reading\+\_\+or\+\_\+writing}
+\item 
+char \hyperlink{structst__net_abf68d4ab7d94a60f5b367e137db8b897}{save\+\_\+char}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__net_a14213eeeee153b43edc68698b46d5220}{unused1}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__net_a814bce0c37d5ad61c5d8dac055884902}{unused2}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__net_ae72db65cba31233b606eacd0a0da5769}{compress}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__net_aafa39985fb118923f443ece4e9bc1820}{unused3}
+\item 
+unsigned char $\ast$ \hyperlink{structst__net_af405b9e71e576024dde5601684393417}{unused}
+\item 
+unsigned int \hyperlink{structst__net_ad32d83e52fbb9bde714a4e91ddd4cca7}{last\+\_\+errno}
+\item 
+unsigned char \hyperlink{structst__net_af25692866530d247001f5c189ffca8f6}{error}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__net_a23a02e676dfbde5b3a42a40d297fdc9e}{unused4}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__net_a1b104bdc3379ed54125acd4c3fc017a7}{unused5}
+\item 
+char \hyperlink{structst__net_a076ac7884d3874905c0c95b6518228fc}{last\+\_\+error} \mbox{[}\hyperlink{mysql__com_8h_a3f5f3eab30894e1dfa8d5bd977a889be}{M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+M\+S\+G\+\_\+\+S\+I\+Z\+E}\mbox{]}
+\item 
+char \hyperlink{structst__net_a0f689854fdd40edbf79cc7e248ecd02f}{sqlstate} \mbox{[}\hyperlink{mysql__com_8h_a8e152edf1a0bae8aec7f5d59cebfbea9}{S\+Q\+L\+S\+T\+A\+T\+E\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}
+\item 
+void $\ast$ \hyperlink{structst__net_a7b50c3d075f87f4e51a1726a7d714869}{extension}
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structst__net_a4c85ad00063e8dc380d73c61b8556c3a}{}\index{st\+\_\+net@{st\+\_\+net}!buf\+\_\+length@{buf\+\_\+length}}
+\index{buf\+\_\+length@{buf\+\_\+length}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{buf\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+net\+::buf\+\_\+length}\label{structst__net_a4c85ad00063e8dc380d73c61b8556c3a}
+\hypertarget{structst__net_a3acff748ebe3823c50d6c77d09281c79}{}\index{st\+\_\+net@{st\+\_\+net}!buff@{buff}}
+\index{buff@{buff}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{buff}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ st\+\_\+net\+::buff}\label{structst__net_a3acff748ebe3823c50d6c77d09281c79}
+\hypertarget{structst__net_ab8bc042e4c3feef2117642cee822dc65}{}\index{st\+\_\+net@{st\+\_\+net}!buff\+\_\+end@{buff\+\_\+end}}
+\index{buff\+\_\+end@{buff\+\_\+end}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{buff\+\_\+end}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char $\ast$ st\+\_\+net\+::buff\+\_\+end}\label{structst__net_ab8bc042e4c3feef2117642cee822dc65}
+\hypertarget{structst__net_ae72db65cba31233b606eacd0a0da5769}{}\index{st\+\_\+net@{st\+\_\+net}!compress@{compress}}
+\index{compress@{compress}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{compress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+net\+::compress}\label{structst__net_ae72db65cba31233b606eacd0a0da5769}
+\hypertarget{structst__net_aee8117a193c6eaf0166b6d140fdc7c8e}{}\index{st\+\_\+net@{st\+\_\+net}!compress\+\_\+pkt\+\_\+nr@{compress\+\_\+pkt\+\_\+nr}}
+\index{compress\+\_\+pkt\+\_\+nr@{compress\+\_\+pkt\+\_\+nr}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{compress\+\_\+pkt\+\_\+nr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+net\+::compress\+\_\+pkt\+\_\+nr}\label{structst__net_aee8117a193c6eaf0166b6d140fdc7c8e}
+\hypertarget{structst__net_af25692866530d247001f5c189ffca8f6}{}\index{st\+\_\+net@{st\+\_\+net}!error@{error}}
+\index{error@{error}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char st\+\_\+net\+::error}\label{structst__net_af25692866530d247001f5c189ffca8f6}
+\hypertarget{structst__net_a7b50c3d075f87f4e51a1726a7d714869}{}\index{st\+\_\+net@{st\+\_\+net}!extension@{extension}}
+\index{extension@{extension}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ st\+\_\+net\+::extension}\label{structst__net_a7b50c3d075f87f4e51a1726a7d714869}
+Extension pointer, for the caller private use. Any program linking with the networking library can use this pointer, which is handy when private connection specific data needs to be maintained. The mysqld server process uses this pointer internally, to maintain the server internal instrumentation for the connection. \hypertarget{structst__net_af0e9b81f66c42f6bb55d53608a24d894}{}\index{st\+\_\+net@{st\+\_\+net}!fcntl@{fcntl}}
+\index{fcntl@{fcntl}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{fcntl}]{\setlength{\rightskip}{0pt plus 5cm}int st\+\_\+net\+::fcntl}\label{structst__net_af0e9b81f66c42f6bb55d53608a24d894}
+\hypertarget{structst__net_aec6de4e9b1fccc6ae611ef83cf06e689}{}\index{st\+\_\+net@{st\+\_\+net}!fd@{fd}}
+\index{fd@{fd}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{fd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+socket} st\+\_\+net\+::fd}\label{structst__net_aec6de4e9b1fccc6ae611ef83cf06e689}
+\hypertarget{structst__net_ad32d83e52fbb9bde714a4e91ddd4cca7}{}\index{st\+\_\+net@{st\+\_\+net}!last\+\_\+errno@{last\+\_\+errno}}
+\index{last\+\_\+errno@{last\+\_\+errno}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{last\+\_\+errno}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+net\+::last\+\_\+errno}\label{structst__net_ad32d83e52fbb9bde714a4e91ddd4cca7}
+\hypertarget{structst__net_a076ac7884d3874905c0c95b6518228fc}{}\index{st\+\_\+net@{st\+\_\+net}!last\+\_\+error@{last\+\_\+error}}
+\index{last\+\_\+error@{last\+\_\+error}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{last\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}char st\+\_\+net\+::last\+\_\+error\mbox{[}{\bf M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+M\+S\+G\+\_\+\+S\+I\+Z\+E}\mbox{]}}\label{structst__net_a076ac7884d3874905c0c95b6518228fc}
+Client library error message buffer. Actually belongs to struct M\+Y\+S\+Q\+L. \hypertarget{structst__net_a5b8619539c5be9ee32051f3e063d428e}{}\index{st\+\_\+net@{st\+\_\+net}!length@{length}}
+\index{length@{length}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+net\+::length}\label{structst__net_a5b8619539c5be9ee32051f3e063d428e}
+\hypertarget{structst__net_aa992b03f110362b7281ad288326d29e8}{}\index{st\+\_\+net@{st\+\_\+net}!max\+\_\+packet@{max\+\_\+packet}}
+\index{max\+\_\+packet@{max\+\_\+packet}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{max\+\_\+packet}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+net\+::max\+\_\+packet}\label{structst__net_aa992b03f110362b7281ad288326d29e8}
+\hypertarget{structst__net_a519fa13bc0447d4058c9f32b9b34a08a}{}\index{st\+\_\+net@{st\+\_\+net}!max\+\_\+packet\+\_\+size@{max\+\_\+packet\+\_\+size}}
+\index{max\+\_\+packet\+\_\+size@{max\+\_\+packet\+\_\+size}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{max\+\_\+packet\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+net\+::max\+\_\+packet\+\_\+size}\label{structst__net_a519fa13bc0447d4058c9f32b9b34a08a}
+\hypertarget{structst__net_aee20cf636fc25c58b9da8c9aeabc33a9}{}\index{st\+\_\+net@{st\+\_\+net}!pkt\+\_\+nr@{pkt\+\_\+nr}}
+\index{pkt\+\_\+nr@{pkt\+\_\+nr}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{pkt\+\_\+nr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+net\+::pkt\+\_\+nr}\label{structst__net_aee20cf636fc25c58b9da8c9aeabc33a9}
+\hypertarget{structst__net_af65adc7b04ff56e008c6f8ca89cc12c2}{}\index{st\+\_\+net@{st\+\_\+net}!read\+\_\+pos@{read\+\_\+pos}}
+\index{read\+\_\+pos@{read\+\_\+pos}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{read\+\_\+pos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char $\ast$ st\+\_\+net\+::read\+\_\+pos}\label{structst__net_af65adc7b04ff56e008c6f8ca89cc12c2}
+\hypertarget{structst__net_a498927f121414f913f35585dbfa2d4b3}{}\index{st\+\_\+net@{st\+\_\+net}!read\+\_\+timeout@{read\+\_\+timeout}}
+\index{read\+\_\+timeout@{read\+\_\+timeout}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{read\+\_\+timeout}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+net\+::read\+\_\+timeout}\label{structst__net_a498927f121414f913f35585dbfa2d4b3}
+\hypertarget{structst__net_af097f7a98db2436221b2633daf1e6cba}{}\index{st\+\_\+net@{st\+\_\+net}!reading\+\_\+or\+\_\+writing@{reading\+\_\+or\+\_\+writing}}
+\index{reading\+\_\+or\+\_\+writing@{reading\+\_\+or\+\_\+writing}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{reading\+\_\+or\+\_\+writing}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char st\+\_\+net\+::reading\+\_\+or\+\_\+writing}\label{structst__net_af097f7a98db2436221b2633daf1e6cba}
+\hypertarget{structst__net_a99914ead05fefebd1b5033aac14f57c4}{}\index{st\+\_\+net@{st\+\_\+net}!remain\+\_\+in\+\_\+buf@{remain\+\_\+in\+\_\+buf}}
+\index{remain\+\_\+in\+\_\+buf@{remain\+\_\+in\+\_\+buf}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{remain\+\_\+in\+\_\+buf}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+net\+::remain\+\_\+in\+\_\+buf}\label{structst__net_a99914ead05fefebd1b5033aac14f57c4}
+\hypertarget{structst__net_a0365f5779e0d4a8052dbd26a04196b5b}{}\index{st\+\_\+net@{st\+\_\+net}!retry\+\_\+count@{retry\+\_\+count}}
+\index{retry\+\_\+count@{retry\+\_\+count}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{retry\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+net\+::retry\+\_\+count}\label{structst__net_a0365f5779e0d4a8052dbd26a04196b5b}
+\hypertarget{structst__net_a3ce1808fa2c992e291de3012c29c6857}{}\index{st\+\_\+net@{st\+\_\+net}!return\+\_\+status@{return\+\_\+status}}
+\index{return\+\_\+status@{return\+\_\+status}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{return\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int$\ast$ st\+\_\+net\+::return\+\_\+status}\label{structst__net_a3ce1808fa2c992e291de3012c29c6857}
+\hypertarget{structst__net_abf68d4ab7d94a60f5b367e137db8b897}{}\index{st\+\_\+net@{st\+\_\+net}!save\+\_\+char@{save\+\_\+char}}
+\index{save\+\_\+char@{save\+\_\+char}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{save\+\_\+char}]{\setlength{\rightskip}{0pt plus 5cm}char st\+\_\+net\+::save\+\_\+char}\label{structst__net_abf68d4ab7d94a60f5b367e137db8b897}
+\hypertarget{structst__net_a0f689854fdd40edbf79cc7e248ecd02f}{}\index{st\+\_\+net@{st\+\_\+net}!sqlstate@{sqlstate}}
+\index{sqlstate@{sqlstate}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{sqlstate}]{\setlength{\rightskip}{0pt plus 5cm}char st\+\_\+net\+::sqlstate\mbox{[}{\bf S\+Q\+L\+S\+T\+A\+T\+E\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}}\label{structst__net_a0f689854fdd40edbf79cc7e248ecd02f}
+Client library sqlstate buffer. Set along with the error message. \hypertarget{structst__net_af405b9e71e576024dde5601684393417}{}\index{st\+\_\+net@{st\+\_\+net}!unused@{unused}}
+\index{unused@{unused}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{unused}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ st\+\_\+net\+::unused}\label{structst__net_af405b9e71e576024dde5601684393417}
+\hypertarget{structst__net_a14213eeeee153b43edc68698b46d5220}{}\index{st\+\_\+net@{st\+\_\+net}!unused1@{unused1}}
+\index{unused1@{unused1}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{unused1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+net\+::unused1}\label{structst__net_a14213eeeee153b43edc68698b46d5220}
+\hypertarget{structst__net_a814bce0c37d5ad61c5d8dac055884902}{}\index{st\+\_\+net@{st\+\_\+net}!unused2@{unused2}}
+\index{unused2@{unused2}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{unused2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+net\+::unused2}\label{structst__net_a814bce0c37d5ad61c5d8dac055884902}
+\hypertarget{structst__net_aafa39985fb118923f443ece4e9bc1820}{}\index{st\+\_\+net@{st\+\_\+net}!unused3@{unused3}}
+\index{unused3@{unused3}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{unused3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+net\+::unused3}\label{structst__net_aafa39985fb118923f443ece4e9bc1820}
+\hypertarget{structst__net_a23a02e676dfbde5b3a42a40d297fdc9e}{}\index{st\+\_\+net@{st\+\_\+net}!unused4@{unused4}}
+\index{unused4@{unused4}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{unused4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+net\+::unused4}\label{structst__net_a23a02e676dfbde5b3a42a40d297fdc9e}
+\hypertarget{structst__net_a1b104bdc3379ed54125acd4c3fc017a7}{}\index{st\+\_\+net@{st\+\_\+net}!unused5@{unused5}}
+\index{unused5@{unused5}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{unused5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+net\+::unused5}\label{structst__net_a1b104bdc3379ed54125acd4c3fc017a7}
+\hypertarget{structst__net_a04dd4cfb0c11319b3ced573c160d75d5}{}\index{st\+\_\+net@{st\+\_\+net}!vio@{vio}}
+\index{vio@{vio}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{vio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vio}$\ast$ st\+\_\+net\+::vio}\label{structst__net_a04dd4cfb0c11319b3ced573c160d75d5}
+\hypertarget{structst__net_ac77e87598c188a301184a305b2766c9c}{}\index{st\+\_\+net@{st\+\_\+net}!where\+\_\+b@{where\+\_\+b}}
+\index{where\+\_\+b@{where\+\_\+b}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{where\+\_\+b}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+net\+::where\+\_\+b}\label{structst__net_ac77e87598c188a301184a305b2766c9c}
+\hypertarget{structst__net_af160b75bc1ab06bd72a88ba7417f826e}{}\index{st\+\_\+net@{st\+\_\+net}!write\+\_\+pos@{write\+\_\+pos}}
+\index{write\+\_\+pos@{write\+\_\+pos}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{write\+\_\+pos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char $\ast$ st\+\_\+net\+::write\+\_\+pos}\label{structst__net_af160b75bc1ab06bd72a88ba7417f826e}
+\hypertarget{structst__net_a178724b62ac9b041f5e21b1b9897b694}{}\index{st\+\_\+net@{st\+\_\+net}!write\+\_\+timeout@{write\+\_\+timeout}}
+\index{write\+\_\+timeout@{write\+\_\+timeout}!st\+\_\+net@{st\+\_\+net}}
+\subsubsection[{write\+\_\+timeout}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+net\+::write\+\_\+timeout}\label{structst__net_a178724b62ac9b041f5e21b1b9897b694}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mysql__com_8h}{mysql\+\_\+com.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="getValue" name="getValue">
+<area shape="rect" id="node2" href="$usscalc_8c.html#a85c6e2ff77e81e72a69c5ebcb86b1ebc" title="ver 2.03 Function creates a telegram message according to the USS&#45;protocol. &#160;&#160;The message is 14&#45;byte ..." alt="" coords="143,5,243,32"/>
+<area shape="rect" id="node4" href="$usssend_8c.html#ac6889b05046a046c3375fa814ea6d609" title="sendReadTelegram" alt="" coords="127,56,260,83"/>
+<area shape="rect" id="node3" href="$usscalc_8c.html#a3758bfbaa4494e65cabf188a026502de" title="Function calculates the BCC check sum by simply xoring the actual with a previous value..." alt="" coords="308,5,381,32"/>
+</map>

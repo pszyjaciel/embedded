@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$usscalc_8c.html#a1237de7b0698797181f0b54a04a0e5c9" title="getAllValues" alt="" coords="104,31,199,57"/>
+<area shape="rect" id="node3" href="$usscalc_8c.html#a634a622655ffe4ad4807ac03238b8194" title="Function returns one parameter value from the MicroMaster. " alt="" coords="247,31,320,57"/>
+<area shape="rect" id="node4" href="$usscalc_8c.html#a85c6e2ff77e81e72a69c5ebcb86b1ebc" title="ver 2.03 Function creates a telegram message according to the USS&#45;protocol. &#160;&#160;The message is 14&#45;byte ..." alt="" coords="385,5,485,32"/>
+<area shape="rect" id="node6" href="$usssend_8c.html#ac6889b05046a046c3375fa814ea6d609" title="sendReadTelegram" alt="" coords="368,56,501,83"/>
+<area shape="rect" id="node5" href="$usscalc_8c.html#a3758bfbaa4494e65cabf188a026502de" title="Function calculates the BCC check sum by simply xoring the actual with a previous value..." alt="" coords="549,5,623,32"/>
+</map>

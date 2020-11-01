@@ -1,0 +1,9 @@
+<map id="SPI_SLAVE_SetMode" name="SPI_SLAVE_SetMode">
+<area shape="rect" id="node1" title="Changes the operation mode of the SPI slave channel." alt="" coords="5,107,157,133"/>
+<area shape="rect" id="node2" href="$_generated_2_s_p_i___s_l_a_v_e_2spi__slave_8c.html#a310a18eaf0173e9d095793561cb4437d" title=" " alt="" coords="205,5,432,32"/>
+<area shape="rect" id="node3" href="$group___g_p_i_o.html#ga05749322fa717f789b178838955b8c5b" title=" " alt="" coords="263,56,375,83"/>
+<area shape="rect" id="node4" href="$group___g_p_i_o.html#ga90b8519a240ddb93289d8960c6c276b1" title=" " alt="" coords="213,107,424,133"/>
+<area shape="rect" id="node5" href="$group___g_p_i_o.html#ga2d52a863e693424c88d5dd8ecf9f2e46" title=" " alt="" coords="245,157,392,184"/>
+<area shape="rect" id="node6" href="$group___s_p_i.html#ga427979d23a0325fa4f4f3c38d84f4127" title=" " alt="" coords="219,208,418,235"/>
+<area shape="rect" id="node7" href="$group___u_s_i_c.html#gacf5e581d5937dbe1bbfba846d4899675" title=" " alt="" coords="480,208,687,235"/>
+</map>

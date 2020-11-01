@@ -1,0 +1,4 @@
+<map id="UART_IsTXFIFOFull" name="UART_IsTXFIFOFull">
+<area shape="rect" id="node1" title="Checks if the transmit FIFO is full." alt="" coords="5,13,143,39"/>
+<area shape="rect" id="node2" href="$group___u_s_i_c.html#ga16a9e9baaa1465cd0b38c88b5d055f1a" title=" " alt="" coords="191,5,352,47"/>
+</map>

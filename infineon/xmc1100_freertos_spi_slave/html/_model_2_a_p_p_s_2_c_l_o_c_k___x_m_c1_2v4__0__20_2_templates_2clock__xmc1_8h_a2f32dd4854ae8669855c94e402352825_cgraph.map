@@ -1,0 +1,4 @@
+<map id="CLOCK_XMC1_SetMCLKFrequency" name="CLOCK_XMC1_SetMCLKFrequency">
+<area shape="rect" id="node1" title="API for ramping up/down the system clock frequency." alt="" coords="5,5,236,32"/>
+<area shape="rect" id="node2" href="$xmc1__scu_8c.html#a4e80d9644d060fdb10194d63d439e5d6" title=" " alt="" coords="284,5,543,32"/>
+</map>

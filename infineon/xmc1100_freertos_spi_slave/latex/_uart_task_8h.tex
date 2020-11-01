@@ -1,0 +1,66 @@
+\hypertarget{_uart_task_8h}{}\doxysection{Uart\+Task.\+h File Reference}
+\label{_uart_task_8h}\index{UartTask.h@{UartTask.h}}
+{\ttfamily \#include $<$D\+A\+V\+E.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Uart\+Task.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_uart_task_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{_uart_task_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_uart_task_8h_ae10565a6c660d6e7dcfdd1547625c9e4}{f\+End\+Of\+Transmit\+Callback}} (void)
+\item 
+void \mbox{\hyperlink{_uart_task_8h_a0ff8bc0afa656bdf24821934d7312867}{U\+A\+R\+T\+\_\+\+Task}} (void $\ast$pv\+Parameters)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_uart_task_8h_ae10565a6c660d6e7dcfdd1547625c9e4}\label{_uart_task_8h_ae10565a6c660d6e7dcfdd1547625c9e4}} 
+\index{UartTask.h@{UartTask.h}!fEndOfTransmitCallback@{fEndOfTransmitCallback}}
+\index{fEndOfTransmitCallback@{fEndOfTransmitCallback}!UartTask.h@{UartTask.h}}
+\doxysubsubsection{\texorpdfstring{fEndOfTransmitCallback()}{fEndOfTransmitCallback()}}
+{\footnotesize\ttfamily void f\+End\+Of\+Transmit\+Callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file Uart\+Task.\+c.
+
+
+
+References b\+Transmit\+Busy.
+
+\mbox{\Hypertarget{_uart_task_8h_a0ff8bc0afa656bdf24821934d7312867}\label{_uart_task_8h_a0ff8bc0afa656bdf24821934d7312867}} 
+\index{UartTask.h@{UartTask.h}!UART\_Task@{UART\_Task}}
+\index{UART\_Task@{UART\_Task}!UartTask.h@{UartTask.h}}
+\doxysubsubsection{\texorpdfstring{UART\_Task()}{UART\_Task()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file Uart\+Task.\+c.
+
+
+
+References Data\+To\+Receive, D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Set\+Output\+High(), D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Set\+Output\+Low(), f\+My\+Printf(), i\+Main\+Menu\+Loop\+Counter, mb, My\+U\+A\+R\+T\+Error\+Handler(), pd\+M\+S\+\_\+\+T\+O\+\_\+\+T\+I\+C\+KS, pd\+T\+R\+UE, uc\+Uart\+Received\+Data\+Global, V\+D\+I\+O\+P0\+\_\+0, V\+D\+I\+O\+P0\+\_\+5, v\+Task\+Delay(), x\+Delay, x\+Queue, and x\+Queue\+Receive().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_uart_task_8h_a0ff8bc0afa656bdf24821934d7312867_cgraph}
+\end{center}
+\end{figure}

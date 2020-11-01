@@ -1,0 +1,8 @@
+<map id="SPI_SLAVE" name="SPI_SLAVE">
+<area shape="rect" id="node1" title="Handler structure with pointers to dynamic and static parameters." alt="" coords="330,637,423,715"/>
+<area shape="rect" id="node2" href="$struct_s_p_i___s_l_a_v_e___c_o_n_f_i_g.html" title="Structure for holding the configuration parameters of SPI_SLAVE channel." alt="" coords="106,263,274,516"/>
+<area shape="rect" id="node3" href="$struct_s_p_i___s_l_a_v_e___p_i_n___c_o_n_f_i_g.html" title="Structure for transmit pin configuration." alt="" coords="5,5,183,127"/>
+<area shape="rect" id="node4" href="$struct_x_m_c___s_p_i___c_h___c_o_n_f_i_g.html" title=" " alt="" coords="207,5,365,127"/>
+<area shape="rect" id="node5" href="$struct_s_p_i___s_l_a_v_e___r_u_n_t_i_m_e.html" title="Structure to hold the dynamic variables for the SPI_SLAVE communication." alt="" coords="298,285,455,494"/>
+<area shape="rect" id="node6" href="$struct_x_m_c___u_s_i_c___c_h.html" title=" " alt="" coords="480,204,607,575"/>
+</map>

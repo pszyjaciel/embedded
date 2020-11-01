@@ -1,0 +1,8 @@
+<map id="Libraries/CMSIS/Infineon/XMC1100_series/Include/XMC1100.h" name="Libraries/CMSIS/Infineon/XMC1100_series/Include/XMC1100.h">
+<area shape="rect" id="node1" title="CMSIS Cortex&#45;M0 Peripheral Access Layer Header File for XMC1100 from Infineon." alt="" coords="118,5,286,61"/>
+<area shape="rect" id="node2" href="$core__cm0_8h.html" title="CMSIS Cortex&#45;M0 Core Peripheral Access Layer Header File." alt="" coords="62,109,153,136"/>
+<area shape="rect" id="node6" href="$system___x_m_c1100_8h.html" title=" " alt="" coords="229,109,368,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="192,259,258,285"/>
+<area shape="rect" id="node4" href="$cmsis__version_8h.html" title="CMSIS Core(M) Version definitions." alt="" coords="24,184,138,211"/>
+<area shape="rect" id="node5" href="$cmsis__compiler_8h.html" title="CMSIS compiler generic header file." alt="" coords="163,184,287,211"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$usscalc_8c.html#a0e6157d1764f0cd0bfd6895d2888d0f1" title="getAllValues" alt="" coords="110,43,205,69"/>
+<area shape="rect" id="node9" href="$my_util_8c.html#a462f788430a8411cca8cfe2116118e31" title="print_hexWord" alt="" coords="104,93,211,120"/>
+<area shape="rect" id="node10" href="$my_uart_8c.html#a60eaeaa21312415e8b5c05f5376f3541" title="RS232_putstring" alt="" coords="259,119,377,145"/>
+<area shape="rect" id="node12" href="$my_uart_8c.html#a06c2a1060a933565013c7e5977139244" title="RS232_init" alt="" coords="115,195,200,221"/>
+<area shape="rect" id="node13" href="$my_uart_8c.html#a27f5340823874f42a318aab1e8b4ed50" title="RS485_init" alt="" coords="115,245,200,272"/>
+<area shape="rect" id="node3" href="$usscalc_8c.html#a0d092db893cddedce1266d2971f2cd7f" title="getValue" alt="" coords="281,43,355,69"/>
+<area shape="rect" id="node4" href="$usscalc_8c.html#ac734b72553a80042ac173bfebf6b5185" title="prepTelegram" alt="" coords="453,5,553,32"/>
+<area shape="rect" id="node6" href="$my_uart_8c.html#a9b1299202b28a668b8039f538539efb1" title="RS485_QueryTelegram" alt="" coords="425,56,581,83"/>
+<area shape="rect" id="node5" href="$usscalc_8c.html#a3758bfbaa4494e65cabf188a026502de" title="calcBCC" alt="" coords="656,5,729,32"/>
+<area shape="rect" id="node7" href="$my_uart_8c.html#aeb49100d16c0c1b323128896ed286558" title="RS485_WriteChar" alt="" coords="629,56,756,83"/>
+<area shape="rect" id="node8" href="$my_uart_8c.html#ab56f53b4e7d6fe7165cdef32270c7a39" title="RS485_ReadChar" alt="" coords="630,107,755,133"/>
+<area shape="rect" id="node11" href="$my_uart_8c.html#a1a99be79a25c05250ff2eca4cbbf9fc5" title="RS232_WriteChar" alt="" coords="440,119,567,145"/>
+</map>

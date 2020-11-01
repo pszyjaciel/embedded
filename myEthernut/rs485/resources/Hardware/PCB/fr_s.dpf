@@ -1,0 +1,9 @@
+U=MIL X-47.244,3905.512Y-47.244,3118.11
+;;GeneratedBy : Ucam v8.1-071121
+;;Hostname : CAM2
+;;User : pk
+;;Date : Thu Feb 26 15:14:40 2009
+;;Digest : dbdaccd8d6e9e699969d9b98ed818187838989fe9ea1b7b0a9e5a7a3abbf
+;@{f
+;@}
+U=MM A0=CIRCLE,2.4,ATTR=(uReverseData) M0,0D98D,78D0D,0

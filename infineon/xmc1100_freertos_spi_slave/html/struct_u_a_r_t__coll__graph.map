@@ -1,0 +1,8 @@
+<map id="UART" name="UART">
+<area shape="rect" id="node1" title="Handler structure with pointers to dynamic and static parameters." alt="" coords="317,652,373,729"/>
+<area shape="rect" id="node2" href="$struct_u_a_r_t___c_o_n_f_i_g.html" title="Structure for holding the configuration parameters of UART channel." alt="" coords="63,270,257,538"/>
+<area shape="rect" id="node3" href="$struct_u_a_r_t___t_x___c_o_n_f_i_g.html" title="Structure for transmit pin configuration." alt="" coords="5,27,139,134"/>
+<area shape="rect" id="node4" href="$struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g.html" title=" " alt="" coords="163,5,333,156"/>
+<area shape="rect" id="node5" href="$struct_x_m_c___u_s_i_c___c_h.html" title=" " alt="" coords="282,219,409,589"/>
+<area shape="rect" id="node6" href="$struct_u_a_r_t___r_u_n_t_i_m_e.html" title="Structure to hold the dynamic variables for the UART communication." alt="" coords="433,314,553,494"/>
+</map>

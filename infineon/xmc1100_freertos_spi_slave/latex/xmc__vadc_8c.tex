@@ -1,0 +1,104 @@
+\hypertarget{xmc__vadc_8c}{}\doxysection{Libraries/\+X\+M\+C\+Lib/src/xmc\+\_\+vadc.c File Reference}
+\label{xmc__vadc_8c}\index{Libraries/XMCLib/src/xmc\_vadc.c@{Libraries/XMCLib/src/xmc\_vadc.c}}
+{\ttfamily \#include $<$xmc\+\_\+vadc.\+h$>$}\newline
+Include dependency graph for xmc\+\_\+vadc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{xmc__vadc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{xmc__vadc_8c_a2e0b730f8ad730723293f485c3d6769c}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+M\+A\+X\+\_\+\+I\+C\+L\+A\+S\+S\+\_\+\+S\+ET}}~(2U)
+\item 
+\#define \mbox{\hyperlink{xmc__vadc_8c_a28456536a417bd3442d7fcf497eaae5b}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+N\+U\+M\+\_\+\+E\+M\+U\+X\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+ES}}~(2U)
+\item 
+\#define \mbox{\hyperlink{xmc__vadc_8c_a11895eff4e9f894647099a2615565ffb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+L\+E\+F\+T\+\_\+\+A\+L\+I\+G\+N\+\_\+10\+B\+IT}}~(2U)
+\item 
+\#define \mbox{\hyperlink{xmc__vadc_8c_a9596993f9b61be6d59acdec173fe801b}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+S\+Y\+N\+C\+T\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+L\+O\+C\+A\+T\+I\+ON}}~(3U)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga9751f6e7d01d01dcd69f939cc7acfc48}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Enable\+Module}} (void)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_gaa02b1286238761c5d6c1a42f552463df}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Disable\+Module}} (void)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga3a03902554eb8c9ff9fdfb6f3e76dc2c}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Init}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, const \mbox{\hyperlink{group___v_a_d_c_gab29cc658e459b86028aee8366da96536}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$config)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga2e65df86680f0bce4057ea37a495445d}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Input\+Class\+Init}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, const \mbox{\hyperlink{group___v_a_d_c_gac2528c482e079bb20de548adf3b92964}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+C\+L\+A\+S\+S\+\_\+t}} config, const \mbox{\hyperlink{group___v_a_d_c_ga16f3e39e5da653ad7303aad4a87bbc74}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+R\+O\+U\+P\+\_\+\+C\+O\+N\+V\+\_\+t}} conv\+\_\+type, const uint32\+\_\+t set\+\_\+num)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga8c267fe37fbdf8654d14f46acf2d3b86}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Startup\+Calibration}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_gac239d3389baab5175eca043b6ac606b8}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Set\+Compare\+Value}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, const \mbox{\hyperlink{group___v_a_d_c_gadb07d5ea1ef8b662d9550d22944825d4}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+S\+I\+Z\+E\+\_\+t}} compare\+\_\+val)
+\item 
+\mbox{\hyperlink{group___v_a_d_c_gaf3ba630a328b97e46151b4ab1cbc7b62}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+F\+A\+S\+T\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+t}} \mbox{\hyperlink{group___v_a_d_c_ga2e6a5c936529f8bf35c81f662e5a57c9}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Get\+Compare\+Result}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_gaa9738610187d2b11716c5faa07e214c7}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Set\+Result\+Event\+Interrupt\+Node}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, \mbox{\hyperlink{group___v_a_d_c_ga6ddc789a677cba8dbb3560195d61811c}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+S\+R\+\_\+t}} sr)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga7f53b56af0d025239dbbcd80af5a5481}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Background\+Set\+Req\+Src\+Event\+Interrupt\+Node}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, \mbox{\hyperlink{group___v_a_d_c_ga6ddc789a677cba8dbb3560195d61811c}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+S\+R\+\_\+t}} sr)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga2a669e00443f963546fdbe05a1eb0084}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Background\+Init}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, const \mbox{\hyperlink{group___v_a_d_c_ga5df621dbf8385ce88a2fbe632a75d02d}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$config)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga1dc24406fa9e95d845a8095728dcbce4}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Background\+Select\+Trigger}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, const uint32\+\_\+t input\+\_\+num)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_gaea3cd4f61981bbc16074a4301b2c1fd3}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Background\+Select\+Trigger\+Edge}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, const \mbox{\hyperlink{group___v_a_d_c_gae8fa52881a7e25eaff9d3db30243c302}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+E\+D\+G\+E\+\_\+t}} trigger\+\_\+edge)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_gacba7a4847be06bb2e71493eabf9bbb69}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Background\+Select\+Gating}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr, const uint32\+\_\+t input\+\_\+num)
+\item 
+void \mbox{\hyperlink{group___v_a_d_c_ga04933ff6939f277ded8a4c19c3ef8d38}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Background\+Abort\+Sequence}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___v_a_d_c_ga424f2cfadf7566780a290be6b34a63cd}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Background\+Get\+Num\+Channels\+Pending}} (\mbox{\hyperlink{group___v_a_d_c_ga8cc559b855e4da85ee2f48bcd98405cb}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+t}} $\ast$const global\+\_\+ptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyDate}{Date}
+2016-\/06-\/17 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xmc__vadc_8c_a2e0b730f8ad730723293f485c3d6769c}\label{xmc__vadc_8c_a2e0b730f8ad730723293f485c3d6769c}} 
+\index{xmc\_vadc.c@{xmc\_vadc.c}!XMC\_VADC\_MAX\_ICLASS\_SET@{XMC\_VADC\_MAX\_ICLASS\_SET}}
+\index{XMC\_VADC\_MAX\_ICLASS\_SET@{XMC\_VADC\_MAX\_ICLASS\_SET}!xmc\_vadc.c@{xmc\_vadc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_VADC\_MAX\_ICLASS\_SET}{XMC\_VADC\_MAX\_ICLASS\_SET}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+M\+A\+X\+\_\+\+I\+C\+L\+A\+S\+S\+\_\+\+S\+ET~(2U)}
+
+Defines the maximum number of conversion parameter sets 
+
+Definition at line 105 of file xmc\+\_\+vadc.\+c.
+
+\mbox{\Hypertarget{xmc__vadc_8c_a28456536a417bd3442d7fcf497eaae5b}\label{xmc__vadc_8c_a28456536a417bd3442d7fcf497eaae5b}} 
+\index{xmc\_vadc.c@{xmc\_vadc.c}!XMC\_VADC\_NUM\_EMUX\_INTERFACES@{XMC\_VADC\_NUM\_EMUX\_INTERFACES}}
+\index{XMC\_VADC\_NUM\_EMUX\_INTERFACES@{XMC\_VADC\_NUM\_EMUX\_INTERFACES}!xmc\_vadc.c@{xmc\_vadc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_VADC\_NUM\_EMUX\_INTERFACES}{XMC\_VADC\_NUM\_EMUX\_INTERFACES}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+N\+U\+M\+\_\+\+E\+M\+U\+X\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+ES~(2U)}
+
+Defines the maximum number of external multiplexer interfaces 
+
+Definition at line 106 of file xmc\+\_\+vadc.\+c.
+
+\mbox{\Hypertarget{xmc__vadc_8c_a11895eff4e9f894647099a2615565ffb}\label{xmc__vadc_8c_a11895eff4e9f894647099a2615565ffb}} 
+\index{xmc\_vadc.c@{xmc\_vadc.c}!XMC\_VADC\_RESULT\_LEFT\_ALIGN\_10BIT@{XMC\_VADC\_RESULT\_LEFT\_ALIGN\_10BIT}}
+\index{XMC\_VADC\_RESULT\_LEFT\_ALIGN\_10BIT@{XMC\_VADC\_RESULT\_LEFT\_ALIGN\_10BIT}!xmc\_vadc.c@{xmc\_vadc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_VADC\_RESULT\_LEFT\_ALIGN\_10BIT}{XMC\_VADC\_RESULT\_LEFT\_ALIGN\_10BIT}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+L\+E\+F\+T\+\_\+\+A\+L\+I\+G\+N\+\_\+10\+B\+IT~(2U)}
+
+Defines the 10 bit converted result register left align mask. It \textbackslash{} is used in the \mbox{\hyperlink{group___v_a_d_c_gac239d3389baab5175eca043b6ac606b8}{X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Set\+Compare\+Value()}} A\+PI 
+
+Definition at line 109 of file xmc\+\_\+vadc.\+c.
+
+\mbox{\Hypertarget{xmc__vadc_8c_a9596993f9b61be6d59acdec173fe801b}\label{xmc__vadc_8c_a9596993f9b61be6d59acdec173fe801b}} 
+\index{xmc\_vadc.c@{xmc\_vadc.c}!XMC\_VADC\_SYNCTR\_START\_LOCATION@{XMC\_VADC\_SYNCTR\_START\_LOCATION}}
+\index{XMC\_VADC\_SYNCTR\_START\_LOCATION@{XMC\_VADC\_SYNCTR\_START\_LOCATION}!xmc\_vadc.c@{xmc\_vadc.c}}
+\doxysubsubsection{\texorpdfstring{XMC\_VADC\_SYNCTR\_START\_LOCATION}{XMC\_VADC\_SYNCTR\_START\_LOCATION}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+S\+Y\+N\+C\+T\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+L\+O\+C\+A\+T\+I\+ON~(3U)}
+
+Defines the location in S\+Y\+N\+C\+TR needed for calculations 
+
+Definition at line 111 of file xmc\+\_\+vadc.\+c.
+

@@ -1,0 +1,41 @@
+\hypertarget{group__servo}{}\section{Parallax Servo Driver}
+\label{group__servo}\index{Parallax Servo Driver@{Parallax Servo Driver}}
+
+
+Servo Control functions. Functions to manipulate the Servo driver.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__servo_ga859a2e40622c3b91e13f435fb914af1b}{set\+Prescaler} (uint16\+\_\+t speed)
+\begin{DoxyCompactList}\small\item\em Set the prescaler with a predefined value The set\+Prescaler function sets the timer to a predefined value that is {\itshape speed} parameter. It modifies three lowest bits in T\+C\+C\+R1\+B register according to the datasheet p. 170. The function returns nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Servo Control functions. Functions to manipulate the Servo driver. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{group__servo_ga859a2e40622c3b91e13f435fb914af1b}{}\index{Parallax Servo Driver@{Parallax Servo Driver}!set\+Prescaler@{set\+Prescaler}}
+\index{set\+Prescaler@{set\+Prescaler}!Parallax Servo Driver@{Parallax Servo Driver}}
+\subsubsection[{set\+Prescaler}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Prescaler (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{speed}
+\end{DoxyParamCaption}
+)}\label{group__servo_ga859a2e40622c3b91e13f435fb914af1b}
+
+
+Set the prescaler with a predefined value The set\+Prescaler function sets the timer to a predefined value that is {\itshape speed} parameter. It modifies three lowest bits in T\+C\+C\+R1\+B register according to the datasheet p. 170. The function returns nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & is one of 6 predefined speed values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}void\mbox{]} nothing is returned 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]will be implemented when I find the time tor it. \end{DoxyRefDesc}

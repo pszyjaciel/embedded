@@ -1,0 +1,7 @@
+<map id="UART_AbortTransmit" name="UART_AbortTransmit">
+<area shape="rect" id="node1" title="Aborts the ongoing data transmission." alt="" coords="5,97,149,124"/>
+<area shape="rect" id="node2" href="$group___u_s_i_c.html#gaf09b9aaac4aacf1f2601362f722eef44" title=" " alt="" coords="211,5,405,32"/>
+<area shape="rect" id="node3" href="$group___u_s_i_c.html#ga29a88baf5a86b4e3654608918cc83dd7" title=" " alt="" coords="197,57,419,98"/>
+<area shape="rect" id="node4" href="$group___u_s_i_c.html#ga9e6752477811e670605881eedb48819a" title=" " alt="" coords="227,122,389,163"/>
+<area shape="rect" id="node5" href="$group___u_s_i_c.html#ga193ef138d483148c4209e62b4507b46d" title=" " alt="" coords="227,187,389,229"/>
+</map>

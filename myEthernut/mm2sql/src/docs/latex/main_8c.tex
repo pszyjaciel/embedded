@@ -1,0 +1,101 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}pksql.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}my\+Serial.\+h\char`\"{}}\\*
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_a1b8c826305ac483320e8a9f34192cf5a}{M\+Y\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_ad4facf5ba5f923526c013960071736f8}{clean\+Buffer} (char $\ast$buffer2clean)
+\begin{DoxyCompactList}\small\item\em This function cleans the buffer which will be filled out with data from serial port. \end{DoxyCompactList}\item 
+static unsigned short \hyperlink{main_8c_abbb7e67a6e449d9be9e3af3ccb861aa1}{char2short} (unsigned char $\ast$val)
+\item 
+void \hyperlink{main_8c_a88bc34280b9c32397b0fd8d8f431d4e6}{parse\+Message} (char $\ast$msg\+Text\+Buf)
+\item 
+int \hyperlink{main_8c_abf5d177785c49159586fcc85a51db69b}{main} (int argc, C\+H\+A\+R $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8c_a1b8c826305ac483320e8a9f34192cf5a}{}\index{main.\+c@{main.\+c}!M\+Y\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{M\+Y\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{M\+Y\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{M\+Y\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!main.\+c@{main.\+c}}
+\subsubsection[{M\+Y\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{main_8c_a1b8c826305ac483320e8a9f34192cf5a}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_abbb7e67a6e449d9be9e3af3ccb861aa1}{}\index{main.\+c@{main.\+c}!char2short@{char2short}}
+\index{char2short@{char2short}!main.\+c@{main.\+c}}
+\subsubsection[{char2short(unsigned char $\ast$val)}]{\setlength{\rightskip}{0pt plus 5cm}static unsigned short char2short (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{main_8c_abbb7e67a6e449d9be9e3af3ccb861aa1}
+\hypertarget{main_8c_ad4facf5ba5f923526c013960071736f8}{}\index{main.\+c@{main.\+c}!clean\+Buffer@{clean\+Buffer}}
+\index{clean\+Buffer@{clean\+Buffer}!main.\+c@{main.\+c}}
+\subsubsection[{clean\+Buffer(char $\ast$buffer2clean)}]{\setlength{\rightskip}{0pt plus 5cm}void clean\+Buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer2clean}
+\end{DoxyParamCaption}
+)}\label{main_8c_ad4facf5ba5f923526c013960071736f8}
+
+
+This function cleans the buffer which will be filled out with data from serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer2clean} & is the pointer to a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return. 
+\end{DoxyReturn}
+\hypertarget{main_8c_abf5d177785c49159586fcc85a51db69b}{}\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{main(int argc, C\+H\+A\+R $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{C\+H\+A\+R $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{main_8c_abf5d177785c49159586fcc85a51db69b}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_abf5d177785c49159586fcc85a51db69b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main_8c_a88bc34280b9c32397b0fd8d8f431d4e6}{}\index{main.\+c@{main.\+c}!parse\+Message@{parse\+Message}}
+\index{parse\+Message@{parse\+Message}!main.\+c@{main.\+c}}
+\subsubsection[{parse\+Message(char $\ast$msg\+Text\+Buf)}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Message (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg\+Text\+Buf}
+\end{DoxyParamCaption}
+)}\label{main_8c_a88bc34280b9c32397b0fd8d8f431d4e6}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{main_8c_a88bc34280b9c32397b0fd8d8f431d4e6_cgraph}
+\end{center}
+\end{figure}
+
+

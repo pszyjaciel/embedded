@@ -1,0 +1,7 @@
+<map id="mysql_query" name="mysql_query">
+<area shape="rect" id="node2" href="$a00031.html#a8b909a723dc6d0092907c796276a08ec" title="This function reads and displays all values from a table myTable, in a row defined by myID..." alt="" coords="144,5,271,31"/>
+<area shape="rect" id="node3" href="$a00031.html#acfcbcaa2f6f2cbc3d57bd53a4d673d13" title="This function prepares a SQL&#45;statement and inserts data into the table myTable of mySQL&#45;database..." alt="" coords="160,55,255,80"/>
+<area shape="rect" id="node5" href="$a00031.html#aa0890e5a0157dcc938d6fb7b43e9c7f1" title="This function will be replaced later by updateTable() " alt="" coords="155,104,260,129"/>
+<area shape="rect" id="node6" href="$a00031.html#adbba85b021fda9020527f0128df3967f" title="Function inserts into mySQL&#45;Database an actual date and time (called Time Stamp). ..." alt="" coords="150,153,265,179"/>
+<area shape="rect" id="node4" href="$a00020.html#abf5d177785c49159586fcc85a51db69b" title="In the main function the connection to mySQL is created, the serial port is being initialized..." alt="" coords="319,55,365,80"/>
+</map>

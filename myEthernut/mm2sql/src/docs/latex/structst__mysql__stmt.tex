@@ -1,0 +1,161 @@
+\hypertarget{structst__mysql__stmt}{}\section{st\+\_\+mysql\+\_\+stmt Struct Reference}
+\label{structst__mysql__stmt}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+
+
+{\ttfamily \#include $<$mysql.\+h$>$}
+
+
+
+Collaboration diagram for st\+\_\+mysql\+\_\+stmt\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structst__mysql__stmt__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{my__alloc_8h_ac59e289b254a2c5ac634ffcedda3f823}{M\+E\+M\+\_\+\+R\+O\+O\+T} \hyperlink{structst__mysql__stmt_a292686a1de9fdbddc3963bcf20249cb0}{mem\+\_\+root}
+\item 
+\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} \hyperlink{structst__mysql__stmt_aac96a0c9f7a07434da3d798f3b2ece87}{list}
+\item 
+\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$ \hyperlink{structst__mysql__stmt_a224349871acc052c72cfa86f5901c809}{mysql}
+\item 
+\hyperlink{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$ \hyperlink{structst__mysql__stmt_a0276e0f80817dccc03611786fd646ec7}{params}
+\item 
+\hyperlink{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$ \hyperlink{structst__mysql__stmt_a5651622ae4c2c31616aa648b70cc12b2}{bind}
+\item 
+\hyperlink{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$ \hyperlink{structst__mysql__stmt_a1d7627383d3c0ab2989968d88c2bb83d}{fields}
+\item 
+\hyperlink{mysql_8h_a19837b8e2f5cec429a5b61d4d5c68ed6}{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A} \hyperlink{structst__mysql__stmt_a198cbcc8f7faf73522a281dec2e1e434}{result}
+\item 
+\hyperlink{mysql_8h_a4d0140764825a51eae874c641df1afb5}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S} $\ast$ \hyperlink{structst__mysql__stmt_ad1663e8fd4bab5be184b6cd38d3296f8}{data\+\_\+cursor}
+\item 
+int($\ast$ \hyperlink{structst__mysql__stmt_a908e910a9ff3cf311f2a34408179cffe}{read\+\_\+row\+\_\+func} )(struct \hyperlink{structst__mysql__stmt}{st\+\_\+mysql\+\_\+stmt} $\ast$stmt, unsigned char $\ast$$\ast$row)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{structst__mysql__stmt_af168ff6c13b33aca298c39d5b128f428}{affected\+\_\+rows}
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{structst__mysql__stmt_ae1412a9a6bacafb7daf66f5fc826b54f}{insert\+\_\+id}
+\item 
+unsigned long \hyperlink{structst__mysql__stmt_ad800f40b351919f8d6e9c9a4d757ab72}{stmt\+\_\+id}
+\item 
+unsigned long \hyperlink{structst__mysql__stmt_a5db08a5ec03692af1fd1b2d588c10999}{flags}
+\item 
+unsigned long \hyperlink{structst__mysql__stmt_ae2e891ae11a6f5d016166f93d1553c24}{prefetch\+\_\+rows}
+\item 
+unsigned int \hyperlink{structst__mysql__stmt_af2b6c14f77e053b0cb952f4bc838a94a}{server\+\_\+status}
+\item 
+unsigned int \hyperlink{structst__mysql__stmt_a58c9c8e23ee17b61de9804585fa3c9cd}{last\+\_\+errno}
+\item 
+unsigned int \hyperlink{structst__mysql__stmt_a082d2c41726787a2c9daea75e9afb2cd}{param\+\_\+count}
+\item 
+unsigned int \hyperlink{structst__mysql__stmt_aee56a3ffa9c1019c207ee1eaade2306b}{field\+\_\+count}
+\item 
+enum \hyperlink{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63}{enum\+\_\+mysql\+\_\+stmt\+\_\+state} \hyperlink{structst__mysql__stmt_a30dfb09d512d7b9397f8bea13bfc319b}{state}
+\item 
+char \hyperlink{structst__mysql__stmt_a5aa67e24109cb953e09d788756802c9a}{last\+\_\+error} \mbox{[}\hyperlink{mysql__com_8h_a3f5f3eab30894e1dfa8d5bd977a889be}{M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+M\+S\+G\+\_\+\+S\+I\+Z\+E}\mbox{]}
+\item 
+char \hyperlink{structst__mysql__stmt_a4bc2da06a308a95a0e5af923239493b5}{sqlstate} \mbox{[}\hyperlink{mysql__com_8h_a8e152edf1a0bae8aec7f5d59cebfbea9}{S\+Q\+L\+S\+T\+A\+T\+E\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__stmt_a18b9cca9708b5d7ac8dba93f68e8da9c}{send\+\_\+types\+\_\+to\+\_\+server}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__stmt_a591d90535b12361e5eb35142cead78cd}{bind\+\_\+param\+\_\+done}
+\item 
+unsigned char \hyperlink{structst__mysql__stmt_a0371a2667da810cfb863de6d15f5c24e}{bind\+\_\+result\+\_\+done}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__stmt_aa0fee515cb67c6671540a12042362619}{unbuffered\+\_\+fetch\+\_\+cancelled}
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{structst__mysql__stmt_ab2e8f874563ad8a2d658117548983cf8}{update\+\_\+max\+\_\+length}
+\item 
+struct st\+\_\+mysql\+\_\+stmt\+\_\+extension $\ast$ \hyperlink{structst__mysql__stmt_a7dc80b5b01da1a6ef0f18f2c41b3c1a0}{extension}
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structst__mysql__stmt_af168ff6c13b33aca298c39d5b128f428}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!affected\+\_\+rows@{affected\+\_\+rows}}
+\index{affected\+\_\+rows@{affected\+\_\+rows}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{affected\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} st\+\_\+mysql\+\_\+stmt\+::affected\+\_\+rows}\label{structst__mysql__stmt_af168ff6c13b33aca298c39d5b128f428}
+\hypertarget{structst__mysql__stmt_a5651622ae4c2c31616aa648b70cc12b2}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!bind@{bind}}
+\index{bind@{bind}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{bind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D}$\ast$ st\+\_\+mysql\+\_\+stmt\+::bind}\label{structst__mysql__stmt_a5651622ae4c2c31616aa648b70cc12b2}
+\hypertarget{structst__mysql__stmt_a591d90535b12361e5eb35142cead78cd}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!bind\+\_\+param\+\_\+done@{bind\+\_\+param\+\_\+done}}
+\index{bind\+\_\+param\+\_\+done@{bind\+\_\+param\+\_\+done}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{bind\+\_\+param\+\_\+done}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+stmt\+::bind\+\_\+param\+\_\+done}\label{structst__mysql__stmt_a591d90535b12361e5eb35142cead78cd}
+\hypertarget{structst__mysql__stmt_a0371a2667da810cfb863de6d15f5c24e}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!bind\+\_\+result\+\_\+done@{bind\+\_\+result\+\_\+done}}
+\index{bind\+\_\+result\+\_\+done@{bind\+\_\+result\+\_\+done}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{bind\+\_\+result\+\_\+done}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char st\+\_\+mysql\+\_\+stmt\+::bind\+\_\+result\+\_\+done}\label{structst__mysql__stmt_a0371a2667da810cfb863de6d15f5c24e}
+\hypertarget{structst__mysql__stmt_ad1663e8fd4bab5be184b6cd38d3296f8}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!data\+\_\+cursor@{data\+\_\+cursor}}
+\index{data\+\_\+cursor@{data\+\_\+cursor}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{data\+\_\+cursor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S}$\ast$ st\+\_\+mysql\+\_\+stmt\+::data\+\_\+cursor}\label{structst__mysql__stmt_ad1663e8fd4bab5be184b6cd38d3296f8}
+\hypertarget{structst__mysql__stmt_a7dc80b5b01da1a6ef0f18f2c41b3c1a0}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!extension@{extension}}
+\index{extension@{extension}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{extension}]{\setlength{\rightskip}{0pt plus 5cm}struct st\+\_\+mysql\+\_\+stmt\+\_\+extension$\ast$ st\+\_\+mysql\+\_\+stmt\+::extension}\label{structst__mysql__stmt_a7dc80b5b01da1a6ef0f18f2c41b3c1a0}
+\hypertarget{structst__mysql__stmt_aee56a3ffa9c1019c207ee1eaade2306b}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!field\+\_\+count@{field\+\_\+count}}
+\index{field\+\_\+count@{field\+\_\+count}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{field\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+stmt\+::field\+\_\+count}\label{structst__mysql__stmt_aee56a3ffa9c1019c207ee1eaade2306b}
+\hypertarget{structst__mysql__stmt_a1d7627383d3c0ab2989968d88c2bb83d}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!fields@{fields}}
+\index{fields@{fields}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{fields}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}$\ast$ st\+\_\+mysql\+\_\+stmt\+::fields}\label{structst__mysql__stmt_a1d7627383d3c0ab2989968d88c2bb83d}
+\hypertarget{structst__mysql__stmt_a5db08a5ec03692af1fd1b2d588c10999}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!flags@{flags}}
+\index{flags@{flags}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+stmt\+::flags}\label{structst__mysql__stmt_a5db08a5ec03692af1fd1b2d588c10999}
+\hypertarget{structst__mysql__stmt_ae1412a9a6bacafb7daf66f5fc826b54f}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!insert\+\_\+id@{insert\+\_\+id}}
+\index{insert\+\_\+id@{insert\+\_\+id}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{insert\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} st\+\_\+mysql\+\_\+stmt\+::insert\+\_\+id}\label{structst__mysql__stmt_ae1412a9a6bacafb7daf66f5fc826b54f}
+\hypertarget{structst__mysql__stmt_a58c9c8e23ee17b61de9804585fa3c9cd}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!last\+\_\+errno@{last\+\_\+errno}}
+\index{last\+\_\+errno@{last\+\_\+errno}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{last\+\_\+errno}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+stmt\+::last\+\_\+errno}\label{structst__mysql__stmt_a58c9c8e23ee17b61de9804585fa3c9cd}
+\hypertarget{structst__mysql__stmt_a5aa67e24109cb953e09d788756802c9a}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!last\+\_\+error@{last\+\_\+error}}
+\index{last\+\_\+error@{last\+\_\+error}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{last\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}char st\+\_\+mysql\+\_\+stmt\+::last\+\_\+error\mbox{[}{\bf M\+Y\+S\+Q\+L\+\_\+\+E\+R\+R\+M\+S\+G\+\_\+\+S\+I\+Z\+E}\mbox{]}}\label{structst__mysql__stmt_a5aa67e24109cb953e09d788756802c9a}
+\hypertarget{structst__mysql__stmt_aac96a0c9f7a07434da3d798f3b2ece87}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!list@{list}}
+\index{list@{list}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T} st\+\_\+mysql\+\_\+stmt\+::list}\label{structst__mysql__stmt_aac96a0c9f7a07434da3d798f3b2ece87}
+\hypertarget{structst__mysql__stmt_a292686a1de9fdbddc3963bcf20249cb0}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!mem\+\_\+root@{mem\+\_\+root}}
+\index{mem\+\_\+root@{mem\+\_\+root}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{mem\+\_\+root}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+M\+\_\+\+R\+O\+O\+T} st\+\_\+mysql\+\_\+stmt\+::mem\+\_\+root}\label{structst__mysql__stmt_a292686a1de9fdbddc3963bcf20249cb0}
+\hypertarget{structst__mysql__stmt_a224349871acc052c72cfa86f5901c809}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!mysql@{mysql}}
+\index{mysql@{mysql}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{mysql}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L}$\ast$ st\+\_\+mysql\+\_\+stmt\+::mysql}\label{structst__mysql__stmt_a224349871acc052c72cfa86f5901c809}
+\hypertarget{structst__mysql__stmt_a082d2c41726787a2c9daea75e9afb2cd}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!param\+\_\+count@{param\+\_\+count}}
+\index{param\+\_\+count@{param\+\_\+count}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{param\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+stmt\+::param\+\_\+count}\label{structst__mysql__stmt_a082d2c41726787a2c9daea75e9afb2cd}
+\hypertarget{structst__mysql__stmt_a0276e0f80817dccc03611786fd646ec7}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!params@{params}}
+\index{params@{params}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{params}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D}$\ast$ st\+\_\+mysql\+\_\+stmt\+::params}\label{structst__mysql__stmt_a0276e0f80817dccc03611786fd646ec7}
+\hypertarget{structst__mysql__stmt_ae2e891ae11a6f5d016166f93d1553c24}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!prefetch\+\_\+rows@{prefetch\+\_\+rows}}
+\index{prefetch\+\_\+rows@{prefetch\+\_\+rows}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{prefetch\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+stmt\+::prefetch\+\_\+rows}\label{structst__mysql__stmt_ae2e891ae11a6f5d016166f93d1553c24}
+\hypertarget{structst__mysql__stmt_a908e910a9ff3cf311f2a34408179cffe}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!read\+\_\+row\+\_\+func@{read\+\_\+row\+\_\+func}}
+\index{read\+\_\+row\+\_\+func@{read\+\_\+row\+\_\+func}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{read\+\_\+row\+\_\+func}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ st\+\_\+mysql\+\_\+stmt\+::read\+\_\+row\+\_\+func) (struct {\bf st\+\_\+mysql\+\_\+stmt} $\ast$stmt, unsigned char $\ast$$\ast$row)}\label{structst__mysql__stmt_a908e910a9ff3cf311f2a34408179cffe}
+\hypertarget{structst__mysql__stmt_a198cbcc8f7faf73522a281dec2e1e434}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!result@{result}}
+\index{result@{result}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A} st\+\_\+mysql\+\_\+stmt\+::result}\label{structst__mysql__stmt_a198cbcc8f7faf73522a281dec2e1e434}
+\hypertarget{structst__mysql__stmt_a18b9cca9708b5d7ac8dba93f68e8da9c}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!send\+\_\+types\+\_\+to\+\_\+server@{send\+\_\+types\+\_\+to\+\_\+server}}
+\index{send\+\_\+types\+\_\+to\+\_\+server@{send\+\_\+types\+\_\+to\+\_\+server}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{send\+\_\+types\+\_\+to\+\_\+server}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+stmt\+::send\+\_\+types\+\_\+to\+\_\+server}\label{structst__mysql__stmt_a18b9cca9708b5d7ac8dba93f68e8da9c}
+\hypertarget{structst__mysql__stmt_af2b6c14f77e053b0cb952f4bc838a94a}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!server\+\_\+status@{server\+\_\+status}}
+\index{server\+\_\+status@{server\+\_\+status}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{server\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int st\+\_\+mysql\+\_\+stmt\+::server\+\_\+status}\label{structst__mysql__stmt_af2b6c14f77e053b0cb952f4bc838a94a}
+\hypertarget{structst__mysql__stmt_a4bc2da06a308a95a0e5af923239493b5}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!sqlstate@{sqlstate}}
+\index{sqlstate@{sqlstate}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{sqlstate}]{\setlength{\rightskip}{0pt plus 5cm}char st\+\_\+mysql\+\_\+stmt\+::sqlstate\mbox{[}{\bf S\+Q\+L\+S\+T\+A\+T\+E\+\_\+\+L\+E\+N\+G\+T\+H}+1\mbox{]}}\label{structst__mysql__stmt_a4bc2da06a308a95a0e5af923239493b5}
+\hypertarget{structst__mysql__stmt_a30dfb09d512d7b9397f8bea13bfc319b}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!state@{state}}
+\index{state@{state}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf enum\+\_\+mysql\+\_\+stmt\+\_\+state} st\+\_\+mysql\+\_\+stmt\+::state}\label{structst__mysql__stmt_a30dfb09d512d7b9397f8bea13bfc319b}
+\hypertarget{structst__mysql__stmt_ad800f40b351919f8d6e9c9a4d757ab72}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!stmt\+\_\+id@{stmt\+\_\+id}}
+\index{stmt\+\_\+id@{stmt\+\_\+id}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{stmt\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long st\+\_\+mysql\+\_\+stmt\+::stmt\+\_\+id}\label{structst__mysql__stmt_ad800f40b351919f8d6e9c9a4d757ab72}
+\hypertarget{structst__mysql__stmt_aa0fee515cb67c6671540a12042362619}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!unbuffered\+\_\+fetch\+\_\+cancelled@{unbuffered\+\_\+fetch\+\_\+cancelled}}
+\index{unbuffered\+\_\+fetch\+\_\+cancelled@{unbuffered\+\_\+fetch\+\_\+cancelled}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{unbuffered\+\_\+fetch\+\_\+cancelled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+stmt\+::unbuffered\+\_\+fetch\+\_\+cancelled}\label{structst__mysql__stmt_aa0fee515cb67c6671540a12042362619}
+\hypertarget{structst__mysql__stmt_ab2e8f874563ad8a2d658117548983cf8}{}\index{st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}!update\+\_\+max\+\_\+length@{update\+\_\+max\+\_\+length}}
+\index{update\+\_\+max\+\_\+length@{update\+\_\+max\+\_\+length}!st\+\_\+mysql\+\_\+stmt@{st\+\_\+mysql\+\_\+stmt}}
+\subsubsection[{update\+\_\+max\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} st\+\_\+mysql\+\_\+stmt\+::update\+\_\+max\+\_\+length}\label{structst__mysql__stmt_ab2e8f874563ad8a2d658117548983cf8}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mysql_8h}{mysql.\+h}\end{DoxyCompactItemize}

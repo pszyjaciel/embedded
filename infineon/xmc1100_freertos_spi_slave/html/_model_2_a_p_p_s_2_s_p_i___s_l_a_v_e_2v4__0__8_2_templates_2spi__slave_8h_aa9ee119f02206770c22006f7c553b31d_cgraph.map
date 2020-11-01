@@ -1,0 +1,4 @@
+<map id="SPI_SLAVE_DisableEvent" name="SPI_SLAVE_DisableEvent">
+<area shape="rect" id="node1" title="Disables selected events from generating interrupt." alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$group___s_p_i.html#ga8f3bb2759c5dc83f4df9674bc7521dfa" title=" " alt="" coords="228,5,412,32"/>
+</map>

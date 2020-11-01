@@ -1,0 +1,149 @@
+/*
+ * myTrash.c
+ *
+ *  Created on: 07/11/2015
+ *      Author: root
+ */
+
+
+// start eclipse with Visual Studio Command Prompt (2010)
+// http://codewriterstips.blogspot.dk/2012/05/using-microsoft-c-compiler-with-eclipse.html
+
+// warning: paths for laptop and desktop can be different!
+// INCLUDE:
+// C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include
+// MYSQL-~1.2-W\include;C:\PROGRA~2\WI3CF2~1\8.0\Include;c:\PROGRA~2\WI3CF2~1\8.0\Include\shared;C:\PROGRA~2\WI3CF2~1\8.0\Include\um;C:\PROGRA~2\WI3CF2~1\8.0\Include\um\gl;
+
+// LIB:
+// MYSQL-~1.2-W\lib;c:\PROGRA~2\MICROS~2.0\Windows\v7.0A\Lib;
+
+// "u:\ICT\7th_semester\bpri2\code\mysql-connector-c-noinstall-6.0.2-win32-vs2005\lib\libmysql.lib"
+// "c:\Users\root\git\myEthernut\myTimeStamp2\src\mysql\lib\libmysql.lib"
+
+// ..\src\mysql\lib\libmysql.lib
+
+
+/*
+ smietnik:
+
+ printf("Timestamp: %d\n",(int)time(NULL));
+
+ time_t clk;
+ clk = time(NULL);
+ printf("%s", ctime(&clk));
+
+		// if (rc != FALSE) {
+			//			printf("\n\nmsgTextBuf: %02x \n", msgTextBuf);
+			//			printf("bytesRead: %d \n", bytesRead);
+						// printf("msgTextBuf: %02x \n", msgTextBuf[0]);
+
+
+ //		start = GetTickCount();
+ //		end = GetTickCount();
+ //		result = (end - start);
+ //		printf("time [ms]: %d \n", result);
+
+//			for (j = 0; j < bytesRead; j++) {
+//				printf("%02x ", msgTextBuf[j]);
+//			}
+// 			printf("\n", msgTextBuf[j]);
+
+//			for (j = 0; j < bytesRead; j++) {
+//				printf("%c", msgTextBuf[j]);
+//			}
+// 			printf("\n", msgTextBuf[j]);
+
+ */
+
+				// char (*myArray[2])[14] - "myArray is array of two pointers to arrays of forteen chars"
+
+				//			unsigned char *myPtrArray[4];
+				//			unsigned char *mmValuesPtr[1024];
+				// myPtrArray[1] = &myArray[5];
+
+				//				printf("index: %04x, counter: %04x, k: %04x ", index, counter, k);
+				//				printf("%02x %02x %02x %02x %02x ", myNewArray[k - 5], myNewArray[k - 4], myNewArray[k - 3],
+				//						myNewArray[k - 2], myNewArray[k - 1]);
+
+//				printf("%04x:%02x %04x:%02x %04x:%02x %04x:%02x %04x:%02x: ", (counter - 5), myCharArray[counter - 5],
+//						(counter - 4), myCharArray[counter - 4], (counter - 3), myCharArray[counter - 3], (counter - 2),
+//						myCharArray[counter - 2], (counter - 1), myCharArray[counter - 1]);
+//
+//				printf("index: %04x, counter: %04x ", index, counter - 5);
+//				mmValuesPtr[index] = &myCharArray[counter - 5];
+//
+//
+//
+
+	// --------------------------------------
+
+	// displayAllFromTable("sensors", 9);
+	// displayAllFromTable("sensors", 10);
+	// insertTimeStamp("TimeStampTable", "myTimeStamp");
+
+//	r131 = 1;
+//	r132 = 0;
+//	r133 = 0;
+//	r134 = 1;
+//	r135 = 0;
+//
+//	insertIntoTable(table, machine, r131, r132, r133, r134, r135);
+//	displayAllFromTable(table, 1);
+
+
+//
+//
+//	char szSQL[512];
+//	char index[128];
+//
+//	unsigned short i = 0;
+//	unsigned short j = 0;
+//
+//	unsigned short myRegistersLength;
+//	unsigned short mmValuesLength;
+//
+//	myRegistersLength = sizeof(myRegisters) / 2;
+//	mmValuesLength = sizeof(mmValues) / 2;
+//
+//	for (i = 0; i < 10; i++)
+//	{
+//		// printf("*(p + %d) : %d\n", i, *(myShortMsg + i));
+//		printf("i: %02x, %04x \n", i, myShortMsg[i]);
+//
+//	}
+//
+//	// An index-array is needed for statement preparation
+//	for (i = 0; i < myRegistersLength; i++)
+//	{
+//		// every second value is registry number
+//		for (j = 0; j < mmValuesLength; j += 2)
+//		{
+//			if (mmValues[j] == myRegisters[i])        // find the name of register
+//			{
+//				index[i] = j + 1;        // value in hex is the next byte just after the register
+//				// printf("mmValuesPtr[]: %s \n", mmValuesPtr[index[i]]);
+//			}
+//		}
+//	}
+//
+//	// assemble the query
+//	strcpy(szSQL, "INSERT INTO ");
+//	strcat(szSQL, myTable);
+//	strcat(szSQL, " (machine, r131, r132, r133, r134, r135, tstamp) ");
+//	strcat(szSQL, "VALUES ('");
+//	strcat(szSQL, mmValuesPtr[index[0]]);        // machine
+//	strcat(szSQL, "', 0x");
+//	strcat(szSQL, mmValuesPtr[index[1]]);        // r131
+//	strcat(szSQL, ", 0x");
+//	strcat(szSQL, mmValuesPtr[index[2]]);        // r132
+//	strcat(szSQL, ", 0x");
+//	strcat(szSQL, mmValuesPtr[index[3]]);        // r133
+//	strcat(szSQL, ", 0x");
+//	strcat(szSQL, mmValuesPtr[index[4]]);        // r134
+//	strcat(szSQL, ", 0x");
+//	strcat(szSQL, mmValuesPtr[index[5]]);        // r135
+//	strcat(szSQL, ", ");
+//	strcat(szSQL, "current_timestamp);");
+//
+//	// printf("%s \n", szSQL);
+

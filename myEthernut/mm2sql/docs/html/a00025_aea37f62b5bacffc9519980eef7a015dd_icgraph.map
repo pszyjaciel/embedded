@@ -1,0 +1,4 @@
+<map id="mysql_real_connect" name="mysql_real_connect">
+<area shape="rect" id="node2" href="$a00031.html#a3bcc2d3f20cb923e4eaa70e5d2195359" title="Function make an attempt to connect to the mySQL database. It calls internally functions from the lib..." alt="" coords="184,5,289,31"/>
+<area shape="rect" id="node3" href="$a00020.html#abf5d177785c49159586fcc85a51db69b" title="In the main function the connection to mySQL is created, the serial port is being initialized..." alt="" coords="337,5,384,31"/>
+</map>

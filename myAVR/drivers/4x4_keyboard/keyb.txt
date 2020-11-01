@@ -1,0 +1,46 @@
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+0	1	1	1
+1	0	1	1
+1	1	0	1
+1	1	1	0
+
+	
+in	out	out	out	out
+f7	77	7b	7d	7e
+fb	b7	bb	bd	be
+fd	d7	db	dd	de
+fe	e7	eb	ed	ee
+
+
+
+in	out	key
+f7	77	S1
+f7	7b	S2
+f7	7d	S3
+f7	7e	S4
+
+in	out	key
+fb	b7	S5
+fb	bb	S6
+fb	bd	S7
+fb	be	S8
+
+in	out	key
+fd	d7	S9
+fd	db	S10
+fd	dd	S11
+fd	de	S12
+
+in	out	key
+fe	e7	S13
+fe	eb	S14
+fe	ed	S15
+fe	ee	S16
+
+
+
+
+

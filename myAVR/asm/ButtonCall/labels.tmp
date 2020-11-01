@@ -1,0 +1,32 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega644P</DEVICE>
+ <WORKING_DIR>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\M644PDEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <START><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>84</LINE></START>
+  <CHECK_BUTTON><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>6</LINE></CHECK_BUTTON>
+  <PRESSET><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>15</LINE></PRESSET>
+  <DELAY><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>22</LINE></DELAY>
+  <LOOP><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>34</LINE></LOOP>
+  <FIBONACCI><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>53</LINE></FIBONACCI>
+  <BEGIN><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>100</LINE></BEGIN>
+  <LOOP2><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>110</LINE></LOOP2>
+  <ZWOLNIONY><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\ButtonCall\ButtonCall.asm</FILE><LINE>132</LINE></ZWOLNIONY>
+ </LABELS>
+</ASSEMBLER_INFO>

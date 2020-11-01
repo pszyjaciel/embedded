@@ -1,0 +1,139 @@
+\hypertarget{my__list_8h}{}\section{my\+\_\+list.\+h File Reference}
+\label{my__list_8h}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{my__list_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structst__list}{st\+\_\+list}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{my__list_8h_a4dedcce48eb31eb34f43d01a117b0a09}{list\+\_\+rest}(a)~((a)-\/$>$next)
+\item 
+\#define \hyperlink{my__list_8h_a4fd4bea6adf6b20816eeb88750760131}{list\+\_\+push}(a,  b)~(a)=\hyperlink{my__list_8h_aeac1351e9825db9b491f3c6a075ce9eb}{list\+\_\+cons}((b),(a))
+\item 
+\#define \hyperlink{my__list_8h_a6ce34cc98ba3c74574ef88670b7768f1}{list\+\_\+pop}(A)~\{\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$old=(A); (A)=\hyperlink{my__list_8h_a11b570dab91ab5f568bc41541d297e03}{list\+\_\+delete}(old,old); my\+\_\+free(old); \}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structst__list}{st\+\_\+list} \hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T}
+\item 
+typedef int($\ast$ \hyperlink{my__list_8h_aeca49f9affc13a8284e287e82a578f1f}{list\+\_\+walk\+\_\+action}) (void $\ast$, void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$ \hyperlink{my__list_8h_aed18cad350263cec89453b7afd548c7a}{list\+\_\+add} (\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$root, \hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$element)
+\item 
+\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$ \hyperlink{my__list_8h_a11b570dab91ab5f568bc41541d297e03}{list\+\_\+delete} (\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$root, \hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$element)
+\item 
+\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$ \hyperlink{my__list_8h_aeac1351e9825db9b491f3c6a075ce9eb}{list\+\_\+cons} (void $\ast$data, \hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$root)
+\item 
+\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$ \hyperlink{my__list_8h_ac40e1e83b450caa91b1ba5dfe69fb419}{list\+\_\+reverse} (\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$root)
+\item 
+void \hyperlink{my__list_8h_a911795309fc233e103bd6a3da13ad5fa}{list\+\_\+free} (\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$root, unsigned int free\+\_\+data)
+\item 
+unsigned int \hyperlink{my__list_8h_a0e3e82b73e930fcfe7d8e4e50b604ec1}{list\+\_\+length} (\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$)
+\item 
+int \hyperlink{my__list_8h_ae1cb86e2197f52f83cd2bd7acdbf51b4}{list\+\_\+walk} (\hyperlink{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{L\+I\+S\+T} $\ast$, \hyperlink{my__list_8h_aeca49f9affc13a8284e287e82a578f1f}{list\+\_\+walk\+\_\+action} action, unsigned char $\ast$argument)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{my__list_8h_a6ce34cc98ba3c74574ef88670b7768f1}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+pop@{list\+\_\+pop}}
+\index{list\+\_\+pop@{list\+\_\+pop}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+pop}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\+\_\+pop(
+\begin{DoxyParamCaption}
+\item[{}]{A}
+\end{DoxyParamCaption}
+)~\{{\bf L\+I\+S\+T} $\ast$old=(A); (A)={\bf list\+\_\+delete}(old,old); my\+\_\+free(old); \}}\label{my__list_8h_a6ce34cc98ba3c74574ef88670b7768f1}
+\hypertarget{my__list_8h_a4fd4bea6adf6b20816eeb88750760131}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+push@{list\+\_\+push}}
+\index{list\+\_\+push@{list\+\_\+push}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+push}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\+\_\+push(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(a)={\bf list\+\_\+cons}((b),(a))}\label{my__list_8h_a4fd4bea6adf6b20816eeb88750760131}
+\hypertarget{my__list_8h_a4dedcce48eb31eb34f43d01a117b0a09}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+rest@{list\+\_\+rest}}
+\index{list\+\_\+rest@{list\+\_\+rest}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+rest}]{\setlength{\rightskip}{0pt plus 5cm}\#define list\+\_\+rest(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~((a)-\/$>$next)}\label{my__list_8h_a4dedcce48eb31eb34f43d01a117b0a09}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!L\+I\+S\+T@{L\+I\+S\+T}}
+\index{L\+I\+S\+T@{L\+I\+S\+T}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{L\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+list}  {\bf L\+I\+S\+T}}\label{my__list_8h_ab2a1c5fd766481fe9ec169b9fdca184e}
+\hypertarget{my__list_8h_aeca49f9affc13a8284e287e82a578f1f}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+walk\+\_\+action@{list\+\_\+walk\+\_\+action}}
+\index{list\+\_\+walk\+\_\+action@{list\+\_\+walk\+\_\+action}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+walk\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ list\+\_\+walk\+\_\+action) (void $\ast$, void $\ast$)}\label{my__list_8h_aeca49f9affc13a8284e287e82a578f1f}
+
+
+\subsection{Function Documentation}
+\hypertarget{my__list_8h_aed18cad350263cec89453b7afd548c7a}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+add@{list\+\_\+add}}
+\index{list\+\_\+add@{list\+\_\+add}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+add(\+L\+I\+S\+T $\ast$root, L\+I\+S\+T $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T}$\ast$ list\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T} $\ast$}]{root, }
+\item[{{\bf L\+I\+S\+T} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{my__list_8h_aed18cad350263cec89453b7afd548c7a}
+\hypertarget{my__list_8h_aeac1351e9825db9b491f3c6a075ce9eb}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+cons@{list\+\_\+cons}}
+\index{list\+\_\+cons@{list\+\_\+cons}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+cons(void $\ast$data, L\+I\+S\+T $\ast$root)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T}$\ast$ list\+\_\+cons (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{{\bf L\+I\+S\+T} $\ast$}]{root}
+\end{DoxyParamCaption}
+)}\label{my__list_8h_aeac1351e9825db9b491f3c6a075ce9eb}
+\hypertarget{my__list_8h_a11b570dab91ab5f568bc41541d297e03}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+delete@{list\+\_\+delete}}
+\index{list\+\_\+delete@{list\+\_\+delete}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+delete(\+L\+I\+S\+T $\ast$root, L\+I\+S\+T $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T}$\ast$ list\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T} $\ast$}]{root, }
+\item[{{\bf L\+I\+S\+T} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{my__list_8h_a11b570dab91ab5f568bc41541d297e03}
+\hypertarget{my__list_8h_a911795309fc233e103bd6a3da13ad5fa}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+free@{list\+\_\+free}}
+\index{list\+\_\+free@{list\+\_\+free}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+free(\+L\+I\+S\+T $\ast$root, unsigned int free\+\_\+data)}]{\setlength{\rightskip}{0pt plus 5cm}void list\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T} $\ast$}]{root, }
+\item[{unsigned int}]{free\+\_\+data}
+\end{DoxyParamCaption}
+)}\label{my__list_8h_a911795309fc233e103bd6a3da13ad5fa}
+\hypertarget{my__list_8h_a0e3e82b73e930fcfe7d8e4e50b604ec1}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+length@{list\+\_\+length}}
+\index{list\+\_\+length@{list\+\_\+length}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+length(\+L\+I\+S\+T $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int list\+\_\+length (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{my__list_8h_a0e3e82b73e930fcfe7d8e4e50b604ec1}
+\hypertarget{my__list_8h_ac40e1e83b450caa91b1ba5dfe69fb419}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+reverse@{list\+\_\+reverse}}
+\index{list\+\_\+reverse@{list\+\_\+reverse}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+reverse(\+L\+I\+S\+T $\ast$root)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T}$\ast$ list\+\_\+reverse (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T} $\ast$}]{root}
+\end{DoxyParamCaption}
+)}\label{my__list_8h_ac40e1e83b450caa91b1ba5dfe69fb419}
+\hypertarget{my__list_8h_ae1cb86e2197f52f83cd2bd7acdbf51b4}{}\index{my\+\_\+list.\+h@{my\+\_\+list.\+h}!list\+\_\+walk@{list\+\_\+walk}}
+\index{list\+\_\+walk@{list\+\_\+walk}!my\+\_\+list.\+h@{my\+\_\+list.\+h}}
+\subsubsection[{list\+\_\+walk(\+L\+I\+S\+T $\ast$, list\+\_\+walk\+\_\+action action, unsigned char $\ast$argument)}]{\setlength{\rightskip}{0pt plus 5cm}int list\+\_\+walk (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T} $\ast$}]{, }
+\item[{{\bf list\+\_\+walk\+\_\+action}}]{action, }
+\item[{unsigned char $\ast$}]{argument}
+\end{DoxyParamCaption}
+)}\label{my__list_8h_ae1cb86e2197f52f83cd2bd7acdbf51b4}

@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega2560</DEVICE>
+ <WORKING_DIR>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\M2560DEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.asm</FILE><LINE>39</LINE></start>
+  <delay><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.asm</FILE><LINE>6</LINE></delay>
+  <LOOP><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.asm</FILE><LINE>23</LINE></LOOP>
+  <main_loop><FILE>C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\Delay\Delay.asm</FILE><LINE>50</LINE></main_loop>
+ </LABELS>
+</ASSEMBLER_INFO>

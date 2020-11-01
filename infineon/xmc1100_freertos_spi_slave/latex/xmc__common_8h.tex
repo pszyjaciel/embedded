@@ -1,0 +1,107 @@
+\hypertarget{xmc__common_8h}{}\doxysection{Libraries/\+X\+M\+C\+Lib/inc/xmc\+\_\+common.h File Reference}
+\label{xmc__common_8h}\index{Libraries/XMCLib/inc/xmc\_common.h@{Libraries/XMCLib/inc/xmc\_common.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xmc\+\_\+device.\+h\char`\"{}}\newline
+Include dependency graph for xmc\+\_\+common.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{xmc__common_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{xmc__common_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_x_m_c___d_r_i_v_e_r___v_e_r_s_i_o_n}{X\+M\+C\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_c___p_r_i_o_a_r_r_a_y___i_t_e_m}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+I\+T\+EM}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_c___p_r_i_o_a_r_r_a_y}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+AY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_ga2a9d6e44ae0353ef2426f35c154c45b9}{X\+M\+C\+\_\+\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(2U)
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_gae74ace78c5137b972b3f760cd5e09343}{X\+M\+C\+\_\+\+L\+I\+B\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~(1U)
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_ga83d51c05ca48b74331f3dd393ceafd03}{X\+M\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+T\+C\+H\+\_\+\+V\+E\+R\+S\+I\+ON}}~(18U)
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_gaf5e319e51fba35a9c2bf924dc2033776}{X\+M\+C\+\_\+\+L\+I\+B\+\_\+\+V\+E\+R\+S\+I\+ON}}~((\mbox{\hyperlink{group___c_o_m_m_o_n_ga2a9d6e44ae0353ef2426f35c154c45b9}{X\+M\+C\+\_\+\+L\+I\+B\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}} $<$$<$ 16U) + (\mbox{\hyperlink{group___c_o_m_m_o_n_gae74ace78c5137b972b3f760cd5e09343}{X\+M\+C\+\_\+\+L\+I\+B\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}} $<$$<$ 8U) + \mbox{\hyperlink{group___c_o_m_m_o_n_ga83d51c05ca48b74331f3dd393ceafd03}{X\+M\+C\+\_\+\+L\+I\+B\+\_\+\+P\+A\+T\+C\+H\+\_\+\+V\+E\+R\+S\+I\+ON}})
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_gab7155203d7199c7a752478960b2a5280}{X\+M\+C\+\_\+\+A\+S\+S\+E\+RT}}(msg,  exp)~\{ ; \}
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_ga6d01dd58e9748e537c15f5f187bbaa90}{X\+M\+C\+\_\+\+D\+E\+B\+UG}}(...)~\{ ; \}
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_gaf50650e73583944093685f4dbd0693e4}{X\+M\+C\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}}(x)~(void)x
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_gad2b629bce679930ce0315950fbb2de4f}{X\+M\+C\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+I\+N\+IT}}(m)~memset(\&m, 0, sizeof(m))
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_ga8d8898048406186dbc83cae22fcd12c4}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+D\+EF}}(name,  size)
+\item 
+\#define \mbox{\hyperlink{group___c_o_m_m_o_n_ga7d328d22067fd4eaf0f3c0200193be59}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+AY}}(name)~\&prioarray\+\_\+def\+\_\+\#\#name
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_c___d_r_i_v_e_r___v_e_r_s_i_o_n}{X\+M\+C\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}} \mbox{\hyperlink{group___c_o_m_m_o_n_ga6f5273e06550db99d219934a0356e140}{X\+M\+C\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+t}}
+\item 
+typedef void $\ast$ \mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_c___p_r_i_o_a_r_r_a_y___i_t_e_m}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+I\+T\+EM}} \mbox{\hyperlink{group___c_o_m_m_o_n_ga787ef895ba5d98aa390c6e665ad94096}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+I\+T\+E\+M\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_c___p_r_i_o_a_r_r_a_y}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+AY}} \mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_gaea382e16ad0ee471de23008a9d7dbbea}{X\+M\+C\+\_\+\+Assert\+Handler}} (const char $\ast$const msg, const char $\ast$const file, uint32\+\_\+t line)
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_gaf01bf64802badb7546271a8ead201208}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+\+Init}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}} $\ast$\mbox{\hyperlink{structlist}{list}})
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_ga7082b27e4210bb4fe2f3ff06178e23e7}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+\+Add}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}} $\ast$\mbox{\hyperlink{structlist}{list}}, void $\ast$const item)
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_ga47ef9e5bde71398f933254378b2750c2}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+\+Remove}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}} $\ast$\mbox{\hyperlink{structlist}{list}}, void $\ast$const item)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___c_o_m_m_o_n_gaf2d07b6e9024b1a6cfc75c4ae7832c6d}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+\+Get\+Length}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}} $\ast$\mbox{\hyperlink{structlist}{list}})
+\item 
+void $\ast$ \mbox{\hyperlink{group___c_o_m_m_o_n_ga4868c274759342fd203f99d54668e082}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+\+Get\+Head}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}} $\ast$\mbox{\hyperlink{structlist}{list}})
+\item 
+void $\ast$ \mbox{\hyperlink{group___c_o_m_m_o_n_ga47dc8c23bca39e65b40592395b670efc}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+\+Get\+Tail}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}} $\ast$\mbox{\hyperlink{structlist}{list}})
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_ga3aa1450a1dee4ea4a37aac2e5390694b}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+\+Insert}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga7bc6784c8df193858cfe63aa3ddd06d8}{X\+M\+C\+\_\+\+L\+I\+S\+T\+\_\+t}} $\ast$\mbox{\hyperlink{structlist}{list}}, void $\ast$prev\+\_\+item, void $\ast$new\+\_\+item)
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_ga10448a316121e7ed07d6d3dbd85b2ae6}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Init}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray)
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_ga89a0126c8ffe8dbf4e800acb0ff6fac3}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Add}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray, int32\+\_\+t item, int32\+\_\+t priority)
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_o_n_ga471bc5f1a002b2e03f35cb9ed80c0645}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Remove}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray, int32\+\_\+t item)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} int32\+\_\+t \mbox{\hyperlink{group___c_o_m_m_o_n_ga214b031e330e317d47a10cb3f7c47300}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Get\+Head}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} int32\+\_\+t \mbox{\hyperlink{group___c_o_m_m_o_n_gaf176253a4d32035d7645f62f5145cc14}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Get\+Tail}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} int32\+\_\+t \mbox{\hyperlink{group___c_o_m_m_o_n_ga30e0c4f6194bae5be83940f1ef417216}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Get\+Item\+Priority}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray, int32\+\_\+t item)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} int32\+\_\+t \mbox{\hyperlink{group___c_o_m_m_o_n_gadcb8a6c0b38a7e58fc0d830f5d477fcd}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Get\+Item\+Next}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray, int32\+\_\+t item)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} int32\+\_\+t \mbox{\hyperlink{group___c_o_m_m_o_n_ga5f8ff255ac0ff405ea78ac97a70699b7}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+\+Get\+Item\+Previous}} (\mbox{\hyperlink{group___c_o_m_m_o_n_ga498261cb3d2d8923f79e4566008c020a}{X\+M\+C\+\_\+\+P\+R\+I\+O\+A\+R\+R\+A\+Y\+\_\+t}} $\ast$prioarray, int32\+\_\+t item)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyDate}{Date}
+2017-\/08-\/03 
+\end{DoxyDate}

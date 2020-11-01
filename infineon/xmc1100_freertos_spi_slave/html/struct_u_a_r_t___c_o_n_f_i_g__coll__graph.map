@@ -1,0 +1,5 @@
+<map id="UART_CONFIG" name="UART_CONFIG">
+<area shape="rect" id="node1" title="Structure for holding the configuration parameters of UART channel." alt="" coords="63,219,257,487"/>
+<area shape="rect" id="node2" href="$struct_u_a_r_t___t_x___c_o_n_f_i_g.html" title="Structure for transmit pin configuration." alt="" coords="5,27,139,134"/>
+<area shape="rect" id="node3" href="$struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g.html" title=" " alt="" coords="163,5,333,156"/>
+</map>

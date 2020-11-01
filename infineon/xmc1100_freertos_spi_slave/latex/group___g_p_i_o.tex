@@ -1,0 +1,649 @@
+\hypertarget{group___g_p_i_o}{}\doxysection{G\+P\+IO}
+\label{group___g_p_i_o}\index{GPIO@{GPIO}}
+
+
+General Purpose Input Output (G\+P\+IO) driver for the X\+MC microcontroller family.  
+
+
+Collaboration diagram for G\+P\+IO\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{group___g_p_i_o}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o_ga669e3b046e7ee4d93631b0befa10ca24}{P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Pos}}~\mbox{\hyperlink{group___device___peripheral___registers_ga4cfff18018c89b6cc224b43694e9f999}{P\+O\+R\+T0\+\_\+\+I\+O\+C\+R0\+\_\+\+P\+C0\+\_\+\+Pos}}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o_ga5fe17c3dc6387b1ccfbc4c5c667c58a1}{P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Msk}}~\mbox{\hyperlink{group___device___peripheral___registers_ga72cc5a5191e33f447ed7e47f898c9518}{P\+O\+R\+T0\+\_\+\+I\+O\+C\+R0\+\_\+\+P\+C0\+\_\+\+Msk}}
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o_ga22bdd3c6eb0d689b8807fdd9440c74ae}{P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Size}}~(8U)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o_gac5ca4560fae138b25b4ee4e09762d3d2}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+EL}}(level)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o_gab47a25c59fc1f4a049cdf650da1a3f8a}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+H\+E\+C\+K\+\_\+\+H\+W\+C\+T\+RL}}(hwctrl)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{group___g_p_i_o_gadfc1f6d1a7cb395dc800871b1a0a0025}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+EL}} \mbox{\hyperlink{group___g_p_i_o_ga4c36e5e3558a80c427b33a79b65cdb9b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{group___g_p_i_o_gad228d0e853db5e9e6f5a874890e038d9}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+RL}} \mbox{\hyperlink{group___g_p_i_o_ga642efb5d9074a8b8345eb6d018e71f6d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___g_p_i_o_gadfc1f6d1a7cb395dc800871b1a0a0025}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+EL}} \{ \mbox{\hyperlink{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025a0b47a549e84c8546805265a5aac61830}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+L\+OW}} = 0x10000U, 
+\mbox{\hyperlink{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025afcc6153b96e6dcd46e5fd5efd72e3b3e}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+H\+I\+GH}} = 0x1U
+ \}
+\item 
+enum \mbox{\hyperlink{group___g_p_i_o_gad228d0e853db5e9e6f5a874890e038d9}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+RL}} \{ \mbox{\hyperlink{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a3208a9c87eb07229a05a4c9fac116316}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+\+D\+I\+S\+A\+B\+L\+ED}} = 0x0U, 
+\mbox{\hyperlink{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a334857542b61d28cf718f9209f907c3e}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L1}} = 0x1U, 
+\mbox{\hyperlink{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a87350dd2a252b6113d23b84187b84d50}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L2}} = 0x2U
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___g_p_i_o_ga05749322fa717f789b178838955b8c5b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Init}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin, const X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t $\ast$const config)
+\item 
+void \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin, const X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+t mode)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_ga92e738b08cb2224ed11f0bb59b6d2e54}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Level}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin, const \mbox{\hyperlink{group___g_p_i_o_ga4c36e5e3558a80c427b33a79b65cdb9b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t}} level)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_gac034d0d7c3a082332d66077c5a07b8d3}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+High}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_ga59c0d8d8078c0d342bcdf727bf41882d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Low}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_ga5d016688a25753bef2e18533b2bde23c}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Toggle\+Output}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t \mbox{\hyperlink{group___g_p_i_o_gaaff7c47a24959071ce0815d23b9f319f}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Get\+Input}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_ga151007c4dae91b9cea64c8a271ab88f4}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Enable\+Power\+Save\+Mode}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_ga4fa89c9ef3fbe14f71c96748c3f714f7}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Disable\+Power\+Save\+Mode}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\item 
+void \mbox{\hyperlink{group___g_p_i_o_ga90b8519a240ddb93289d8960c6c276b1}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Hardware\+Control}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin, const \mbox{\hyperlink{group___g_p_i_o_ga642efb5d9074a8b8345eb6d018e71f6d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+t}} hwctrl)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_ga437ad69639344c060f494329aed8583e}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Enable\+Digital\+Input}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___g_p_i_o_ga5139e21cbfb630c5b2e583b9d0c96541}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Disable\+Digital\+Input}} (X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const port, const uint8\+\_\+t pin)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Purpose Input Output (G\+P\+IO) driver for the X\+MC microcontroller family. 
+
+G\+P\+IO driver provide a generic and very flexible software interface for all standard digital I/O port pins. Each port slice has individual interfaces for the operation as General Purpose I/O and it further provides the connectivity to the on-\/chip periphery and the control for the pad characteristics.
+
+The driver is divided into Input and Output mode.
+
+Input mode features\+:
+\begin{DoxyEnumerate}
+\item Configuration structure X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t and initialization function \mbox{\hyperlink{group___g_p_i_o_ga05749322fa717f789b178838955b8c5b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Init()}}
+\item Allows the selection of weak pull-\/up or pull-\/down device. Configuration structure X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+t and function \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode()}}
+\end{DoxyEnumerate}
+
+Output mode features\+:
+\begin{DoxyEnumerate}
+\item Allows the selection of push pull/open drain and Alternate output. Configuration structure X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+t and function \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode()}}
+\item Allows the selection of initial output level. Configuration structure X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t and function \mbox{\hyperlink{group___g_p_i_o_ga92e738b08cb2224ed11f0bb59b6d2e54}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Level()}} 
+\end{DoxyEnumerate}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___g_p_i_o_ga5fe17c3dc6387b1ccfbc4c5c667c58a1}\label{group___g_p_i_o_ga5fe17c3dc6387b1ccfbc4c5c667c58a1}} 
+\index{GPIO@{GPIO}!PORT\_IOCR\_PC\_Msk@{PORT\_IOCR\_PC\_Msk}}
+\index{PORT\_IOCR\_PC\_Msk@{PORT\_IOCR\_PC\_Msk}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{PORT\_IOCR\_PC\_Msk}{PORT\_IOCR\_PC\_Msk}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Msk~\mbox{\hyperlink{group___device___peripheral___registers_ga72cc5a5191e33f447ed7e47f898c9518}{P\+O\+R\+T0\+\_\+\+I\+O\+C\+R0\+\_\+\+P\+C0\+\_\+\+Msk}}}
+
+
+
+Definition at line 99 of file xmc\+\_\+gpio.\+h.
+
+\mbox{\Hypertarget{group___g_p_i_o_ga669e3b046e7ee4d93631b0befa10ca24}\label{group___g_p_i_o_ga669e3b046e7ee4d93631b0befa10ca24}} 
+\index{GPIO@{GPIO}!PORT\_IOCR\_PC\_Pos@{PORT\_IOCR\_PC\_Pos}}
+\index{PORT\_IOCR\_PC\_Pos@{PORT\_IOCR\_PC\_Pos}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{PORT\_IOCR\_PC\_Pos}{PORT\_IOCR\_PC\_Pos}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Pos~\mbox{\hyperlink{group___device___peripheral___registers_ga4cfff18018c89b6cc224b43694e9f999}{P\+O\+R\+T0\+\_\+\+I\+O\+C\+R0\+\_\+\+P\+C0\+\_\+\+Pos}}}
+
+
+
+Definition at line 98 of file xmc\+\_\+gpio.\+h.
+
+\mbox{\Hypertarget{group___g_p_i_o_ga22bdd3c6eb0d689b8807fdd9440c74ae}\label{group___g_p_i_o_ga22bdd3c6eb0d689b8807fdd9440c74ae}} 
+\index{GPIO@{GPIO}!PORT\_IOCR\_PC\_Size@{PORT\_IOCR\_PC\_Size}}
+\index{PORT\_IOCR\_PC\_Size@{PORT\_IOCR\_PC\_Size}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{PORT\_IOCR\_PC\_Size}{PORT\_IOCR\_PC\_Size}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Size~(8U)}
+
+
+
+Definition at line 101 of file xmc\+\_\+gpio.\+h.
+
+\mbox{\Hypertarget{group___g_p_i_o_gab47a25c59fc1f4a049cdf650da1a3f8a}\label{group___g_p_i_o_gab47a25c59fc1f4a049cdf650da1a3f8a}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_CHECK\_HWCTRL@{XMC\_GPIO\_CHECK\_HWCTRL}}
+\index{XMC\_GPIO\_CHECK\_HWCTRL@{XMC\_GPIO\_CHECK\_HWCTRL}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_CHECK\_HWCTRL}{XMC\_GPIO\_CHECK\_HWCTRL}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+H\+E\+C\+K\+\_\+\+H\+W\+C\+T\+RL(\begin{DoxyParamCaption}\item[{}]{hwctrl }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       ((hwctrl == \mbox{\hyperlink{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a3208a9c87eb07229a05a4c9fac116316}{XMC\_GPIO\_HWCTRL\_DISABLED}}) || \(\backslash\)}
+\DoxyCodeLine{                                       (hwctrl == \mbox{\hyperlink{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a334857542b61d28cf718f9209f907c3e}{XMC\_GPIO\_HWCTRL\_PERIPHERAL1}}) || \(\backslash\)}
+\DoxyCodeLine{                                       (hwctrl == \mbox{\hyperlink{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a87350dd2a252b6113d23b84187b84d50}{XMC\_GPIO\_HWCTRL\_PERIPHERAL2}}))}
+
+\end{DoxyCode}
+
+
+Definition at line 107 of file xmc\+\_\+gpio.\+h.
+
+\mbox{\Hypertarget{group___g_p_i_o_gac5ca4560fae138b25b4ee4e09762d3d2}\label{group___g_p_i_o_gac5ca4560fae138b25b4ee4e09762d3d2}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_CHECK\_OUTPUT\_LEVEL@{XMC\_GPIO\_CHECK\_OUTPUT\_LEVEL}}
+\index{XMC\_GPIO\_CHECK\_OUTPUT\_LEVEL@{XMC\_GPIO\_CHECK\_OUTPUT\_LEVEL}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_CHECK\_OUTPUT\_LEVEL}{XMC\_GPIO\_CHECK\_OUTPUT\_LEVEL}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+EL(\begin{DoxyParamCaption}\item[{}]{level }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                            ((level == \mbox{\hyperlink{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025a0b47a549e84c8546805265a5aac61830}{XMC\_GPIO\_OUTPUT\_LEVEL\_LOW}}) || \(\backslash\)}
+\DoxyCodeLine{                                            (level == \mbox{\hyperlink{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025afcc6153b96e6dcd46e5fd5efd72e3b3e}{XMC\_GPIO\_OUTPUT\_LEVEL\_HIGH}}))}
+
+\end{DoxyCode}
+
+
+Definition at line 104 of file xmc\+\_\+gpio.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group___g_p_i_o_ga642efb5d9074a8b8345eb6d018e71f6d}\label{group___g_p_i_o_ga642efb5d9074a8b8345eb6d018e71f6d}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_HWCTRL\_t@{XMC\_GPIO\_HWCTRL\_t}}
+\index{XMC\_GPIO\_HWCTRL\_t@{XMC\_GPIO\_HWCTRL\_t}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_HWCTRL\_t}{XMC\_GPIO\_HWCTRL\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___g_p_i_o_gad228d0e853db5e9e6f5a874890e038d9}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+RL}} \mbox{\hyperlink{group___g_p_i_o_ga642efb5d9074a8b8345eb6d018e71f6d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+t}}}
+
+Defines direct hardware control characteristics of the pin . Use type {\itshape X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+t} for this enum. \mbox{\Hypertarget{group___g_p_i_o_ga4c36e5e3558a80c427b33a79b65cdb9b}\label{group___g_p_i_o_ga4c36e5e3558a80c427b33a79b65cdb9b}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_OUTPUT\_LEVEL\_t@{XMC\_GPIO\_OUTPUT\_LEVEL\_t}}
+\index{XMC\_GPIO\_OUTPUT\_LEVEL\_t@{XMC\_GPIO\_OUTPUT\_LEVEL\_t}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_OUTPUT\_LEVEL\_t}{XMC\_GPIO\_OUTPUT\_LEVEL\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___g_p_i_o_gadfc1f6d1a7cb395dc800871b1a0a0025}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+EL}} \mbox{\hyperlink{group___g_p_i_o_ga4c36e5e3558a80c427b33a79b65cdb9b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t}}}
+
+Defines output level of a pin. Use type {\itshape X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t} for this enum. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___g_p_i_o_gad228d0e853db5e9e6f5a874890e038d9}\label{group___g_p_i_o_gad228d0e853db5e9e6f5a874890e038d9}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_HWCTRL@{XMC\_GPIO\_HWCTRL}}
+\index{XMC\_GPIO\_HWCTRL@{XMC\_GPIO\_HWCTRL}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_HWCTRL}{XMC\_GPIO\_HWCTRL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___g_p_i_o_gad228d0e853db5e9e6f5a874890e038d9}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+RL}}}
+
+Defines direct hardware control characteristics of the pin . Use type {\itshape X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+t} for this enum. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_GPIO\_HWCTRL\_DISABLED@{XMC\_GPIO\_HWCTRL\_DISABLED}!GPIO@{GPIO}}\index{GPIO@{GPIO}!XMC\_GPIO\_HWCTRL\_DISABLED@{XMC\_GPIO\_HWCTRL\_DISABLED}}}\mbox{\Hypertarget{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a3208a9c87eb07229a05a4c9fac116316}\label{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a3208a9c87eb07229a05a4c9fac116316}} 
+X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+\+D\+I\+S\+A\+B\+L\+ED&Software control only \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_GPIO\_HWCTRL\_PERIPHERAL1@{XMC\_GPIO\_HWCTRL\_PERIPHERAL1}!GPIO@{GPIO}}\index{GPIO@{GPIO}!XMC\_GPIO\_HWCTRL\_PERIPHERAL1@{XMC\_GPIO\_HWCTRL\_PERIPHERAL1}}}\mbox{\Hypertarget{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a334857542b61d28cf718f9209f907c3e}\label{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a334857542b61d28cf718f9209f907c3e}} 
+X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L1&H\+W\+I0/\+H\+W\+O0 control path can override the software configuration \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_GPIO\_HWCTRL\_PERIPHERAL2@{XMC\_GPIO\_HWCTRL\_PERIPHERAL2}!GPIO@{GPIO}}\index{GPIO@{GPIO}!XMC\_GPIO\_HWCTRL\_PERIPHERAL2@{XMC\_GPIO\_HWCTRL\_PERIPHERAL2}}}\mbox{\Hypertarget{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a87350dd2a252b6113d23b84187b84d50}\label{group___g_p_i_o_ggad228d0e853db5e9e6f5a874890e038d9a87350dd2a252b6113d23b84187b84d50}} 
+X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L2&H\+W\+I1/\+H\+W\+O1 control path can override the software configuration \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 127 of file xmc\+\_\+gpio.\+h.
+
+\mbox{\Hypertarget{group___g_p_i_o_gadfc1f6d1a7cb395dc800871b1a0a0025}\label{group___g_p_i_o_gadfc1f6d1a7cb395dc800871b1a0a0025}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_OUTPUT\_LEVEL@{XMC\_GPIO\_OUTPUT\_LEVEL}}
+\index{XMC\_GPIO\_OUTPUT\_LEVEL@{XMC\_GPIO\_OUTPUT\_LEVEL}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_OUTPUT\_LEVEL}{XMC\_GPIO\_OUTPUT\_LEVEL}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___g_p_i_o_gadfc1f6d1a7cb395dc800871b1a0a0025}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+EL}}}
+
+Defines output level of a pin. Use type {\itshape X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t} for this enum. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_GPIO\_OUTPUT\_LEVEL\_LOW@{XMC\_GPIO\_OUTPUT\_LEVEL\_LOW}!GPIO@{GPIO}}\index{GPIO@{GPIO}!XMC\_GPIO\_OUTPUT\_LEVEL\_LOW@{XMC\_GPIO\_OUTPUT\_LEVEL\_LOW}}}\mbox{\Hypertarget{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025a0b47a549e84c8546805265a5aac61830}\label{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025a0b47a549e84c8546805265a5aac61830}} 
+X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+L\+OW&Reset bit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_GPIO\_OUTPUT\_LEVEL\_HIGH@{XMC\_GPIO\_OUTPUT\_LEVEL\_HIGH}!GPIO@{GPIO}}\index{GPIO@{GPIO}!XMC\_GPIO\_OUTPUT\_LEVEL\_HIGH@{XMC\_GPIO\_OUTPUT\_LEVEL\_HIGH}}}\mbox{\Hypertarget{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025afcc6153b96e6dcd46e5fd5efd72e3b3e}\label{group___g_p_i_o_ggadfc1f6d1a7cb395dc800871b1a0a0025afcc6153b96e6dcd46e5fd5efd72e3b3e}} 
+X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+\+H\+I\+GH&Set bit ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 118 of file xmc\+\_\+gpio.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___g_p_i_o_ga5139e21cbfb630c5b2e583b9d0c96541}\label{group___g_p_i_o_ga5139e21cbfb630c5b2e583b9d0c96541}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_DisableDigitalInput@{XMC\_GPIO\_DisableDigitalInput}}
+\index{XMC\_GPIO\_DisableDigitalInput@{XMC\_GPIO\_DisableDigitalInput}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_DisableDigitalInput()}{XMC\_GPIO\_DisableDigitalInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Disable\+Digital\+Input (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+P\+D\+I\+SC. \\
+\hline
+{\em pin} & port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+None
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description\+:}
+Disable digital input path for analog pins and configures Pn\+\_\+\+P\+D\+I\+SC register.\+This configuration is applicable only for analog port pins. 
+\end{DoxyParagraph}
+
+
+Definition at line 458 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+\mbox{\Hypertarget{group___g_p_i_o_ga4fa89c9ef3fbe14f71c96748c3f714f7}\label{group___g_p_i_o_ga4fa89c9ef3fbe14f71c96748c3f714f7}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_DisablePowerSaveMode@{XMC\_GPIO\_DisablePowerSaveMode}}
+\index{XMC\_GPIO\_DisablePowerSaveMode@{XMC\_GPIO\_DisablePowerSaveMode}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_DisablePowerSaveMode()}{XMC\_GPIO\_DisablePowerSaveMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Disable\+Power\+Save\+Mode (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+P\+PS. \\
+\hline
+{\em pin} & port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Disables pin power save mode and configures Pn\+\_\+\+P\+PS register.\+This configuration is useful when the controller enters Deep Sleep mode. This configuration enables input Schmitt-\/\+Trigger and output driver stage(if pin is enabled power save mode previously). By default port {\itshape pin} does not react to power save mode request.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___g_p_i_o_ga151007c4dae91b9cea64c8a271ab88f4}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Enable\+Power\+Save\+Mode()}}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Do not enable the Pin Power Save function for pins configured for Hardware Control (Pn\+\_\+\+H\+W\+S\+E\+L.\+H\+Wx != 00B). Doing so may result in an undefined behavior of the pin when the device enters the Deep Sleep state. 
+\end{DoxyParagraph}
+
+
+Definition at line 390 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+\mbox{\Hypertarget{group___g_p_i_o_ga437ad69639344c060f494329aed8583e}\label{group___g_p_i_o_ga437ad69639344c060f494329aed8583e}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_EnableDigitalInput@{XMC\_GPIO\_EnableDigitalInput}}
+\index{XMC\_GPIO\_EnableDigitalInput@{XMC\_GPIO\_EnableDigitalInput}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_EnableDigitalInput()}{XMC\_GPIO\_EnableDigitalInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Enable\+Digital\+Input (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+P\+D\+I\+SC. \\
+\hline
+{\em pin} & port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+None
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Description\+:}
+Enable digital input path for analog pins and configures Pn\+\_\+\+P\+D\+I\+SC register.\+This configuration is applicable only for analog port pins. 
+\end{DoxyParagraph}
+
+
+Definition at line 435 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+\mbox{\Hypertarget{group___g_p_i_o_ga151007c4dae91b9cea64c8a271ab88f4}\label{group___g_p_i_o_ga151007c4dae91b9cea64c8a271ab88f4}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_EnablePowerSaveMode@{XMC\_GPIO\_EnablePowerSaveMode}}
+\index{XMC\_GPIO\_EnablePowerSaveMode@{XMC\_GPIO\_EnablePowerSaveMode}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_EnablePowerSaveMode()}{XMC\_GPIO\_EnablePowerSaveMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Enable\+Power\+Save\+Mode (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+P\+PS. \\
+\hline
+{\em pin} & port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Enables pin power save mode and configures Pn\+\_\+\+P\+PS register.\+This configuration is useful when the controller enters Deep Sleep mode.\+Port pin enabled with power save mode option are set to a defined state and the input Schmitt-\/\+Trigger as well as the output driver stage are switched off. By default port pin does not react to power save mode request.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___g_p_i_o_ga4fa89c9ef3fbe14f71c96748c3f714f7}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Disable\+Power\+Save\+Mode()}}
+\end{DoxyParagraph}
+{\bfseries{Note\+:}}~\newline
+ Do not enable the Pin Power Save function for pins configured for Hardware Control (Pn\+\_\+\+H\+W\+S\+E\+L.\+H\+Wx != 00B). Doing so may result in an undefined behavior of the pin when the device enters the Deep Sleep state. 
+
+Definition at line 361 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+\mbox{\Hypertarget{group___g_p_i_o_gaaff7c47a24959071ce0815d23b9f319f}\label{group___g_p_i_o_gaaff7c47a24959071ce0815d23b9f319f}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_GetInput@{XMC\_GPIO\_GetInput}}
+\index{XMC\_GPIO\_GetInput@{XMC\_GPIO\_GetInput}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_GetInput()}{XMC\_GPIO\_GetInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Get\+Input (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+IN. \\
+\hline
+{\em pin} & Port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t pin logic level status.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Reads the Pn\+\_\+\+IN register and returns the current logical value at the G\+P\+IO pin.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+None
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Prior to this api, user has to configure port pin to input mode using \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode()}}. 
+\end{DoxyParagraph}
+
+
+Definition at line 333 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+
+
+Referenced by D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Get\+Input().
+
+\mbox{\Hypertarget{group___g_p_i_o_ga05749322fa717f789b178838955b8c5b}\label{group___g_p_i_o_ga05749322fa717f789b178838955b8c5b}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_Init@{XMC\_GPIO\_Init}}
+\index{XMC\_GPIO\_Init@{XMC\_GPIO\_Init}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_Init()}{XMC\_GPIO\_Init()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Init (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin,  }\item[{const X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t $\ast$const}]{config }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Constant pointer pointing to G\+P\+IO port, to access port registers like Pn\+\_\+\+O\+UT,Pn\+\_\+\+O\+MR,Pn\+\_\+\+I\+O\+CR etc. \\
+\hline
+{\em pin} & Port pin number. \\
+\hline
+{\em config} & G\+P\+IO configuration data structure. Refer data structure X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t for details.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+None
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+This A\+PI is called in definition of D\+A\+V\+E\+\_\+init by code generation and therefore should not be explicitly called for the normal operation. Use other A\+P\+Is only after D\+A\+V\+E\+\_\+init is called successfully (returns D\+A\+V\+E\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+SS). 
+\end{DoxyParagraph}
+
+
+Definition at line 69 of file xmc1\+\_\+gpio.\+c.
+
+
+
+References P\+O\+R\+T\+\_\+\+H\+W\+S\+E\+L\+\_\+\+Msk, P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Msk, P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Size, P\+O\+R\+T\+\_\+\+P\+H\+C\+R\+\_\+\+Msk, P\+O\+R\+T\+\_\+\+P\+H\+C\+R\+\_\+\+Size, X\+M\+C\+\_\+\+A\+S\+S\+E\+RT, and X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+\+OE.
+
+
+
+Referenced by D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Init(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+0\+\_\+init(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode(), U\+A\+R\+T\+\_\+0\+\_\+init(), and U\+A\+R\+T\+\_\+\+Set\+Baudrate().
+
+\mbox{\Hypertarget{group___g_p_i_o_ga90b8519a240ddb93289d8960c6c276b1}\label{group___g_p_i_o_ga90b8519a240ddb93289d8960c6c276b1}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_SetHardwareControl@{XMC\_GPIO\_SetHardwareControl}}
+\index{XMC\_GPIO\_SetHardwareControl@{XMC\_GPIO\_SetHardwareControl}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_SetHardwareControl()}{XMC\_GPIO\_SetHardwareControl()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Hardware\+Control (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin,  }\item[{const \mbox{\hyperlink{group___g_p_i_o_ga642efb5d9074a8b8345eb6d018e71f6d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+t}}}]{hwctrl }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+H\+W\+S\+EL. \\
+\hline
+{\em pin} & port pin number. \\
+\hline
+{\em hwctrl} & direct hardware control selection. Refer \mbox{\hyperlink{group___g_p_i_o_ga642efb5d9074a8b8345eb6d018e71f6d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+H\+W\+C\+T\+R\+L\+\_\+t}} for valid values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Selects direct hard ware control and configures Pn\+\_\+\+H\+W\+S\+EL register.\+This configuration is useful for the port pins overlaid with peripheral functions for which the connected peripheral needs hardware control.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+None
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Do not enable the Pin Power Save function for pins configured for Hardware Control (Pn\+\_\+\+H\+W\+S\+E\+L.\+H\+Wx != 00B). Doing so may result in an undefined behavior of the pin when the device enters the Deep Sleep state. 
+\end{DoxyParagraph}
+
+
+Definition at line 74 of file xmc\+\_\+gpio.\+c.
+
+
+
+References P\+O\+R\+T\+\_\+\+H\+W\+S\+E\+L\+\_\+\+Msk, X\+M\+C\+\_\+\+A\+S\+S\+E\+RT, and X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+H\+E\+C\+K\+\_\+\+H\+W\+C\+T\+RL.
+
+
+
+Referenced by D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Init(), S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+0\+\_\+init(), and S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode().
+
+\mbox{\Hypertarget{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}\label{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_SetMode@{XMC\_GPIO\_SetMode}}
+\index{XMC\_GPIO\_SetMode@{XMC\_GPIO\_SetMode}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_SetMode()}{XMC\_GPIO\_SetMode()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin,  }\item[{const X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+I\+O\+CR. \\
+\hline
+{\em pin} & Port pin number. \\
+\hline
+{\em mode} & input / output functionality selection. Refer X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+M\+O\+D\+E\+\_\+t for valid values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sets digital input and output driver functionality and characteristics of a G\+P\+IO port pin. It configures hardware registers Pn\+\_\+\+I\+O\+CR. {\itshape mode} is initially configured during initialization in \mbox{\hyperlink{group___g_p_i_o_ga05749322fa717f789b178838955b8c5b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Init()}}. Call this A\+PI to alter the port direction functionality as needed later in the program.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+None 
+\end{DoxyParagraph}
+
+
+Definition at line 65 of file xmc\+\_\+gpio.\+c.
+
+
+
+References P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Msk, P\+O\+R\+T\+\_\+\+I\+O\+C\+R\+\_\+\+P\+C\+\_\+\+Size, and X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+
+
+Referenced by S\+P\+I\+\_\+\+S\+L\+A\+V\+E\+\_\+\+Set\+Mode(), and U\+A\+R\+T\+\_\+\+Set\+Baudrate().
+
+\mbox{\Hypertarget{group___g_p_i_o_gac034d0d7c3a082332d66077c5a07b8d3}\label{group___g_p_i_o_gac034d0d7c3a082332d66077c5a07b8d3}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_SetOutputHigh@{XMC\_GPIO\_SetOutputHigh}}
+\index{XMC\_GPIO\_SetOutputHigh@{XMC\_GPIO\_SetOutputHigh}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_SetOutputHigh()}{XMC\_GPIO\_SetOutputHigh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+High (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+O\+MR. \\
+\hline
+{\em pin} & Port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sets port pin output to high. It configures hardware registers Pn\+\_\+\+O\+MR.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___g_p_i_o_ga59c0d8d8078c0d342bcdf727bf41882d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Low()}}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Prior to this api, user has to configure port pin to output mode using \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode()}}.~\newline
+Register Pn\+\_\+\+O\+MR is virtual and does not contain any flip-\/flop. A read action delivers the value of 0. 
+\end{DoxyParagraph}
+
+
+Definition at line 256 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+
+
+Referenced by D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Set\+Output\+High().
+
+\mbox{\Hypertarget{group___g_p_i_o_ga92e738b08cb2224ed11f0bb59b6d2e54}\label{group___g_p_i_o_ga92e738b08cb2224ed11f0bb59b6d2e54}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_SetOutputLevel@{XMC\_GPIO\_SetOutputLevel}}
+\index{XMC\_GPIO\_SetOutputLevel@{XMC\_GPIO\_SetOutputLevel}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_SetOutputLevel()}{XMC\_GPIO\_SetOutputLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Level (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin,  }\item[{const \mbox{\hyperlink{group___g_p_i_o_ga4c36e5e3558a80c427b33a79b65cdb9b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t}}}]{level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+O\+MR. \\
+\hline
+{\em pin} & Port pin number. \\
+\hline
+{\em level} & output level selection. Refer \mbox{\hyperlink{group___g_p_i_o_ga4c36e5e3558a80c427b33a79b65cdb9b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+E\+L\+\_\+t}} for valid values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Set port pin output level to high or low.\+It configures hardware registers Pn\+\_\+\+O\+MR.{\itshape level} is initially configured during initialization in \mbox{\hyperlink{group___g_p_i_o_ga05749322fa717f789b178838955b8c5b}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Init()}}. Call this A\+PI to alter output level as needed later in the program.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___g_p_i_o_gac034d0d7c3a082332d66077c5a07b8d3}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+High()}}, \mbox{\hyperlink{group___g_p_i_o_ga59c0d8d8078c0d342bcdf727bf41882d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Low()}}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Prior to this api, user has to configure port pin to output mode using \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode()}}. 
+\end{DoxyParagraph}
+
+
+Definition at line 229 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT, and X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+C\+H\+E\+C\+K\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+L\+E\+V\+EL.
+
+\mbox{\Hypertarget{group___g_p_i_o_ga59c0d8d8078c0d342bcdf727bf41882d}\label{group___g_p_i_o_ga59c0d8d8078c0d342bcdf727bf41882d}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_SetOutputLow@{XMC\_GPIO\_SetOutputLow}}
+\index{XMC\_GPIO\_SetOutputLow@{XMC\_GPIO\_SetOutputLow}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_SetOutputLow()}{XMC\_GPIO\_SetOutputLow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Low (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+O\+MR. \\
+\hline
+{\em pin} & port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sets port pin output to low. It configures hardware registers Pn\+\_\+\+O\+MR.~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:$>$}
+\mbox{\hyperlink{group___g_p_i_o_gac034d0d7c3a082332d66077c5a07b8d3}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+High()}}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Prior to this api, user has to configure port pin to output mode using \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode()}}. Register Pn\+\_\+\+O\+MR is virtual and does not contain any flip-\/flop. A read action delivers the value of 0.~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 282 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+
+
+Referenced by D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Set\+Output\+Low().
+
+\mbox{\Hypertarget{group___g_p_i_o_ga5d016688a25753bef2e18533b2bde23c}\label{group___g_p_i_o_ga5d016688a25753bef2e18533b2bde23c}} 
+\index{GPIO@{GPIO}!XMC\_GPIO\_ToggleOutput@{XMC\_GPIO\_ToggleOutput}}
+\index{XMC\_GPIO\_ToggleOutput@{XMC\_GPIO\_ToggleOutput}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{XMC\_GPIO\_ToggleOutput()}{XMC\_GPIO\_ToggleOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Toggle\+Output (\begin{DoxyParamCaption}\item[{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+t $\ast$const}]{port,  }\item[{const uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & constant pointer pointing to G\+P\+IO port, to access hardware register Pn\+\_\+\+O\+MR. \\
+\hline
+{\em pin} & port pin number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Configures port pin output to Toggle. It configures hardware registers Pn\+\_\+\+O\+MR.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___g_p_i_o_gac034d0d7c3a082332d66077c5a07b8d3}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+High()}}, \mbox{\hyperlink{group___g_p_i_o_ga59c0d8d8078c0d342bcdf727bf41882d}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Output\+Low()}}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Prior to this api, user has to configure port pin to output mode using \mbox{\hyperlink{group___g_p_i_o_ga2d52a863e693424c88d5dd8ecf9f2e46}{X\+M\+C\+\_\+\+G\+P\+I\+O\+\_\+\+Set\+Mode()}}. Register Pn\+\_\+\+O\+MR is virtual and does not contain any flip-\/flop. A read action delivers the value of 0. 
+\end{DoxyParagraph}
+
+
+Definition at line 308 of file xmc\+\_\+gpio.\+h.
+
+
+
+References X\+M\+C\+\_\+\+A\+S\+S\+E\+RT.
+
+
+
+Referenced by D\+I\+G\+I\+T\+A\+L\+\_\+\+I\+O\+\_\+\+Toggle\+Output().
+

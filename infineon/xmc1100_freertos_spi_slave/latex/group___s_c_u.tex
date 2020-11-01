@@ -1,0 +1,729 @@
+\hypertarget{group___s_c_u}{}\doxysection{S\+CU}
+\label{group___s_c_u}\index{SCU@{SCU}}
+
+
+System Control Unit(\+S\+C\+U) driver for X\+MC microcontroller family.  
+
+
+Collaboration diagram for S\+CU\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{group___s_c_u}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{group___s_c_u_ga038b306c834ed7183c64dc8f92bc5ee7}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+US}} \mbox{\hyperlink{group___s_c_u_ga258feddd9c813aeac2248fa026a91b81}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{group___s_c_u_ga4b50170c441fb21833c07a27b814a581}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+t}}) (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_c_u_ga038b306c834ed7183c64dc8f92bc5ee7}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+US}} \{ \mbox{\hyperlink{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7a764eaaa84d169b3222ae9174d1fa6855}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}} = 0UL, 
+\mbox{\hyperlink{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7aaf8f778e9be5e754dcaa0c1cf83e1e4b}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR}}, 
+\mbox{\hyperlink{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7a6f6a43bd2a61be2a1b0b57601d58bd77}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___s_c_u_ga3b2b4eb2b1fb84d9aa0b3b2997941d10}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Set\+Ccu\+Trigger\+High}} (const uint32\+\_\+t trigger)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___s_c_u_gaee8a9cc1bea24cd3a6027ecfa02cac9d}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Set\+Ccu\+Trigger\+Low}} (const uint32\+\_\+t trigger)
+\item 
+void \mbox{\hyperlink{group___s_c_u_ga08c337e8a728604e7eb54dff78ae2d9d}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Init}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t $\ast$const config)
+\item 
+void \mbox{\hyperlink{group___s_c_u_gab4cfb9545d1e561e1f24aeaa69af821c}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Enable\+Event}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t event)
+\item 
+void \mbox{\hyperlink{group___s_c_u_gaa814678729d6b7f41c558e768ba8ecd4}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Disable\+Event}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t event)
+\item 
+void \mbox{\hyperlink{group___s_c_u_gaa55b2098ce803174e7dfd680d0c30728}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Trigger\+Event}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t event)
+\item 
+X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t \mbox{\hyperlink{group___s_c_u_gae23dfad3e5e11c78791e5d5a777c44a8}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+U\+P\+T\+\_\+\+Get\+Event\+Status}} (void)
+\item 
+void \mbox{\hyperlink{group___s_c_u_gabd2e577339ff5af48261d18e0e41dc50}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Clear\+Event\+Status}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t event)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t \mbox{\hyperlink{group___s_c_u_ga9239de911e1602022b1e3e1121e0a126}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Get\+Device\+Reset\+Reason}} (void)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___s_c_u_ga6ab54dc1771863dfe14729caee0d3ab3}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Clear\+Device\+Reset\+Reason}} (void)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t \mbox{\hyperlink{group___s_c_u_ga4b3caea1645eb3c2692e15e39b124b2b}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Cpu\+Clock\+Frequency}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___s_c_u_ga55a1be4f0e96fcda7b2c0feb542af250}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Peripheral\+Clock\+Frequency}} (void)
+\item 
+void \mbox{\hyperlink{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t peripheral)
+\item 
+void \mbox{\hyperlink{group___s_c_u_ga702904d10b6e6c6a55db381763fd322f}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Ungate\+Peripheral\+Clock}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t peripheral)
+\item 
+bool \mbox{\hyperlink{group___s_c_u_ga804f98badedf0e0ba4ce09f445687a37}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Is\+Peripheral\+Clock\+Gated}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t peripheral)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t \mbox{\hyperlink{group___s_c_u_gac1c342fd66a4476279daaac294b62e78}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status}} (void)
+\item 
+\mbox{\hyperlink{group___s_c_u_ga258feddd9c813aeac2248fa026a91b81}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{group___s_c_u_ga4ae03c6bcc3ccade266b46d84f7715e6}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Set\+Event\+Handler}} (const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t event, const \mbox{\hyperlink{group___s_c_u_ga4b50170c441fb21833c07a27b814a581}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+t}} handler)
+\item 
+void \mbox{\hyperlink{group___s_c_u_ga9ba1ce317ce89edfea107893fbd8a0be}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+R\+Q\+Handler}} (uint32\+\_\+t sr\+\_\+num)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+System Control Unit(\+S\+C\+U) driver for X\+MC microcontroller family. 
+
+System control unit is the SoC power, reset and a clock manager with additional responsibility of providing system stability protection and other auxiliary functions.~\newline
+ S\+CU provides the following features,
+\begin{DoxyEnumerate}
+\item Power control
+\item Reset control
+\item Clock control
+\item Miscellaneous control(boot mode, system interrupts etc.)~\newline
+~\newline
+
+\end{DoxyEnumerate}
+
+The S\+CU driver is divided in to clock control logic, reset control logic, system interrupt control logic and miscellaneous control logic.~\newline
+
+
+Clock driver features\+:
+\begin{DoxyEnumerate}
+\item Allows clock configuration using the structure X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t and A\+PI \mbox{\hyperlink{group___s_c_u_ga08c337e8a728604e7eb54dff78ae2d9d}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Init()}}
+\end{DoxyEnumerate}
+
+Reset driver features\+: ~\newline
+
+
+Interrupt driver features\+:
+\begin{DoxyEnumerate}
+\item Provides A\+P\+Is for enabling/ disabling interrupt event generation \mbox{\hyperlink{group___s_c_u_gab4cfb9545d1e561e1f24aeaa69af821c}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Enable\+Event()}}, \mbox{\hyperlink{group___s_c_u_gaa814678729d6b7f41c558e768ba8ecd4}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Disable\+Event()}}
+\item Provides A\+PI for registering callback function for events \mbox{\hyperlink{group___s_c_u_ga4ae03c6bcc3ccade266b46d84f7715e6}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Set\+Event\+Handler()}}~\newline
+
+\end{DoxyEnumerate}
+
+Miscellaneous features\+:
+\begin{DoxyEnumerate}
+\item Allows to trigger multiple capture compare unit(\+C\+C\+U) channels to be started together \mbox{\hyperlink{group___s_c_u_ga3b2b4eb2b1fb84d9aa0b3b2997941d10}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Set\+Ccu\+Trigger\+High()}} 
+\end{DoxyEnumerate}
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group___s_c_u_ga4b50170c441fb21833c07a27b814a581}\label{group___s_c_u_ga4b50170c441fb21833c07a27b814a581}} 
+\index{SCU@{SCU}!XMC\_SCU\_INTERRUPT\_EVENT\_HANDLER\_t@{XMC\_SCU\_INTERRUPT\_EVENT\_HANDLER\_t}}
+\index{XMC\_SCU\_INTERRUPT\_EVENT\_HANDLER\_t@{XMC\_SCU\_INTERRUPT\_EVENT\_HANDLER\_t}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_INTERRUPT\_EVENT\_HANDLER\_t}{XMC\_SCU\_INTERRUPT\_EVENT\_HANDLER\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+t) (void)}
+
+Function pointer type used for registering callback functions on S\+CU event occurrence. 
+
+Definition at line 187 of file xmc\+\_\+scu.\+h.
+
+\mbox{\Hypertarget{group___s_c_u_ga258feddd9c813aeac2248fa026a91b81}\label{group___s_c_u_ga258feddd9c813aeac2248fa026a91b81}} 
+\index{SCU@{SCU}!XMC\_SCU\_STATUS\_t@{XMC\_SCU\_STATUS\_t}}
+\index{XMC\_SCU\_STATUS\_t@{XMC\_SCU\_STATUS\_t}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_STATUS\_t}{XMC\_SCU\_STATUS\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___s_c_u_ga038b306c834ed7183c64dc8f92bc5ee7}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+US}} \mbox{\hyperlink{group___s_c_u_ga258feddd9c813aeac2248fa026a91b81}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}}}
+
+Defines the status of S\+CU A\+PI execution, used to verify the S\+CU related A\+PI calls. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___s_c_u_ga038b306c834ed7183c64dc8f92bc5ee7}\label{group___s_c_u_ga038b306c834ed7183c64dc8f92bc5ee7}} 
+\index{SCU@{SCU}!XMC\_SCU\_STATUS@{XMC\_SCU\_STATUS}}
+\index{XMC\_SCU\_STATUS@{XMC\_SCU\_STATUS}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_STATUS}{XMC\_SCU\_STATUS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_c_u_ga038b306c834ed7183c64dc8f92bc5ee7}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+US}}}
+
+Defines the status of S\+CU A\+PI execution, used to verify the S\+CU related A\+PI calls. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_SCU\_STATUS\_OK@{XMC\_SCU\_STATUS\_OK}!SCU@{SCU}}\index{SCU@{SCU}!XMC\_SCU\_STATUS\_OK@{XMC\_SCU\_STATUS\_OK}}}\mbox{\Hypertarget{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7a764eaaa84d169b3222ae9174d1fa6855}\label{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7a764eaaa84d169b3222ae9174d1fa6855}} 
+X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK&S\+CU related operation successfully completed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_SCU\_STATUS\_ERROR@{XMC\_SCU\_STATUS\_ERROR}!SCU@{SCU}}\index{SCU@{SCU}!XMC\_SCU\_STATUS\_ERROR@{XMC\_SCU\_STATUS\_ERROR}}}\mbox{\Hypertarget{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7aaf8f778e9be5e754dcaa0c1cf83e1e4b}\label{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7aaf8f778e9be5e754dcaa0c1cf83e1e4b}} 
+X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR&S\+CU related operation failed. When A\+PI cannot fulfill request, this value is returned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_SCU\_STATUS\_BUSY@{XMC\_SCU\_STATUS\_BUSY}!SCU@{SCU}}\index{SCU@{SCU}!XMC\_SCU\_STATUS\_BUSY@{XMC\_SCU\_STATUS\_BUSY}}}\mbox{\Hypertarget{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7a6f6a43bd2a61be2a1b0b57601d58bd77}\label{group___s_c_u_gga038b306c834ed7183c64dc8f92bc5ee7a6f6a43bd2a61be2a1b0b57601d58bd77}} 
+X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY&Cannot execute the S\+CU related operation request because another operation is in progress. {\itshape X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY} is returned when A\+PI is busy processing another request. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 170 of file xmc\+\_\+scu.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}\label{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}} 
+\index{SCU@{SCU}!XMC\_SCU\_CLOCK\_GatePeripheralClock@{XMC\_SCU\_CLOCK\_GatePeripheralClock}}
+\index{XMC\_SCU\_CLOCK\_GatePeripheralClock@{XMC\_SCU\_CLOCK\_GatePeripheralClock}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_CLOCK\_GatePeripheralClock()}{XMC\_SCU\_CLOCK\_GatePeripheralClock()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t}]{peripheral }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em peripheral} & The peripheral for which the clock has to be gated. {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t to identify the peripheral clock to be gated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Blocks the supply of clock to the selected peripheral.~\newline
+~\newline
+Clock gating helps in reducing the power consumption. User can selectively gate the clocks of unused peripherals. Note\+: Clock gating shall not be activated unless the module is in reset state. So use {\itshape \mbox{\hyperlink{group___s_c_u_ga804f98badedf0e0ba4ce09f445687a37}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Is\+Peripheral\+Clock\+Gated()}}} A\+PI before enabling the gating of any peripheral. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga804f98badedf0e0ba4ce09f445687a37}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Is\+Peripheral\+Clock\+Gated()}}, \mbox{\hyperlink{group___s_c_u_ga702904d10b6e6c6a55db381763fd322f}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Ungate\+Peripheral\+Clock()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 612 of file xmc1\+\_\+scu.\+c.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable(), X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+Disable(), X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Disable\+Module(), and X\+M\+C\+\_\+\+W\+D\+T\+\_\+\+Disable().
+
+\mbox{\Hypertarget{group___s_c_u_ga4b3caea1645eb3c2692e15e39b124b2b}\label{group___s_c_u_ga4b3caea1645eb3c2692e15e39b124b2b}} 
+\index{SCU@{SCU}!XMC\_SCU\_CLOCK\_GetCpuClockFrequency@{XMC\_SCU\_CLOCK\_GetCpuClockFrequency}}
+\index{XMC\_SCU\_CLOCK\_GetCpuClockFrequency@{XMC\_SCU\_CLOCK\_GetCpuClockFrequency}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_CLOCK\_GetCpuClockFrequency()}{XMC\_SCU\_CLOCK\_GetCpuClockFrequency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Cpu\+Clock\+Frequency (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Value of C\+PU clock frequency.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Provides the vlaue of C\+PU clock frequency.~\newline
+~\newline
+The value is stored in a global variable {\itshape {\bfseries{System\+Core\+Clock}}.} It is updated when the clock configuration is done using the S\+CU L\+LD A\+P\+Is. The value represents the frequency of clock used for C\+PU operation. {\bfseries{Range\+:}} Value is of type uint32\+\_\+t, and gives the value of frequency in Hertz.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga55a1be4f0e96fcda7b2c0feb542af250}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Peripheral\+Clock\+Frequency()}}, \mbox{\hyperlink{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 425 of file xmc\+\_\+scu.\+h.
+
+
+
+References System\+Core\+Clock.
+
+\mbox{\Hypertarget{group___s_c_u_ga55a1be4f0e96fcda7b2c0feb542af250}\label{group___s_c_u_ga55a1be4f0e96fcda7b2c0feb542af250}} 
+\index{SCU@{SCU}!XMC\_SCU\_CLOCK\_GetPeripheralClockFrequency@{XMC\_SCU\_CLOCK\_GetPeripheralClockFrequency}}
+\index{XMC\_SCU\_CLOCK\_GetPeripheralClockFrequency@{XMC\_SCU\_CLOCK\_GetPeripheralClockFrequency}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_CLOCK\_GetPeripheralClockFrequency()}{XMC\_SCU\_CLOCK\_GetPeripheralClockFrequency()}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Peripheral\+Clock\+Frequency (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Value of peripheral clock frequency in Hertz.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Provides the vlaue of clock frequency at which the peripherals are working.~\newline
+~\newline
+The value is derived from the C\+PU frequency. {\bfseries{Range\+:}} Value is of type uint32\+\_\+t. It is represented in Hertz. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga4b3caea1645eb3c2692e15e39b124b2b}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Cpu\+Clock\+Frequency()}},\mbox{\hyperlink{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 776 of file xmc1\+\_\+scu.\+c.
+
+
+
+References S\+C\+U\+\_\+\+C\+LK, S\+C\+U\+\_\+\+C\+L\+K\+\_\+\+C\+L\+K\+C\+R\+\_\+\+P\+C\+L\+K\+S\+E\+L\+\_\+\+Msk, S\+C\+U\+\_\+\+C\+L\+K\+\_\+\+C\+L\+K\+C\+R\+\_\+\+P\+C\+L\+K\+S\+E\+L\+\_\+\+Pos, and System\+Core\+Clock.
+
+
+
+Referenced by X\+M\+C\+\_\+\+I2\+S\+\_\+\+C\+H\+\_\+\+Set\+Baudrate(), X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+Set\+Baudrate(), X\+M\+C\+\_\+\+S\+P\+I\+\_\+\+C\+H\+\_\+\+Set\+Interword\+Delay(), X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+Set\+Baudrate(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Baudrate().
+
+\mbox{\Hypertarget{group___s_c_u_ga08c337e8a728604e7eb54dff78ae2d9d}\label{group___s_c_u_ga08c337e8a728604e7eb54dff78ae2d9d}} 
+\index{SCU@{SCU}!XMC\_SCU\_CLOCK\_Init@{XMC\_SCU\_CLOCK\_Init}}
+\index{XMC\_SCU\_CLOCK\_Init@{XMC\_SCU\_CLOCK\_Init}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_CLOCK\_Init()}{XMC\_SCU\_CLOCK\_Init()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Init (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t $\ast$const}]{config }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Pointer to structure holding the clock prescaler values and divider values for configuring clock generators and clock tree.~\newline
+ {\bfseries{Range\+:}} Configure the members of structure X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t for various parameters of clock setup.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Initializes clock generators and clock tree.~\newline
+~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga55a1be4f0e96fcda7b2c0feb542af250}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Peripheral\+Clock\+Frequency()}}, \mbox{\hyperlink{group___s_c_u_ga4b3caea1645eb3c2692e15e39b124b2b}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Get\+Cpu\+Clock\+Frequency()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 529 of file xmc1\+\_\+scu.\+c.
+
+
+
+References delay(), S\+C\+U\+\_\+\+A\+N\+A\+L\+OG, S\+C\+U\+\_\+\+C\+LK, and S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+PT.
+
+
+
+Referenced by System\+Core\+Clock\+Setup().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{group___s_c_u_ga08c337e8a728604e7eb54dff78ae2d9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___s_c_u_ga804f98badedf0e0ba4ce09f445687a37}\label{group___s_c_u_ga804f98badedf0e0ba4ce09f445687a37}} 
+\index{SCU@{SCU}!XMC\_SCU\_CLOCK\_IsPeripheralClockGated@{XMC\_SCU\_CLOCK\_IsPeripheralClockGated}}
+\index{XMC\_SCU\_CLOCK\_IsPeripheralClockGated@{XMC\_SCU\_CLOCK\_IsPeripheralClockGated}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_CLOCK\_IsPeripheralClockGated()}{XMC\_SCU\_CLOCK\_IsPeripheralClockGated()}}
+{\footnotesize\ttfamily bool X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Is\+Peripheral\+Clock\+Gated (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t}]{peripheral }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em peripheral} & The peripheral for which the check for clock gating has to be done. {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t to identify the peripheral.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Status of the peripheral clock gating. {\bfseries{Range\+:}} true if the peripheral clock is gated. false if the peripheral clock ungated(gate de-\/asserted).
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Gives the status of peripheral clock gating.~\newline
+~\newline
+It is recommended to use this A\+PI before enabling the gating of any peripherals through {\itshape \mbox{\hyperlink{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock()}}} A\+PI.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga702904d10b6e6c6a55db381763fd322f}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Ungate\+Peripheral\+Clock()}}, \mbox{\hyperlink{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 632 of file xmc1\+\_\+scu.\+c.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Is\+Enabled().
+
+\mbox{\Hypertarget{group___s_c_u_ga702904d10b6e6c6a55db381763fd322f}\label{group___s_c_u_ga702904d10b6e6c6a55db381763fd322f}} 
+\index{SCU@{SCU}!XMC\_SCU\_CLOCK\_UngatePeripheralClock@{XMC\_SCU\_CLOCK\_UngatePeripheralClock}}
+\index{XMC\_SCU\_CLOCK\_UngatePeripheralClock@{XMC\_SCU\_CLOCK\_UngatePeripheralClock}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_CLOCK\_UngatePeripheralClock()}{XMC\_SCU\_CLOCK\_UngatePeripheralClock()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Ungate\+Peripheral\+Clock (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t}]{peripheral }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em peripheral} & The peripheral for which the clock has to be ungated. {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+t to identify the peripheral.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Enables the supply of clock to the selected peripheral.~\newline
+~\newline
+By default when the device powers on, the peripheral clock will be gated for the peripherals that support clock gating. The peripheral clock should be enabled before using it for any functionality.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga804f98badedf0e0ba4ce09f445687a37}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Is\+Peripheral\+Clock\+Gated()}}, \mbox{\hyperlink{group___s_c_u_gab0af70f90b9a1f24d3a0a4764543d833}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 620 of file xmc1\+\_\+scu.\+c.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable(), X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+Enable(), X\+M\+C\+\_\+\+V\+A\+D\+C\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+Enable\+Module(), and X\+M\+C\+\_\+\+W\+D\+T\+\_\+\+Enable().
+
+\mbox{\Hypertarget{group___s_c_u_gac1c342fd66a4476279daaac294b62e78}\label{group___s_c_u_gac1c342fd66a4476279daaac294b62e78}} 
+\index{SCU@{SCU}!XMC\_SCU\_GetMirrorStatus@{XMC\_SCU\_GetMirrorStatus}}
+\index{XMC\_SCU\_GetMirrorStatus@{XMC\_SCU\_GetMirrorStatus}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_GetMirrorStatus()}{XMC\_SCU\_GetMirrorStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Status of the register mirror update.~\newline
+ {\bfseries{Range\+:}} Use the bit mask of the S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+TS register for the mirror update event of interest. e.\+g.\+: S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+Msk. Multiple update events can be combined using {\itshape OR} operation.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Provides the status of hibernate domain register update, when the respective mirror registers are changed. ~\newline
+~\newline
+The hibernate domain is connected to the core domain via S\+PI serial communication. M\+I\+R\+R\+S\+TS is a status register representing the communication of changed value of a mirror register to its corresponding register in the hibernate domain. The bit fields of the register indicate that a corresponding register of the hibernate domain is ready to accept a write or that the communication interface is busy with executing the previous operation.~\newline
+Note\+: There is no hibernate domain in X\+M\+C1x devices. This register is retained for legacy purpose. 
+\end{DoxyParagraph}
+
+
+Definition at line 543 of file xmc\+\_\+scu.\+h.
+
+
+
+References S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+AL.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Prescaler(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Start(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop().
+
+\mbox{\Hypertarget{group___s_c_u_gabd2e577339ff5af48261d18e0e41dc50}\label{group___s_c_u_gabd2e577339ff5af48261d18e0e41dc50}} 
+\index{SCU@{SCU}!XMC\_SCU\_INTERRUPT\_ClearEventStatus@{XMC\_SCU\_INTERRUPT\_ClearEventStatus}}
+\index{XMC\_SCU\_INTERRUPT\_ClearEventStatus@{XMC\_SCU\_INTERRUPT\_ClearEventStatus}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_INTERRUPT\_ClearEventStatus()}{XMC\_SCU\_INTERRUPT\_ClearEventStatus()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Clear\+Event\+Status (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Bit mask of the events to clear. {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t for providing the input value. Multiple events can be combined using the {\itshape OR} operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Clears the event status bit in S\+R\+R\+AW register.~\newline
+~\newline
+The events are cleared by writing value 1 to their bit positions in the S\+R\+C\+LR register. The A\+PI can be used when polling method is used. After detecting the event, the event status should be cleared using software to detect the event again.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_gae23dfad3e5e11c78791e5d5a777c44a8}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+U\+P\+T\+\_\+\+Get\+Event\+Status()}}, \mbox{\hyperlink{group___s_c_u_gaa55b2098ce803174e7dfd680d0c30728}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Trigger\+Event()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 381 of file xmc1\+\_\+scu.\+c.
+
+\mbox{\Hypertarget{group___s_c_u_gaa814678729d6b7f41c558e768ba8ecd4}\label{group___s_c_u_gaa814678729d6b7f41c558e768ba8ecd4}} 
+\index{SCU@{SCU}!XMC\_SCU\_INTERRUPT\_DisableEvent@{XMC\_SCU\_INTERRUPT\_DisableEvent}}
+\index{XMC\_SCU\_INTERRUPT\_DisableEvent@{XMC\_SCU\_INTERRUPT\_DisableEvent}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_INTERRUPT\_DisableEvent()}{XMC\_SCU\_INTERRUPT\_DisableEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Disable\+Event (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Bit mask of the event to disable. {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t for providing the input value. Multiple events can be combined using the {\itshape OR} operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Disables generation of interrupt on occurrence of the input event.~\newline
+~\newline
+The events are disabled by resetting the respective bit fields in the S\+R\+M\+SK register. ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga73b4e251f59cab4e9a5e234aac02ae57}{N\+V\+I\+C\+\_\+\+Disable\+I\+R\+Q()}}, \mbox{\hyperlink{group___s_c_u_gab4cfb9545d1e561e1f24aeaa69af821c}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Enable\+Event()}}~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 351 of file xmc1\+\_\+scu.\+c.
+
+\mbox{\Hypertarget{group___s_c_u_gab4cfb9545d1e561e1f24aeaa69af821c}\label{group___s_c_u_gab4cfb9545d1e561e1f24aeaa69af821c}} 
+\index{SCU@{SCU}!XMC\_SCU\_INTERRUPT\_EnableEvent@{XMC\_SCU\_INTERRUPT\_EnableEvent}}
+\index{XMC\_SCU\_INTERRUPT\_EnableEvent@{XMC\_SCU\_INTERRUPT\_EnableEvent}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_INTERRUPT\_EnableEvent()}{XMC\_SCU\_INTERRUPT\_EnableEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Enable\+Event (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Bit mask of the event to enable. {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t for providing the input value. Multiple events can be combined using the {\itshape OR} operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Enables the generation of interrupt for the input events.~\newline
+~\newline
+The events are enabled by setting the respective bit fields in the S\+R\+M\+SK register. ~\newline
+Note\+: User should separately enable the N\+V\+IC node responsible for handling the S\+CU interrupt. The interrupt will be generated when the respective event occurs. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga57b3064413dbc7459d9646020fdd8bef}{N\+V\+I\+C\+\_\+\+Enable\+I\+R\+Q()}}, \mbox{\hyperlink{group___s_c_u_gaa814678729d6b7f41c558e768ba8ecd4}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Disable\+Event()}}~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 342 of file xmc1\+\_\+scu.\+c.
+
+
+
+Referenced by C\+L\+O\+C\+K\+\_\+\+X\+M\+C1\+\_\+\+Init().
+
+\mbox{\Hypertarget{group___s_c_u_ga4ae03c6bcc3ccade266b46d84f7715e6}\label{group___s_c_u_ga4ae03c6bcc3ccade266b46d84f7715e6}} 
+\index{SCU@{SCU}!XMC\_SCU\_INTERRUPT\_SetEventHandler@{XMC\_SCU\_INTERRUPT\_SetEventHandler}}
+\index{XMC\_SCU\_INTERRUPT\_SetEventHandler@{XMC\_SCU\_INTERRUPT\_SetEventHandler}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_INTERRUPT\_SetEventHandler()}{XMC\_SCU\_INTERRUPT\_SetEventHandler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_c_u_ga258feddd9c813aeac2248fa026a91b81}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Set\+Event\+Handler (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t}]{event,  }\item[{const \mbox{\hyperlink{group___s_c_u_ga4b50170c441fb21833c07a27b814a581}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+t}}}]{handler }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event for which the interrupt handler is to be configured. ~\newline
+ {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t for identifying the event. \\
+\hline
+{\em handler} & Name of the function to be executed when the event if detected. ~\newline
+ {\bfseries{Range\+:}} The function accepts no arguments and returns no value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t Status of configuring the event handler function for the selected event.~\newline
+ {\bfseries{Range\+:}} {\itshape X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK} if the event handler is successfully configured.~\newline
+ {\itshape X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR} if the input event is invalid.~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Assigns the event handler function to be executed on occurrence of the selected event.~\newline
+~\newline
+If the input event is valid, the handler function will be assigned to a table to be executed when the interrupt is generated and the event status is set in the event status register. By using this A\+PI, polling for a particular event can be avoided. This way the C\+PU utilization will be optimized. Multiple S\+CU events can generate a common interrupt. When the interrupt is generated, a common interrupt service routine is executed. It checks for status flags of events which can generate the interrupt. The handler function will be executed if the event flag is set.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_gaa55b2098ce803174e7dfd680d0c30728}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Trigger\+Event()}}, \mbox{\hyperlink{group___s_c_u_gae23dfad3e5e11c78791e5d5a777c44a8}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+U\+P\+T\+\_\+\+Get\+Event\+Status()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 812 of file xmc1\+\_\+scu.\+c.
+
+\mbox{\Hypertarget{group___s_c_u_gaa55b2098ce803174e7dfd680d0c30728}\label{group___s_c_u_gaa55b2098ce803174e7dfd680d0c30728}} 
+\index{SCU@{SCU}!XMC\_SCU\_INTERRUPT\_TriggerEvent@{XMC\_SCU\_INTERRUPT\_TriggerEvent}}
+\index{XMC\_SCU\_INTERRUPT\_TriggerEvent@{XMC\_SCU\_INTERRUPT\_TriggerEvent}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_INTERRUPT\_TriggerEvent()}{XMC\_SCU\_INTERRUPT\_TriggerEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Trigger\+Event (\begin{DoxyParamCaption}\item[{const X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Bit mask of the event to be triggered. {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t for providing the input value. Multiple events can be combined using the {\itshape OR} operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Triggers the event as if the hardware raised it.~\newline
+~\newline
+Event will be triggered by setting the respective bitfield in the S\+R\+S\+ET register.~\newline
+Note\+: User should enable the N\+V\+IC node that handles the respective event for interrupt generation. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga57b3064413dbc7459d9646020fdd8bef}{N\+V\+I\+C\+\_\+\+Enable\+I\+R\+Q()}}, \mbox{\hyperlink{group___s_c_u_gae23dfad3e5e11c78791e5d5a777c44a8}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+U\+P\+T\+\_\+\+Get\+Event\+Status()}}, \mbox{\hyperlink{group___s_c_u_gabd2e577339ff5af48261d18e0e41dc50}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Clear\+Event\+Status()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 360 of file xmc1\+\_\+scu.\+c.
+
+\mbox{\Hypertarget{group___s_c_u_gae23dfad3e5e11c78791e5d5a777c44a8}\label{group___s_c_u_gae23dfad3e5e11c78791e5d5a777c44a8}} 
+\index{SCU@{SCU}!XMC\_SCU\_INTERUPT\_GetEventStatus@{XMC\_SCU\_INTERUPT\_GetEventStatus}}
+\index{XMC\_SCU\_INTERUPT\_GetEventStatus@{XMC\_SCU\_INTERUPT\_GetEventStatus}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_INTERUPT\_GetEventStatus()}{XMC\_SCU\_INTERUPT\_GetEventStatus()}}
+{\footnotesize\ttfamily X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+U\+P\+T\+\_\+\+Get\+Event\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Status of the S\+CU events.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Provides the status of all S\+CU events.~\newline
+~\newline
+The status is read from the S\+R\+R\+AW register. To check the status of a particular event, the returned value should be masked with the bit mask of the event. The bitmask of events can be obtained using the type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+t. Multiple events\textquotesingle{} status can be checked by combining the bit masks using {\itshape OR} operation. After detecting the event, the event status should be cleared using software to detect the event again. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_gabd2e577339ff5af48261d18e0e41dc50}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Clear\+Event\+Status()}}, \mbox{\hyperlink{group___s_c_u_gaa55b2098ce803174e7dfd680d0c30728}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Trigger\+Event()}}, \mbox{\hyperlink{group___s_c_u_ga4ae03c6bcc3ccade266b46d84f7715e6}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Set\+Event\+Handler()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 369 of file xmc1\+\_\+scu.\+c.
+
+\mbox{\Hypertarget{group___s_c_u_ga9ba1ce317ce89edfea107893fbd8a0be}\label{group___s_c_u_ga9ba1ce317ce89edfea107893fbd8a0be}} 
+\index{SCU@{SCU}!XMC\_SCU\_IRQHandler@{XMC\_SCU\_IRQHandler}}
+\index{XMC\_SCU\_IRQHandler@{XMC\_SCU\_IRQHandler}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_IRQHandler()}{XMC\_SCU\_IRQHandler()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{sr\+\_\+num }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sr\+\_\+num} & Service request number identifying the S\+CU interrupt generated.~\newline
+ {\bfseries{Range\+:}} 0 to 2. X\+M\+C4x devices have one common S\+CU interrupt, so the value should be 0.~\newline
+ But X\+M\+C1x devices support 3 interrupt nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+A common function to execute callback functions for multiple events.~\newline
+~\newline
+It checks for the status of events which can generate the interrupt with the selected service request. If the event is set, the corresponding callback function will be executed. It also clears the event status bit.~\newline
+{\bfseries{Note\+:}} This is an internal function. It should not be called by the user application.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga4ae03c6bcc3ccade266b46d84f7715e6}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+Set\+Event\+Handler()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 843 of file xmc1\+\_\+scu.\+c.
+
+\mbox{\Hypertarget{group___s_c_u_ga6ab54dc1771863dfe14729caee0d3ab3}\label{group___s_c_u_ga6ab54dc1771863dfe14729caee0d3ab3}} 
+\index{SCU@{SCU}!XMC\_SCU\_RESET\_ClearDeviceResetReason@{XMC\_SCU\_RESET\_ClearDeviceResetReason}}
+\index{XMC\_SCU\_RESET\_ClearDeviceResetReason@{XMC\_SCU\_RESET\_ClearDeviceResetReason}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_RESET\_ClearDeviceResetReason()}{XMC\_SCU\_RESET\_ClearDeviceResetReason()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Clear\+Device\+Reset\+Reason (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Clears the reset reason bits in the reset status register. ~\newline
+~\newline
+Clearing of the reset status information in the {\itshape S\+C\+U\+\_\+\+R\+S\+T\+S\+T\+AT} register via register bit {\itshape R\+S\+T\+C\+L\+R.\+R\+S\+C\+LR} is strongly recommended to ensure a clear indication of the cause of next reset.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga9239de911e1602022b1e3e1121e0a126}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Get\+Device\+Reset\+Reason()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 406 of file xmc\+\_\+scu.\+h.
+
+
+
+References S\+C\+U\+\_\+\+R\+E\+S\+ET, and S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+R\+S\+T\+C\+L\+R\+\_\+\+R\+S\+C\+L\+R\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___s_c_u_ga9239de911e1602022b1e3e1121e0a126}\label{group___s_c_u_ga9239de911e1602022b1e3e1121e0a126}} 
+\index{SCU@{SCU}!XMC\_SCU\_RESET\_GetDeviceResetReason@{XMC\_SCU\_RESET\_GetDeviceResetReason}}
+\index{XMC\_SCU\_RESET\_GetDeviceResetReason@{XMC\_SCU\_RESET\_GetDeviceResetReason}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_RESET\_GetDeviceResetReason()}{XMC\_SCU\_RESET\_GetDeviceResetReason()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Get\+Device\+Reset\+Reason (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Status representing the reason for device reset.
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Provides the value representing the reason for device reset.~\newline
+~\newline
+The return value is an encoded word, which can indicate multiple reasons for the last reset. Each bit position of the returned word is representative of a last reset cause. The returned value should be appropriately masked to check the cause of reset. The cause of the last reset gets automatically stored in the {\itshape S\+C\+U\+\_\+\+R\+S\+T\+S\+T\+AT} register. The reset status shall be reset after each startup in order to ensure consistent source indication after the next reset. {\bfseries{Range\+:}} The type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+t can be used to get the bit masks of the reset cause.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___s_c_u_ga6ab54dc1771863dfe14729caee0d3ab3}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Clear\+Device\+Reset\+Reason()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 391 of file xmc\+\_\+scu.\+h.
+
+
+
+References S\+C\+U\+\_\+\+R\+E\+S\+ET, and S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+R\+S\+T\+S\+T\+A\+T\+\_\+\+R\+S\+T\+S\+T\+A\+T\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___s_c_u_ga3b2b4eb2b1fb84d9aa0b3b2997941d10}\label{group___s_c_u_ga3b2b4eb2b1fb84d9aa0b3b2997941d10}} 
+\index{SCU@{SCU}!XMC\_SCU\_SetCcuTriggerHigh@{XMC\_SCU\_SetCcuTriggerHigh}}
+\index{XMC\_SCU\_SetCcuTriggerHigh@{XMC\_SCU\_SetCcuTriggerHigh}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_SetCcuTriggerHigh()}{XMC\_SCU\_SetCcuTriggerHigh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Set\+Ccu\+Trigger\+High (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{trigger }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger} & C\+CU slices to be triggered synchronously via software. The value is a bitmask of C\+CU slice bits in the register C\+C\+U\+C\+ON. ~\newline
+ {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+C\+U\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+t for bitmask of individual C\+CU slices. Multiple slices can be combined using {\itshape OR} operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Generates active edge(low to high) trigger for multiple C\+CU units at the same time.~\newline
+~\newline
+Before executing this A\+PI, all the required C\+CU timers should configure external start. The edge of the start signal should be selected as active edge. The input signal for the C\+CU slice should be selected as S\+CU input. The above mentioned configurations can be made using the C\+CU L\+LD A\+PI X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Start\+Config(). C\+CU timer slice should be started using X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Start\+Timer() before triggering the timer using this A\+PI.~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Start\+Config(), X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Set\+Input(), \mbox{\hyperlink{group___s_c_u_gaee8a9cc1bea24cd3a6027ecfa02cac9d}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Set\+Ccu\+Trigger\+Low()}}~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 230 of file xmc\+\_\+scu.\+h.
+
+
+
+References S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+AL.
+
+\mbox{\Hypertarget{group___s_c_u_gaee8a9cc1bea24cd3a6027ecfa02cac9d}\label{group___s_c_u_gaee8a9cc1bea24cd3a6027ecfa02cac9d}} 
+\index{SCU@{SCU}!XMC\_SCU\_SetCcuTriggerLow@{XMC\_SCU\_SetCcuTriggerLow}}
+\index{XMC\_SCU\_SetCcuTriggerLow@{XMC\_SCU\_SetCcuTriggerLow}!SCU@{SCU}}
+\doxysubsubsection{\texorpdfstring{XMC\_SCU\_SetCcuTriggerLow()}{XMC\_SCU\_SetCcuTriggerLow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Set\+Ccu\+Trigger\+Low (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{trigger }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger} & C\+CU slices to be triggered synchronously via software. The value is a bitmask of C\+CU slice bits in the register C\+C\+U\+C\+ON. ~\newline
+ {\bfseries{Range\+:}} Use type X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+C\+U\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+t for bitmask of individual C\+CU slices. Multiple slices can be combined using {\itshape OR} operation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Generates passive edge(high to low) trigger for multiple C\+CU units at the same time.~\newline
+~\newline
+Before executing this A\+PI, all the required C\+CU timers should configure external start. The edge of the start signal should be selected as passive edge. The input signal for the C\+CU slice should be selected as S\+CU input. The above mentioned configurations can be made using the C\+CU L\+LD A\+PI X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Start\+Config(). C\+CU timer slice should be started using X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Start\+Timer() before triggering the timer using this A\+PI.~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Start\+Config(), X\+M\+C\+\_\+\+C\+C\+U4\+\_\+\+S\+L\+I\+C\+E\+\_\+\+Set\+Input(), \mbox{\hyperlink{group___s_c_u_ga3b2b4eb2b1fb84d9aa0b3b2997941d10}{X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Set\+Ccu\+Trigger\+High()}}~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 255 of file xmc\+\_\+scu.\+h.
+
+
+
+References S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+AL.
+

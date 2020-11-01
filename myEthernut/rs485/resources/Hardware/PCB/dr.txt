@@ -1,0 +1,48 @@
+
+
+
+
+
+   Toolspecifikation for Sag Nr. 999-401
+
+
+
+
+   999-401.bor         Dato: 15-01-2009
+
+
+
+   Tool  Dia           Attrib.                            Antal
+
+
+   T01 = 0.40 Via                                          4641
+   T02 = 0.50                                               641
+   T03 = 0.90                                               641
+   T04 = 1.00                                              1921
+   T05 = 1.15                                               641
+   T06 = 1.55                                                41
+   T07 = 1.80                                                41
+   T08 = 3.15 NP                                             81
+   T09 = 3.45                                                41
+   T10 = 3.95 NP                                             41
+   T15 = 3.05 FILM REG.                                      13
+   T16 = 0.75 INTERNT NR.                                    23
+   T17 = 4.05 FRAESE REG.                                    14
+   T18 = 5.00 KLIP HUL                                       11
+   T19 = 3.15                                                 2
+
+
+
+---------------------------------------------------------------
+
+
+
+   999-401.frs
+
+
+
+   Tool  Dia           Attrib.                            Antal
+
+
+   T01 = 2.40 Fraes                                         247
+   T17 = 4.00 FRAESE REG.                                     9

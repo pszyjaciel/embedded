@@ -1,0 +1,167 @@
+\hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e}{}\doxysection{U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+ME Struct Reference}
+\label{struct_u_a_r_t___r_u_n_t_i_m_e}\index{UART\_RUNTIME@{UART\_RUNTIME}}
+
+
+Structure to hold the dynamic variables for the \mbox{\hyperlink{struct_u_a_r_t}{U\+A\+RT}} communication.  
+
+
+
+
+{\ttfamily \#include $<$uart.\+h$>$}
+
+
+
+Collaboration diagram for U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+ME\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{struct_u_a_r_t___r_u_n_t_i_m_e__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_aa87fffe260226af4c63eb48e71aac7bd}{tx\+\_\+data}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_abcabe4d17e5e326eb3b242819c8b30cd}{rx\+\_\+data}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_afde687345b7d60c9bca3dad422eb3346}{tx\+\_\+data\+\_\+count}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_acb8a3d24f9f0212f5c203c53eabad74d}{tx\+\_\+data\+\_\+index}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_a284961eec7cc84f5a5ea83b2afa21635}{rx\+\_\+data\+\_\+count}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_ae9e76c6a2983800ee592caad9767e0c6}{rx\+\_\+data\+\_\+index}}
+\item 
+volatile bool \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_a540c72828e94fccdc8440882f484aad7}{tx\+\_\+busy}}
+\item 
+volatile bool \mbox{\hyperlink{struct_u_a_r_t___r_u_n_t_i_m_e_a7b31e91b5f5ef622d8beee5fce844720}{rx\+\_\+busy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to hold the dynamic variables for the \mbox{\hyperlink{struct_u_a_r_t}{U\+A\+RT}} communication. 
+
+Definition at line 250 of file uart.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_a7b31e91b5f5ef622d8beee5fce844720}\label{struct_u_a_r_t___r_u_n_t_i_m_e_a7b31e91b5f5ef622d8beee5fce844720}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!rx\_busy@{rx\_busy}}
+\index{rx\_busy@{rx\_busy}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{rx\_busy}{rx\_busy}}
+{\footnotesize\ttfamily volatile bool U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::rx\+\_\+busy}
+
+Status flag to indicate busy when a reception is assigned 
+
+Definition at line 259 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+\+Abort\+Receive(), U\+A\+R\+T\+\_\+\+Is\+Rx\+Busy(), U\+A\+R\+T\+\_\+l\+Receive\+Handler(), U\+A\+R\+T\+\_\+\+Set\+Baudrate(), and U\+A\+R\+T\+\_\+\+Start\+Receive\+I\+R\+Q().
+
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_abcabe4d17e5e326eb3b242819c8b30cd}\label{struct_u_a_r_t___r_u_n_t_i_m_e_abcabe4d17e5e326eb3b242819c8b30cd}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!rx\_data@{rx\_data}}
+\index{rx\_data@{rx\_data}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{rx\_data}{rx\_data}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::rx\+\_\+data}
+
+Pointer to the receive data buffer 
+
+Definition at line 253 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+\+Abort\+Receive(), U\+A\+R\+T\+\_\+l\+Receive\+Handler(), and U\+A\+R\+T\+\_\+\+Start\+Receive\+I\+R\+Q().
+
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_a284961eec7cc84f5a5ea83b2afa21635}\label{struct_u_a_r_t___r_u_n_t_i_m_e_a284961eec7cc84f5a5ea83b2afa21635}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!rx\_data\_count@{rx\_data\_count}}
+\index{rx\_data\_count@{rx\_data\_count}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{rx\_data\_count}{rx\_data\_count}}
+{\footnotesize\ttfamily uint32\+\_\+t U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::rx\+\_\+data\+\_\+count}
+
+Number of bytes of data to be received 
+
+Definition at line 256 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+l\+Receive\+Handler(), and U\+A\+R\+T\+\_\+\+Start\+Receive\+I\+R\+Q().
+
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_ae9e76c6a2983800ee592caad9767e0c6}\label{struct_u_a_r_t___r_u_n_t_i_m_e_ae9e76c6a2983800ee592caad9767e0c6}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!rx\_data\_index@{rx\_data\_index}}
+\index{rx\_data\_index@{rx\_data\_index}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{rx\_data\_index}{rx\_data\_index}}
+{\footnotesize\ttfamily uint32\+\_\+t U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::rx\+\_\+data\+\_\+index}
+
+Indicates the number of bytes currently available in the rx\+\_\+data buffer 
+
+Definition at line 257 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+l\+Receive\+Handler(), and U\+A\+R\+T\+\_\+\+Start\+Receive\+I\+R\+Q().
+
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_a540c72828e94fccdc8440882f484aad7}\label{struct_u_a_r_t___r_u_n_t_i_m_e_a540c72828e94fccdc8440882f484aad7}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!tx\_busy@{tx\_busy}}
+\index{tx\_busy@{tx\_busy}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{tx\_busy}{tx\_busy}}
+{\footnotesize\ttfamily volatile bool U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::tx\+\_\+busy}
+
+Status flag to indicate busy when a transmission is assigned 
+
+Definition at line 258 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+\+Abort\+Transmit(), U\+A\+R\+T\+\_\+\+Is\+Tx\+Busy(), U\+A\+R\+T\+\_\+l\+Transmit\+Handler(), U\+A\+R\+T\+\_\+\+Set\+Baudrate(), and U\+A\+R\+T\+\_\+\+Start\+Transmit\+I\+R\+Q().
+
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_aa87fffe260226af4c63eb48e71aac7bd}\label{struct_u_a_r_t___r_u_n_t_i_m_e_aa87fffe260226af4c63eb48e71aac7bd}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!tx\_data@{tx\_data}}
+\index{tx\_data@{tx\_data}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{tx\_data}{tx\_data}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::tx\+\_\+data}
+
+Pointer to the transmit data buffer 
+
+Definition at line 252 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+\+Abort\+Transmit(), U\+A\+R\+T\+\_\+l\+Transmit\+Handler(), and U\+A\+R\+T\+\_\+\+Start\+Transmit\+I\+R\+Q().
+
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_afde687345b7d60c9bca3dad422eb3346}\label{struct_u_a_r_t___r_u_n_t_i_m_e_afde687345b7d60c9bca3dad422eb3346}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!tx\_data\_count@{tx\_data\_count}}
+\index{tx\_data\_count@{tx\_data\_count}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{tx\_data\_count}{tx\_data\_count}}
+{\footnotesize\ttfamily uint32\+\_\+t U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::tx\+\_\+data\+\_\+count}
+
+Number of bytes of data to be transmitted 
+
+Definition at line 254 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+l\+Transmit\+Handler(), and U\+A\+R\+T\+\_\+\+Start\+Transmit\+I\+R\+Q().
+
+\mbox{\Hypertarget{struct_u_a_r_t___r_u_n_t_i_m_e_acb8a3d24f9f0212f5c203c53eabad74d}\label{struct_u_a_r_t___r_u_n_t_i_m_e_acb8a3d24f9f0212f5c203c53eabad74d}} 
+\index{UART\_RUNTIME@{UART\_RUNTIME}!tx\_data\_index@{tx\_data\_index}}
+\index{tx\_data\_index@{tx\_data\_index}!UART\_RUNTIME@{UART\_RUNTIME}}
+\doxysubsubsection{\texorpdfstring{tx\_data\_index}{tx\_data\_index}}
+{\footnotesize\ttfamily uint32\+\_\+t U\+A\+R\+T\+\_\+\+R\+U\+N\+T\+I\+M\+E\+::tx\+\_\+data\+\_\+index}
+
+Index to the byte to be transmitted next in the tx\+\_\+data buffer 
+
+Definition at line 255 of file uart.\+h.
+
+
+
+Referenced by U\+A\+R\+T\+\_\+l\+Transmit\+Handler(), and U\+A\+R\+T\+\_\+\+Start\+Transmit\+I\+R\+Q().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dave/\+Generated/\+U\+A\+R\+T/\mbox{\hyperlink{_generated_2_u_a_r_t_2uart_8h}{uart.\+h}}\end{DoxyCompactItemize}

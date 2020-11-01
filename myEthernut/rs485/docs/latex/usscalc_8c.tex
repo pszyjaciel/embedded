@@ -1,0 +1,228 @@
+\section{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/usscalc.c File Reference}
+\label{usscalc_8c}\index{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/usscalc.\+c@{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/rs485/src/usscalc.\+c}}
+{\ttfamily \#include \char`\"{}usscalc.\+h\char`\"{}}\\*
+Include dependency graph for usscalc.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{usscalc_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf ppo}~1
+\item 
+\#define {\bf mirror}~0
+\item 
+\#define {\bf pkw}~0
+\item 
+\#define {\bf A\+K}~0x00
+\item 
+\#define {\bf S\+P}~0
+\item 
+\#define {\bf P\+N\+U}~0x12bc
+\item 
+\#define {\bf P\+N\+Uex}~0x00
+\item 
+\#define {\bf I\+D\+X}~0x00
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t {\bf calc\+B\+C\+C} ()
+\item 
+void {\bf prep\+Telegram} (uint16\+\_\+t my\+Param)
+\item 
+uint16\+\_\+t {\bf get\+Value} (uint16\+\_\+t my\+Param)
+\item 
+void {\bf get\+All\+Values} (uint16\+\_\+t $\ast$mm\+Parameters\+Arr, uint8\+\_\+t length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{usscalc.\+c@{usscalc.\+c}!A\+K@{A\+K}}
+\index{A\+K@{A\+K}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+K~0x00}\label{usscalc_8c_ac3a341ede33bbed651abe7f847361a6e}
+
+
+Definition at line 29 of file usscalc.\+c.
+
+
+
+Referenced by prep\+Telegram().
+
+\index{usscalc.\+c@{usscalc.\+c}!I\+D\+X@{I\+D\+X}}
+\index{I\+D\+X@{I\+D\+X}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{I\+D\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+X~0x00}\label{usscalc_8c_a223697fc2f8a4423171d86ced5c8872b}
+
+
+Definition at line 41 of file usscalc.\+c.
+
+
+
+Referenced by prep\+Telegram().
+
+\index{usscalc.\+c@{usscalc.\+c}!mirror@{mirror}}
+\index{mirror@{mirror}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{mirror}]{\setlength{\rightskip}{0pt plus 5cm}\#define mirror~0}\label{usscalc_8c_ab75be13d6d9ba70e2a9591121b408184}
+
+
+Definition at line 20 of file usscalc.\+c.
+
+
+
+Referenced by prep\+Telegram().
+
+\index{usscalc.\+c@{usscalc.\+c}!pkw@{pkw}}
+\index{pkw@{pkw}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{pkw}]{\setlength{\rightskip}{0pt plus 5cm}\#define pkw~0}\label{usscalc_8c_a0b9a09dbc3e3871baf2f518b82686dcb}
+
+
+Definition at line 22 of file usscalc.\+c.
+
+\index{usscalc.\+c@{usscalc.\+c}!P\+N\+U@{P\+N\+U}}
+\index{P\+N\+U@{P\+N\+U}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{P\+N\+U}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+N\+U~0x12bc}\label{usscalc_8c_ab765f8aafdcbbd05cfcd27e208eb55b2}
+
+
+Definition at line 35 of file usscalc.\+c.
+
+\index{usscalc.\+c@{usscalc.\+c}!P\+N\+Uex@{P\+N\+Uex}}
+\index{P\+N\+Uex@{P\+N\+Uex}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{P\+N\+Uex}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+N\+Uex~0x00}\label{usscalc_8c_a544eab7def9683a65c07c12fb091acc7}
+
+
+Definition at line 38 of file usscalc.\+c.
+
+\index{usscalc.\+c@{usscalc.\+c}!ppo@{ppo}}
+\index{ppo@{ppo}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{ppo}]{\setlength{\rightskip}{0pt plus 5cm}\#define ppo~1}\label{usscalc_8c_a8ef3f4ce9afc84a8f4b4c62237ad2dcb}
+
+
+Definition at line 18 of file usscalc.\+c.
+
+\index{usscalc.\+c@{usscalc.\+c}!S\+P@{S\+P}}
+\index{S\+P@{S\+P}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{S\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P~0}\label{usscalc_8c_aecd69d9a67487cc45c38eb184c50538a}
+
+
+Definition at line 32 of file usscalc.\+c.
+
+
+
+Referenced by prep\+Telegram().
+
+
+
+\subsection{Function Documentation}
+\index{usscalc.\+c@{usscalc.\+c}!calc\+B\+C\+C@{calc\+B\+C\+C}}
+\index{calc\+B\+C\+C@{calc\+B\+C\+C}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{calc\+B\+C\+C()}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t calc\+B\+C\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_a3758bfbaa4494e65cabf188a026502de}
+
+
+Definition at line 43 of file usscalc.\+c.
+
+
+
+References my\+Telegram.
+
+
+
+Referenced by prep\+Telegram().
+
+\index{usscalc.\+c@{usscalc.\+c}!get\+All\+Values@{get\+All\+Values}}
+\index{get\+All\+Values@{get\+All\+Values}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{get\+All\+Values(uint16\+\_\+t $\ast$mm\+Parameters\+Arr, uint8\+\_\+t length)}]{\setlength{\rightskip}{0pt plus 5cm}void get\+All\+Values (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t $\ast$}]{mm\+Parameters\+Arr, }
+\item[{uint8\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_a0e6157d1764f0cd0bfd6895d2888d0f1}
+
+
+Definition at line 106 of file usscalc.\+c.
+
+
+
+References get\+Value().
+
+
+
+Referenced by main().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8c_a0e6157d1764f0cd0bfd6895d2888d0f1_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{usscalc.\+c@{usscalc.\+c}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{get\+Value(uint16\+\_\+t my\+Param)}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t get\+Value (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{my\+Param}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_a0d092db893cddedce1266d2971f2cd7f}
+
+
+Definition at line 100 of file usscalc.\+c.
+
+
+
+References my\+Telegram, prep\+Telegram(), and R\+S485\+\_\+\+Query\+Telegram().
+
+
+
+Referenced by get\+All\+Values().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8c_a0d092db893cddedce1266d2971f2cd7f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{usscalc.\+c@{usscalc.\+c}!prep\+Telegram@{prep\+Telegram}}
+\index{prep\+Telegram@{prep\+Telegram}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{prep\+Telegram(uint16\+\_\+t my\+Param)}]{\setlength{\rightskip}{0pt plus 5cm}void prep\+Telegram (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{my\+Param}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_ac734b72553a80042ac173bfebf6b5185}
+
+
+Definition at line 55 of file usscalc.\+c.
+
+
+
+References A\+K, calc\+B\+C\+C(), I\+D\+X, mirror, my\+Telegram, and S\+P.
+
+
+
+Referenced by get\+Value().
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{usscalc_8c_ac734b72553a80042ac173bfebf6b5185_cgraph}
+\end{center}
+\end{figure}
+
+

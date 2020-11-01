@@ -1,0 +1,114 @@
+\hypertarget{usscalc_8h}{}\section{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/pc2mm/src/usscalc.h File Reference}
+\label{usscalc_8h}\index{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/pc2mm/src/usscalc.\+h@{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/pc2mm/src/usscalc.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}usssend.\+h\char`\"{}}\\*
+Include dependency graph for usscalc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{usscalc_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t}
+\item 
+typedef unsigned short \hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t}
+\item 
+typedef unsigned int \hyperlink{usscalc_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} \hyperlink{usscalc_8h_a0d092db893cddedce1266d2971f2cd7f}{get\+Value} (\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} my\+Param)
+\begin{DoxyCompactList}\small\item\em Function returns one parameter value from the Micro\+Master. \end{DoxyCompactList}\item 
+\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} $\ast$ \hyperlink{usscalc_8h_a1237de7b0698797181f0b54a04a0e5c9}{get\+All\+Values} (\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} $\ast$my\+Param\+Arr, \hyperlink{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} length)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{usscalc_8h_ace4b9a76218fd1cc485563419811a46b}{my\+Telegram} \mbox{[}14\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{usscalc_8h_a273cf69d639a59973b6019625df33e30}{}\index{usscalc.\+h@{usscalc.\+h}!uint16\+\_\+t@{uint16\+\_\+t}}
+\index{uint16\+\_\+t@{uint16\+\_\+t}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{uint16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf uint16\+\_\+t}}\label{usscalc_8h_a273cf69d639a59973b6019625df33e30}
+\hypertarget{usscalc_8h_a435d1572bf3f880d55459d9805097f62}{}\index{usscalc.\+h@{usscalc.\+h}!uint32\+\_\+t@{uint32\+\_\+t}}
+\index{uint32\+\_\+t@{uint32\+\_\+t}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{uint32\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf uint32\+\_\+t}}\label{usscalc_8h_a435d1572bf3f880d55459d9805097f62}
+\hypertarget{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}{}\index{usscalc.\+h@{usscalc.\+h}!uint8\+\_\+t@{uint8\+\_\+t}}
+\index{uint8\+\_\+t@{uint8\+\_\+t}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf uint8\+\_\+t}}\label{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}
+
+
+\subsection{Function Documentation}
+\hypertarget{usscalc_8h_a1237de7b0698797181f0b54a04a0e5c9}{}\index{usscalc.\+h@{usscalc.\+h}!get\+All\+Values@{get\+All\+Values}}
+\index{get\+All\+Values@{get\+All\+Values}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{get\+All\+Values(uint16\+\_\+t $\ast$my\+Param\+Arr, uint8\+\_\+t length)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t}$\ast$ get\+All\+Values (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t} $\ast$}]{my\+Param\+Arr, }
+\item[{{\bf uint8\+\_\+t}}]{length}
+\end{DoxyParamCaption}
+)}\label{usscalc_8h_a1237de7b0698797181f0b54a04a0e5c9}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8h_a1237de7b0698797181f0b54a04a0e5c9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usscalc_8h_a0d092db893cddedce1266d2971f2cd7f}{}\index{usscalc.\+h@{usscalc.\+h}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{get\+Value(uint16\+\_\+t my\+Param)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} get\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{my\+Reg\+No}
+\end{DoxyParamCaption}
+)}\label{usscalc_8h_a0d092db893cddedce1266d2971f2cd7f}
+
+
+Function returns one parameter value from the Micro\+Master. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Reg\+No} & is a 16-\/bit value that represents the number of M\+M-\/register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16-\/bit value. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8h_a0d092db893cddedce1266d2971f2cd7f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{usscalc_8h_ace4b9a76218fd1cc485563419811a46b}{}\index{usscalc.\+h@{usscalc.\+h}!my\+Telegram@{my\+Telegram}}
+\index{my\+Telegram@{my\+Telegram}!usscalc.\+h@{usscalc.\+h}}
+\subsubsection[{my\+Telegram}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} my\+Telegram\mbox{[}14\mbox{]}}\label{usscalc_8h_ace4b9a76218fd1cc485563419811a46b}

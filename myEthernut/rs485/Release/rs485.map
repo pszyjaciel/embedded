@@ -1,0 +1,601 @@
+Archive member included because of file (symbol)
+
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodqi4.o)
+                              ./src/main.o (__udivmodqi4)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+                              ./src/myUart.o (__udivmodsi4)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o (exit)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+                              ./src/debounce.o (__do_clear_bss)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(itoa.o)
+                              ./src/myUtil.o (itoa)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(itoa.o) (strrev)
+c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+                              c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(itoa.o) (__udivmodhi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+rxLength            0x1               ./src/main.o
+pos                 0x2               ./src/nokia_lcd.o
+buttons_down        0x1               ./src/debounce.o
+myTelegram          0xe               ./src/main.o
+USART1_RX_complete  0x1               ./src/main.o
+xRAM                0x2               ./src/nokia_lcd.o
+myIndex             0x1               ./src/main.o
+pcData              0x2               ./src/nokia_lcd.o
+previous            0x1               ./src/main.o
+myRxArray           0xff              ./src/main.o
+yRAM                0x2               ./src/nokia_lcd.o
+heartbeat           0x1               ./src/main.o
+USART1_RX_timeout   0x1               ./src/main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+LOAD ./src/debounce.o
+LOAD ./src/main.o
+LOAD ./src/myTrash.o
+LOAD ./src/myUart.o
+LOAD ./src/myUtil.o
+LOAD ./src/nokia_lcd.o
+LOAD ./src/usscalc.o
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a
+LOAD c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1ab2
+ *(.vectors)
+ .vectors       0x00000000       0x8c c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0000008c      0xa16 ./src/nokia_lcd.o
+                0x00000aa2                . = ALIGN (0x2)
+                0x00000aa2                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000aa2        0x0 linker stubs
+ *(.trampolines*)
+                0x00000aa2                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000aa2                __ctors_start = .
+ *(.ctors)
+                0x00000aa2                __ctors_end = .
+                0x00000aa2                __dtors_start = .
+ *(.dtors)
+                0x00000aa2                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000aa2        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x00000aa2                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000aa2        0xc c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000aae       0x1a c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x00000aae                __do_copy_data
+ .init4         0x00000ac8       0x10 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+                0x00000ac8                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000ad8        0x8 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ *(.init9)
+ *(.text)
+ .text          0x00000ae0        0x4 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+                0x00000ae0                __vector_22
+                0x00000ae0                __vector_28
+                0x00000ae0                __vector_1
+                0x00000ae0                __vector_32
+                0x00000ae0                __vector_34
+                0x00000ae0                __vector_24
+                0x00000ae0                __vector_12
+                0x00000ae0                __bad_interrupt
+                0x00000ae0                __vector_6
+                0x00000ae0                __vector_31
+                0x00000ae0                __vector_3
+                0x00000ae0                __vector_23
+                0x00000ae0                __vector_25
+                0x00000ae0                __vector_11
+                0x00000ae0                __vector_13
+                0x00000ae0                __vector_17
+                0x00000ae0                __vector_19
+                0x00000ae0                __vector_7
+                0x00000ae0                __vector_27
+                0x00000ae0                __vector_5
+                0x00000ae0                __vector_33
+                0x00000ae0                __vector_4
+                0x00000ae0                __vector_9
+                0x00000ae0                __vector_2
+                0x00000ae0                __vector_21
+                0x00000ae0                __vector_15
+                0x00000ae0                __vector_8
+                0x00000ae0                __vector_26
+                0x00000ae0                __vector_10
+                0x00000ae0                __vector_16
+                0x00000ae0                __vector_18
+                0x00000ae0                __vector_20
+ .text          0x00000ae4        0x0 ./src/debounce.o
+ .text          0x00000ae4        0x0 ./src/main.o
+ .text          0x00000ae4        0x0 ./src/myTrash.o
+ .text          0x00000ae4        0x0 ./src/myUart.o
+ .text          0x00000ae4        0x0 ./src/myUtil.o
+ .text          0x00000ae4        0x0 ./src/nokia_lcd.o
+ .text          0x00000ae4        0x0 ./src/usscalc.o
+ .text          0x00000ae4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodqi4.o)
+ .text          0x00000ae4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+ .text          0x00000ae4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .text          0x00000ae4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .text          0x00000ae4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(itoa.o)
+ .text          0x00000ae4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+ .text          0x00000ae4        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+                0x00000ae4                . = ALIGN (0x2)
+ *(.text.*)
+ .text.button_down
+                0x00000ae4       0x18 ./src/debounce.o
+                0x00000ae4                button_down
+ .text.debounce_init
+                0x00000afc       0x20 ./src/debounce.o
+                0x00000afc                debounce_init
+ .text.__vector_30
+                0x00000b1c       0x82 ./src/main.o
+                0x00000b1c                __vector_30
+ .text.__vector_14
+                0x00000b9e       0x5e ./src/main.o
+                0x00000b9e                __vector_14
+ .text.__vector_29
+                0x00000bfc       0x62 ./src/main.o
+                0x00000bfc                __vector_29
+ .text.Timer3_Init
+                0x00000c5e       0x2e ./src/main.o
+                0x00000c5e                Timer3_Init
+ .text.Timer2_Init
+                0x00000c8c       0x1a ./src/main.o
+                0x00000c8c                Timer2_Init
+ .text.getInputs
+                0x00000ca6       0x92 ./src/main.o
+                0x00000ca6                getInputs
+ .text.main     0x00000d38      0x150 ./src/main.o
+                0x00000d38                main
+ .text.RS232_ReadChar
+                0x00000e88        0xc ./src/myUart.o
+                0x00000e88                RS232_ReadChar
+ .text.RS485_ReadChar
+                0x00000e94       0x12 ./src/myUart.o
+                0x00000e94                RS485_ReadChar
+ .text.RS232_WriteChar
+                0x00000ea6        0xc ./src/myUart.o
+                0x00000ea6                RS232_WriteChar
+ .text.RS485_WriteChar
+                0x00000eb2       0x14 ./src/myUart.o
+                0x00000eb2                RS485_WriteChar
+ .text.RS485_QueryTelegram
+                0x00000ec6       0x60 ./src/myUart.o
+                0x00000ec6                RS485_QueryTelegram
+ .text.RS232_putstring
+                0x00000f26       0x16 ./src/myUart.o
+                0x00000f26                RS232_putstring
+ .text.RS485_putstring
+                0x00000f3c       0x1c ./src/myUart.o
+                0x00000f3c                RS485_putstring
+ .text.RS232_init
+                0x00000f58       0x38 ./src/myUart.o
+                0x00000f58                RS232_init
+ .text.RS485_init
+                0x00000f90       0x5c ./src/myUart.o
+                0x00000f90                RS485_init
+ .text.displayTelegram
+                0x00000fec       0x54 ./src/myUart.o
+                0x00000fec                displayTelegram
+ .text.short2String
+                0x00001040      0x16a ./src/myUtil.o
+                0x00001040                short2String
+ .text.char2short
+                0x000011aa       0x78 ./src/myUtil.o
+                0x000011aa                char2short
+ .text.addSuffix
+                0x00001222       0x3a ./src/myUtil.o
+                0x00001222                addSuffix
+ .text.print_hexAddress
+                0x0000125c       0x78 ./src/myUtil.o
+                0x0000125c                print_hexAddress
+ .text.print_hexWord
+                0x000012d4       0x76 ./src/myUtil.o
+                0x000012d4                print_hexWord
+ .text.print_hexByte
+                0x0000134a       0x4e ./src/myUtil.o
+                0x0000134a                print_hexByte
+ .text.printStrInHex
+                0x00001398       0x36 ./src/myUtil.o
+                0x00001398                printStrInHex
+ .text.deb_print
+                0x000013ce       0xf6 ./src/myUtil.o
+                0x000013ce                deb_print
+ .text.print_binByte
+                0x000014c4       0x4a ./src/myUtil.o
+                0x000014c4                print_binByte
+ .text.Delay_MS
+                0x0000150e       0x14 ./src/nokia_lcd.o
+                0x0000150e                Delay_MS
+ .text.SPI_MasterTransmit
+                0x00001522        0xa ./src/nokia_lcd.o
+                0x00001522                SPI_MasterTransmit
+ .text.N5110_WriteByte
+                0x0000152c       0x18 ./src/nokia_lcd.o
+                0x0000152c                N5110_WriteByte
+ .text.N5110_Clear
+                0x00001544       0x38 ./src/nokia_lcd.o
+                0x00001544                N5110_Clear
+ .text.N5110_Init
+                0x0000157c       0x64 ./src/nokia_lcd.o
+                0x0000157c                N5110_Init
+ .text.setPos   0x000015e0       0xa8 ./src/nokia_lcd.o
+                0x000015e0                setPos
+ .text.printChar
+                0x00001688       0x44 ./src/nokia_lcd.o
+                0x00001688                printChar
+ .text.printWord
+                0x000016cc       0x1a ./src/nokia_lcd.o
+                0x000016cc                printWord
+ .text.gotoXY   0x000016e6       0x1a ./src/nokia_lcd.o
+                0x000016e6                gotoXY
+ .text.printSmString
+                0x00001700       0x22 ./src/nokia_lcd.o
+                0x00001700                printSmString
+ .text.printBigString
+                0x00001722       0xe8 ./src/nokia_lcd.o
+                0x00001722                printBigString
+ .text.N5110_RefreshRam
+                0x0000180a       0x46 ./src/nokia_lcd.o
+                0x0000180a                N5110_RefreshRam
+ .text.WaitMs   0x00001850       0x1c ./src/nokia_lcd.o
+                0x00001850                WaitMs
+ .text.drawBox  0x0000186c       0x82 ./src/nokia_lcd.o
+                0x0000186c                drawBox
+ .text.calcBCC  0x000018ee       0x16 ./src/usscalc.o
+                0x000018ee                calcBCC
+ .text.prepTelegram
+                0x00001904       0x50 ./src/usscalc.o
+                0x00001904                prepTelegram
+ .text.getValue
+                0x00001954       0x1e ./src/usscalc.o
+                0x00001954                getValue
+ .text.getAllValues
+                0x00001972       0x56 ./src/usscalc.o
+                0x00001972                getAllValues
+ .text.libgcc   0x000019c8       0x18 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodqi4.o)
+                0x000019c8                __udivmodqi4
+ .text.libgcc   0x000019e0       0x44 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+                0x000019e0                __udivmodsi4
+ .text.libgcc   0x00001a24        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x00001a24        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00001a24       0x42 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(itoa.o)
+                0x00001a24                itoa
+ .text.avr-libc
+                0x00001a66       0x20 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+                0x00001a66                strrev
+ .text.libgcc   0x00001a86       0x28 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+                0x00001a86                __udivmodhi4
+                0x00001aae                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001aae        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+                0x00001aae                exit
+                0x00001aae                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001aae        0x4 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001ab2                _etext = .
+
+.data           0x00800100       0x74 load address 0x00001ab2
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ .data          0x00800100        0x0 ./src/debounce.o
+ .data          0x00800100       0x5b ./src/main.o
+ .data          0x0080015b        0x0 ./src/myTrash.o
+ .data          0x0080015b        0x5 ./src/myUart.o
+ .data          0x00800160        0x3 ./src/myUtil.o
+ .data          0x00800163        0x0 ./src/nokia_lcd.o
+ .data          0x00800163        0x0 ./src/usscalc.o
+ .data          0x00800163        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodqi4.o)
+ .data          0x00800163        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+ .data          0x00800163        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .data          0x00800163        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .data          0x00800163        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(itoa.o)
+ .data          0x00800163        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+ .data          0x00800163        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+ *(.data*)
+ .data.vcount_high.1579
+                0x00800163        0x1 ./src/main.o
+ .data.vcount_low.1578
+                0x00800164        0x1 ./src/main.o
+ *(.rodata)
+ *(.rodata*)
+ .rodata.C.17.1684
+                0x00800165        0xe ./src/main.o
+ *(.gnu.linkonce.d*)
+                0x00800174                . = ALIGN (0x2)
+ *fill*         0x00800173        0x1 00
+                0x00800174                _edata = .
+                0x00800174                PROVIDE (__data_end, .)
+
+.bss            0x00800174      0x23e
+                0x00800174                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51/crtm128.o
+ .bss           0x00800174        0x0 ./src/debounce.o
+ .bss           0x00800174        0x0 ./src/main.o
+ .bss           0x00800174        0x0 ./src/myTrash.o
+ .bss           0x00800174        0x0 ./src/myUart.o
+ .bss           0x00800174        0x0 ./src/myUtil.o
+ .bss           0x00800174        0x0 ./src/nokia_lcd.o
+ .bss           0x00800174        0x0 ./src/usscalc.o
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodqi4.o)
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_exit.o)
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_clear_bss.o)
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(itoa.o)
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr51\libc.a(strrev.o)
+ .bss           0x00800174        0x0 c:/winavr/bin/../lib/gcc/avr/4.3.3/avr51\libgcc.a(_udivmodhi4.o)
+ *(.bss*)
+ .bss.errorFlag
+                0x00800174        0x1 ./src/main.o
+                0x00800174                errorFlag
+ .bss.counter   0x00800175        0x1 ./src/main.o
+                0x00800175                counter
+ .bss.button_state.1580
+                0x00800176        0x1 ./src/main.o
+ .bss.myArray.1419
+                0x00800177       0x10 ./src/myUart.o
+ .bss.myBuffer.1439
+                0x00800187        0xa ./src/myUtil.o
+ .bss.myStr.1343
+                0x00800191        0x7 ./src/myUtil.o
+ .bss.myValueArray.1405
+                0x00800198       0xfe ./src/usscalc.o
+ *(COMMON)
+ COMMON         0x00800296        0x1 ./src/debounce.o
+                0x00800296                buttons_down
+ COMMON         0x00800297      0x113 ./src/main.o
+                0x00800297                rxLength
+                0x00800298                myTelegram
+                0x008002a6                USART1_RX_complete
+                0x008002a7                myIndex
+                0x008002a8                previous
+                0x008002a9                myRxArray
+                0x008003a8                heartbeat
+                0x008003a9                USART1_RX_timeout
+ COMMON         0x008003aa        0x8 ./src/nokia_lcd.o
+                0x008003aa                pos
+                0x008003ac                xRAM
+                0x008003ae                pcData
+                0x008003b0                yRAM
+                0x008003b2                PROVIDE (__bss_end, .)
+                0x00001ab2                __data_load_start = LOADADDR (.data)
+                0x00001b26                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008003b2        0x0
+                0x008003b2                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008003b2                PROVIDE (__noinit_end, .)
+                0x008003b2                _end = .
+                0x008003b2                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(rs485.elf elf32-avr)
+LOAD linker stubs

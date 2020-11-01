@@ -1,0 +1,1872 @@
+\hypertarget{group___i2_c}{}\doxysection{I2C}
+\label{group___i2_c}\index{I2C@{I2C}}
+
+
+Inter Integrated Circuit(\+I\+I\+C) driver for the X\+MC microcontroller family.  
+
+
+Collaboration diagram for I2C\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{group___i2_c}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_x_m_c___i2_c___c_h___c_o_n_f_i_g}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+IG}}
+\begin{DoxyCompactList}\small\item\em I2\+C\+\_\+\+CH configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___i2_c_ga156f3aa37787f3b6b73c58a742e64302}{X\+M\+C\+\_\+\+I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+\_\+\+G\+R\+O\+UP}}~(0x7800U)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{group___i2_c_gaf2d77dcfbd07b14235386ae435ed054a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+US}} \mbox{\hyperlink{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C Status. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group___i2_c_ga90edd01fe8e213f0dfdcad95faa4b294}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}} \mbox{\hyperlink{group___i2_c_ga7f964b3aa72a0dcc33eb3da049a81553}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C status. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group___i2_c_ga9c47caa0ab10b83bfe93e9585938120d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}} \mbox{\hyperlink{group___i2_c_gaf72472731d511d43bc7b39b202028abb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C receiver status. The received data byte is available at the bit positions R\+B\+UF\mbox{[}7\+:0\mbox{]}, whereas the additional information is monitored at the bit positions R\+B\+UF\mbox{[}12\+:8\mbox{]}. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group___i2_c_ga15f88cf4d2cd15ab55ef6f0f56fe2f86}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+MD}} \mbox{\hyperlink{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C commands. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group___i2_c_gaec4029de4b47d5c2f392020fa7b76a41}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+NT}} \mbox{\hyperlink{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C events. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group___i2_c_ga792cb66c70e0719c0490fc7b361290b2}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+UT}} \mbox{\hyperlink{group___i2_c_ga79fdcb936fddd7c2717e45177d27e23b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2C input stage selection. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{group___i2_c_ga68109c6e445f0979b1d98546d393a46a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+ER}} \mbox{\hyperlink{group___i2_c_ga0403b38bac963ac5c1bd2fb59a85b32c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_c___i2_c___c_h___c_o_n_f_i_g}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+IG}} \mbox{\hyperlink{group___i2_c_ga1df261494eb7dfec05d52fcdef86fb85}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em I2\+C\+\_\+\+CH configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___i2_c_gaf2d77dcfbd07b14235386ae435ed054a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+US}} \{ \mbox{\hyperlink{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aad4a9d28840691950dde4b05dad36f276}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}}, 
+\mbox{\hyperlink{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aa60c441b462f4212da785420bb921734d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR}}, 
+\mbox{\hyperlink{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aa27fb280a26d46055901bc598c7e02f2f}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}}
+ \}
+\begin{DoxyCompactList}\small\item\em I2C Status. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___i2_c_ga90edd01fe8e213f0dfdcad95faa4b294}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}} \{ \newline
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a9064574003e7488ab0abb7ff5ab24afb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+E\+L\+E\+CT}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+S\+L\+S\+E\+L\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a755a5fd93caa9ce9256fb9b1af28f83b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+D\+F\+\_\+\+C\+O\+D\+E\+\_\+\+F\+O\+U\+ND}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+W\+T\+D\+F\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a70622c04d56ea2eb020f6d284a6ab3cb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+S\+C\+R\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a756fc8a9aeeb892d313cb974a3d0177b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+R\+S\+C\+R\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a4664181ff09534b6db48dea42858e898}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+T\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+P\+C\+R\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ab44e1045125702fdfd9dcf9285ef17cb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+N\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+N\+A\+C\+K\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a9423024bda96a10cd3c46715cd9ca9df}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+R\+B\+I\+T\+R\+A\+T\+I\+O\+N\+\_\+\+L\+O\+ST}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+A\+R\+L\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a7b0ee1867bcc1f8341b092ae4eb67511}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+S\+R\+R\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a2da70d78de866416d369528e6219429f}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+E\+R\+R\+OR}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+E\+R\+R\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ab08a526647c7f9bd1bcad252e6a195c3}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+A\+C\+K\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a942fb1f070d531f75611d7ea2780b895}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+R\+S\+I\+F\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ae799d0f1665c26de8a6e698c68e5b2cb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+L\+O\+S\+T\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+D\+L\+I\+F\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a277ffd76549e58155dbe9bb950a2827c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+T\+S\+I\+F\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a852f66a227d76d83ce213ff503666566}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+T\+B\+I\+F\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a66815c4a86a9c2db3486177c992a559d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+R\+I\+F\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a47e992f985807bd7e44c6a1692221454}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+I\+V\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+A\+I\+F\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a592e3d84375f9921674e4e5a46a2544d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+T\+E\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+S\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+B\+R\+G\+I\+F\+\_\+\+Msk
+ \}
+\begin{DoxyCompactList}\small\item\em I2C status. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___i2_c_ga9c47caa0ab10b83bfe93e9585938120d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}} \{ \newline
+\mbox{\hyperlink{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120dae99b1cd7f47070702c4c8608eee3ea5b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+CK}} = 0x1U, 
+\mbox{\hyperlink{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da94b6f93bb9548e17750f7ca5c1ead596}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+F\+IN}} = 0x2U, 
+\mbox{\hyperlink{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da4f00ab2699087f6404bb326a8a40432f}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+M\+O\+DE}} = 0x4U, 
+\mbox{\hyperlink{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da1561cdb73356e1167878f2c171a59c03}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+E\+RR}} = 0x8U, 
+\newline
+\mbox{\hyperlink{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120dacdd6f7f3796679921b546e194b25329e}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+DR}} = 0x10
+ \}
+\begin{DoxyCompactList}\small\item\em I2C receiver status. The received data byte is available at the bit positions R\+B\+UF\mbox{[}7\+:0\mbox{]}, whereas the additional information is monitored at the bit positions R\+B\+UF\mbox{[}12\+:8\mbox{]}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___i2_c_ga15f88cf4d2cd15ab55ef6f0f56fe2f86}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+MD}} \{ \mbox{\hyperlink{group___i2_c_gga15f88cf4d2cd15ab55ef6f0f56fe2f86af3c121d840b85087f675d717adf27dc5}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+TE}}, 
+\mbox{\hyperlink{group___i2_c_gga15f88cf4d2cd15ab55ef6f0f56fe2f86a31d1b9749ef1daa181a908bbf2f28087}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+\+R\+E\+AD}}
+ \}
+\begin{DoxyCompactList}\small\item\em I2C commands. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___i2_c_gaec4029de4b47d5c2f392020fa7b76a41}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+NT}} \{ \newline
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a07ea52a7379c4bf4825453b3d210b0be}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+C\+C\+R\+\_\+\+R\+S\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a3f9ea9390840a184c4b611aa5fe1ce6d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+L\+O\+ST}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+C\+C\+R\+\_\+\+D\+L\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41afd7666e256e93f0e533f879a83284f54}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+FT}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+C\+C\+R\+\_\+\+T\+S\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a5e8ecaf6874fb8996dc7a527e183c8d8}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+ER}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+C\+C\+R\+\_\+\+T\+B\+I\+E\+N\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41aa3535a887f7de062e4e3d0eaa95e421c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+R\+E\+C\+E\+I\+VE}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+C\+C\+R\+\_\+\+R\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a2d0b99a3d3e49439e6a6d58776b028d1}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+I\+V\+E\+\_\+\+R\+E\+C\+E\+I\+VE}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+C\+C\+R\+\_\+\+A\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41ab99891a610ff5ad0a7fdfb8037981da8}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+T\+E\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+C\+C\+R\+\_\+\+B\+R\+G\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41ad4539a3f5b3d43af665dcb2a5816ed82}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+S\+C\+R\+I\+E\+N\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41acf9e7500f6357d8821e4ef18c935e751}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+R\+S\+C\+R\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a8b8ef502b35abb43ea12a87e497a28d3}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+P\+C\+R\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a8cffe5232278c8f126ebfbc8487a1c26}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+A\+CK}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+N\+A\+C\+K\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a0ef9afd8b09cb8e99bcc7d342c0a38ee}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+B\+I\+T\+R\+A\+T\+I\+O\+N\+\_\+\+L\+O\+ST}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+A\+R\+L\+I\+E\+N\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a5b951bd38436773cb0e772c1db7dc997}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+S\+R\+R\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a43faef54c5b0282fd188a4d374a18bdc}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+E\+R\+R\+OR}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+E\+R\+R\+I\+E\+N\+\_\+\+Msk, 
+\mbox{\hyperlink{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41abcff76a9225d94f13a62d8fd613abe62}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+CK}} = U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+A\+C\+K\+I\+E\+N\+\_\+\+Msk
+ \}
+\begin{DoxyCompactList}\small\item\em I2C events. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___i2_c_ga792cb66c70e0719c0490fc7b361290b2}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+UT}} \{ \mbox{\hyperlink{group___i2_c_gga792cb66c70e0719c0490fc7b361290b2aba2847f3ec9aeb06277abdea4a9a51bc}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+\+S\+DA}} = 0U, 
+\mbox{\hyperlink{group___i2_c_gga792cb66c70e0719c0490fc7b361290b2aabd01419bb4afb47c665b94b4441dca9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+\+S\+CL}} = 1U
+ \}
+\begin{DoxyCompactList}\small\item\em I2C input stage selection. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___i2_c_ga68109c6e445f0979b1d98546d393a46a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+ER}} \{ \newline
+\mbox{\hyperlink{group___i2_c_gga68109c6e445f0979b1d98546d393a46aafd73773ef7c86cc9030d4766b6dad775}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+FT}} = X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+FT, 
+\mbox{\hyperlink{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa30e7d3a2e8ad4bb38a00f428454b517c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+ER}} = X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+ER, 
+\mbox{\hyperlink{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa7d9ed5feb1378602a157a765470f55bb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+E\+C\+E\+I\+VE}} = X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+E\+C\+E\+I\+VE, 
+\mbox{\hyperlink{group___i2_c_gga68109c6e445f0979b1d98546d393a46aab01fc29cb67b7bf5c6cd96d4ab25aa61}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+E\+\_\+\+R\+E\+C\+E\+I\+VE}} = X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+E\+\_\+\+R\+E\+C\+E\+I\+VE, 
+\newline
+\mbox{\hyperlink{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa21d86beba6a0b2719c4a280f6e0c483b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O\+C\+OL}} = X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O\+C\+OL
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___i2_c_gafbab6cabacc65e03592b1c5d6cece11d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Init}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const \mbox{\hyperlink{group___i2_c_ga1df261494eb7dfec05d52fcdef86fb85}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$const config)
+\item 
+\mbox{\hyperlink{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{group___i2_c_ga0da1b672c78d08d3ffdb83316d1443cb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Baudrate}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint32\+\_\+t rate)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_ga86d96c08c752ae2ecd2af107a1c6d5c9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Start}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{group___i2_c_ga4eeda18d28c90e527c309726ff5d3cb9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Stop}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_gaf6badf2e9a73b1ccd2f9b7813dc33114}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Interrupt\+Node\+Pointer}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint8\+\_\+t service\+\_\+request)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_gacbe84db2e8f8dcd1946fd3ccc76d657b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Select\+Interrupt\+Node\+Pointer}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const \mbox{\hyperlink{group___i2_c_ga0403b38bac963ac5c1bd2fb59a85b32c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+t}} interrupt\+\_\+node, const uint32\+\_\+t service\+\_\+request)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_ga23a5506a060fd4087ec7f1d3dd6bd571}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Trigger\+Service\+Request}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint32\+\_\+t service\+\_\+request\+\_\+line)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_ga1b74dc72445ffb42447cec6cc8c0c392}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Input\+Source}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const \mbox{\hyperlink{group___i2_c_ga79fdcb936fddd7c2717e45177d27e23b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+t}} input, const uint8\+\_\+t source)
+\item 
+void \mbox{\hyperlink{group___i2_c_gaec9df234c44378c3fc10f0423d71aec9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Slave\+Address}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint16\+\_\+t address)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group___i2_c_ga9131749645c421ff4b8bc80d0c93b691}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Slave\+Address}} (const \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+void \mbox{\hyperlink{group___i2_c_gaebd425a409b805d4571e75f793317070}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Start}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint16\+\_\+t addr, const \mbox{\hyperlink{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+t}} command)
+\item 
+void \mbox{\hyperlink{group___i2_c_ga770a5f71ceb3b447f21a8b129df6486e}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Repeated\+Start}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint16\+\_\+t addr, const \mbox{\hyperlink{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+t}} command)
+\item 
+void \mbox{\hyperlink{group___i2_c_ga6a48dbbe2be7fce74bd328bae5db5141}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Stop}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+void \mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint8\+\_\+t data)
+\item 
+void \mbox{\hyperlink{group___i2_c_gafdd7192c5a6b3fa481f293fb0a574665}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Slave\+Transmit}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint8\+\_\+t data)
+\item 
+void \mbox{\hyperlink{group___i2_c_gad5e1a8e56b356c2fc246c8b3b95bfb74}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Receive\+Ack}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+void \mbox{\hyperlink{group___i2_c_gae5960060afec908c91cd8e4a78e5eae9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Receive\+Nack}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___i2_c_ga50f0983dca84031814fcbcb52991ee63}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Received\+Data}} (const \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint8\+\_\+t \mbox{\hyperlink{group___i2_c_gafbecd5b3d880c596f0082afb1dda00a0}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Receiver\+Status\+Flag}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+void \mbox{\hyperlink{group___i2_c_ga868f80d9e08a0518c38100dda3f77882}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Event}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, uint32\+\_\+t event)
+\item 
+void \mbox{\hyperlink{group___i2_c_ga7d0b7e575a13d2fdd2ead33d96d9e15b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Event}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, uint32\+\_\+t event)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t \mbox{\hyperlink{group___i2_c_ga0738fe1da4162046b818f924e1851dac}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Status\+Flag}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_ga2bbb8ccea8fada2c5db74e1fd5cfb17a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, uint32\+\_\+t flag)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_ga2b4116bd10e27e098fbdffe4021ef222}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Config\+External\+Input\+Signal\+To\+B\+RG}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel, const uint16\+\_\+t pdiv, const uint32\+\_\+t oversampling, const \mbox{\hyperlink{group___u_s_i_c_ga43e23e8f72ad2b55ed72c4771d86ba8c}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+t}} combination\+\_\+mode)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_gae8f2fc3c10f3196a8e2021cc07bc34c4}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Acknowledge\+Address0}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_gae3f432c94e42bece6087095ad716c002}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Acknowledge\+Address0}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_ga2937fb7f07ff03ff84fcdcecdf2cd73e}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Data\+Transmission}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_gac5e6b53e61b942a8542031e6281714c9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Data\+Transmission}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_gac307e99ae4e46c888a8db9a048deef8c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Master\+Clock}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void \mbox{\hyperlink{group___i2_c_gaa18e12d5431b1dfab311aabc87b097e5}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Master\+Clock}} (\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const channel)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inter Integrated Circuit(\+I\+I\+C) driver for the X\+MC microcontroller family. 
+
+U\+S\+IC I\+IC Features\+: ~\newline
+
+\begin{DoxyItemize}
+\item Two-\/wire interface, with one line for shift clock transfer and synchronization (shift clock S\+CL), the other one for the data transfer (shift data S\+DA) ~\newline
+
+\item Communication in standard mode (100 k\+Bit/s) or in fast mode (up to 400 k\+Bit/s) ~\newline
+
+\item Support of 7-\/bit addressing, as well as 10-\/bit addressing ~\newline
+
+\item Master mode operation, where the I\+IC controls the bus transactions and provides the clock signal. ~\newline
+
+\item Slave mode operation, where an external master controls the bus transactions and provides the clock signal.~\newline
+
+\item Multi-\/master mode operation, where several masters can be connected to the bus and bus arbitration can take place, i.\+e. the I\+IC module can be master or slave. ~\newline
+ The master/slave operation of an I\+IC bus participant can change from frame to frame. ~\newline
+
+\item Efficient frame handling (low software effort), also allowing D\+MA transfers ~\newline
+
+\item Powerful interrupt handling due to multitude of indication flags ~\newline
+ 
+\end{DoxyItemize}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___i2_c_ga156f3aa37787f3b6b73c58a742e64302}\label{group___i2_c_ga156f3aa37787f3b6b73c58a742e64302}} 
+\index{I2C@{I2C}!XMC\_I2C\_10BIT\_ADDR\_GROUP@{XMC\_I2C\_10BIT\_ADDR\_GROUP}}
+\index{XMC\_I2C\_10BIT\_ADDR\_GROUP@{XMC\_I2C\_10BIT\_ADDR\_GROUP}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_10BIT\_ADDR\_GROUP}{XMC\_I2C\_10BIT\_ADDR\_GROUP}}
+{\footnotesize\ttfamily \#define X\+M\+C\+\_\+\+I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+\_\+\+G\+R\+O\+UP~(0x7800U)}
+
+Value to verify the address is 10-\/bit or not 
+
+Definition at line 132 of file xmc\+\_\+i2c.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}\label{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_CMD\_t@{XMC\_I2C\_CH\_CMD\_t}}
+\index{XMC\_I2C\_CH\_CMD\_t@{XMC\_I2C\_CH\_CMD\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_CMD\_t}{XMC\_I2C\_CH\_CMD\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___i2_c_ga15f88cf4d2cd15ab55ef6f0f56fe2f86}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+MD}} \mbox{\hyperlink{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+t}}}
+
+
+
+I2C commands. 
+
+\mbox{\Hypertarget{group___i2_c_ga1df261494eb7dfec05d52fcdef86fb85}\label{group___i2_c_ga1df261494eb7dfec05d52fcdef86fb85}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_CONFIG\_t@{XMC\_I2C\_CH\_CONFIG\_t}}
+\index{XMC\_I2C\_CH\_CONFIG\_t@{XMC\_I2C\_CH\_CONFIG\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_CONFIG\_t}{XMC\_I2C\_CH\_CONFIG\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_x_m_c___i2_c___c_h___c_o_n_f_i_g}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+IG}} \mbox{\hyperlink{group___i2_c_ga1df261494eb7dfec05d52fcdef86fb85}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}}}
+
+
+
+I2\+C\+\_\+\+CH configuration structure. 
+
+\mbox{\Hypertarget{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}\label{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_t@{XMC\_I2C\_CH\_EVENT\_t}}
+\index{XMC\_I2C\_CH\_EVENT\_t@{XMC\_I2C\_CH\_EVENT\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_EVENT\_t}{XMC\_I2C\_CH\_EVENT\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___i2_c_gaec4029de4b47d5c2f392020fa7b76a41}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+NT}} \mbox{\hyperlink{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}}
+
+
+
+I2C events. 
+
+\mbox{\Hypertarget{group___i2_c_ga79fdcb936fddd7c2717e45177d27e23b}\label{group___i2_c_ga79fdcb936fddd7c2717e45177d27e23b}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_INPUT\_t@{XMC\_I2C\_CH\_INPUT\_t}}
+\index{XMC\_I2C\_CH\_INPUT\_t@{XMC\_I2C\_CH\_INPUT\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_INPUT\_t}{XMC\_I2C\_CH\_INPUT\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___i2_c_ga792cb66c70e0719c0490fc7b361290b2}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+UT}} \mbox{\hyperlink{group___i2_c_ga79fdcb936fddd7c2717e45177d27e23b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+t}}}
+
+
+
+I2C input stage selection. 
+
+\mbox{\Hypertarget{group___i2_c_ga0403b38bac963ac5c1bd2fb59a85b32c}\label{group___i2_c_ga0403b38bac963ac5c1bd2fb59a85b32c}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_t@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_t}}
+\index{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_t@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_t}{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___i2_c_ga68109c6e445f0979b1d98546d393a46a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+ER}} \mbox{\hyperlink{group___i2_c_ga0403b38bac963ac5c1bd2fb59a85b32c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+t}}}
+
+I2C channel interrupt node pointers \mbox{\Hypertarget{group___i2_c_gaf72472731d511d43bc7b39b202028abb}\label{group___i2_c_gaf72472731d511d43bc7b39b202028abb}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_t@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_t}}
+\index{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_t@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_t}{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___i2_c_ga9c47caa0ab10b83bfe93e9585938120d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}} \mbox{\hyperlink{group___i2_c_gaf72472731d511d43bc7b39b202028abb}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+t}}}
+
+
+
+I2C receiver status. The received data byte is available at the bit positions R\+B\+UF\mbox{[}7\+:0\mbox{]}, whereas the additional information is monitored at the bit positions R\+B\+UF\mbox{[}12\+:8\mbox{]}. 
+
+\mbox{\Hypertarget{group___i2_c_ga7f964b3aa72a0dcc33eb3da049a81553}\label{group___i2_c_ga7f964b3aa72a0dcc33eb3da049a81553}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_t@{XMC\_I2C\_CH\_STATUS\_FLAG\_t}}
+\index{XMC\_I2C\_CH\_STATUS\_FLAG\_t@{XMC\_I2C\_CH\_STATUS\_FLAG\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_STATUS\_FLAG\_t}{XMC\_I2C\_CH\_STATUS\_FLAG\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___i2_c_ga90edd01fe8e213f0dfdcad95faa4b294}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}} \mbox{\hyperlink{group___i2_c_ga7f964b3aa72a0dcc33eb3da049a81553}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+t}}}
+
+
+
+I2C status. 
+
+\mbox{\Hypertarget{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}\label{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_t@{XMC\_I2C\_CH\_STATUS\_t}}
+\index{XMC\_I2C\_CH\_STATUS\_t@{XMC\_I2C\_CH\_STATUS\_t}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_STATUS\_t}{XMC\_I2C\_CH\_STATUS\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___i2_c_gaf2d77dcfbd07b14235386ae435ed054a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+US}} \mbox{\hyperlink{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}}}
+
+
+
+I2C Status. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___i2_c_ga15f88cf4d2cd15ab55ef6f0f56fe2f86}\label{group___i2_c_ga15f88cf4d2cd15ab55ef6f0f56fe2f86}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_CMD@{XMC\_I2C\_CH\_CMD}}
+\index{XMC\_I2C\_CH\_CMD@{XMC\_I2C\_CH\_CMD}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_CMD}{XMC\_I2C\_CH\_CMD}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___i2_c_ga15f88cf4d2cd15ab55ef6f0f56fe2f86}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+MD}}}
+
+
+
+I2C commands. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_CMD\_WRITE@{XMC\_I2C\_CH\_CMD\_WRITE}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_CMD\_WRITE@{XMC\_I2C\_CH\_CMD\_WRITE}}}\mbox{\Hypertarget{group___i2_c_gga15f88cf4d2cd15ab55ef6f0f56fe2f86af3c121d840b85087f675d717adf27dc5}\label{group___i2_c_gga15f88cf4d2cd15ab55ef6f0f56fe2f86af3c121d840b85087f675d717adf27dc5}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+\+W\+R\+I\+TE&I2C Command Write \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_CMD\_READ@{XMC\_I2C\_CH\_CMD\_READ}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_CMD\_READ@{XMC\_I2C\_CH\_CMD\_READ}}}\mbox{\Hypertarget{group___i2_c_gga15f88cf4d2cd15ab55ef6f0f56fe2f86a31d1b9749ef1daa181a908bbf2f28087}\label{group___i2_c_gga15f88cf4d2cd15ab55ef6f0f56fe2f86a31d1b9749ef1daa181a908bbf2f28087}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+\+R\+E\+AD&I2C Command Read \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 193 of file xmc\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c_gaec4029de4b47d5c2f392020fa7b76a41}\label{group___i2_c_gaec4029de4b47d5c2f392020fa7b76a41}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT@{XMC\_I2C\_CH\_EVENT}}
+\index{XMC\_I2C\_CH\_EVENT@{XMC\_I2C\_CH\_EVENT}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_EVENT}{XMC\_I2C\_CH\_EVENT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___i2_c_gaec4029de4b47d5c2f392020fa7b76a41}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+NT}}}
+
+
+
+I2C events. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_RECEIVE\_START@{XMC\_I2C\_CH\_EVENT\_RECEIVE\_START}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_RECEIVE\_START@{XMC\_I2C\_CH\_EVENT\_RECEIVE\_START}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a07ea52a7379c4bf4825453b3d210b0be}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a07ea52a7379c4bf4825453b3d210b0be}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+S\+T\+A\+RT&Receive start event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_DATA\_LOST@{XMC\_I2C\_CH\_EVENT\_DATA\_LOST}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_DATA\_LOST@{XMC\_I2C\_CH\_EVENT\_DATA\_LOST}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a3f9ea9390840a184c4b611aa5fe1ce6d}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a3f9ea9390840a184c4b611aa5fe1ce6d}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+L\+O\+ST&Data lost event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_TRANSMIT\_SHIFT@{XMC\_I2C\_CH\_EVENT\_TRANSMIT\_SHIFT}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_TRANSMIT\_SHIFT@{XMC\_I2C\_CH\_EVENT\_TRANSMIT\_SHIFT}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41afd7666e256e93f0e533f879a83284f54}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41afd7666e256e93f0e533f879a83284f54}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+FT&Transmit shift event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_TRANSMIT\_BUFFER@{XMC\_I2C\_CH\_EVENT\_TRANSMIT\_BUFFER}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_TRANSMIT\_BUFFER@{XMC\_I2C\_CH\_EVENT\_TRANSMIT\_BUFFER}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a5e8ecaf6874fb8996dc7a527e183c8d8}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a5e8ecaf6874fb8996dc7a527e183c8d8}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+ER&Transmit buffer event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_STANDARD\_RECEIVE@{XMC\_I2C\_CH\_EVENT\_STANDARD\_RECEIVE}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_STANDARD\_RECEIVE@{XMC\_I2C\_CH\_EVENT\_STANDARD\_RECEIVE}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41aa3535a887f7de062e4e3d0eaa95e421c}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41aa3535a887f7de062e4e3d0eaa95e421c}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+R\+E\+C\+E\+I\+VE&Receive event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_ALTERNATIVE\_RECEIVE@{XMC\_I2C\_CH\_EVENT\_ALTERNATIVE\_RECEIVE}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_ALTERNATIVE\_RECEIVE@{XMC\_I2C\_CH\_EVENT\_ALTERNATIVE\_RECEIVE}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a2d0b99a3d3e49439e6a6d58776b028d1}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a2d0b99a3d3e49439e6a6d58776b028d1}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+I\+V\+E\+\_\+\+R\+E\+C\+E\+I\+VE&Alternate receive event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_BAUD\_RATE\_GENERATOR@{XMC\_I2C\_CH\_EVENT\_BAUD\_RATE\_GENERATOR}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_BAUD\_RATE\_GENERATOR@{XMC\_I2C\_CH\_EVENT\_BAUD\_RATE\_GENERATOR}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41ab99891a610ff5ad0a7fdfb8037981da8}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41ab99891a610ff5ad0a7fdfb8037981da8}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+T\+E\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR&Baudrate generator event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_EVENT\_START\_CONDITION\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_EVENT\_START\_CONDITION\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41ad4539a3f5b3d43af665dcb2a5816ed82}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41ad4539a3f5b3d43af665dcb2a5816ed82}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED&Start condition received event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_REPEATED\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_EVENT\_REPEATED\_START\_CONDITION\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_REPEATED\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_EVENT\_REPEATED\_START\_CONDITION\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41acf9e7500f6357d8821e4ef18c935e751}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41acf9e7500f6357d8821e4ef18c935e751}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED&Repeated start condition received event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_STOP\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_EVENT\_STOP\_CONDITION\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_STOP\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_EVENT\_STOP\_CONDITION\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a8b8ef502b35abb43ea12a87e497a28d3}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a8b8ef502b35abb43ea12a87e497a28d3}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+T\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED&Stop condition received event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_NACK@{XMC\_I2C\_CH\_EVENT\_NACK}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_NACK@{XMC\_I2C\_CH\_EVENT\_NACK}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a8cffe5232278c8f126ebfbc8487a1c26}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a8cffe5232278c8f126ebfbc8487a1c26}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+N\+A\+CK&N\+A\+CK received event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_ARBITRATION\_LOST@{XMC\_I2C\_CH\_EVENT\_ARBITRATION\_LOST}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_ARBITRATION\_LOST@{XMC\_I2C\_CH\_EVENT\_ARBITRATION\_LOST}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a0ef9afd8b09cb8e99bcc7d342c0a38ee}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a0ef9afd8b09cb8e99bcc7d342c0a38ee}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+R\+B\+I\+T\+R\+A\+T\+I\+O\+N\+\_\+\+L\+O\+ST&Arbitration lost event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_SLAVE\_READ\_REQUEST@{XMC\_I2C\_CH\_EVENT\_SLAVE\_READ\_REQUEST}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_SLAVE\_READ\_REQUEST@{XMC\_I2C\_CH\_EVENT\_SLAVE\_READ\_REQUEST}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a5b951bd38436773cb0e772c1db7dc997}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a5b951bd38436773cb0e772c1db7dc997}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST&Slave read request event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_ERROR@{XMC\_I2C\_CH\_EVENT\_ERROR}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_ERROR@{XMC\_I2C\_CH\_EVENT\_ERROR}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a43faef54c5b0282fd188a4d374a18bdc}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41a43faef54c5b0282fd188a4d374a18bdc}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+E\+R\+R\+OR&Error condition event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_EVENT\_ACK@{XMC\_I2C\_CH\_EVENT\_ACK}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_EVENT\_ACK@{XMC\_I2C\_CH\_EVENT\_ACK}}}\mbox{\Hypertarget{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41abcff76a9225d94f13a62d8fd613abe62}\label{group___i2_c_ggaec4029de4b47d5c2f392020fa7b76a41abcff76a9225d94f13a62d8fd613abe62}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+CK&A\+CK received event \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 202 of file xmc\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c_ga792cb66c70e0719c0490fc7b361290b2}\label{group___i2_c_ga792cb66c70e0719c0490fc7b361290b2}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_INPUT@{XMC\_I2C\_CH\_INPUT}}
+\index{XMC\_I2C\_CH\_INPUT@{XMC\_I2C\_CH\_INPUT}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_INPUT}{XMC\_I2C\_CH\_INPUT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___i2_c_ga792cb66c70e0719c0490fc7b361290b2}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+UT}}}
+
+
+
+I2C input stage selection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_INPUT\_SDA@{XMC\_I2C\_CH\_INPUT\_SDA}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_INPUT\_SDA@{XMC\_I2C\_CH\_INPUT\_SDA}}}\mbox{\Hypertarget{group___i2_c_gga792cb66c70e0719c0490fc7b361290b2aba2847f3ec9aeb06277abdea4a9a51bc}\label{group___i2_c_gga792cb66c70e0719c0490fc7b361290b2aba2847f3ec9aeb06277abdea4a9a51bc}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+\+S\+DA&selection of sda input stage \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_INPUT\_SCL@{XMC\_I2C\_CH\_INPUT\_SCL}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_INPUT\_SCL@{XMC\_I2C\_CH\_INPUT\_SCL}}}\mbox{\Hypertarget{group___i2_c_gga792cb66c70e0719c0490fc7b361290b2aabd01419bb4afb47c665b94b4441dca9}\label{group___i2_c_gga792cb66c70e0719c0490fc7b361290b2aabd01419bb4afb47c665b94b4441dca9}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+\+S\+CL&selection of scl input stage \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 225 of file xmc\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c_ga68109c6e445f0979b1d98546d393a46a}\label{group___i2_c_ga68109c6e445f0979b1d98546d393a46a}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER}}
+\index{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER}{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___i2_c_ga68109c6e445f0979b1d98546d393a46a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+ER}}}
+
+I2C channel interrupt node pointers \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_SHIFT@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_SHIFT}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_SHIFT@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_SHIFT}}}\mbox{\Hypertarget{group___i2_c_gga68109c6e445f0979b1d98546d393a46aafd73773ef7c86cc9030d4766b6dad775}\label{group___i2_c_gga68109c6e445f0979b1d98546d393a46aafd73773ef7c86cc9030d4766b6dad775}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+FT&Node pointer for transmit shift interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_BUFFER@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_BUFFER}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_BUFFER@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_TRANSMIT\_BUFFER}}}\mbox{\Hypertarget{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa30e7d3a2e8ad4bb38a00f428454b517c}\label{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa30e7d3a2e8ad4bb38a00f428454b517c}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+ER&Node pointer for transmit buffer interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_RECEIVE@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_RECEIVE}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_RECEIVE@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_RECEIVE}}}\mbox{\Hypertarget{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa7d9ed5feb1378602a157a765470f55bb}\label{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa7d9ed5feb1378602a157a765470f55bb}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+E\+C\+E\+I\+VE&Node pointer for receive interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_ALTERNATE\_RECEIVE@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_ALTERNATE\_RECEIVE}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_ALTERNATE\_RECEIVE@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_ALTERNATE\_RECEIVE}}}\mbox{\Hypertarget{group___i2_c_gga68109c6e445f0979b1d98546d393a46aab01fc29cb67b7bf5c6cd96d4ab25aa61}\label{group___i2_c_gga68109c6e445f0979b1d98546d393a46aab01fc29cb67b7bf5c6cd96d4ab25aa61}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+E\+\_\+\+R\+E\+C\+E\+I\+VE&Node pointer for alternate receive interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_PROTOCOL@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_PROTOCOL}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_PROTOCOL@{XMC\_I2C\_CH\_INTERRUPT\_NODE\_POINTER\_PROTOCOL}}}\mbox{\Hypertarget{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa21d86beba6a0b2719c4a280f6e0c483b}\label{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa21d86beba6a0b2719c4a280f6e0c483b}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O\+C\+OL&Node pointer for protocol related interrupts \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 241 of file xmc\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c_ga9c47caa0ab10b83bfe93e9585938120d}\label{group___i2_c_ga9c47caa0ab10b83bfe93e9585938120d}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG}}
+\index{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG}{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___i2_c_ga9c47caa0ab10b83bfe93e9585938120d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}}}
+
+
+
+I2C receiver status. The received data byte is available at the bit positions R\+B\+UF\mbox{[}7\+:0\mbox{]}, whereas the additional information is monitored at the bit positions R\+B\+UF\mbox{[}12\+:8\mbox{]}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ACK@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ACK}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ACK@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ACK}}}\mbox{\Hypertarget{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120dae99b1cd7f47070702c4c8608eee3ea5b}\label{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120dae99b1cd7f47070702c4c8608eee3ea5b}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+CK&Bit 8\+: Value of Received Acknowledgement bit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_FIN@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_FIN}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_FIN@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_FIN}}}\mbox{\Hypertarget{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da94b6f93bb9548e17750f7ca5c1ead596}\label{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da94b6f93bb9548e17750f7ca5c1ead596}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+F\+IN&Bit 9\+: A 1 at this bit position indicates that after a (repeated) start condition followed by the address reception the first data byte of a new frame has been received. A 0 at this bit position indicates further data bytes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_MODE@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_MODE}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_MODE@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_MODE}}}\mbox{\Hypertarget{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da4f00ab2699087f6404bb326a8a40432f}\label{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da4f00ab2699087f6404bb326a8a40432f}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+M\+O\+DE&Bit 10\+: A 0 at this bit position indicates that the data byte has been received when the device has been in slave mode, whereas a 1 indicates a reception in master mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ERR@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ERR}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ERR@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ERR}}}\mbox{\Hypertarget{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da1561cdb73356e1167878f2c171a59c03}\label{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120da1561cdb73356e1167878f2c171a59c03}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+E\+RR&Bit 11\+: A 1 at this bit position indicates an incomplete/erroneous data byte in the receive buffer \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ADR@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ADR}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ADR@{XMC\_I2C\_CH\_RECEIVER\_STATUS\_FLAG\_ADR}}}\mbox{\Hypertarget{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120dacdd6f7f3796679921b546e194b25329e}\label{group___i2_c_gga9c47caa0ab10b83bfe93e9585938120dacdd6f7f3796679921b546e194b25329e}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+DR&Bit 12\+: A 0 at this bit position indicates that the programmed address has been received. A 1 indicates a general call address. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 176 of file xmc\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c_gaf2d77dcfbd07b14235386ae435ed054a}\label{group___i2_c_gaf2d77dcfbd07b14235386ae435ed054a}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS@{XMC\_I2C\_CH\_STATUS}}
+\index{XMC\_I2C\_CH\_STATUS@{XMC\_I2C\_CH\_STATUS}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_STATUS}{XMC\_I2C\_CH\_STATUS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___i2_c_gaf2d77dcfbd07b14235386ae435ed054a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+US}}}
+
+
+
+I2C Status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_OK@{XMC\_I2C\_CH\_STATUS\_OK}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_OK@{XMC\_I2C\_CH\_STATUS\_OK}}}\mbox{\Hypertarget{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aad4a9d28840691950dde4b05dad36f276}\label{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aad4a9d28840691950dde4b05dad36f276}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK&Status OK \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_ERROR@{XMC\_I2C\_CH\_STATUS\_ERROR}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_ERROR@{XMC\_I2C\_CH\_STATUS\_ERROR}}}\mbox{\Hypertarget{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aa60c441b462f4212da785420bb921734d}\label{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aa60c441b462f4212da785420bb921734d}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR&Status E\+R\+R\+OR \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_BUSY@{XMC\_I2C\_CH\_STATUS\_BUSY}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_BUSY@{XMC\_I2C\_CH\_STATUS\_BUSY}}}\mbox{\Hypertarget{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aa27fb280a26d46055901bc598c7e02f2f}\label{group___i2_c_ggaf2d77dcfbd07b14235386ae435ed054aa27fb280a26d46055901bc598c7e02f2f}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY&Status B\+U\+SY \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 140 of file xmc\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c_ga90edd01fe8e213f0dfdcad95faa4b294}\label{group___i2_c_ga90edd01fe8e213f0dfdcad95faa4b294}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG@{XMC\_I2C\_CH\_STATUS\_FLAG}}
+\index{XMC\_I2C\_CH\_STATUS\_FLAG@{XMC\_I2C\_CH\_STATUS\_FLAG}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_STATUS\_FLAG}{XMC\_I2C\_CH\_STATUS\_FLAG}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___i2_c_ga90edd01fe8e213f0dfdcad95faa4b294}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+AG}}}
+
+
+
+I2C status. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_SELECT@{XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_SELECT}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_SELECT@{XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_SELECT}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a9064574003e7488ab0abb7ff5ab24afb}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a9064574003e7488ab0abb7ff5ab24afb}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+E\+L\+E\+CT&Slave select status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_WRONG\_TDF\_CODE\_FOUND@{XMC\_I2C\_CH\_STATUS\_FLAG\_WRONG\_TDF\_CODE\_FOUND}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_WRONG\_TDF\_CODE\_FOUND@{XMC\_I2C\_CH\_STATUS\_FLAG\_WRONG\_TDF\_CODE\_FOUND}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a755a5fd93caa9ce9256fb9b1af28f83b}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a755a5fd93caa9ce9256fb9b1af28f83b}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+D\+F\+\_\+\+C\+O\+D\+E\+\_\+\+F\+O\+U\+ND&Wrong T\+DF status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_START\_CONDITION\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_START\_CONDITION\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a70622c04d56ea2eb020f6d284a6ab3cb}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a70622c04d56ea2eb020f6d284a6ab3cb}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED&Start condition received status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_REPEATED\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_REPEATED\_START\_CONDITION\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_REPEATED\_START\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_REPEATED\_START\_CONDITION\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a756fc8a9aeeb892d313cb974a3d0177b}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a756fc8a9aeeb892d313cb974a3d0177b}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+P\+E\+A\+T\+E\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED&Repeated start condition received status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_STOP\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_STOP\_CONDITION\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_STOP\_CONDITION\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_STOP\_CONDITION\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a4664181ff09534b6db48dea42858e898}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a4664181ff09534b6db48dea42858e898}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+T\+O\+P\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+\_\+\+R\+E\+C\+E\+I\+V\+ED&Stop condition received status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_NACK\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_NACK\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_NACK\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_NACK\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ab44e1045125702fdfd9dcf9285ef17cb}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ab44e1045125702fdfd9dcf9285ef17cb}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+N\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED&N\+A\+CK received status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_ARBITRATION\_LOST@{XMC\_I2C\_CH\_STATUS\_FLAG\_ARBITRATION\_LOST}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_ARBITRATION\_LOST@{XMC\_I2C\_CH\_STATUS\_FLAG\_ARBITRATION\_LOST}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a9423024bda96a10cd3c46715cd9ca9df}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a9423024bda96a10cd3c46715cd9ca9df}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+R\+B\+I\+T\+R\+A\+T\+I\+O\+N\+\_\+\+L\+O\+ST&Arbitration lost status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_READ\_REQUESTED@{XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_READ\_REQUESTED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_READ\_REQUESTED@{XMC\_I2C\_CH\_STATUS\_FLAG\_SLAVE\_READ\_REQUESTED}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a7b0ee1867bcc1f8341b092ae4eb67511}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a7b0ee1867bcc1f8341b092ae4eb67511}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+S\+L\+A\+V\+E\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED&Slave read requested status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_ERROR@{XMC\_I2C\_CH\_STATUS\_FLAG\_ERROR}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_ERROR@{XMC\_I2C\_CH\_STATUS\_FLAG\_ERROR}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a2da70d78de866416d369528e6219429f}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a2da70d78de866416d369528e6219429f}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+E\+R\+R\+OR&Error status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_ACK\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_ACK\_RECEIVED}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_ACK\_RECEIVED@{XMC\_I2C\_CH\_STATUS\_FLAG\_ACK\_RECEIVED}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ab08a526647c7f9bd1bcad252e6a195c3}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ab08a526647c7f9bd1bcad252e6a195c3}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED&A\+CK received status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVER\_START\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVER\_START\_INDICATION}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVER\_START\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVER\_START\_INDICATION}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a942fb1f070d531f75611d7ea2780b895}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a942fb1f070d531f75611d7ea2780b895}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+C\+E\+I\+V\+E\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON&Receive start indication status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_DATA\_LOST\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_DATA\_LOST\_INDICATION}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_DATA\_LOST\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_DATA\_LOST\_INDICATION}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ae799d0f1665c26de8a6e698c68e5b2cb}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294ae799d0f1665c26de8a6e698c68e5b2cb}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+L\+O\+S\+T\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON&Data lost indication status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_SHIFT\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_SHIFT\_INDICATION}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_SHIFT\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_SHIFT\_INDICATION}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a277ffd76549e58155dbe9bb950a2827c}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a277ffd76549e58155dbe9bb950a2827c}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON&Transmit shift indication status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_BUFFER\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_BUFFER\_INDICATION}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_BUFFER\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_TRANSMIT\_BUFFER\_INDICATION}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a852f66a227d76d83ce213ff503666566}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a852f66a227d76d83ce213ff503666566}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON&Transmit buffer indication status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVE\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVE\_INDICATION}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVE\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_RECEIVE\_INDICATION}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a66815c4a86a9c2db3486177c992a559d}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a66815c4a86a9c2db3486177c992a559d}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON&Receive indication status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_ALTERNATIVE\_RECEIVE\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_ALTERNATIVE\_RECEIVE\_INDICATION}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_ALTERNATIVE\_RECEIVE\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_ALTERNATIVE\_RECEIVE\_INDICATION}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a47e992f985807bd7e44c6a1692221454}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a47e992f985807bd7e44c6a1692221454}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+A\+L\+T\+E\+R\+N\+A\+T\+I\+V\+E\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON&Alternate receive indication status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_I2C\_CH\_STATUS\_FLAG\_BAUD\_RATE\_GENERATOR\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_BAUD\_RATE\_GENERATOR\_INDICATION}!I2C@{I2C}}\index{I2C@{I2C}!XMC\_I2C\_CH\_STATUS\_FLAG\_BAUD\_RATE\_GENERATOR\_INDICATION@{XMC\_I2C\_CH\_STATUS\_FLAG\_BAUD\_RATE\_GENERATOR\_INDICATION}}}\mbox{\Hypertarget{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a592e3d84375f9921674e4e5a46a2544d}\label{group___i2_c_gga90edd01fe8e213f0dfdcad95faa4b294a592e3d84375f9921674e4e5a46a2544d}} 
+X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+T\+E\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON&Baud rate generator indication status \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 150 of file xmc\+\_\+i2c.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___i2_c_ga2bbb8ccea8fada2c5db74e1fd5cfb17a}\label{group___i2_c_ga2bbb8ccea8fada2c5db74e1fd5cfb17a}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_ClearStatusFlag@{XMC\_I2C\_CH\_ClearStatusFlag}}
+\index{XMC\_I2C\_CH\_ClearStatusFlag@{XMC\_I2C\_CH\_ClearStatusFlag}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_ClearStatusFlag()}{XMC\_I2C\_CH\_ClearStatusFlag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{uint32\+\_\+t}]{flag }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em flag} & Status flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Clears the status flag of I2C {\itshape channel} by setting the input parameter {\itshape flag} in P\+S\+CR register.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga0738fe1da4162046b818f924e1851dac}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Status\+Flag()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 676 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+S\+CR.
+
+
+
+Referenced by X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Receive\+Ack(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Receive\+Nack(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Repeated\+Start(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Start(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Stop(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit(), and X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Slave\+Transmit().
+
+\mbox{\Hypertarget{group___i2_c_ga2b4116bd10e27e098fbdffe4021ef222}\label{group___i2_c_ga2b4116bd10e27e098fbdffe4021ef222}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_ConfigExternalInputSignalToBRG@{XMC\_I2C\_CH\_ConfigExternalInputSignalToBRG}}
+\index{XMC\_I2C\_CH\_ConfigExternalInputSignalToBRG@{XMC\_I2C\_CH\_ConfigExternalInputSignalToBRG}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_ConfigExternalInputSignalToBRG()}{XMC\_I2C\_CH\_ConfigExternalInputSignalToBRG()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Config\+External\+Input\+Signal\+To\+B\+RG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint16\+\_\+t}]{pdiv,  }\item[{const uint32\+\_\+t}]{oversampling,  }\item[{const \mbox{\hyperlink{group___u_s_i_c_ga43e23e8f72ad2b55ed72c4771d86ba8c}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+\+C\+O\+M\+B\+I\+N\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+t}}}]{combination\+\_\+mode }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Pointer to U\+S\+IC channel handler of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} ~\newline
+ {\bfseries{Range\+:}} X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H0, X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Availability of I2\+C1 and I2\+C2 depends on device selection 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em pdiv} & Desired divider for the external frequency input. {\bfseries{Range\+:}} minimum value = 1, maximum value = 1024 ~\newline
+\\
+\hline
+{\em oversampling} & Required oversampling. The value indicates the number of time quanta for one symbol of data. ~\newline
+ This can be related to the number of samples for each logic state of the data signal. ~\newline
+ {\bfseries{Range\+:}} 1 to 32. Value should be chosen based on the protocol used. \\
+\hline
+{\em combination\+\_\+mode} & U\+S\+IC channel input combination mode ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Enables the external frequency input for the Baudrate Generator and configures the divider, oversampling and the combination mode of the U\+S\+IC channel. ~\newline
+~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___u_s_i_c_ga19701f2d41e37994b79bd037dc2bc519}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+B\+R\+G\+Input\+Clock\+Source()}}, \mbox{\hyperlink{group___u_s_i_c_ga9b4014d2977b8c72782ce1ba3ba9418f}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Input\+Trigger\+Combination\+Mode()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 699 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Config\+External\+Input\+Signal\+To\+B\+R\+G().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga2b4116bd10e27e098fbdffe4021ef222_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_gae3f432c94e42bece6087095ad716c002}\label{group___i2_c_gae3f432c94e42bece6087095ad716c002}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_DisableAcknowledgeAddress0@{XMC\_I2C\_CH\_DisableAcknowledgeAddress0}}
+\index{XMC\_I2C\_CH\_DisableAcknowledgeAddress0@{XMC\_I2C\_CH\_DisableAcknowledgeAddress0}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_DisableAcknowledgeAddress0()}{XMC\_I2C\_CH\_DisableAcknowledgeAddress0()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Acknowledge\+Address0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+This bit defines that slave device should not be sensitive to the slave address 00H.~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_gae8f2fc3c10f3196a8e2021cc07bc34c4}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Acknowledge\+Address0()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 732 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode, and U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+A\+C\+K00\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___i2_c_gac5e6b53e61b942a8542031e6281714c9}\label{group___i2_c_gac5e6b53e61b942a8542031e6281714c9}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_DisableDataTransmission@{XMC\_I2C\_CH\_DisableDataTransmission}}
+\index{XMC\_I2C\_CH\_DisableDataTransmission@{XMC\_I2C\_CH\_DisableDataTransmission}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_DisableDataTransmission()}{XMC\_I2C\_CH\_DisableDataTransmission()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Data\+Transmission (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel handle of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} ~\newline
+ {\bfseries{Range\+:}} X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H0, X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Availability of I2\+C1 and I2\+C2 depends on device selection 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Disable data transmission.~\newline
+~\newline
+Use this function in combination with \mbox{\hyperlink{group___i2_c_ga2937fb7f07ff03ff84fcdcecdf2cd73e}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Data\+Transmission()}} to fill the F\+I\+FO and send the F\+I\+FO content without gaps in the transmission. F\+I\+FO is filled using \mbox{\hyperlink{group___u_s_i_c_gacc0a4521925fd852e7e08075235d85fb}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+X\+F\+I\+F\+O\+\_\+\+Put\+Data()}}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga2937fb7f07ff03ff84fcdcecdf2cd73e}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Data\+Transmission()}}~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 769 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Start\+Transmision\+Mode(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gac5e6b53e61b942a8542031e6281714c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga7d0b7e575a13d2fdd2ead33d96d9e15b}\label{group___i2_c_ga7d0b7e575a13d2fdd2ead33d96d9e15b}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_DisableEvent@{XMC\_I2C\_CH\_DisableEvent}}
+\index{XMC\_I2C\_CH\_DisableEvent@{XMC\_I2C\_CH\_DisableEvent}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_DisableEvent()}{XMC\_I2C\_CH\_DisableEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{uint32\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em event} & O\+Red values of \mbox{\hyperlink{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+t}} enum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Disables the input parameter \mbox{\hyperlink{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+t}} event using P\+C\+R\+\_\+\+I\+I\+C\+Mode register.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga868f80d9e08a0518c38100dda3f77882}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Event()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 398 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+C\+CR, and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode.
+
+\mbox{\Hypertarget{group___i2_c_gaa18e12d5431b1dfab311aabc87b097e5}\label{group___i2_c_gaa18e12d5431b1dfab311aabc87b097e5}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_DisableMasterClock@{XMC\_I2C\_CH\_DisableMasterClock}}
+\index{XMC\_I2C\_CH\_DisableMasterClock@{XMC\_I2C\_CH\_DisableMasterClock}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_DisableMasterClock()}{XMC\_I2C\_CH\_DisableMasterClock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Master\+Clock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & A constant pointer to X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t, pointing to the U\+S\+IC channel base address.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Disables the generation of Master clock by clearing P\+C\+R.\+M\+C\+LK bit.~\newline
+~\newline
+This clock can be enabled by invoking \mbox{\hyperlink{group___i2_c_gac307e99ae4e46c888a8db9a048deef8c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Master\+Clock()}} as needed in the program.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_gac307e99ae4e46c888a8db9a048deef8c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Master\+Clock()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 805 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode, and U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+M\+C\+L\+K\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___i2_c_gae8f2fc3c10f3196a8e2021cc07bc34c4}\label{group___i2_c_gae8f2fc3c10f3196a8e2021cc07bc34c4}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_EnableAcknowledgeAddress0@{XMC\_I2C\_CH\_EnableAcknowledgeAddress0}}
+\index{XMC\_I2C\_CH\_EnableAcknowledgeAddress0@{XMC\_I2C\_CH\_EnableAcknowledgeAddress0}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_EnableAcknowledgeAddress0()}{XMC\_I2C\_CH\_EnableAcknowledgeAddress0()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Acknowledge\+Address0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Retrieves the status byte of I2C {\itshape channel} using P\+S\+R\+\_\+\+I\+I\+C\+Mode register.~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_gae3f432c94e42bece6087095ad716c002}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Acknowledge\+Address0()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 717 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode, and U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+A\+C\+K00\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___i2_c_ga2937fb7f07ff03ff84fcdcecdf2cd73e}\label{group___i2_c_ga2937fb7f07ff03ff84fcdcecdf2cd73e}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_EnableDataTransmission@{XMC\_I2C\_CH\_EnableDataTransmission}}
+\index{XMC\_I2C\_CH\_EnableDataTransmission@{XMC\_I2C\_CH\_EnableDataTransmission}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_EnableDataTransmission()}{XMC\_I2C\_CH\_EnableDataTransmission()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Data\+Transmission (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel handle of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} ~\newline
+ {\bfseries{Range\+:}} X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H0, X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Availability of I2\+C1 and I2\+C2 depends on device selection 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Enable data transmission.~\newline
+~\newline
+Use this function in combination with \mbox{\hyperlink{group___i2_c_gac5e6b53e61b942a8542031e6281714c9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Data\+Transmission()}} to fill the F\+I\+FO and send the F\+I\+FO content without gaps in the transmission. F\+I\+FO is filled using \mbox{\hyperlink{group___u_s_i_c_gacc0a4521925fd852e7e08075235d85fb}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+X\+F\+I\+F\+O\+\_\+\+Put\+Data()}}. 
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+If you need more control over the start of transmission use \mbox{\hyperlink{group___u_s_i_c_ga04c66a47ae22c847b394f10d85e01bf8}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Start\+Transmision\+Mode()}}
+\end{DoxyNote}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_gac5e6b53e61b942a8542031e6281714c9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Data\+Transmission()}}~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 751 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Start\+Transmision\+Mode(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+R\+T\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+I\+O\+N\+\_\+\+O\+N\+\_\+\+T\+DV.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga2937fb7f07ff03ff84fcdcecdf2cd73e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga868f80d9e08a0518c38100dda3f77882}\label{group___i2_c_ga868f80d9e08a0518c38100dda3f77882}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_EnableEvent@{XMC\_I2C\_CH\_EnableEvent}}
+\index{XMC\_I2C\_CH\_EnableEvent@{XMC\_I2C\_CH\_EnableEvent}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_EnableEvent()}{XMC\_I2C\_CH\_EnableEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{uint32\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em event} & O\+Red values of \mbox{\hyperlink{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+t}} enum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Enables the input parameter \mbox{\hyperlink{group___i2_c_gac0654afd5969b6c3cfc6477d82d1cebe}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+E\+V\+E\+N\+T\+\_\+t}} event using P\+C\+R\+\_\+\+I\+I\+C\+Mode register.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga7d0b7e575a13d2fdd2ead33d96d9e15b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Event()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 392 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+C\+CR, and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode.
+
+\mbox{\Hypertarget{group___i2_c_gac307e99ae4e46c888a8db9a048deef8c}\label{group___i2_c_gac307e99ae4e46c888a8db9a048deef8c}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_EnableMasterClock@{XMC\_I2C\_CH\_EnableMasterClock}}
+\index{XMC\_I2C\_CH\_EnableMasterClock@{XMC\_I2C\_CH\_EnableMasterClock}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_EnableMasterClock()}{XMC\_I2C\_CH\_EnableMasterClock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Master\+Clock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & A constant pointer to X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t, pointing to the U\+S\+IC channel base address.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Enables the generation of Master clock by setting P\+C\+R.\+M\+C\+LK bit.~\newline
+~\newline
+This clock can be used as a clock reference for external devices. This is not enabled during initialization in \mbox{\hyperlink{group___i2_c_gafbab6cabacc65e03592b1c5d6cece11d}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Init()}}. Invoke \mbox{\hyperlink{group___i2_c_gac307e99ae4e46c888a8db9a048deef8c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Master\+Clock()}} to enable as needed in the program, or if it is disabled by \mbox{\hyperlink{group___i2_c_gaa18e12d5431b1dfab311aabc87b097e5}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Master\+Clock()}}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_gaa18e12d5431b1dfab311aabc87b097e5}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Disable\+Master\+Clock()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 788 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode, and U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+M\+C\+L\+K\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___i2_c_ga50f0983dca84031814fcbcb52991ee63}\label{group___i2_c_ga50f0983dca84031814fcbcb52991ee63}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_GetReceivedData@{XMC\_I2C\_CH\_GetReceivedData}}
+\index{XMC\_I2C\_CH\_GetReceivedData@{XMC\_I2C\_CH\_GetReceivedData}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_GetReceivedData()}{XMC\_I2C\_CH\_GetReceivedData()}}
+{\footnotesize\ttfamily uint8\+\_\+t X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Received\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t O\+U\+T\+R/\+R\+B\+UF register data~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Reads the data from I2C {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Data is read by using O\+U\+T\+R/\+R\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 358 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+O\+U\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+R\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+R\+B\+UF, and U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+R\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___i2_c_gafbecd5b3d880c596f0082afb1dda00a0}\label{group___i2_c_gafbecd5b3d880c596f0082afb1dda00a0}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_GetReceiverStatusFlag@{XMC\_I2C\_CH\_GetReceiverStatusFlag}}
+\index{XMC\_I2C\_CH\_GetReceiverStatusFlag@{XMC\_I2C\_CH\_GetReceiverStatusFlag}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_GetReceiverStatusFlag()}{XMC\_I2C\_CH\_GetReceiverStatusFlag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint8\+\_\+t X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Receiver\+Status\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Receiver status flag~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Gets the receiver status of I2C {\itshape channel} using R\+B\+UF register of bits 8-\/12 which gives information about receiver status.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 619 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+R\+B\+UF.
+
+\mbox{\Hypertarget{group___i2_c_ga9131749645c421ff4b8bc80d0c93b691}\label{group___i2_c_ga9131749645c421ff4b8bc80d0c93b691}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_GetSlaveAddress@{XMC\_I2C\_CH\_GetSlaveAddress}}
+\index{XMC\_I2C\_CH\_GetSlaveAddress@{XMC\_I2C\_CH\_GetSlaveAddress}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_GetSlaveAddress()}{XMC\_I2C\_CH\_GetSlaveAddress()}}
+{\footnotesize\ttfamily uint16\+\_\+t X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Slave\+Address (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel handler of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Slave address~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Gets the I2C {\itshape channel} slave address.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Returns the address using P\+C\+R\+\_\+\+I\+I\+C\+Mode register by checking if it is in 10-\/bit address group or 7-\/bit address group.~\newline
+ (If first five bits of address are assigned with 0x\+F0, then address mode is considered as 10-\/bit mode otherwise it is 7-\/bit mode)~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+A 7-\/bit address will include an additional bit at the L\+SB. For example, address 0x05 will be returned as 0x0a. 10-\/bit address will not include the 10-\/bit address identifier 0b11110xx at the most signifcant bits.
+\end{DoxyNote}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_gaec9df234c44378c3fc10f0423d71aec9}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Slave\+Address()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 144 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+S\+L\+A\+D\+\_\+\+Msk, and X\+M\+C\+\_\+\+I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+R\+\_\+\+Pos.
+
+\mbox{\Hypertarget{group___i2_c_ga0738fe1da4162046b818f924e1851dac}\label{group___i2_c_ga0738fe1da4162046b818f924e1851dac}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_GetStatusFlag@{XMC\_I2C\_CH\_GetStatusFlag}}
+\index{XMC\_I2C\_CH\_GetStatusFlag@{XMC\_I2C\_CH\_GetStatusFlag}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_GetStatusFlag()}{XMC\_I2C\_CH\_GetStatusFlag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Status\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Status byte~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Retrieves the status byte of I2C {\itshape channel} using P\+S\+R\+\_\+\+I\+I\+C\+Mode register.~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga2bbb8ccea8fada2c5db74e1fd5cfb17a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 660 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+S\+R\+\_\+\+I\+I\+C\+Mode.
+
+\mbox{\Hypertarget{group___i2_c_gafbab6cabacc65e03592b1c5d6cece11d}\label{group___i2_c_gafbab6cabacc65e03592b1c5d6cece11d}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_Init@{XMC\_I2C\_CH\_Init}}
+\index{XMC\_I2C\_CH\_Init@{XMC\_I2C\_CH\_Init}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_Init()}{XMC\_I2C\_CH\_Init()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const \mbox{\hyperlink{group___i2_c_ga1df261494eb7dfec05d52fcdef86fb85}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$const}]{config }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em config} & Constant pointer to I2C channel config structure of type \mbox{\hyperlink{group___i2_c_ga1df261494eb7dfec05d52fcdef86fb85}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Initializes the I2C {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Configures the data format in S\+C\+TR register. Sets the slave address, baud rate. Enables transmit data valid, clears status flags and disables parity generation.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___u_s_i_c_ga0567321036170adb335fef9b36dc3b71}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Enable()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 108 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::address, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::baudrate, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+C\+CR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+S\+CR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+S\+C\+TR, S\+E\+T\+\_\+\+T\+DV, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+C\+SR, T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+O\+N\+\_\+\+M\+O\+DE, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+C\+T\+R\+\_\+\+F\+L\+E\+\_\+\+Msk, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+C\+T\+R\+\_\+\+P\+D\+L\+\_\+\+Msk, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+C\+T\+R\+\_\+\+S\+D\+I\+R\+\_\+\+Msk, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+C\+T\+R\+\_\+\+T\+R\+M\+\_\+\+Pos, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+C\+T\+R\+\_\+\+W\+L\+E\+\_\+\+Pos, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+C\+S\+R\+\_\+\+T\+D\+E\+N\+\_\+\+Pos, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+C\+S\+R\+\_\+\+T\+D\+S\+S\+M\+\_\+\+Msk, W\+O\+R\+D\+L\+E\+N\+G\+TH, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Baudrate(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Slave\+Address(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Enable().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gafbab6cabacc65e03592b1c5d6cece11d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_gad5e1a8e56b356c2fc246c8b3b95bfb74}\label{group___i2_c_gad5e1a8e56b356c2fc246c8b3b95bfb74}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_MasterReceiveAck@{XMC\_I2C\_CH\_MasterReceiveAck}}
+\index{XMC\_I2C\_CH\_MasterReceiveAck@{XMC\_I2C\_CH\_MasterReceiveAck}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_MasterReceiveAck()}{XMC\_I2C\_CH\_MasterReceiveAck()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Receive\+Ack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sends the Ack request from I2C master {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Reads the transmit buffer status is busy or not and thereby updates I\+N/\+T\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes using Master Receive Ack command.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 314 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+IN, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+UF, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+T\+D\+F\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+A\+CK, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gad5e1a8e56b356c2fc246c8b3b95bfb74_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_gae5960060afec908c91cd8e4a78e5eae9}\label{group___i2_c_gae5960060afec908c91cd8e4a78e5eae9}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_MasterReceiveNack@{XMC\_I2C\_CH\_MasterReceiveNack}}
+\index{XMC\_I2C\_CH\_MasterReceiveNack@{XMC\_I2C\_CH\_MasterReceiveNack}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_MasterReceiveNack()}{XMC\_I2C\_CH\_MasterReceiveNack()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Receive\+Nack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sends the Nack request from I2C master {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Reads the transmit buffer status is busy or not and thereby updates I\+N/\+T\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes using Master Receive Nack command.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 336 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+IN, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+UF, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+T\+D\+F\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+N\+A\+CK, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gae5960060afec908c91cd8e4a78e5eae9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga770a5f71ceb3b447f21a8b129df6486e}\label{group___i2_c_ga770a5f71ceb3b447f21a8b129df6486e}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_MasterRepeatedStart@{XMC\_I2C\_CH\_MasterRepeatedStart}}
+\index{XMC\_I2C\_CH\_MasterRepeatedStart@{XMC\_I2C\_CH\_MasterRepeatedStart}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_MasterRepeatedStart()}{XMC\_I2C\_CH\_MasterRepeatedStart()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Repeated\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint16\+\_\+t}]{addr,  }\item[{const \mbox{\hyperlink{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+t}}}]{command }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em addr} & I2C master address \\
+\hline
+{\em command} & read/write command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sends the repeated start condition from I2C master {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Sends the repeated start condition with read/write command by updating I\+N/\+T\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Address(addr) should reserve an additional bit at the L\+SB for read/write indication. For example, address 0x05 should be provided as 0x0a. If the address is 10-\/bit, only most significant bits with the 10-\/bit identifier should be sent using this function. For example, if the 10-\/bit address is 0x305, the address should be provided as 0xf6(prepend with 0b11110, upper two bits of address 0b11, followed by 1-\/bit field for read/write).
+\end{DoxyNote}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit()}}, \mbox{\hyperlink{group___u_s_i_c_gaa168774fc8ce19786adafd38d5145e41}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 219 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+IN, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+UF, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+\+R\+E\+AD, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+T\+D\+F\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+R\+E\+S\+T\+A\+RT, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga770a5f71ceb3b447f21a8b129df6486e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_gaebd425a409b805d4571e75f793317070}\label{group___i2_c_gaebd425a409b805d4571e75f793317070}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_MasterStart@{XMC\_I2C\_CH\_MasterStart}}
+\index{XMC\_I2C\_CH\_MasterStart@{XMC\_I2C\_CH\_MasterStart}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_MasterStart()}{XMC\_I2C\_CH\_MasterStart()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint16\+\_\+t}]{addr,  }\item[{const \mbox{\hyperlink{group___i2_c_ga9627b1559cffb7e182fe664daacf4fb6}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+t}}}]{command }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em addr} & I2C master address \\
+\hline
+{\em command} & read/write command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Starts the I2C master {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Sends the Start condition with read/write command by updating I\+N/\+T\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Address(addr) should reserve an additional bit at the L\+SB for read/write indication. For example, address 0x05 should be provided as 0x0a. If the address is 10-\/bit, only most significant bits with the 10-\/bit identifier should be sent using this function. For example, if the 10-\/bit address is 0x305, the address should be provided as 0xf6(prepend with 0b11110, upper two bits of address 0b11, followed by 1-\/bit field for read/write).
+\end{DoxyNote}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit()}}, \mbox{\hyperlink{group___u_s_i_c_gaa168774fc8ce19786adafd38d5145e41}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 190 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+IN, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+UF, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+M\+D\+\_\+\+R\+E\+AD, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+T\+D\+F\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+S\+T\+A\+RT, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gaebd425a409b805d4571e75f793317070_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga6a48dbbe2be7fce74bd328bae5db5141}\label{group___i2_c_ga6a48dbbe2be7fce74bd328bae5db5141}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_MasterStop@{XMC\_I2C\_CH\_MasterStop}}
+\index{XMC\_I2C\_CH\_MasterStop@{XMC\_I2C\_CH\_MasterStop}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_MasterStop()}{XMC\_I2C\_CH\_MasterStop()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Stops the I2C master {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Reads the transmit buffer status is busy or not and thereby updates I\+N/\+T\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes using Stop command.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga701835880c9d134de09af56c12ee3383}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit()}}, \mbox{\hyperlink{group___u_s_i_c_gaa168774fc8ce19786adafd38d5145e41}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 248 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+IN, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+UF, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+T\+D\+F\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+S\+T\+OP, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga6a48dbbe2be7fce74bd328bae5db5141_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga701835880c9d134de09af56c12ee3383}\label{group___i2_c_ga701835880c9d134de09af56c12ee3383}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_MasterTransmit@{XMC\_I2C\_CH\_MasterTransmit}}
+\index{XMC\_I2C\_CH\_MasterTransmit@{XMC\_I2C\_CH\_MasterTransmit}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_MasterTransmit()}{XMC\_I2C\_CH\_MasterTransmit()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Master\+Transmit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em data} & data to transmit from I2C {\itshape channel} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Transmit the data from the I2C master {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Reads the transmit buffer status is busy or not and thereby updates I\+N/\+T\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes using Master Send command.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___u_s_i_c_gaa168774fc8ce19786adafd38d5145e41}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 270 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+IN, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+UF, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+T\+D\+F\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+S\+E\+ND, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga701835880c9d134de09af56c12ee3383_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_gacbe84db2e8f8dcd1946fd3ccc76d657b}\label{group___i2_c_gacbe84db2e8f8dcd1946fd3ccc76d657b}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_SelectInterruptNodePointer@{XMC\_I2C\_CH\_SelectInterruptNodePointer}}
+\index{XMC\_I2C\_CH\_SelectInterruptNodePointer@{XMC\_I2C\_CH\_SelectInterruptNodePointer}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_SelectInterruptNodePointer()}{XMC\_I2C\_CH\_SelectInterruptNodePointer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Select\+Interrupt\+Node\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const \mbox{\hyperlink{group___i2_c_ga0403b38bac963ac5c1bd2fb59a85b32c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+t}}}]{interrupt\+\_\+node,  }\item[{const uint32\+\_\+t}]{service\+\_\+request }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Pointer to U\+S\+IC channel handler of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} ~\newline
+ {\bfseries{Range\+:}} X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H0, X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Availability of I2\+C1 and I2\+C2 depends on device selection 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em interrupt\+\_\+node} & Interrupt node pointer to be configured. ~\newline
+ {\bfseries{Range\+:}} \mbox{\hyperlink{group___i2_c_gga68109c6e445f0979b1d98546d393a46aafd73773ef7c86cc9030d4766b6dad775}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+S\+H\+I\+FT}}, \mbox{\hyperlink{group___i2_c_gga68109c6e445f0979b1d98546d393a46aa30e7d3a2e8ad4bb38a00f428454b517c}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+ER}} etc. \\
+\hline
+{\em service\+\_\+request} & Service request number.~\newline
+ {\bfseries{Range\+:}} 0 to 5. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Sets the interrupt node for U\+S\+IC channel events. ~\newline
+~\newline
+For an event to generate interrupt, node pointer should be configured with service request(S\+R0, S\+R1..S\+R5). The N\+V\+IC node gets linked to the interrupt event by doing so.~\newline
+ Note\+: N\+V\+IC node should be separately enabled to generate the interrupt.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga868f80d9e08a0518c38100dda3f77882}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Event()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 387 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Interrupt\+Node\+Pointer().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gacbe84db2e8f8dcd1946fd3ccc76d657b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga0da1b672c78d08d3ffdb83316d1443cb}\label{group___i2_c_ga0da1b672c78d08d3ffdb83316d1443cb}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_SetBaudrate@{XMC\_I2C\_CH\_SetBaudrate}}
+\index{XMC\_I2C\_CH\_SetBaudrate@{XMC\_I2C\_CH\_SetBaudrate}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_SetBaudrate()}{XMC\_I2C\_CH\_SetBaudrate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Baudrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint32\+\_\+t}]{rate }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em rate} & baud rate of I2C channel\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sets the rate of I2C {\itshape channel}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+Standard over sampling is considered if rate $<$= 100K\+Hz and fast over sampling is considered if rate $>$ 100K\+Hz.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___u_s_i_c_gac9feec95c73b09889e494ec6d6898f4f}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Baudrate()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 160 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+C\+R\+\_\+\+I\+I\+C\+Mode\+\_\+\+S\+T\+I\+M\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+L\+O\+C\+K\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+A\+ST, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+C\+L\+O\+C\+K\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+S\+T\+A\+N\+D\+A\+RD, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Baudrate(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK.
+
+
+
+Referenced by X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Init().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga0da1b672c78d08d3ffdb83316d1443cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga1b74dc72445ffb42447cec6cc8c0c392}\label{group___i2_c_ga1b74dc72445ffb42447cec6cc8c0c392}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_SetInputSource@{XMC\_I2C\_CH\_SetInputSource}}
+\index{XMC\_I2C\_CH\_SetInputSource@{XMC\_I2C\_CH\_SetInputSource}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_SetInputSource()}{XMC\_I2C\_CH\_SetInputSource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Input\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const \mbox{\hyperlink{group___i2_c_ga79fdcb936fddd7c2717e45177d27e23b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+t}}}]{input,  }\item[{const uint8\+\_\+t}]{source }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em input} & I2C channel input stage of type \mbox{\hyperlink{group___i2_c_ga79fdcb936fddd7c2717e45177d27e23b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+I\+N\+P\+U\+T\+\_\+t}} \\
+\hline
+{\em source} & Input source select for the input stage(0-\/$>$D\+X0A, 1-\/$>$D\+X1A, .. 7-\/$>$D\+X7G) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sets the input source for I2C {\itshape channel}.~\newline
+ Defines the input stage for the corresponding input line.
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+After configuring the input source for corresponding channel, interrupt node pointer is set.
+\end{DoxyNote}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Inpt\+Source(), \mbox{\hyperlink{group___u_s_i_c_ga52f9fc18049dbc906b127e1f3662b4b3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Interrupt\+Node\+Pointer()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 431 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+D\+X\+CR, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+D\+X0\+C\+R\+\_\+\+D\+S\+E\+N\+\_\+\+Msk, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+D\+X0\+C\+R\+\_\+\+I\+N\+S\+W\+\_\+\+Msk, and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Input\+Source().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga1b74dc72445ffb42447cec6cc8c0c392_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_gaf6badf2e9a73b1ccd2f9b7813dc33114}\label{group___i2_c_gaf6badf2e9a73b1ccd2f9b7813dc33114}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_SetInterruptNodePointer@{XMC\_I2C\_CH\_SetInterruptNodePointer}}
+\index{XMC\_I2C\_CH\_SetInterruptNodePointer@{XMC\_I2C\_CH\_SetInterruptNodePointer}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_SetInterruptNodePointer()}{XMC\_I2C\_CH\_SetInterruptNodePointer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Interrupt\+Node\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint8\+\_\+t}]{service\+\_\+request }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em service\+\_\+request} & Service request number in the range of 0-\/5 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sets the interrupt node for protocol interrupt.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+To generate interrupt for an event, node pointer should be configured with service request number(S\+R0, S\+R1..S\+R5). The N\+V\+IC node gets linked to the interrupt event by doing so.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Note\+:}
+N\+V\+IC node should be separately enabled to generate the interrupt. After setting the node pointer, desired event must be enabled.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga868f80d9e08a0518c38100dda3f77882}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Enable\+Event()}}, \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gae0e9d0e2f7b6133828c71b57d4941c35}{N\+V\+I\+C\+\_\+\+Set\+Priority()}}, \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga57b3064413dbc7459d9646020fdd8bef}{N\+V\+I\+C\+\_\+\+Enable\+I\+R\+Q()}}, \mbox{\hyperlink{group___i2_c_ga1b74dc72445ffb42447cec6cc8c0c392}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Input\+Source()}}~\newline
+ 
+\end{DoxyParagraph}
+
+
+Definition at line 361 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+D\+E\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O\+C\+OL, and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Interrupt\+Node\+Pointer().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gaf6badf2e9a73b1ccd2f9b7813dc33114_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_gaec9df234c44378c3fc10f0423d71aec9}\label{group___i2_c_gaec9df234c44378c3fc10f0423d71aec9}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_SetSlaveAddress@{XMC\_I2C\_CH\_SetSlaveAddress}}
+\index{XMC\_I2C\_CH\_SetSlaveAddress@{XMC\_I2C\_CH\_SetSlaveAddress}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_SetSlaveAddress()}{XMC\_I2C\_CH\_SetSlaveAddress()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Set\+Slave\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint16\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em address} & I2C slave address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Sets the I2C {\itshape channel} slave address.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Address is set in P\+C\+R\+\_\+\+I\+I\+C\+Mode register by checking if it is in 10-\/bit address group or 7-\/bit address group. (If first five bits of address are assigned with 0x\+F0, then address mode is 10-\/bit mode otherwise it is 7-\/bit mode)~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+A 7-\/bit address should include an additional bit at the L\+SB for read/write indication. For example, address 0x05 should be provided as 0x0a. A 10-\/bit address should be provided with the identifier 0b11110xx at the most significant bits. For example, address 0x305 should be provided as 0x7b05(bitwise O\+R with 0x7800).
+\end{DoxyNote}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_ga9131749645c421ff4b8bc80d0c93b691}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Get\+Slave\+Address()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 132 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+P\+C\+R\+\_\+\+I\+I\+C\+Mode, X\+M\+C\+\_\+\+I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+\_\+\+G\+R\+O\+UP, X\+M\+C\+\_\+\+I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+\_\+\+M\+A\+SK, and X\+M\+C\+\_\+\+I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+R\+\_\+\+Pos.
+
+
+
+Referenced by X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Init().
+
+\mbox{\Hypertarget{group___i2_c_gafdd7192c5a6b3fa481f293fb0a574665}\label{group___i2_c_gafdd7192c5a6b3fa481f293fb0a574665}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_SlaveTransmit@{XMC\_I2C\_CH\_SlaveTransmit}}
+\index{XMC\_I2C\_CH\_SlaveTransmit@{XMC\_I2C\_CH\_SlaveTransmit}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_SlaveTransmit()}{XMC\_I2C\_CH\_SlaveTransmit()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Slave\+Transmit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} \\
+\hline
+{\em data} & data to transmit from I2C {\itshape channel} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Transmit the data from the I2C slave {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Reads the transmit buffer status is busy or not and thereby updates I\+N/\+T\+B\+UF register based on F\+I\+F\+O/non-\/\+F\+I\+FO modes using Slave Send command.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___u_s_i_c_gaa168774fc8ce19786adafd38d5145e41}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status()}},\mbox{\hyperlink{group___i2_c_ga2bbb8ccea8fada2c5db74e1fd5cfb17a}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 292 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+IN, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+C\+TR, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+::\+T\+B\+UF, U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+C\+T\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+Msk, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Clear\+Status\+Flag(), X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+F\+L\+A\+G\+\_\+\+T\+R\+A\+N\+S\+M\+I\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+I\+N\+D\+I\+C\+A\+T\+I\+ON, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+T\+D\+F\+\_\+\+S\+L\+A\+V\+E\+\_\+\+S\+E\+ND, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_gafdd7192c5a6b3fa481f293fb0a574665_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga86d96c08c752ae2ecd2af107a1c6d5c9}\label{group___i2_c_ga86d96c08c752ae2ecd2af107a1c6d5c9}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_Start@{XMC\_I2C\_CH\_Start}}
+\index{XMC\_I2C\_CH\_Start@{XMC\_I2C\_CH\_Start}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_Start()}{XMC\_I2C\_CH\_Start()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None~\newline
+
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Starts the I2C {\itshape channel}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Sets the U\+S\+IC input operation mode to I2C mode using C\+CR register.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___u_s_i_c_ga8557961a3ad8f13044675bd791d77dab}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Mode()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 322 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+I2C, and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Mode().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{group___i2_c_ga86d96c08c752ae2ecd2af107a1c6d5c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga4eeda18d28c90e527c309726ff5d3cb9}\label{group___i2_c_ga4eeda18d28c90e527c309726ff5d3cb9}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_Stop@{XMC\_I2C\_CH\_Stop}}
+\index{XMC\_I2C\_CH\_Stop@{XMC\_I2C\_CH\_Stop}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_Stop()}{XMC\_I2C\_CH\_Stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Constant pointer to U\+S\+IC channel structure of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{group___i2_c_ga4c6e64bd3b8bc239633ac72e0d50247b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t~\newline
+}}
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+:}
+Stops the I2C {\itshape channel}.~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Sets the U\+S\+IC input operation to I\+D\+LE mode using C\+CR register.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___u_s_i_c_ga8557961a3ad8f13044675bd791d77dab}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Mode()}}~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 376 of file xmc\+\_\+i2c.\+c.
+
+
+
+References X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY, X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Get\+Transmit\+Buffer\+Status(), X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+O\+P\+E\+R\+A\+T\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+I\+D\+LE, X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Set\+Mode(), and X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+T\+B\+U\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga4eeda18d28c90e527c309726ff5d3cb9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___i2_c_ga23a5506a060fd4087ec7f1d3dd6bd571}\label{group___i2_c_ga23a5506a060fd4087ec7f1d3dd6bd571}} 
+\index{I2C@{I2C}!XMC\_I2C\_CH\_TriggerServiceRequest@{XMC\_I2C\_CH\_TriggerServiceRequest}}
+\index{XMC\_I2C\_CH\_TriggerServiceRequest@{XMC\_I2C\_CH\_TriggerServiceRequest}!I2C@{I2C}}
+\doxysubsubsection{\texorpdfstring{XMC\_I2C\_CH\_TriggerServiceRequest()}{XMC\_I2C\_CH\_TriggerServiceRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} void X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Trigger\+Service\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} $\ast$const}]{channel,  }\item[{const uint32\+\_\+t}]{service\+\_\+request\+\_\+line }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Pointer to U\+S\+IC channel handler of type \mbox{\hyperlink{group___u_s_i_c_gab79a19dac84ff17c48b06cfa3b38ecc3}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+t}} ~\newline
+ {\bfseries{Range\+:}} X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H0, X\+M\+C\+\_\+\+I2\+C0\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C1\+\_\+\+C\+H1,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H0,X\+M\+C\+\_\+\+I2\+C2\+\_\+\+C\+H1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Availability of I2\+C1 and I2\+C2 depends on device selection 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em service\+\_\+request\+\_\+line} & service request number of the event to be triggered. ~\newline
+ {\bfseries{Range\+:}} 0 to 5. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Trigger a I2C interrupt service request.~\newline
+~\newline
+When the I2C service request is triggered, the N\+V\+IC interrupt associated with it will be generated if enabled.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___i2_c_gacbe84db2e8f8dcd1946fd3ccc76d657b}{X\+M\+C\+\_\+\+I2\+C\+\_\+\+C\+H\+\_\+\+Select\+Interrupt\+Node\+Pointer()}} ~\newline
+~\newline
+~\newline
+
+\end{DoxyParagraph}
+
+
+Definition at line 410 of file xmc\+\_\+i2c.\+h.
+
+
+
+References X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+Trigger\+Service\+Request().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c_ga23a5506a060fd4087ec7f1d3dd6bd571_cgraph}
+\end{center}
+\end{figure}

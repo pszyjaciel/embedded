@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\lego3\labels.tmp" -fI -W+ie -C V3 -o "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\lego3\lego3.hex" -d "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\lego3\lego3.obj" -e "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\lego3\lego3.eep" -m "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\lego3\lego3.map" "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\lego3\lego3.asm"

@@ -1,0 +1,146 @@
+\hypertarget{system___x_m_c1100_8c}{}\doxysection{Startup/system\+\_\+\+X\+M\+C1100.c File Reference}
+\label{system___x_m_c1100_8c}\index{Startup/system\_XMC1100.c@{Startup/system\_XMC1100.c}}
+{\ttfamily \#include $<$X\+M\+C1100.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}system\+\_\+\+X\+M\+C1100.\+h\char`\"{}}\newline
+Include dependency graph for system\+\_\+\+X\+M\+C1100.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system___x_m_c1100_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{system___x_m_c1100_8c_a3e062c18663b78ccfa672a78a4725720}{D\+C\+O1\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}~(64000000U)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void \mbox{\hyperlink{system___x_m_c1100_8c_ac81336f930a6eb48b56d92247d4d0b9e}{System\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void \mbox{\hyperlink{system___x_m_c1100_8c_a30b4f437e20e11dce859437f7203ffc9}{System\+Core\+Setup}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize C\+PU settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void \mbox{\hyperlink{system___x_m_c1100_8c_a897d71cb548033efcf3abee052f4912c}{System\+Core\+Clock\+Setup}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize clock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void \mbox{\hyperlink{system___x_m_c1100_8c_a4e8484c19e19484f2850f02fd6f2503a}{System\+Core\+Clock\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Update System\+Core\+Clock variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{system___x_m_c1100_8c_a3e062c18663b78ccfa672a78a4725720}\label{system___x_m_c1100_8c_a3e062c18663b78ccfa672a78a4725720}} 
+\index{system\_XMC1100.c@{system\_XMC1100.c}!DCO1\_FREQUENCY@{DCO1\_FREQUENCY}}
+\index{DCO1\_FREQUENCY@{DCO1\_FREQUENCY}!system\_XMC1100.c@{system\_XMC1100.c}}
+\doxysubsubsection{\texorpdfstring{DCO1\_FREQUENCY}{DCO1\_FREQUENCY}}
+{\footnotesize\ttfamily \#define D\+C\+O1\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~(64000000U)}
+
+
+
+Definition at line 66 of file system\+\_\+\+X\+M\+C1100.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{system___x_m_c1100_8c_a897d71cb548033efcf3abee052f4912c}\label{system___x_m_c1100_8c_a897d71cb548033efcf3abee052f4912c}} 
+\index{system\_XMC1100.c@{system\_XMC1100.c}!SystemCoreClockSetup@{SystemCoreClockSetup}}
+\index{SystemCoreClockSetup@{SystemCoreClockSetup}!system\_XMC1100.c@{system\_XMC1100.c}}
+\doxysubsubsection{\texorpdfstring{SystemCoreClockSetup()}{SystemCoreClockSetup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void System\+Core\+Clock\+Setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize clock. 
+
+$<$ 8/10 Bit Fractional divider
+
+$<$ 8 Bit integer divider
+
+Definition at line 102 of file system\+\_\+\+X\+M\+C1100.\+c.
+
+
+
+References S\+C\+U\+\_\+\+C\+LK, S\+C\+U\+\_\+\+C\+L\+K\+\_\+\+C\+L\+K\+C\+R\+\_\+\+V\+D\+D\+C2\+L\+O\+W\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+AL, System\+Core\+Clock\+Update(), and X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Init().
+
+
+
+Referenced by System\+Init().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system___x_m_c1100_8c_a897d71cb548033efcf3abee052f4912c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system___x_m_c1100_8c_a4e8484c19e19484f2850f02fd6f2503a}\label{system___x_m_c1100_8c_a4e8484c19e19484f2850f02fd6f2503a}} 
+\index{system\_XMC1100.c@{system\_XMC1100.c}!SystemCoreClockUpdate@{SystemCoreClockUpdate}}
+\index{SystemCoreClockUpdate@{SystemCoreClockUpdate}!system\_XMC1100.c@{system\_XMC1100.c}}
+\doxysubsubsection{\texorpdfstring{SystemCoreClockUpdate()}{SystemCoreClockUpdate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void System\+Core\+Clock\+Update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Update System\+Core\+Clock variable. 
+
+
+
+Definition at line 115 of file system\+\_\+\+X\+M\+C1100.\+c.
+
+
+
+References D\+C\+O1\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY, S\+C\+U\+\_\+\+C\+LK, S\+C\+U\+\_\+\+C\+L\+K\+\_\+\+C\+L\+K\+C\+R\+\_\+\+F\+D\+I\+V\+\_\+\+Msk, S\+C\+U\+\_\+\+C\+L\+K\+\_\+\+C\+L\+K\+C\+R\+\_\+\+F\+D\+I\+V\+\_\+\+Pos, S\+C\+U\+\_\+\+C\+L\+K\+\_\+\+C\+L\+K\+C\+R\+\_\+\+I\+D\+I\+V\+\_\+\+Msk, S\+C\+U\+\_\+\+C\+L\+K\+\_\+\+C\+L\+K\+C\+R\+\_\+\+I\+D\+I\+V\+\_\+\+Pos, and System\+Core\+Clock.
+
+
+
+Referenced by System\+Core\+Clock\+Setup().
+
+\mbox{\Hypertarget{system___x_m_c1100_8c_a30b4f437e20e11dce859437f7203ffc9}\label{system___x_m_c1100_8c_a30b4f437e20e11dce859437f7203ffc9}} 
+\index{system\_XMC1100.c@{system\_XMC1100.c}!SystemCoreSetup@{SystemCoreSetup}}
+\index{SystemCoreSetup@{SystemCoreSetup}!system\_XMC1100.c@{system\_XMC1100.c}}
+\doxysubsubsection{\texorpdfstring{SystemCoreSetup()}{SystemCoreSetup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void System\+Core\+Setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize C\+PU settings. 
+
+
+
+Definition at line 93 of file system\+\_\+\+X\+M\+C1100.\+c.
+
+
+
+References N\+VM, N\+V\+M\+\_\+\+C\+O\+N\+F\+I\+G1\+\_\+\+F\+I\+X\+W\+S\+\_\+\+Msk, and N\+V\+M\+\_\+\+N\+V\+M\+C\+O\+N\+F\+\_\+\+W\+S\+\_\+\+Msk.
+
+
+
+Referenced by System\+Init().
+
+\mbox{\Hypertarget{system___x_m_c1100_8c_ac81336f930a6eb48b56d92247d4d0b9e}\label{system___x_m_c1100_8c_ac81336f930a6eb48b56d92247d4d0b9e}} 
+\index{system\_XMC1100.c@{system\_XMC1100.c}!SystemInit@{SystemInit}}
+\index{SystemInit@{SystemInit}!system\_XMC1100.c@{system\_XMC1100.c}}
+\doxysubsubsection{\texorpdfstring{SystemInit()}{SystemInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_ac607bf387b29162be6a9b77fc7999539}{\+\_\+\+\_\+\+W\+E\+AK}} void System\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the system. 
+
+
+
+Definition at line 87 of file system\+\_\+\+X\+M\+C1100.\+c.
+
+
+
+References System\+Core\+Clock\+Setup(), and System\+Core\+Setup().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system___x_m_c1100_8c_ac81336f930a6eb48b56d92247d4d0b9e_cgraph}
+\end{center}
+\end{figure}

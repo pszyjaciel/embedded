@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\labels.tmp" -fI -W+ie -C V3 -o "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\AVR_Board.hex" -d "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\AVR_Board.obj" -e "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\AVR_Board.eep" -m "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\AVR_Board.map" "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\AVR_Board\delay2.asm"

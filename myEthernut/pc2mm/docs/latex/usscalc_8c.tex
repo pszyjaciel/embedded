@@ -1,0 +1,243 @@
+\hypertarget{usscalc_8c}{}\section{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/pc2mm/src/usscalc.c File Reference}
+\label{usscalc_8c}\index{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/pc2mm/src/usscalc.\+c@{U\+:/\+I\+C\+T/7th\+\_\+semester/bpri2/code/my\+Ethernut/pc2mm/src/usscalc.\+c}}
+{\ttfamily \#include \char`\"{}usscalc.\+h\char`\"{}}\\*
+Include dependency graph for usscalc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usscalc_8c_a8ef3f4ce9afc84a8f4b4c62237ad2dcb}{ppo}~1
+\item 
+\#define \hyperlink{usscalc_8c_ab75be13d6d9ba70e2a9591121b408184}{mirror}~0
+\item 
+\#define \hyperlink{usscalc_8c_ac3a341ede33bbed651abe7f847361a6e}{A\+K}~0x00
+\item 
+\#define \hyperlink{usscalc_8c_aecd69d9a67487cc45c38eb184c50538a}{S\+P}~0
+\item 
+\#define \hyperlink{usscalc_8c_ab765f8aafdcbbd05cfcd27e208eb55b2}{P\+N\+U}~0x12bc
+\item 
+\#define \hyperlink{usscalc_8c_a544eab7def9683a65c07c12fb091acc7}{P\+N\+Uex}~0x00
+\item 
+\#define \hyperlink{usscalc_8c_a223697fc2f8a4423171d86ced5c8872b}{I\+D\+X}~0x00
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} $\ast$ \hyperlink{usscalc_8c_af3c52cfa11b974e99c3c58cf4c524855}{send\+Telegram} ()
+\item 
+\hyperlink{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} \hyperlink{usscalc_8c_a3758bfbaa4494e65cabf188a026502de}{calc\+B\+C\+C} ()
+\begin{DoxyCompactList}\small\item\em Function calculates the B\+C\+C check sum by simply xoring the actual with a previous value. \end{DoxyCompactList}\item 
+void \hyperlink{usscalc_8c_a85c6e2ff77e81e72a69c5ebcb86b1ebc}{prep\+Telegram} (\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} my\+Reg\+No)
+\begin{DoxyCompactList}\small\item\em ver 2.\+03 Function creates a telegram message according to the U\+S\+S-\/protocol. ~\newline
+ The message is 14-\/byte long and consists of\+: \end{DoxyCompactList}\item 
+\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} \hyperlink{usscalc_8c_a634a622655ffe4ad4807ac03238b8194}{get\+Value} (\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} my\+Reg\+No)
+\begin{DoxyCompactList}\small\item\em Function returns one parameter value from the Micro\+Master. \end{DoxyCompactList}\item 
+void \hyperlink{usscalc_8c_aa3b21853f890838c88d047d6c2786917}{wait} ()
+\item 
+\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} $\ast$ \hyperlink{usscalc_8c_a1237de7b0698797181f0b54a04a0e5c9}{get\+All\+Values} (\hyperlink{usscalc_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} $\ast$my\+Param\+Arr, \hyperlink{usscalc_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\+\_\+t} length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usscalc_8c_ac3a341ede33bbed651abe7f847361a6e}{}\index{usscalc.\+c@{usscalc.\+c}!A\+K@{A\+K}}
+\index{A\+K@{A\+K}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{A\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+K~0x00}\label{usscalc_8c_ac3a341ede33bbed651abe7f847361a6e}
+
+\begin{DoxyParams}{Parameters}
+{\em A\+K} & A\+K\+: bit 15-\/12 (0-\/f $<$$<$ 1111 0000 0000 0000) -\/ Auftrag oder Antwort-\/\+I\+D
+\begin{DoxyItemize}
+\item 1\+: Request parameter
+\item 2\+: Change parameter value (word) \mbox{[}R\+A\+M only\mbox{]}
+\item 3\+: Change parameter value (double word) \mbox{[}R\+A\+M only\mbox{]}
+\item 4\+: Request description element 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\hypertarget{usscalc_8c_a223697fc2f8a4423171d86ced5c8872b}{}\index{usscalc.\+c@{usscalc.\+c}!I\+D\+X@{I\+D\+X}}
+\index{I\+D\+X@{I\+D\+X}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{I\+D\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+D\+X~0x00}\label{usscalc_8c_a223697fc2f8a4423171d86ced5c8872b}
+\hypertarget{usscalc_8c_ab75be13d6d9ba70e2a9591121b408184}{}\index{usscalc.\+c@{usscalc.\+c}!mirror@{mirror}}
+\index{mirror@{mirror}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{mirror}]{\setlength{\rightskip}{0pt plus 5cm}\#define mirror~0}\label{usscalc_8c_ab75be13d6d9ba70e2a9591121b408184}
+\hypertarget{usscalc_8c_ab765f8aafdcbbd05cfcd27e208eb55b2}{}\index{usscalc.\+c@{usscalc.\+c}!P\+N\+U@{P\+N\+U}}
+\index{P\+N\+U@{P\+N\+U}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{P\+N\+U}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+N\+U~0x12bc}\label{usscalc_8c_ab765f8aafdcbbd05cfcd27e208eb55b2}
+
+\begin{DoxyParams}{Parameters}
+{\em P\+N\+U} & P\+N\+U\+: bit 0-\/10 (0000 0111 1111 1111) -\/ parameter-\/nummer (this is not the number of words P\+K\+W\+\_\+\+A\+N\+Z) \\
+\hline
+\end{DoxyParams}
+\hypertarget{usscalc_8c_a544eab7def9683a65c07c12fb091acc7}{}\index{usscalc.\+c@{usscalc.\+c}!P\+N\+Uex@{P\+N\+Uex}}
+\index{P\+N\+Uex@{P\+N\+Uex}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{P\+N\+Uex}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+N\+Uex~0x00}\label{usscalc_8c_a544eab7def9683a65c07c12fb091acc7}
+
+\begin{DoxyParams}{Parameters}
+{\em P\+N\+Uex} & P\+N\+Eex\+: bit 15-\/12 \\
+\hline
+\end{DoxyParams}
+\hypertarget{usscalc_8c_a8ef3f4ce9afc84a8f4b4c62237ad2dcb}{}\index{usscalc.\+c@{usscalc.\+c}!ppo@{ppo}}
+\index{ppo@{ppo}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{ppo}]{\setlength{\rightskip}{0pt plus 5cm}\#define ppo~1}\label{usscalc_8c_a8ef3f4ce9afc84a8f4b4c62237ad2dcb}
+
+\begin{DoxyParams}{Parameters}
+{\em ppo1} & 
+\begin{DoxyItemize}
+\item ppo1\+: stx, lge, adr, (word1\+: pke\+Hi, pke\+Lo), (word2\+: ind\+Hi, ind\+Lo), (word3\+: pwe1\+Hi, pwe1\+Lo), (word4\+: pwe2\+Hi, pwe2\+Lo), pzd1\+Hi, pzd1\+Lo, bcc
+\item ppo2\+: pke, ind, pwe (1+2), pzd1, pzd2, pzd3, pzd4, pzd5, pzd6
+\item ppo3\+: pzd1, pzd2
+\item ppo4\+: pzd1, pzd2, pzd3, pzd4, pzd5, pzd6
+\item ppo5\+: pke, ind, pwe (1+2), pzd1, pzd2, pzd3, pzd4, pzd5, pzd6, pzd7, pzd8, pzd9, pzd10 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\hypertarget{usscalc_8c_aecd69d9a67487cc45c38eb184c50538a}{}\index{usscalc.\+c@{usscalc.\+c}!S\+P@{S\+P}}
+\index{S\+P@{S\+P}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{S\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P~0}\label{usscalc_8c_aecd69d9a67487cc45c38eb184c50538a}
+S\+P\+: bit 11 (0000 1000 0000 0000) -\/ Spontanmeldebearbeitung, not used 
+
+\subsection{Function Documentation}
+\hypertarget{usscalc_8c_a3758bfbaa4494e65cabf188a026502de}{}\index{usscalc.\+c@{usscalc.\+c}!calc\+B\+C\+C@{calc\+B\+C\+C}}
+\index{calc\+B\+C\+C@{calc\+B\+C\+C}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{calc\+B\+C\+C()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t} calc\+B\+C\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_a3758bfbaa4494e65cabf188a026502de}
+
+
+Function calculates the B\+C\+C check sum by simply xoring the actual with a previous value. 
+
+\begin{DoxyReturn}{Returns}
+8-\/bit unsigned value 
+\end{DoxyReturn}
+\hypertarget{usscalc_8c_a1237de7b0698797181f0b54a04a0e5c9}{}\index{usscalc.\+c@{usscalc.\+c}!get\+All\+Values@{get\+All\+Values}}
+\index{get\+All\+Values@{get\+All\+Values}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{get\+All\+Values(uint16\+\_\+t $\ast$my\+Param\+Arr, uint8\+\_\+t length)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t}$\ast$ get\+All\+Values (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t} $\ast$}]{my\+Param\+Arr, }
+\item[{{\bf uint8\+\_\+t}}]{length}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_a1237de7b0698797181f0b54a04a0e5c9}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8c_a1237de7b0698797181f0b54a04a0e5c9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usscalc_8c_a634a622655ffe4ad4807ac03238b8194}{}\index{usscalc.\+c@{usscalc.\+c}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{get\+Value(uint16\+\_\+t my\+Reg\+No)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\+\_\+t} get\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{my\+Reg\+No}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_a634a622655ffe4ad4807ac03238b8194}
+
+
+Function returns one parameter value from the Micro\+Master. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Reg\+No} & is a 16-\/bit value that represents the number of M\+M-\/register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 16-\/bit value. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usscalc_8c_a634a622655ffe4ad4807ac03238b8194_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usscalc_8c_a85c6e2ff77e81e72a69c5ebcb86b1ebc}{}\index{usscalc.\+c@{usscalc.\+c}!prep\+Telegram@{prep\+Telegram}}
+\index{prep\+Telegram@{prep\+Telegram}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{prep\+Telegram(uint16\+\_\+t my\+Reg\+No)}]{\setlength{\rightskip}{0pt plus 5cm}void prep\+Telegram (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\+\_\+t}}]{my\+Reg\+No}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_a85c6e2ff77e81e72a69c5ebcb86b1ebc}
+
+
+ver 2.\+03 Function creates a telegram message according to the U\+S\+S-\/protocol. ~\newline
+ The message is 14-\/byte long and consists of\+: 
+
+
+\begin{DoxyItemize}
+\item 00. byte\+: S\+T\+X, start of telegram
+\item 01. byte\+: L\+G\+E, length of telegram
+\item 02. byte\+: A\+D\+R, device number
+\item 03. byte\+: P\+K\+Ehi, 1. word, register number
+\item 04. byte\+: P\+K\+Elo, A\+K, S\+P
+\item 05. byte\+: I\+N\+Dhi, P\+K\+W, 2. word, page index
+\item 06. byte\+: I\+N\+Dlo, subindex ~\newline
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- start of P\+K\+W -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+\item 07. byte\+: P\+W\+E1hi, 3. word
+\item 08. byte\+: P\+W\+E1lo, 1st parameter value, high-\/order word
+\item 09. byte\+: P\+W\+E2hi, P\+K\+W, 4. word
+\item 10. byte\+: P\+W\+E2lo, 2nd parameter value, low-\/order word ~\newline
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- end of P\+K\+W -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- ~\newline
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- start of P\+Z\+D -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+\item 11. byte\+: P\+Z\+D1hi, S\+T\+W/\+Z\+S\+W
+\item 12. byte\+: P\+Z\+D1lo, H\+S\+W//\+H\+I\+W ~\newline
+ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---end of P\+Z\+D -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+\item 13. byte\+: B\+C\+C check sum of telegrams 
+\begin{DoxyParams}{Parameters}
+{\em my\+Reg\+No} & number of register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no return. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{usscalc_8c_a85c6e2ff77e81e72a69c5ebcb86b1ebc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usscalc_8c_af3c52cfa11b974e99c3c58cf4c524855}{}\index{usscalc.\+c@{usscalc.\+c}!send\+Telegram@{send\+Telegram}}
+\index{send\+Telegram@{send\+Telegram}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{send\+Telegram()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\+\_\+t}$\ast$ send\+Telegram (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_af3c52cfa11b974e99c3c58cf4c524855}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{usscalc_8c_af3c52cfa11b974e99c3c58cf4c524855_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{usscalc_8c_aa3b21853f890838c88d047d6c2786917}{}\index{usscalc.\+c@{usscalc.\+c}!wait@{wait}}
+\index{wait@{wait}!usscalc.\+c@{usscalc.\+c}}
+\subsubsection[{wait()}]{\setlength{\rightskip}{0pt plus 5cm}void wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{usscalc_8c_aa3b21853f890838c88d047d6c2786917}

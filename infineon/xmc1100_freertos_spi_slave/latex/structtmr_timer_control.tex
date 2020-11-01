@@ -1,0 +1,138 @@
+\hypertarget{structtmr_timer_control}{}\doxysection{tmr\+Timer\+Control Struct Reference}
+\label{structtmr_timer_control}\index{tmrTimerControl@{tmrTimerControl}}
+
+
+Collaboration diagram for tmr\+Timer\+Control\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{structtmr_timer_control__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{structtmr_timer_control_a2eaabf3e9361ed55fe003d8c126d0992}{pc\+Timer\+Name}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_a1a62d469392f9bfe2443e7efab9c8398}{List\+Item\+\_\+t}} \mbox{\hyperlink{structtmr_timer_control_a0c1a269ad9f8c4ac16fe0e74fb7b4069}{x\+Timer\+List\+Item}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t}} \mbox{\hyperlink{structtmr_timer_control_ac47cb7213a91706ba53e0f869f393748}{x\+Timer\+Period\+In\+Ticks}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structtmr_timer_control_a978a57f01b9d8d0ce8a4d3d3c1da3cf9}{ux\+Auto\+Reload}}
+\item 
+void $\ast$ \mbox{\hyperlink{structtmr_timer_control_a4b669df059ca5686e473dd3328abdb1f}{pv\+Timer\+ID}}
+\item 
+\mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2timers_8h_a5cf6d1f61ccd4871022ed8ad454c6027}{Timer\+Callback\+Function\+\_\+t}} \mbox{\hyperlink{structtmr_timer_control_ac43a7d1323a7bc8ab963f46363756fcc}{px\+Callback\+Function}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structtmr_timer_control_a52d720d939f878b6b314552f3fc74742}{ux\+Timer\+Number}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 68 of file timers.\+c.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structtmr_timer_control_a2eaabf3e9361ed55fe003d8c126d0992}\label{structtmr_timer_control_a2eaabf3e9361ed55fe003d8c126d0992}} 
+\index{tmrTimerControl@{tmrTimerControl}!pcTimerName@{pcTimerName}}
+\index{pcTimerName@{pcTimerName}!tmrTimerControl@{tmrTimerControl}}
+\doxysubsubsection{\texorpdfstring{pcTimerName}{pcTimerName}}
+{\footnotesize\ttfamily const char$\ast$ tmr\+Timer\+Control\+::pc\+Timer\+Name}
+
+
+
+Definition at line 70 of file timers.\+c.
+
+
+
+Referenced by pc\+Timer\+Get\+Name(), and prv\+Initialise\+New\+Timer().
+
+\mbox{\Hypertarget{structtmr_timer_control_a4b669df059ca5686e473dd3328abdb1f}\label{structtmr_timer_control_a4b669df059ca5686e473dd3328abdb1f}} 
+\index{tmrTimerControl@{tmrTimerControl}!pvTimerID@{pvTimerID}}
+\index{pvTimerID@{pvTimerID}!tmrTimerControl@{tmrTimerControl}}
+\doxysubsubsection{\texorpdfstring{pvTimerID}{pvTimerID}}
+{\footnotesize\ttfamily void$\ast$ tmr\+Timer\+Control\+::pv\+Timer\+ID}
+
+
+
+Definition at line 74 of file timers.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Timer(), pv\+Timer\+Get\+Timer\+I\+D(), and v\+Timer\+Set\+Timer\+I\+D().
+
+\mbox{\Hypertarget{structtmr_timer_control_ac43a7d1323a7bc8ab963f46363756fcc}\label{structtmr_timer_control_ac43a7d1323a7bc8ab963f46363756fcc}} 
+\index{tmrTimerControl@{tmrTimerControl}!pxCallbackFunction@{pxCallbackFunction}}
+\index{pxCallbackFunction@{pxCallbackFunction}!tmrTimerControl@{tmrTimerControl}}
+\doxysubsubsection{\texorpdfstring{pxCallbackFunction}{pxCallbackFunction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_model_2_a_p_p_s_2_f_r_e_e_r_t_o_s_2v4__1__2_2_templates_2timers_8h_a5cf6d1f61ccd4871022ed8ad454c6027}{Timer\+Callback\+Function\+\_\+t}} tmr\+Timer\+Control\+::px\+Callback\+Function}
+
+
+
+Definition at line 75 of file timers.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Timer(), prv\+Process\+Expired\+Timer(), prv\+Process\+Received\+Commands(), and prv\+Switch\+Timer\+Lists().
+
+\mbox{\Hypertarget{structtmr_timer_control_a978a57f01b9d8d0ce8a4d3d3c1da3cf9}\label{structtmr_timer_control_a978a57f01b9d8d0ce8a4d3d3c1da3cf9}} 
+\index{tmrTimerControl@{tmrTimerControl}!uxAutoReload@{uxAutoReload}}
+\index{uxAutoReload@{uxAutoReload}!tmrTimerControl@{tmrTimerControl}}
+\doxysubsubsection{\texorpdfstring{uxAutoReload}{uxAutoReload}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} tmr\+Timer\+Control\+::ux\+Auto\+Reload}
+
+
+
+Definition at line 73 of file timers.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Timer(), and prv\+Process\+Expired\+Timer().
+
+\mbox{\Hypertarget{structtmr_timer_control_a52d720d939f878b6b314552f3fc74742}\label{structtmr_timer_control_a52d720d939f878b6b314552f3fc74742}} 
+\index{tmrTimerControl@{tmrTimerControl}!uxTimerNumber@{uxTimerNumber}}
+\index{uxTimerNumber@{uxTimerNumber}!tmrTimerControl@{tmrTimerControl}}
+\doxysubsubsection{\texorpdfstring{uxTimerNumber}{uxTimerNumber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} tmr\+Timer\+Control\+::ux\+Timer\+Number}
+
+
+
+Definition at line 77 of file timers.\+c.
+
+\mbox{\Hypertarget{structtmr_timer_control_a0c1a269ad9f8c4ac16fe0e74fb7b4069}\label{structtmr_timer_control_a0c1a269ad9f8c4ac16fe0e74fb7b4069}} 
+\index{tmrTimerControl@{tmrTimerControl}!xTimerListItem@{xTimerListItem}}
+\index{xTimerListItem@{xTimerListItem}!tmrTimerControl@{tmrTimerControl}}
+\doxysubsubsection{\texorpdfstring{xTimerListItem}{xTimerListItem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_a1a62d469392f9bfe2443e7efab9c8398}{List\+Item\+\_\+t}} tmr\+Timer\+Control\+::x\+Timer\+List\+Item}
+
+
+
+Definition at line 71 of file timers.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Timer(), prv\+Insert\+Timer\+In\+Active\+List(), prv\+Process\+Expired\+Timer(), prv\+Process\+Received\+Commands(), prv\+Switch\+Timer\+Lists(), x\+Timer\+Get\+Expiry\+Time(), and x\+Timer\+Is\+Timer\+Active().
+
+\mbox{\Hypertarget{structtmr_timer_control_ac47cb7213a91706ba53e0f869f393748}\label{structtmr_timer_control_ac47cb7213a91706ba53e0f869f393748}} 
+\index{tmrTimerControl@{tmrTimerControl}!xTimerPeriodInTicks@{xTimerPeriodInTicks}}
+\index{xTimerPeriodInTicks@{xTimerPeriodInTicks}!tmrTimerControl@{tmrTimerControl}}
+\doxysubsubsection{\texorpdfstring{xTimerPeriodInTicks}{xTimerPeriodInTicks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_aa69c48c6e902ce54f70886e6573c92a9}{Tick\+Type\+\_\+t}} tmr\+Timer\+Control\+::x\+Timer\+Period\+In\+Ticks}
+
+
+
+Definition at line 72 of file timers.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Timer(), prv\+Insert\+Timer\+In\+Active\+List(), prv\+Process\+Expired\+Timer(), prv\+Process\+Received\+Commands(), and x\+Timer\+Get\+Period().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dave/\+Generated/\+F\+R\+E\+E\+R\+T\+O\+S/\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2timers_8c}{timers.\+c}}\end{DoxyCompactItemize}

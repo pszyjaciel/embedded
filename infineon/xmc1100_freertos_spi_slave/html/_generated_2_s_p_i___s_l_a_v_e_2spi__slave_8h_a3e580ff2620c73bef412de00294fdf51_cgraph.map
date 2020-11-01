@@ -1,0 +1,7 @@
+<map id="SPI_SLAVE_AbortTransmit" name="SPI_SLAVE_AbortTransmit">
+<area shape="rect" id="node1" title="Aborts the ongoing data transmission." alt="" coords="5,97,187,124"/>
+<area shape="rect" id="node2" href="$group___s_p_i.html#ga8f3bb2759c5dc83f4df9674bc7521dfa" title=" " alt="" coords="253,5,437,32"/>
+<area shape="rect" id="node3" href="$group___u_s_i_c.html#ga29a88baf5a86b4e3654608918cc83dd7" title=" " alt="" coords="235,57,456,98"/>
+<area shape="rect" id="node4" href="$group___u_s_i_c.html#ga9e6752477811e670605881eedb48819a" title=" " alt="" coords="265,122,426,163"/>
+<area shape="rect" id="node5" href="$group___u_s_i_c.html#ga193ef138d483148c4209e62b4507b46d" title=" " alt="" coords="265,187,426,229"/>
+</map>

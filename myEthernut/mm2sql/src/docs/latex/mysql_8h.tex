@@ -1,0 +1,1579 @@
+\hypertarget{mysql_8h}{}\section{mysql.\+h File Reference}
+\label{mysql_8h}\index{mysql.\+h@{mysql.\+h}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}mysql\+\_\+version.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mysql\+\_\+com.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mysql\+\_\+time.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}my\+\_\+list.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../mysql/client\+\_\+plugin.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}typelib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}my\+\_\+alloc.\+h\char`\"{}}\\*
+Include dependency graph for mysql.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mysql_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{mysql_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structst__mysql__field}{st\+\_\+mysql\+\_\+field}
+\item 
+struct \hyperlink{structst__mysql__rows}{st\+\_\+mysql\+\_\+rows}
+\item 
+struct \hyperlink{structst__mysql__data}{st\+\_\+mysql\+\_\+data}
+\item 
+struct \hyperlink{structst__mysql__options}{st\+\_\+mysql\+\_\+options}
+\item 
+struct \hyperlink{structcharacter__set}{character\+\_\+set}
+\item 
+struct \hyperlink{structst__mysql}{st\+\_\+mysql}
+\item 
+struct \hyperlink{structst__mysql__res}{st\+\_\+mysql\+\_\+res}
+\item 
+struct \hyperlink{structst__mysql__parameters}{st\+\_\+mysql\+\_\+parameters}
+\item 
+struct \hyperlink{structst__mysql__bind}{st\+\_\+mysql\+\_\+bind}
+\item 
+struct \hyperlink{structst__mysql__stmt}{st\+\_\+mysql\+\_\+stmt}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L}
+\item 
+\#define \hyperlink{mysql_8h_a2a9336a51b002fb5ff147e574d6434be}{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T}~365$\ast$24$\ast$3600	/$\ast$ Timeout on read $\ast$/
+\item 
+\#define \hyperlink{mysql_8h_ada95a5c6a955ac2895dffa48349ad35b}{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T}~365$\ast$24$\ast$3600	/$\ast$ Timeout on write $\ast$/
+\item 
+\#define \hyperlink{mysql_8h_a60056c465b03308a4ff3c446535c73d5}{I\+S\+\_\+\+P\+R\+I\+\_\+\+K\+E\+Y}(n)~((n) \& \hyperlink{mysql__com_8h_a06d741340319e92c3ee7139079488ca8}{P\+R\+I\+\_\+\+K\+E\+Y\+\_\+\+F\+L\+A\+G})
+\item 
+\#define \hyperlink{mysql_8h_a209056026b37bf3522b7170da447feec}{I\+S\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L}(n)~((n) \& \hyperlink{mysql__com_8h_a50377f5ca5b3e92f3931a81fe7b44043}{N\+O\+T\+\_\+\+N\+U\+L\+L\+\_\+\+F\+L\+A\+G})
+\item 
+\#define \hyperlink{mysql_8h_a1e5fa6abbd5b4b2e729858e7a87ac759}{I\+S\+\_\+\+B\+L\+O\+B}(n)~((n) \& \hyperlink{mysql__com_8h_a5a1ebc825faa2b47812f514190cefb02}{B\+L\+O\+B\+\_\+\+F\+L\+A\+G})
+\item 
+\#define \hyperlink{mysql_8h_ad54318c3afe8639877a4cc628dc868a9}{I\+S\+\_\+\+N\+U\+M}(t)~(((t) $<$= \hyperlink{mysql__com_8h_a69e798807026a0f7e12b1d6c72374854aee0b45950ddbb0f51bdd2ee086552aba}{M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T24} \&\& (t) != \hyperlink{mysql__com_8h_a69e798807026a0f7e12b1d6c72374854ae9057027fedb101da18b352d4784fcb0}{M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P}) $\vert$$\vert$ (t) == \hyperlink{mysql__com_8h_a69e798807026a0f7e12b1d6c72374854af56f96ba1e7d7cf216d987f8dce9650e}{M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Y\+E\+A\+R} $\vert$$\vert$ (t) == \hyperlink{mysql__com_8h_a69e798807026a0f7e12b1d6c72374854abf1e0aa5e259fe4d630043c94f6f693a}{M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+E\+W\+D\+E\+C\+I\+M\+A\+L})
+\item 
+\#define \hyperlink{mysql_8h_aa676fef30356c2226922f6ebc81d928c}{I\+S\+\_\+\+L\+O\+N\+G\+D\+A\+T\+A}(t)~((t) $>$= \hyperlink{mysql__com_8h_a69e798807026a0f7e12b1d6c72374854a9b4a7755878cc06fccbfef853d2f7d1b}{M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+N\+Y\+\_\+\+B\+L\+O\+B} \&\& (t) $<$= \hyperlink{mysql__com_8h_a69e798807026a0f7e12b1d6c72374854a71bd15e06b1280e3a881af8c50767180}{M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G})
+\item 
+\#define \hyperlink{mysql_8h_adaafa376da2bf1201cac79a0703c6ca5}{M\+Y\+S\+Q\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+O\+R}~($\sim$(\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong}) 0)
+\item 
+\#define \hyperlink{mysql_8h_a3c0b5d69b5c297335640414806af35a5}{E\+R\+\_\+\+W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}~W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D
+\item 
+\#define \hyperlink{mysql_8h_a45bf751168b032c8b525e570a4c232d4}{M\+Y\+S\+Q\+L\+\_\+\+C\+L\+I\+E\+N\+T}
+\item 
+\#define \hyperlink{mysql_8h_a12abd04f7e07d9555dc4dc2999e6a4dd}{max\+\_\+allowed\+\_\+packet}~($\ast$\hyperlink{mysql_8h_aa0c8dcb12ab1833d2e1dd6d5730e6e9b}{mysql\+\_\+get\+\_\+parameters}()-\/$>$p\+\_\+max\+\_\+allowed\+\_\+packet)
+\item 
+\#define \hyperlink{mysql_8h_ace1a51272d328c90ce0e2a8723a2fd1a}{net\+\_\+buffer\+\_\+length}~($\ast$\hyperlink{mysql_8h_aa0c8dcb12ab1833d2e1dd6d5730e6e9b}{mysql\+\_\+get\+\_\+parameters}()-\/$>$p\+\_\+net\+\_\+buffer\+\_\+length)
+\item 
+\#define \hyperlink{mysql_8h_ae8b141c64aa2a5a9395992c290ea67f2}{mysql\+\_\+library\+\_\+init}~\hyperlink{mysql_8h_a724e1c14ad46e2aac8c39643eb8a96bb}{mysql\+\_\+server\+\_\+init}
+\item 
+\#define \hyperlink{mysql_8h_ad4a32f550a5731b8cc761bba29703e5f}{mysql\+\_\+library\+\_\+end}~\hyperlink{mysql_8h_ab65120b6e611702fad3e1c74c9a91924}{mysql\+\_\+server\+\_\+end}
+\item 
+\#define \hyperlink{mysql_8h_a63fbdb76ec1265024a664041c556f0fc}{L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+E\+N}~512
+\item 
+\#define \hyperlink{mysql_8h_ac4ad026e5792fb8fbe4c63217acbe3bc}{M\+Y\+S\+Q\+L\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A}~100
+\item 
+\#define \hyperlink{mysql_8h_a836a93f13180be88fbc7619a5f107d66}{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}~101
+\item 
+\#define \hyperlink{mysql_8h_a0d8900a190a42495ba4e21d1b8f2cf50}{mysql\+\_\+reload}(mysql)~\hyperlink{mysql_8h_a019789e8e18395ba49d7963f0a788530}{mysql\+\_\+refresh}((mysql),\hyperlink{mysql__com_8h_abd0b4e170cad1ea4cc971f38e669ee7d}{R\+E\+F\+R\+E\+S\+H\+\_\+\+G\+R\+A\+N\+T})
+\item 
+\#define \hyperlink{mysql_8h_a4be0c182358ef8467b0a950796916c3b}{H\+A\+V\+E\+\_\+\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool}
+\item 
+typedef int \hyperlink{mysql_8h_aed973571b4b7eb2facd8c39e8b500bb6}{my\+\_\+socket}
+\item 
+typedef struct \hyperlink{structst__mysql__field}{st\+\_\+mysql\+\_\+field} \hyperlink{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}
+\item 
+typedef char $\ast$$\ast$ \hyperlink{mysql_8h_afae8ad264fb6a4bd740df59f19b9da71}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W}
+\item 
+typedef unsigned int \hyperlink{mysql_8h_af5d4ae5dd5ba78eab72fe70af3add49c}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T}
+\item 
+typedef unsigned long long \hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong}
+\item 
+typedef struct \hyperlink{structst__mysql__rows}{st\+\_\+mysql\+\_\+rows} \hyperlink{mysql_8h_a4d0140764825a51eae874c641df1afb5}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S}
+\item 
+typedef \hyperlink{mysql_8h_a4d0140764825a51eae874c641df1afb5}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S} $\ast$ \hyperlink{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T}
+\item 
+typedef struct embedded\+\_\+query\+\_\+result \hyperlink{mysql_8h_afd272e3d2915579a76c8536006ea609b}{E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+U\+L\+T}
+\item 
+typedef struct \hyperlink{structst__mysql__data}{st\+\_\+mysql\+\_\+data} \hyperlink{mysql_8h_a19837b8e2f5cec429a5b61d4d5c68ed6}{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A}
+\item 
+typedef struct \hyperlink{structcharacter__set}{character\+\_\+set} \hyperlink{mysql_8h_a0d37d444b9a07ee888a35d9bd4497f39}{M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O}
+\item 
+typedef struct \hyperlink{structst__mysql}{st\+\_\+mysql} \hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L}
+\item 
+typedef struct \hyperlink{structst__mysql__res}{st\+\_\+mysql\+\_\+res} \hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}
+\item 
+typedef struct \hyperlink{structst__mysql__parameters}{st\+\_\+mysql\+\_\+parameters} \hyperlink{mysql_8h_ac7e4a005304e99eb5f0ac7d4ea8caec3}{M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S}
+\item 
+typedef struct \hyperlink{structst__mysql__bind}{st\+\_\+mysql\+\_\+bind} \hyperlink{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D}
+\item 
+typedef struct \hyperlink{structst__mysql__stmt}{st\+\_\+mysql\+\_\+stmt} \hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836}{mysql\+\_\+option} \{ \\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a04b7361eec201f2f90932f93bcf9f037}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a0988d7276abb518e1ff4cd537e665614}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836af29e418c5e26de0b5881106953437698}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+N\+A\+M\+E\+D\+\_\+\+P\+I\+P\+E}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836af509dae920bb0afd8f8282133c51523d}{M\+Y\+S\+Q\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836ab42cd277182e0c81e003c6165758e305}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836aa3fff32c09f78dd3561f62841868e82c}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+O\+U\+P}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a1fd59047f371393a78a0ec4b09b1a2ec}{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+D\+I\+R}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a48965936f489f785236feef5f2890511}{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+N\+A\+M\+E}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a40fd988ef9d515d8df1b605cb41d6a5b}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a2463564004516e07cfc764e01cd88188}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a5a48bd0ecdd7b6996619fe37403cac03}{M\+Y\+S\+Q\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+A\+S\+E\+\_\+\+N\+A\+M\+E}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a7100a11b3f4e9cc485dcd8a64bb51fb0}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a7f9865ca3978f5a1abadbaf00f93c0b9}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836ad60f14bcd3d6b7a1ec0e650dd6895122}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a461fe7e7c0a4db27856221e369d1f7b9}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836aa946a5ed2cce384c3f21897adc2f02b0}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a21b624547ab25edba1a0beef2db05102}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+G\+U\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a8747191a8e80029184f4275c31a12ec9}{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+I\+P}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a3b976fb0fe320dc1367684d94995c04b}{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+U\+T\+H}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836adb481f6c8386fcfd212bf9443fdf3dbc}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+I\+O\+N}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836afb25bc17a6360c310032259992672fd4}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836aa7bea62884133eeafafafde9c7433cd2}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+C\+E\+R\+T}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836ad08d23092df1b3c1c503e72160b8d4ba}{M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+R}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836acd043f70d139eaf25e8b4963cfc836ca}{M\+Y\+S\+Q\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+T\+H}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a794d949e93204bebe8ea109c21b62c62}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+B\+I\+N\+D}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a81d6925def422ef2b21961429bc3dfc9}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+K\+E\+Y}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836ab33391e83e9c12889071350201c5a821}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a5e6057b42b35b44e32f6cb8d5fe77413}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836acc92d3b95f6f82839f8051a8e0619394}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A\+P\+A\+T\+H}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a39420f2f6720733db01deb3494c915c3}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+I\+P\+H\+E\+R}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836ade6f9005b13973a76c5c0d93db88aed0}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836aab6b8ccc6a561b7f1ca70cb4d3a4ed94}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L\+P\+A\+T\+H}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836aa8be5c75307abf34256bff90336f99a3}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+S\+E\+T}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a920a34c542ad2379724152c6e00b1a94}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+D}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a2a99bedec5b10425739b1e5d787010b7}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+L\+E\+T\+E}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a5c10b1587ea52131a8a7680857a48532}{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y}, 
+\\*
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836ae58a7cbcb83c3eac9459463f161235af}{M\+Y\+S\+Q\+L\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+L\+E\+A\+R\+T\+E\+X\+T\+\_\+\+P\+L\+U\+G\+I\+N}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a87edd1a1c6f1b9eca5f0d9e20d5072c9}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+E\+X\+P\+I\+R\+E\+D\+\_\+\+P\+A\+S\+S\+W\+O\+R\+D\+S}, 
+\hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836a14c725a6d34788b462106b6afb6ebc16}{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+E\+N\+F\+O\+R\+C\+E}
+ \}
+\item 
+enum \hyperlink{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5d}{mysql\+\_\+status} \{ \hyperlink{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da5b9a77ab649e8ee6da459016f7daa06c}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+A\+D\+Y}, 
+\hyperlink{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da2cef1dfe36cb944ab2744ead96cd5a5d}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T}, 
+\hyperlink{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da17782fa4f4a6c15c5f114c04ea726d7d}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T}, 
+\hyperlink{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da1fb435cec252952e420e6f4e96261eba}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+T\+A\+T\+E\+M\+E\+N\+T\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T}
+ \}
+\item 
+enum \hyperlink{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9}{mysql\+\_\+protocol\+\_\+type} \{ \\*
+\hyperlink{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a4ca6aa2b0a3c5f72457214fa5b37728f}{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T}, 
+\hyperlink{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a061914346fab1226594f32cd21f8aa3d}{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+C\+P}, 
+\hyperlink{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9af1416ca8f572227475c82fdf8ef2856d}{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+O\+C\+K\+E\+T}, 
+\hyperlink{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a8bb817c9cfe1071e5dd37e1d78954efb}{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+P\+I\+P\+E}, 
+\\*
+\hyperlink{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a6a905ff56459011393053d00a0407b26}{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+E\+M\+O\+R\+Y}
+ \}
+\item 
+enum \hyperlink{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63}{enum\+\_\+mysql\+\_\+stmt\+\_\+state} \{ \hyperlink{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63a819cd41f5a6872a65530714a56dffc98}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+I\+N\+I\+T\+\_\+\+D\+O\+N\+E} = 1, 
+\hyperlink{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63a0f4ca2651be614045d44b37aee9f177a}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+D\+O\+N\+E}, 
+\hyperlink{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63af9493784c7da556f36fb3fa867fc8a3b}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+D\+O\+N\+E}, 
+\hyperlink{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63ab09550e422afa23d495ce12263d42b32}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+F\+E\+T\+C\+H\+\_\+\+D\+O\+N\+E}
+ \}
+\item 
+enum \hyperlink{mysql_8h_a6a817651ddd965cbe062659e174ff92f}{enum\+\_\+stmt\+\_\+attr\+\_\+type} \{ \hyperlink{mysql_8h_a6a817651ddd965cbe062659e174ff92fa65ee8085ca508e83a7a05bd9260c8c9a}{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}, 
+\hyperlink{mysql_8h_a6a817651ddd965cbe062659e174ff92fab438ec55961a1dfc64c3d11bad080b66}{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{mysql_8h_a6a817651ddd965cbe062659e174ff92fa09126057589656d0fbf03be26a78a116}{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+E\+F\+E\+T\+C\+H\+\_\+\+R\+O\+W\+S}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a724e1c14ad46e2aac8c39643eb8a96bb}{mysql\+\_\+server\+\_\+init} (int argc, char $\ast$$\ast$argv, char $\ast$$\ast$groups)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab65120b6e611702fad3e1c74c9a91924}{mysql\+\_\+server\+\_\+end} (void)
+\item 
+\hyperlink{mysql_8h_ac7e4a005304e99eb5f0ac7d4ea8caec3}{M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aa0c8dcb12ab1833d2e1dd6d5730e6e9b}{mysql\+\_\+get\+\_\+parameters} (void)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a30b32d00bd5ac5691c4b7ff5b05067e8}{mysql\+\_\+thread\+\_\+init} (void)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af521e01410f5e055352db9757ce7fe8e}{mysql\+\_\+thread\+\_\+end} (void)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a0a0eddc4c9052c5d5d665d5b6ee929cd}{mysql\+\_\+num\+\_\+rows} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$res)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_afb587699269dcf289e0452564207b7f1}{mysql\+\_\+num\+\_\+fields} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$res)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af4f9fb4fcb831a589c85191e00300fc1}{mysql\+\_\+eof} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$res)
+\item 
+\hyperlink{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a0408d163c5bfbebeb3671a38ff6ae1a3}{mysql\+\_\+fetch\+\_\+field\+\_\+direct} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$res, unsigned int fieldnr)
+\item 
+\hyperlink{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a318dea46875c77798440629c2ea975ed}{mysql\+\_\+fetch\+\_\+fields} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$res)
+\item 
+\hyperlink{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab53f65082bc67554fb1f46bcdcf47a70}{mysql\+\_\+row\+\_\+tell} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$res)
+\item 
+\hyperlink{mysql_8h_af5d4ae5dd5ba78eab72fe70af3add49c}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a839d677a9588558a7983f510caa998f9}{mysql\+\_\+field\+\_\+tell} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$res)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a2afbb4d8b80fba4581306007e72a00ee}{mysql\+\_\+field\+\_\+count} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aef7f0a2985ccf3cbdb3115dee42e3699}{mysql\+\_\+affected\+\_\+rows} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ad5431c16e4f6f8f1af3748ad732cca05}{mysql\+\_\+insert\+\_\+id} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a11a4321c550a74672fe26f02996efa3f}{mysql\+\_\+errno} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aa4f352a0ef888f350687c48d8acb6180}{mysql\+\_\+error} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a32dda733ec2257692163a66b7e24bc64}{mysql\+\_\+sqlstate} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a680fcc0848fb5287f5ba2e7178181572}{mysql\+\_\+warning\+\_\+count} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a6bf5a1bc75e654a767d76b4a7cde7a2c}{mysql\+\_\+info} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+unsigned long \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a4131fd3cb5041b6997010fbbddb0c866}{mysql\+\_\+thread\+\_\+id} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a6775251f900ea9a8c41c797926e11d47}{mysql\+\_\+character\+\_\+set\+\_\+name} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a4e5edde9a55264a1b937ca6eb7bd6497}{mysql\+\_\+set\+\_\+character\+\_\+set} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$csname)
+\item 
+\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a57dd141bcf4441d66c1ef41cf1cb058b}{mysql\+\_\+init} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_acbf40f58cb494f4a64f0b016ae1fc67c}{mysql\+\_\+ssl\+\_\+set} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$key, const char $\ast$cert, const char $\ast$ca, const char $\ast$capath, const char $\ast$cipher)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a42a29e12fbcb5890314a33c9c8ba4e1b}{mysql\+\_\+get\+\_\+ssl\+\_\+cipher} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ac8c7bf52f50668c268c661708acffd6a}{mysql\+\_\+change\+\_\+user} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$user, const char $\ast$passwd, const char $\ast$db)
+\item 
+\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a613a678e4a6940b415bdc3d0a4cd6def}{mysql\+\_\+real\+\_\+connect} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$host, const char $\ast$user, const char $\ast$passwd, const char $\ast$db, unsigned int port, const char $\ast$unix\+\_\+socket, unsigned long clientflag)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a573c9edfe7701b8cb346221aa437bd88}{mysql\+\_\+select\+\_\+db} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$db)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_abc8edade534933593ab605741422b319}{mysql\+\_\+query} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$q)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a1243de90b5a25d24bd69f7d929bf4863}{mysql\+\_\+send\+\_\+query} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$q, unsigned long length)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a20ef8a4b6bdcb0276708b85bd1edb2a6}{mysql\+\_\+real\+\_\+query} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$q, unsigned long length)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a11029d06cd3bf4fc76ce4be717146ea3}{mysql\+\_\+store\+\_\+result} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a67951903960ca1cfab10c0f3482fc18a}{mysql\+\_\+use\+\_\+result} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab58306ec7636318711b2fc797a979b5b}{mysql\+\_\+get\+\_\+character\+\_\+set\+\_\+info} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, \hyperlink{mysql_8h_a0d37d444b9a07ee888a35d9bd4497f39}{M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O} $\ast$charset)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af3df95f14073f385163918cbf2e829bf}{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+first} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, enum \hyperlink{mysql__com_8h_a1c6cf2629b0bda6da6788a25725d6b7f}{enum\+\_\+session\+\_\+state\+\_\+type} type, const char $\ast$$\ast$data, size\+\_\+t $\ast$length)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aa5a73ac3bf9a383fcc8e141f86ff0b05}{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+next} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, enum \hyperlink{mysql__com_8h_a1c6cf2629b0bda6da6788a25725d6b7f}{enum\+\_\+session\+\_\+state\+\_\+type} type, const char $\ast$$\ast$data, size\+\_\+t $\ast$length)
+\item 
+void \hyperlink{mysql_8h_a8ba6f219194fce4e455ac5c47ca084bc}{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+handler} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, int($\ast$local\+\_\+infile\+\_\+init)(void $\ast$$\ast$, const char $\ast$,                                                                                                       void $\ast$), int($\ast$local\+\_\+infile\+\_\+read)(void $\ast$, char $\ast$, unsigned int), void($\ast$local\+\_\+infile\+\_\+end)(void $\ast$), int($\ast$local\+\_\+infile\+\_\+error)(void $\ast$, char $\ast$, unsigned int), void $\ast$)
+\item 
+void \hyperlink{mysql_8h_ae7b8a414b4314da534597ba89f561c88}{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+default} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a678473798bddfda6f1d001a4879d3477}{mysql\+\_\+shutdown} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, enum \hyperlink{mysql__com_8h_a06133bb686f1030c73086378cab8d27b}{mysql\+\_\+enum\+\_\+shutdown\+\_\+level} shutdown\+\_\+level)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af08147f7cf50dfa6c8e485c351c17f4b}{mysql\+\_\+dump\+\_\+debug\+\_\+info} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a019789e8e18395ba49d7963f0a788530}{mysql\+\_\+refresh} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, unsigned int refresh\+\_\+options)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a445f7a3c514f228a3b841813fee4f5cb}{mysql\+\_\+kill} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, unsigned long pid)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a8b8952a491c9be146b33cb50237f6001}{mysql\+\_\+set\+\_\+server\+\_\+option} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, enum \hyperlink{mysql__com_8h_a53f60000da139fc7d547db96635a2c02}{enum\+\_\+mysql\+\_\+set\+\_\+option} option)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_afb52359ba100adf315c0b9b9be9943c3}{mysql\+\_\+ping} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ac225a19e51a082f246c8d88517b58d04}{mysql\+\_\+stat} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af8d64a9f856b7a02ab8c056e30e1d1e0}{mysql\+\_\+get\+\_\+server\+\_\+info} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab372dbc086fc98c0fa490011ac6939fe}{mysql\+\_\+get\+\_\+client\+\_\+info} (void)
+\item 
+unsigned long \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ac4e40b0c2472ab94e74c1fad4dc4a9fd}{mysql\+\_\+get\+\_\+client\+\_\+version} (void)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a60c3be23e8bca17dbf3a87c8b72f8bea}{mysql\+\_\+get\+\_\+host\+\_\+info} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+unsigned long \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a6075eb2aa12553e32ebacf057a5c443f}{mysql\+\_\+get\+\_\+server\+\_\+version} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a9e771505728b631d4409ab4ddcf626e3}{mysql\+\_\+get\+\_\+proto\+\_\+info} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab22b2082938c45d7dced3d89002d665f}{mysql\+\_\+list\+\_\+dbs} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$wild)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a5edc31b6f6b705a0de87b279ba8153fe}{mysql\+\_\+list\+\_\+tables} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$wild)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ad33fb39588eab7dda02ead3176e480ed}{mysql\+\_\+list\+\_\+processes} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_addcdda07a809daba4220a761ac390e54}{mysql\+\_\+options} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, enum \hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836}{mysql\+\_\+option} option, const void $\ast$arg)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a4cc2b4252b62a9517b4b6b2ec2e95aac}{mysql\+\_\+options4} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, enum \hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836}{mysql\+\_\+option} option, const void $\ast$arg1, const void $\ast$arg2)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a87a2cd72ca7d0eead0f138d2d12d77f8}{mysql\+\_\+get\+\_\+option} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, enum \hyperlink{mysql_8h_a255d4e9a14d73dde30125232fefac836}{mysql\+\_\+option} option, const void $\ast$arg)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ada9e5d549970fb10d2fc862739717129}{mysql\+\_\+free\+\_\+result} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$result)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a10c597851e58005c3f3843857dc2160f}{mysql\+\_\+data\+\_\+seek} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$result, \hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} offset)
+\item 
+\hyperlink{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_abcf44523dac8756b8c9252c742f87d79}{mysql\+\_\+row\+\_\+seek} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$result, \hyperlink{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} offset)
+\item 
+\hyperlink{mysql_8h_af5d4ae5dd5ba78eab72fe70af3add49c}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a84f2ca4344a8f767afc83ea21842adf0}{mysql\+\_\+field\+\_\+seek} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$result, \hyperlink{mysql_8h_af5d4ae5dd5ba78eab72fe70af3add49c}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T} offset)
+\item 
+\hyperlink{mysql_8h_afae8ad264fb6a4bd740df59f19b9da71}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a2b719aa756f05a972bce1eee22d701be}{mysql\+\_\+fetch\+\_\+row} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$result)
+\item 
+unsigned long $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ae2fd6ac97ac97a78a081e78387eeea54}{mysql\+\_\+fetch\+\_\+lengths} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$result)
+\item 
+\hyperlink{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a11e0509d2701b40b2219da9560761adc}{mysql\+\_\+fetch\+\_\+field} (\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$result)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a2732d5084f3e9a1628bae74b53c2692c}{mysql\+\_\+list\+\_\+fields} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, const char $\ast$table, const char $\ast$wild)
+\item 
+unsigned long \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab644bc560daf2ca6419df1cd66b48a7a}{mysql\+\_\+escape\+\_\+string} (char $\ast$to, const char $\ast$from, unsigned long from\+\_\+length)
+\item 
+unsigned long \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a19e20d21387fcd171c9809b642072fef}{mysql\+\_\+hex\+\_\+string} (char $\ast$to, const char $\ast$from, unsigned long from\+\_\+length)
+\item 
+unsigned long \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ae271e862886c4b54c97e4c8a911f829f}{mysql\+\_\+real\+\_\+escape\+\_\+string} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, char $\ast$to, const char $\ast$from, unsigned long length)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ae0944b5ab1f99027cdfd12636f045e72}{mysql\+\_\+debug} (const char $\ast$debug)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a71647b809cf9f72f27197177177697ea}{myodbc\+\_\+remove\+\_\+escape} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, char $\ast$name)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a0e00463b751369a0e4587c3ea3e0315a}{mysql\+\_\+thread\+\_\+safe} (void)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a518415dc4a540df3bc46e42274c2670a}{mysql\+\_\+embedded} (void)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aed679533dc26b0198734cecb0146a82b}{mysql\+\_\+read\+\_\+query\+\_\+result} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a13b3d55c0c2a20c57f5bd7fca17ef150}{mysql\+\_\+reset\+\_\+connection} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a9e7680dceaa2194919cadaefd13e5db9}{mysql\+\_\+stmt\+\_\+init} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a8d797ee1e3542c9db8823b0e9c125470}{mysql\+\_\+stmt\+\_\+prepare} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, const char $\ast$query, unsigned long length)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab4185cad2e81cb04d022cc1c7a552ac9}{mysql\+\_\+stmt\+\_\+execute} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a583682a3e86aba1275973342a5919e5d}{mysql\+\_\+stmt\+\_\+fetch} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a608f8c875a7af0b5ce128394014a771e}{mysql\+\_\+stmt\+\_\+fetch\+\_\+column} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, \hyperlink{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$bind\+\_\+arg, unsigned int column, unsigned long offset)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a88ba59ece2a241e79685188dbc8291fc}{mysql\+\_\+stmt\+\_\+store\+\_\+result} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+unsigned long \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a648e5e79bf40cebdc55e477450bcdc37}{mysql\+\_\+stmt\+\_\+param\+\_\+count} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ac2e71a3bd524f15980cd7cac3cca142a}{mysql\+\_\+stmt\+\_\+attr\+\_\+set} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, enum \hyperlink{mysql_8h_a6a817651ddd965cbe062659e174ff92f}{enum\+\_\+stmt\+\_\+attr\+\_\+type} attr\+\_\+type, const void $\ast$attr)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a5db8d743742d56b5a31d9ef645c17bb7}{mysql\+\_\+stmt\+\_\+attr\+\_\+get} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, enum \hyperlink{mysql_8h_a6a817651ddd965cbe062659e174ff92f}{enum\+\_\+stmt\+\_\+attr\+\_\+type} attr\+\_\+type, void $\ast$attr)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a1e5d700fce97945abfd8589db7b36115}{mysql\+\_\+stmt\+\_\+bind\+\_\+param} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, \hyperlink{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$bnd)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a8d56e869f6251c9495e4906d8af3b44e}{mysql\+\_\+stmt\+\_\+bind\+\_\+result} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, \hyperlink{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$bnd)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af12389cc413297bedb75432c5f9f09d2}{mysql\+\_\+stmt\+\_\+close} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aaba370e73bbe747467d04e65bcf1cdda}{mysql\+\_\+stmt\+\_\+reset} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ab218c0039546c12d77f2f0324cfdf679}{mysql\+\_\+stmt\+\_\+free\+\_\+result} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a6b44cd9617dd1ab78cd7662ec8b5223a}{mysql\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, unsigned int param\+\_\+number, const char $\ast$data, unsigned long length)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af8e35f9132ae3809b7ced457a03a376e}{mysql\+\_\+stmt\+\_\+result\+\_\+metadata} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_af33147f7e4ae15e720e9d8b9df690aba}{mysql\+\_\+stmt\+\_\+param\+\_\+metadata} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ac7f15052df439edb2381b4bbd96392a0}{mysql\+\_\+stmt\+\_\+errno} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_abb60da2fb15e98f62ddd3e9b487e5995}{mysql\+\_\+stmt\+\_\+error} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+const char $\ast$\hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aef49d900cda67437951a90d2e8c5f87d}{mysql\+\_\+stmt\+\_\+sqlstate} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_ae9a75d32c822dde18d99caa57988dfd5}{mysql\+\_\+stmt\+\_\+row\+\_\+seek} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, \hyperlink{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} offset)
+\item 
+\hyperlink{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a4a333f94f5bb2fea141e766716016dfe}{mysql\+\_\+stmt\+\_\+row\+\_\+tell} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a38dbfd9eb3b18c86b188d353a0904df1}{mysql\+\_\+stmt\+\_\+data\+\_\+seek} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt, \hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} offset)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a55405a0e0c57bdb0072fbce3519fdd37}{mysql\+\_\+stmt\+\_\+num\+\_\+rows} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a45849176553fbd39204f95227eeff6b1}{mysql\+\_\+stmt\+\_\+affected\+\_\+rows} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{my\+\_\+ulonglong} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a67a387c3b983ece6103f964b0105527d}{mysql\+\_\+stmt\+\_\+insert\+\_\+id} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+unsigned int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a02569a1f2c5cd6142445556b0865003c}{mysql\+\_\+stmt\+\_\+field\+\_\+count} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a81573324b1f7b82e4d5082fafa376f51}{mysql\+\_\+commit} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a4b1d96f8fd7153dbb249f490b2a4dc17}{mysql\+\_\+rollback} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a4cac9318a2fa43563aef4c0ab49da228}{mysql\+\_\+autocommit} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql, \hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} auto\+\_\+mode)
+\item 
+\hyperlink{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{my\+\_\+bool} \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a3233a9d225ce8a850427479802835f25}{mysql\+\_\+more\+\_\+results} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a5498795c3bb494716a0c74e27f18aeec}{mysql\+\_\+next\+\_\+result} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$mysql)
+\item 
+int \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_a6acdabde7507a189a22a862e1406bd90}{mysql\+\_\+stmt\+\_\+next\+\_\+result} (\hyperlink{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$stmt)
+\item 
+void \hyperlink{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{S\+T\+D\+C\+A\+L\+L} \hyperlink{mysql_8h_aea046bdeddad2a112a86caa97a806181}{mysql\+\_\+close} (\hyperlink{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{M\+Y\+S\+Q\+L} $\ast$sock)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{mysql_8h_a80816aeddad71ad988bd490a3a4020a5}{mysql\+\_\+port}
+\item 
+char $\ast$ \hyperlink{mysql_8h_ac53f2b5a4e5c09d4006e45c22865c279}{mysql\+\_\+unix\+\_\+port}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{mysql_8h_a2a9336a51b002fb5ff147e574d6434be}{}\index{mysql.\+h@{mysql.\+h}!C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T@{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T}}
+\index{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T@{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T~365$\ast$24$\ast$3600	/$\ast$ Timeout on read $\ast$/}\label{mysql_8h_a2a9336a51b002fb5ff147e574d6434be}
+\hypertarget{mysql_8h_ada95a5c6a955ac2895dffa48349ad35b}{}\index{mysql.\+h@{mysql.\+h}!C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T@{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T}}
+\index{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T@{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+I\+E\+N\+T\+\_\+\+N\+E\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T~365$\ast$24$\ast$3600	/$\ast$ Timeout on write $\ast$/}\label{mysql_8h_ada95a5c6a955ac2895dffa48349ad35b}
+\hypertarget{mysql_8h_a3c0b5d69b5c297335640414806af35a5}{}\index{mysql.\+h@{mysql.\+h}!E\+R\+\_\+\+W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D@{E\+R\+\_\+\+W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}}
+\index{E\+R\+\_\+\+W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D@{E\+R\+\_\+\+W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{E\+R\+\_\+\+W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+\_\+\+W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D~W\+A\+R\+N\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}\label{mysql_8h_a3c0b5d69b5c297335640414806af35a5}
+\hypertarget{mysql_8h_a4be0c182358ef8467b0a950796916c3b}{}\index{mysql.\+h@{mysql.\+h}!H\+A\+V\+E\+\_\+\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T@{H\+A\+V\+E\+\_\+\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T}}
+\index{H\+A\+V\+E\+\_\+\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T@{H\+A\+V\+E\+\_\+\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{H\+A\+V\+E\+\_\+\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+A\+V\+E\+\_\+\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+L\+\_\+\+C\+O\+N\+N\+E\+C\+T}\label{mysql_8h_a4be0c182358ef8467b0a950796916c3b}
+\hypertarget{mysql_8h_a1e5fa6abbd5b4b2e729858e7a87ac759}{}\index{mysql.\+h@{mysql.\+h}!I\+S\+\_\+\+B\+L\+O\+B@{I\+S\+\_\+\+B\+L\+O\+B}}
+\index{I\+S\+\_\+\+B\+L\+O\+B@{I\+S\+\_\+\+B\+L\+O\+B}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{I\+S\+\_\+\+B\+L\+O\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+B\+L\+O\+B(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((n) \& {\bf B\+L\+O\+B\+\_\+\+F\+L\+A\+G})}\label{mysql_8h_a1e5fa6abbd5b4b2e729858e7a87ac759}
+\hypertarget{mysql_8h_aa676fef30356c2226922f6ebc81d928c}{}\index{mysql.\+h@{mysql.\+h}!I\+S\+\_\+\+L\+O\+N\+G\+D\+A\+T\+A@{I\+S\+\_\+\+L\+O\+N\+G\+D\+A\+T\+A}}
+\index{I\+S\+\_\+\+L\+O\+N\+G\+D\+A\+T\+A@{I\+S\+\_\+\+L\+O\+N\+G\+D\+A\+T\+A}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{I\+S\+\_\+\+L\+O\+N\+G\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+L\+O\+N\+G\+D\+A\+T\+A(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~((t) $>$= {\bf M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+N\+Y\+\_\+\+B\+L\+O\+B} \&\& (t) $<$= {\bf M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+N\+G})}\label{mysql_8h_aa676fef30356c2226922f6ebc81d928c}
+\hypertarget{mysql_8h_a209056026b37bf3522b7170da447feec}{}\index{mysql.\+h@{mysql.\+h}!I\+S\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L@{I\+S\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L}}
+\index{I\+S\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L@{I\+S\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{I\+S\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+N\+O\+T\+\_\+\+N\+U\+L\+L(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((n) \& {\bf N\+O\+T\+\_\+\+N\+U\+L\+L\+\_\+\+F\+L\+A\+G})}\label{mysql_8h_a209056026b37bf3522b7170da447feec}
+\hypertarget{mysql_8h_ad54318c3afe8639877a4cc628dc868a9}{}\index{mysql.\+h@{mysql.\+h}!I\+S\+\_\+\+N\+U\+M@{I\+S\+\_\+\+N\+U\+M}}
+\index{I\+S\+\_\+\+N\+U\+M@{I\+S\+\_\+\+N\+U\+M}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{I\+S\+\_\+\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+N\+U\+M(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~(((t) $<$= {\bf M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T24} \&\& (t) != {\bf M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P}) $\vert$$\vert$ (t) == {\bf M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Y\+E\+A\+R} $\vert$$\vert$ (t) == {\bf M\+Y\+S\+Q\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+E\+W\+D\+E\+C\+I\+M\+A\+L})}\label{mysql_8h_ad54318c3afe8639877a4cc628dc868a9}
+Returns true if the value is a number which does not need quotes for the sql\+\_\+lex.\+cc parser to parse correctly. \hypertarget{mysql_8h_a60056c465b03308a4ff3c446535c73d5}{}\index{mysql.\+h@{mysql.\+h}!I\+S\+\_\+\+P\+R\+I\+\_\+\+K\+E\+Y@{I\+S\+\_\+\+P\+R\+I\+\_\+\+K\+E\+Y}}
+\index{I\+S\+\_\+\+P\+R\+I\+\_\+\+K\+E\+Y@{I\+S\+\_\+\+P\+R\+I\+\_\+\+K\+E\+Y}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{I\+S\+\_\+\+P\+R\+I\+\_\+\+K\+E\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+\_\+\+P\+R\+I\+\_\+\+K\+E\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((n) \& {\bf P\+R\+I\+\_\+\+K\+E\+Y\+\_\+\+F\+L\+A\+G})}\label{mysql_8h_a60056c465b03308a4ff3c446535c73d5}
+\hypertarget{mysql_8h_a63fbdb76ec1265024a664041c556f0fc}{}\index{mysql.\+h@{mysql.\+h}!L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+E\+N@{L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+E\+N}}
+\index{L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+E\+N@{L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+E\+N}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+E\+N~512}\label{mysql_8h_a63fbdb76ec1265024a664041c556f0fc}
+\hypertarget{mysql_8h_a12abd04f7e07d9555dc4dc2999e6a4dd}{}\index{mysql.\+h@{mysql.\+h}!max\+\_\+allowed\+\_\+packet@{max\+\_\+allowed\+\_\+packet}}
+\index{max\+\_\+allowed\+\_\+packet@{max\+\_\+allowed\+\_\+packet}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{max\+\_\+allowed\+\_\+packet}]{\setlength{\rightskip}{0pt plus 5cm}\#define max\+\_\+allowed\+\_\+packet~($\ast${\bf mysql\+\_\+get\+\_\+parameters}()-\/$>$p\+\_\+max\+\_\+allowed\+\_\+packet)}\label{mysql_8h_a12abd04f7e07d9555dc4dc2999e6a4dd}
+\hypertarget{mysql_8h_a45bf751168b032c8b525e570a4c232d4}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+C\+L\+I\+E\+N\+T@{M\+Y\+S\+Q\+L\+\_\+\+C\+L\+I\+E\+N\+T}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+C\+L\+I\+E\+N\+T@{M\+Y\+S\+Q\+L\+\_\+\+C\+L\+I\+E\+N\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+C\+L\+I\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+S\+Q\+L\+\_\+\+C\+L\+I\+E\+N\+T}\label{mysql_8h_a45bf751168b032c8b525e570a4c232d4}
+\hypertarget{mysql_8h_adaafa376da2bf1201cac79a0703c6ca5}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+O\+R@{M\+Y\+S\+Q\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+O\+R}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+O\+R@{M\+Y\+S\+Q\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+O\+R}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+S\+Q\+L\+\_\+\+C\+O\+U\+N\+T\+\_\+\+E\+R\+R\+O\+R~($\sim$({\bf my\+\_\+ulonglong}) 0)}\label{mysql_8h_adaafa376da2bf1201cac79a0703c6ca5}
+\hypertarget{mysql_8h_a836a93f13180be88fbc7619a5f107d66}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D@{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D@{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E\+D~101}\label{mysql_8h_a836a93f13180be88fbc7619a5f107d66}
+\hypertarget{mysql_8h_ad4a32f550a5731b8cc761bba29703e5f}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+library\+\_\+end@{mysql\+\_\+library\+\_\+end}}
+\index{mysql\+\_\+library\+\_\+end@{mysql\+\_\+library\+\_\+end}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+library\+\_\+end}]{\setlength{\rightskip}{0pt plus 5cm}\#define mysql\+\_\+library\+\_\+end~{\bf mysql\+\_\+server\+\_\+end}}\label{mysql_8h_ad4a32f550a5731b8cc761bba29703e5f}
+\hypertarget{mysql_8h_ae8b141c64aa2a5a9395992c290ea67f2}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+library\+\_\+init@{mysql\+\_\+library\+\_\+init}}
+\index{mysql\+\_\+library\+\_\+init@{mysql\+\_\+library\+\_\+init}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+library\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}\#define mysql\+\_\+library\+\_\+init~{\bf mysql\+\_\+server\+\_\+init}}\label{mysql_8h_ae8b141c64aa2a5a9395992c290ea67f2}
+\hypertarget{mysql_8h_ac4ad026e5792fb8fbe4c63217acbe3bc}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A@{M\+Y\+S\+Q\+L\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A@{M\+Y\+S\+Q\+L\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+S\+Q\+L\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A~100}\label{mysql_8h_ac4ad026e5792fb8fbe4c63217acbe3bc}
+\hypertarget{mysql_8h_a0d8900a190a42495ba4e21d1b8f2cf50}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+reload@{mysql\+\_\+reload}}
+\index{mysql\+\_\+reload@{mysql\+\_\+reload}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+reload}]{\setlength{\rightskip}{0pt plus 5cm}\#define mysql\+\_\+reload(
+\begin{DoxyParamCaption}
+\item[{}]{mysql}
+\end{DoxyParamCaption}
+)~{\bf mysql\+\_\+refresh}((mysql),{\bf R\+E\+F\+R\+E\+S\+H\+\_\+\+G\+R\+A\+N\+T})}\label{mysql_8h_a0d8900a190a42495ba4e21d1b8f2cf50}
+\hypertarget{mysql_8h_ace1a51272d328c90ce0e2a8723a2fd1a}{}\index{mysql.\+h@{mysql.\+h}!net\+\_\+buffer\+\_\+length@{net\+\_\+buffer\+\_\+length}}
+\index{net\+\_\+buffer\+\_\+length@{net\+\_\+buffer\+\_\+length}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{net\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}\#define net\+\_\+buffer\+\_\+length~($\ast${\bf mysql\+\_\+get\+\_\+parameters}()-\/$>$p\+\_\+net\+\_\+buffer\+\_\+length)}\label{mysql_8h_ace1a51272d328c90ce0e2a8723a2fd1a}
+\hypertarget{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}{}\index{mysql.\+h@{mysql.\+h}!S\+T\+D\+C\+A\+L\+L@{S\+T\+D\+C\+A\+L\+L}}
+\index{S\+T\+D\+C\+A\+L\+L@{S\+T\+D\+C\+A\+L\+L}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{S\+T\+D\+C\+A\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+D\+C\+A\+L\+L}\label{mysql_8h_a446cf449a6234c9b177309d5ba0852c0}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{mysql_8h_afd272e3d2915579a76c8536006ea609b}{}\index{mysql.\+h@{mysql.\+h}!E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+U\+L\+T@{E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+U\+L\+T}}
+\index{E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+U\+L\+T@{E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+U\+L\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+U\+L\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct embedded\+\_\+query\+\_\+result {\bf E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+S\+U\+L\+T}}\label{mysql_8h_afd272e3d2915579a76c8536006ea609b}
+\hypertarget{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}{}\index{mysql.\+h@{mysql.\+h}!my\+\_\+bool@{my\+\_\+bool}}
+\index{my\+\_\+bool@{my\+\_\+bool}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{my\+\_\+bool}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf my\+\_\+bool}}\label{mysql_8h_a74cd599039dcf29c6e6d342cf4efd0a8}
+\hypertarget{mysql_8h_a0d37d444b9a07ee888a35d9bd4497f39}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O@{M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O}}
+\index{M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O@{M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf character\+\_\+set}  {\bf M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O}}\label{mysql_8h_a0d37d444b9a07ee888a35d9bd4497f39}
+\hypertarget{mysql_8h_aed973571b4b7eb2facd8c39e8b500bb6}{}\index{mysql.\+h@{mysql.\+h}!my\+\_\+socket@{my\+\_\+socket}}
+\index{my\+\_\+socket@{my\+\_\+socket}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{my\+\_\+socket}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf my\+\_\+socket}}\label{mysql_8h_aed973571b4b7eb2facd8c39e8b500bb6}
+\hypertarget{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}{}\index{mysql.\+h@{mysql.\+h}!my\+\_\+ulonglong@{my\+\_\+ulonglong}}
+\index{my\+\_\+ulonglong@{my\+\_\+ulonglong}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{my\+\_\+ulonglong}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long long {\bf my\+\_\+ulonglong}}\label{mysql_8h_ae05bd5d3e5a75578e2f14cfeb43f07aa}
+\hypertarget{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L@{M\+Y\+S\+Q\+L}}
+\index{M\+Y\+S\+Q\+L@{M\+Y\+S\+Q\+L}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql}  {\bf M\+Y\+S\+Q\+L}}\label{mysql_8h_a42e5b5e53a1263817a59e42e219feca6}
+\hypertarget{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D@{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql\+\_\+bind}  {\bf M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D}}\label{mysql_8h_a4cec8aef3d6aab1d7d9d8e4f2a90457d}
+\hypertarget{mysql_8h_a19837b8e2f5cec429a5b61d4d5c68ed6}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A@{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A@{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql\+\_\+data}  {\bf M\+Y\+S\+Q\+L\+\_\+\+D\+A\+T\+A}}\label{mysql_8h_a19837b8e2f5cec429a5b61d4d5c68ed6}
+\hypertarget{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D@{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D@{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql\+\_\+field}  {\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}}\label{mysql_8h_ad010774d7ae34dc28a2e044ed2cd4f71}
+\hypertarget{mysql_8h_af5d4ae5dd5ba78eab72fe70af3add49c}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T}}\label{mysql_8h_af5d4ae5dd5ba78eab72fe70af3add49c}
+\hypertarget{mysql_8h_ac7e4a005304e99eb5f0ac7d4ea8caec3}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S@{M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S@{M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql\+\_\+parameters}  {\bf M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S}}\label{mysql_8h_ac7e4a005304e99eb5f0ac7d4ea8caec3}
+\hypertarget{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql\+\_\+res}  {\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}}\label{mysql_8h_aceddbfef1d7bcb272c42ca09484ca1d3}
+\hypertarget{mysql_8h_afae8ad264fb6a4bd740df59f19b9da71}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W@{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W@{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}typedef char$\ast$$\ast$ {\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W}}\label{mysql_8h_afae8ad264fb6a4bd740df59f19b9da71}
+\hypertarget{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S}$\ast$ {\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T}}\label{mysql_8h_aa2ff7dc915a6d8f25f5fd515e8bff083}
+\hypertarget{mysql_8h_a4d0140764825a51eae874c641df1afb5}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S@{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S@{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql\+\_\+rows}  {\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+S}}\label{mysql_8h_a4d0140764825a51eae874c641df1afb5}
+\hypertarget{mysql_8h_afc42d9744125878bd38b3c92b7059e42}{}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T}}
+\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mysql\+\_\+stmt}  {\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T}}\label{mysql_8h_afc42d9744125878bd38b3c92b7059e42}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63}{}\index{mysql.\+h@{mysql.\+h}!enum\+\_\+mysql\+\_\+stmt\+\_\+state@{enum\+\_\+mysql\+\_\+stmt\+\_\+state}}
+\index{enum\+\_\+mysql\+\_\+stmt\+\_\+state@{enum\+\_\+mysql\+\_\+stmt\+\_\+state}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{enum\+\_\+mysql\+\_\+stmt\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf enum\+\_\+mysql\+\_\+stmt\+\_\+state}}\label{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+I\+N\+I\+T\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+I\+N\+I\+T\+\_\+\+D\+O\+N\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+I\+N\+I\+T\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+I\+N\+I\+T\+\_\+\+D\+O\+N\+E}}\item[{\em 
+\hypertarget{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63a819cd41f5a6872a65530714a56dffc98}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+I\+N\+I\+T\+\_\+\+D\+O\+N\+E\label{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63a819cd41f5a6872a65530714a56dffc98}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+D\+O\+N\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+D\+O\+N\+E}}\item[{\em 
+\hypertarget{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63a0f4ca2651be614045d44b37aee9f177a}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+P\+R\+E\+P\+A\+R\+E\+\_\+\+D\+O\+N\+E\label{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63a0f4ca2651be614045d44b37aee9f177a}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+D\+O\+N\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+D\+O\+N\+E}}\item[{\em 
+\hypertarget{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63af9493784c7da556f36fb3fa867fc8a3b}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+E\+X\+E\+C\+U\+T\+E\+\_\+\+D\+O\+N\+E\label{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63af9493784c7da556f36fb3fa867fc8a3b}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+F\+E\+T\+C\+H\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+F\+E\+T\+C\+H\+\_\+\+D\+O\+N\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+F\+E\+T\+C\+H\+\_\+\+D\+O\+N\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+F\+E\+T\+C\+H\+\_\+\+D\+O\+N\+E}}\item[{\em 
+\hypertarget{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63ab09550e422afa23d495ce12263d42b32}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T\+\_\+\+F\+E\+T\+C\+H\+\_\+\+D\+O\+N\+E\label{mysql_8h_a3491e6b32b8b2a22404cc3c009343b63ab09550e422afa23d495ce12263d42b32}
+}]\end{description}
+\end{Desc}
+\hypertarget{mysql_8h_a6a817651ddd965cbe062659e174ff92f}{}\index{mysql.\+h@{mysql.\+h}!enum\+\_\+stmt\+\_\+attr\+\_\+type@{enum\+\_\+stmt\+\_\+attr\+\_\+type}}
+\index{enum\+\_\+stmt\+\_\+attr\+\_\+type@{enum\+\_\+stmt\+\_\+attr\+\_\+type}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{enum\+\_\+stmt\+\_\+attr\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf enum\+\_\+stmt\+\_\+attr\+\_\+type}}\label{mysql_8h_a6a817651ddd965cbe062659e174ff92f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H@{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H@{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}}\item[{\em 
+\hypertarget{mysql_8h_a6a817651ddd965cbe062659e174ff92fa65ee8085ca508e83a7a05bd9260c8c9a}{}S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H\label{mysql_8h_a6a817651ddd965cbe062659e174ff92fa65ee8085ca508e83a7a05bd9260c8c9a}
+}]\index{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+T\+Y\+P\+E@{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+T\+Y\+P\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+T\+Y\+P\+E@{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{mysql_8h_a6a817651ddd965cbe062659e174ff92fab438ec55961a1dfc64c3d11bad080b66}{}S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+T\+Y\+P\+E\label{mysql_8h_a6a817651ddd965cbe062659e174ff92fab438ec55961a1dfc64c3d11bad080b66}
+}]\index{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+E\+F\+E\+T\+C\+H\+\_\+\+R\+O\+W\+S@{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+E\+F\+E\+T\+C\+H\+\_\+\+R\+O\+W\+S}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+E\+F\+E\+T\+C\+H\+\_\+\+R\+O\+W\+S@{S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+E\+F\+E\+T\+C\+H\+\_\+\+R\+O\+W\+S}}\item[{\em 
+\hypertarget{mysql_8h_a6a817651ddd965cbe062659e174ff92fa09126057589656d0fbf03be26a78a116}{}S\+T\+M\+T\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+E\+F\+E\+T\+C\+H\+\_\+\+R\+O\+W\+S\label{mysql_8h_a6a817651ddd965cbe062659e174ff92fa09126057589656d0fbf03be26a78a116}
+}]\end{description}
+\end{Desc}
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+option@{mysql\+\_\+option}}
+\index{mysql\+\_\+option@{mysql\+\_\+option}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+option}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mysql\+\_\+option}}\label{mysql_8h_a255d4e9a14d73dde30125232fefac836}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a04b7361eec201f2f90932f93bcf9f037}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+U\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a04b7361eec201f2f90932f93bcf9f037}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a0988d7276abb518e1ff4cd537e665614}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a0988d7276abb518e1ff4cd537e665614}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+N\+A\+M\+E\+D\+\_\+\+P\+I\+P\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+N\+A\+M\+E\+D\+\_\+\+P\+I\+P\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+N\+A\+M\+E\+D\+\_\+\+P\+I\+P\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+N\+A\+M\+E\+D\+\_\+\+P\+I\+P\+E}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836af29e418c5e26de0b5881106953437698}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+N\+A\+M\+E\+D\+\_\+\+P\+I\+P\+E\label{mysql_8h_a255d4e9a14d73dde30125232fefac836af29e418c5e26de0b5881106953437698}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D@{M\+Y\+S\+Q\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D@{M\+Y\+S\+Q\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836af509dae920bb0afd8f8282133c51523d}{}M\+Y\+S\+Q\+L\+\_\+\+I\+N\+I\+T\+\_\+\+C\+O\+M\+M\+A\+N\+D\label{mysql_8h_a255d4e9a14d73dde30125232fefac836af509dae920bb0afd8f8282133c51523d}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836ab42cd277182e0c81e003c6165758e305}{}M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+I\+L\+E\label{mysql_8h_a255d4e9a14d73dde30125232fefac836ab42cd277182e0c81e003c6165758e305}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+O\+U\+P@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+O\+U\+P}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+O\+U\+P@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+O\+U\+P}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836aa3fff32c09f78dd3561f62841868e82c}{}M\+Y\+S\+Q\+L\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+O\+U\+P\label{mysql_8h_a255d4e9a14d73dde30125232fefac836aa3fff32c09f78dd3561f62841868e82c}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+D\+I\+R@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+D\+I\+R}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+D\+I\+R@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+D\+I\+R}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a1fd59047f371393a78a0ec4b09b1a2ec}{}M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+D\+I\+R\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a1fd59047f371393a78a0ec4b09b1a2ec}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+N\+A\+M\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+N\+A\+M\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+N\+A\+M\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+N\+A\+M\+E}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a48965936f489f785236feef5f2890511}{}M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+N\+A\+M\+E\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a48965936f489f785236feef5f2890511}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a40fd988ef9d515d8df1b605cb41d6a5b}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+N\+F\+I\+L\+E\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a40fd988ef9d515d8df1b605cb41d6a5b}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a2463564004516e07cfc764e01cd88188}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a2463564004516e07cfc764e01cd88188}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+A\+S\+E\+\_\+\+N\+A\+M\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+A\+S\+E\+\_\+\+N\+A\+M\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+A\+S\+E\+\_\+\+N\+A\+M\+E@{M\+Y\+S\+Q\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+A\+S\+E\+\_\+\+N\+A\+M\+E}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a5a48bd0ecdd7b6996619fe37403cac03}{}M\+Y\+S\+Q\+L\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+A\+S\+E\+\_\+\+N\+A\+M\+E\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a5a48bd0ecdd7b6996619fe37403cac03}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a7100a11b3f4e9cc485dcd8a64bb51fb0}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+A\+D\+\_\+\+T\+I\+M\+E\+O\+U\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a7100a11b3f4e9cc485dcd8a64bb51fb0}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a7f9865ca3978f5a1abadbaf00f93c0b9}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+W\+R\+I\+T\+E\+\_\+\+T\+I\+M\+E\+O\+U\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a7f9865ca3978f5a1abadbaf00f93c0b9}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836ad60f14bcd3d6b7a1ec0e650dd6895122}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836ad60f14bcd3d6b7a1ec0e650dd6895122}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a461fe7e7c0a4db27856221e369d1f7b9}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a461fe7e7c0a4db27856221e369d1f7b9}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836aa946a5ed2cce384c3f21897adc2f02b0}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+U\+S\+E\+\_\+\+E\+M\+B\+E\+D\+D\+E\+D\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\label{mysql_8h_a255d4e9a14d73dde30125232fefac836aa946a5ed2cce384c3f21897adc2f02b0}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+G\+U\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+G\+U\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+G\+U\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+G\+U\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a21b624547ab25edba1a0beef2db05102}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+G\+U\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a21b624547ab25edba1a0beef2db05102}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+I\+P@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+I\+P}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+I\+P@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+I\+P}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a8747191a8e80029184f4275c31a12ec9}{}M\+Y\+S\+Q\+L\+\_\+\+S\+E\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+I\+P\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a8747191a8e80029184f4275c31a12ec9}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+U\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+U\+T\+H}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+U\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+U\+T\+H}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a3b976fb0fe320dc1367684d94995c04b}{}M\+Y\+S\+Q\+L\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+A\+U\+T\+H\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a3b976fb0fe320dc1367684d94995c04b}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+I\+O\+N}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+I\+O\+N@{M\+Y\+S\+Q\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836adb481f6c8386fcfd212bf9443fdf3dbc}{}M\+Y\+S\+Q\+L\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+U\+N\+C\+A\+T\+I\+O\+N\label{mysql_8h_a255d4e9a14d73dde30125232fefac836adb481f6c8386fcfd212bf9443fdf3dbc}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836afb25bc17a6360c310032259992672fd4}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+R\+E\+C\+O\+N\+N\+E\+C\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836afb25bc17a6360c310032259992672fd4}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+C\+E\+R\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+C\+E\+R\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+C\+E\+R\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+C\+E\+R\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836aa7bea62884133eeafafafde9c7433cd2}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+C\+E\+R\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836aa7bea62884133eeafafafde9c7433cd2}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+R@{M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+R}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+R@{M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+R}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836ad08d23092df1b3c1c503e72160b8d4ba}{}M\+Y\+S\+Q\+L\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+I\+R\label{mysql_8h_a255d4e9a14d73dde30125232fefac836ad08d23092df1b3c1c503e72160b8d4ba}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+T\+H}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+T\+H}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836acd043f70d139eaf25e8b4963cfc836ca}{}M\+Y\+S\+Q\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+T\+H\label{mysql_8h_a255d4e9a14d73dde30125232fefac836acd043f70d139eaf25e8b4963cfc836ca}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+B\+I\+N\+D@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+B\+I\+N\+D}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+B\+I\+N\+D@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+B\+I\+N\+D}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a794d949e93204bebe8ea109c21b62c62}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+B\+I\+N\+D\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a794d949e93204bebe8ea109c21b62c62}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+K\+E\+Y@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+K\+E\+Y}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+K\+E\+Y@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+K\+E\+Y}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a81d6925def422ef2b21961429bc3dfc9}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+K\+E\+Y\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a81d6925def422ef2b21961429bc3dfc9}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836ab33391e83e9c12889071350201c5a821}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+E\+R\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836ab33391e83e9c12889071350201c5a821}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a5e6057b42b35b44e32f6cb8d5fe77413}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a5e6057b42b35b44e32f6cb8d5fe77413}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A\+P\+A\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A\+P\+A\+T\+H}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A\+P\+A\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A\+P\+A\+T\+H}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836acc92d3b95f6f82839f8051a8e0619394}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+A\+P\+A\+T\+H\label{mysql_8h_a255d4e9a14d73dde30125232fefac836acc92d3b95f6f82839f8051a8e0619394}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+I\+P\+H\+E\+R@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+I\+P\+H\+E\+R}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+I\+P\+H\+E\+R@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+I\+P\+H\+E\+R}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a39420f2f6720733db01deb3494c915c3}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+I\+P\+H\+E\+R\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a39420f2f6720733db01deb3494c915c3}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836ade6f9005b13973a76c5c0d93db88aed0}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L\label{mysql_8h_a255d4e9a14d73dde30125232fefac836ade6f9005b13973a76c5c0d93db88aed0}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L\+P\+A\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L\+P\+A\+T\+H}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L\+P\+A\+T\+H@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L\+P\+A\+T\+H}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836aab6b8ccc6a561b7f1ca70cb4d3a4ed94}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+C\+R\+L\+P\+A\+T\+H\label{mysql_8h_a255d4e9a14d73dde30125232fefac836aab6b8ccc6a561b7f1ca70cb4d3a4ed94}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+S\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+S\+E\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+S\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+S\+E\+T}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836aa8be5c75307abf34256bff90336f99a3}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+S\+E\+T\label{mysql_8h_a255d4e9a14d73dde30125232fefac836aa8be5c75307abf34256bff90336f99a3}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+D@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+D}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+D@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+D}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a920a34c542ad2379724152c6e00b1a94}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+D\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a920a34c542ad2379724152c6e00b1a94}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+L\+E\+T\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+L\+E\+T\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+L\+E\+T\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+L\+E\+T\+E}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a2a99bedec5b10425739b1e5d787010b7}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+L\+E\+T\+E\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a2a99bedec5b10425739b1e5d787010b7}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y@{M\+Y\+S\+Q\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a5c10b1587ea52131a8a7680857a48532}{}M\+Y\+S\+Q\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a5c10b1587ea52131a8a7680857a48532}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+L\+E\+A\+R\+T\+E\+X\+T\+\_\+\+P\+L\+U\+G\+I\+N@{M\+Y\+S\+Q\+L\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+L\+E\+A\+R\+T\+E\+X\+T\+\_\+\+P\+L\+U\+G\+I\+N}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+L\+E\+A\+R\+T\+E\+X\+T\+\_\+\+P\+L\+U\+G\+I\+N@{M\+Y\+S\+Q\+L\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+L\+E\+A\+R\+T\+E\+X\+T\+\_\+\+P\+L\+U\+G\+I\+N}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836ae58a7cbcb83c3eac9459463f161235af}{}M\+Y\+S\+Q\+L\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+C\+L\+E\+A\+R\+T\+E\+X\+T\+\_\+\+P\+L\+U\+G\+I\+N\label{mysql_8h_a255d4e9a14d73dde30125232fefac836ae58a7cbcb83c3eac9459463f161235af}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+E\+X\+P\+I\+R\+E\+D\+\_\+\+P\+A\+S\+S\+W\+O\+R\+D\+S@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+E\+X\+P\+I\+R\+E\+D\+\_\+\+P\+A\+S\+S\+W\+O\+R\+D\+S}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+E\+X\+P\+I\+R\+E\+D\+\_\+\+P\+A\+S\+S\+W\+O\+R\+D\+S@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+E\+X\+P\+I\+R\+E\+D\+\_\+\+P\+A\+S\+S\+W\+O\+R\+D\+S}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a87edd1a1c6f1b9eca5f0d9e20d5072c9}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+C\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+E\+X\+P\+I\+R\+E\+D\+\_\+\+P\+A\+S\+S\+W\+O\+R\+D\+S\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a87edd1a1c6f1b9eca5f0d9e20d5072c9}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+E\+N\+F\+O\+R\+C\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+E\+N\+F\+O\+R\+C\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+E\+N\+F\+O\+R\+C\+E@{M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+E\+N\+F\+O\+R\+C\+E}}\item[{\em 
+\hypertarget{mysql_8h_a255d4e9a14d73dde30125232fefac836a14c725a6d34788b462106b6afb6ebc16}{}M\+Y\+S\+Q\+L\+\_\+\+O\+P\+T\+\_\+\+S\+S\+L\+\_\+\+E\+N\+F\+O\+R\+C\+E\label{mysql_8h_a255d4e9a14d73dde30125232fefac836a14c725a6d34788b462106b6afb6ebc16}
+}]\end{description}
+\end{Desc}
+\hypertarget{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+protocol\+\_\+type@{mysql\+\_\+protocol\+\_\+type}}
+\index{mysql\+\_\+protocol\+\_\+type@{mysql\+\_\+protocol\+\_\+type}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+protocol\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mysql\+\_\+protocol\+\_\+type}}\label{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T}}\item[{\em 
+\hypertarget{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a4ca6aa2b0a3c5f72457214fa5b37728f}{}M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+D\+E\+F\+A\+U\+L\+T\label{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a4ca6aa2b0a3c5f72457214fa5b37728f}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+C\+P@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+C\+P}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+C\+P@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+C\+P}}\item[{\em 
+\hypertarget{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a061914346fab1226594f32cd21f8aa3d}{}M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+T\+C\+P\label{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a061914346fab1226594f32cd21f8aa3d}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+O\+C\+K\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+O\+C\+K\+E\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+O\+C\+K\+E\+T@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+O\+C\+K\+E\+T}}\item[{\em 
+\hypertarget{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9af1416ca8f572227475c82fdf8ef2856d}{}M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+S\+O\+C\+K\+E\+T\label{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9af1416ca8f572227475c82fdf8ef2856d}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+P\+I\+P\+E@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+P\+I\+P\+E}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+P\+I\+P\+E@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+P\+I\+P\+E}}\item[{\em 
+\hypertarget{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a8bb817c9cfe1071e5dd37e1d78954efb}{}M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+P\+I\+P\+E\label{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a8bb817c9cfe1071e5dd37e1d78954efb}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+E\+M\+O\+R\+Y@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+E\+M\+O\+R\+Y}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+E\+M\+O\+R\+Y@{M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+E\+M\+O\+R\+Y}}\item[{\em 
+\hypertarget{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a6a905ff56459011393053d00a0407b26}{}M\+Y\+S\+Q\+L\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+E\+M\+O\+R\+Y\label{mysql_8h_ac42d2279c8bd9026a231418fafd9a1a9a6a905ff56459011393053d00a0407b26}
+}]\end{description}
+\end{Desc}
+\hypertarget{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5d}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+status@{mysql\+\_\+status}}
+\index{mysql\+\_\+status@{mysql\+\_\+status}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mysql\+\_\+status}}\label{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+A\+D\+Y@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+A\+D\+Y}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+A\+D\+Y@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+A\+D\+Y}}\item[{\em 
+\hypertarget{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da5b9a77ab649e8ee6da459016f7daa06c}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+A\+D\+Y\label{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da5b9a77ab649e8ee6da459016f7daa06c}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T}}\item[{\em 
+\hypertarget{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da2cef1dfe36cb944ab2744ead96cd5a5d}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T\label{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da2cef1dfe36cb944ab2744ead96cd5a5d}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T}}\item[{\em 
+\hypertarget{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da17782fa4f4a6c15c5f114c04ea726d7d}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+S\+E\+\_\+\+R\+E\+S\+U\+L\+T\label{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da17782fa4f4a6c15c5f114c04ea726d7d}
+}]\index{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+T\+A\+T\+E\+M\+E\+N\+T\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+T\+A\+T\+E\+M\+E\+N\+T\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T}!mysql.\+h@{mysql.\+h}}\index{mysql.\+h@{mysql.\+h}!M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+T\+A\+T\+E\+M\+E\+N\+T\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T@{M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+T\+A\+T\+E\+M\+E\+N\+T\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T}}\item[{\em 
+\hypertarget{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da1fb435cec252952e420e6f4e96261eba}{}M\+Y\+S\+Q\+L\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+T\+A\+T\+E\+M\+E\+N\+T\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T\label{mysql_8h_a8c0cf7afc762670cf296e4a0067cae5da1fb435cec252952e420e6f4e96261eba}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{mysql_8h_a71647b809cf9f72f27197177177697ea}{}\index{mysql.\+h@{mysql.\+h}!myodbc\+\_\+remove\+\_\+escape@{myodbc\+\_\+remove\+\_\+escape}}
+\index{myodbc\+\_\+remove\+\_\+escape@{myodbc\+\_\+remove\+\_\+escape}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{myodbc\+\_\+remove\+\_\+escape(\+M\+Y\+S\+Q\+L $\ast$mysql, char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} myodbc\+\_\+remove\+\_\+escape (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a71647b809cf9f72f27197177177697ea}
+\hypertarget{mysql_8h_aef7f0a2985ccf3cbdb3115dee42e3699}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+affected\+\_\+rows@{mysql\+\_\+affected\+\_\+rows}}
+\index{mysql\+\_\+affected\+\_\+rows@{mysql\+\_\+affected\+\_\+rows}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+affected\+\_\+rows(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+affected\+\_\+rows (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aef7f0a2985ccf3cbdb3115dee42e3699}
+\hypertarget{mysql_8h_a4cac9318a2fa43563aef4c0ab49da228}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+autocommit@{mysql\+\_\+autocommit}}
+\index{mysql\+\_\+autocommit@{mysql\+\_\+autocommit}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+autocommit(\+M\+Y\+S\+Q\+L $\ast$mysql, my\+\_\+bool auto\+\_\+mode)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+autocommit (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{{\bf my\+\_\+bool}}]{auto\+\_\+mode}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a4cac9318a2fa43563aef4c0ab49da228}
+\hypertarget{mysql_8h_ac8c7bf52f50668c268c661708acffd6a}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+change\+\_\+user@{mysql\+\_\+change\+\_\+user}}
+\index{mysql\+\_\+change\+\_\+user@{mysql\+\_\+change\+\_\+user}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+change\+\_\+user(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$user, const char $\ast$passwd, const char $\ast$db)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+change\+\_\+user (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{user, }
+\item[{const char $\ast$}]{passwd, }
+\item[{const char $\ast$}]{db}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ac8c7bf52f50668c268c661708acffd6a}
+\hypertarget{mysql_8h_a6775251f900ea9a8c41c797926e11d47}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+character\+\_\+set\+\_\+name@{mysql\+\_\+character\+\_\+set\+\_\+name}}
+\index{mysql\+\_\+character\+\_\+set\+\_\+name@{mysql\+\_\+character\+\_\+set\+\_\+name}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+character\+\_\+set\+\_\+name(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+character\+\_\+set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a6775251f900ea9a8c41c797926e11d47}
+\hypertarget{mysql_8h_aea046bdeddad2a112a86caa97a806181}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+close@{mysql\+\_\+close}}
+\index{mysql\+\_\+close@{mysql\+\_\+close}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+close(\+M\+Y\+S\+Q\+L $\ast$sock)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{sock}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aea046bdeddad2a112a86caa97a806181}
+\hypertarget{mysql_8h_a81573324b1f7b82e4d5082fafa376f51}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+commit@{mysql\+\_\+commit}}
+\index{mysql\+\_\+commit@{mysql\+\_\+commit}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+commit(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+commit (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a81573324b1f7b82e4d5082fafa376f51}
+\hypertarget{mysql_8h_a10c597851e58005c3f3843857dc2160f}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+data\+\_\+seek@{mysql\+\_\+data\+\_\+seek}}
+\index{mysql\+\_\+data\+\_\+seek@{mysql\+\_\+data\+\_\+seek}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+data\+\_\+seek(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$result, my\+\_\+ulonglong offset)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+data\+\_\+seek (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{result, }
+\item[{{\bf my\+\_\+ulonglong}}]{offset}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a10c597851e58005c3f3843857dc2160f}
+\hypertarget{mysql_8h_ae0944b5ab1f99027cdfd12636f045e72}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+debug@{mysql\+\_\+debug}}
+\index{mysql\+\_\+debug@{mysql\+\_\+debug}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+debug(const char $\ast$debug)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{debug}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ae0944b5ab1f99027cdfd12636f045e72}
+\hypertarget{mysql_8h_af08147f7cf50dfa6c8e485c351c17f4b}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+dump\+\_\+debug\+\_\+info@{mysql\+\_\+dump\+\_\+debug\+\_\+info}}
+\index{mysql\+\_\+dump\+\_\+debug\+\_\+info@{mysql\+\_\+dump\+\_\+debug\+\_\+info}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+dump\+\_\+debug\+\_\+info(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+dump\+\_\+debug\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af08147f7cf50dfa6c8e485c351c17f4b}
+\hypertarget{mysql_8h_a518415dc4a540df3bc46e42274c2670a}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+embedded@{mysql\+\_\+embedded}}
+\index{mysql\+\_\+embedded@{mysql\+\_\+embedded}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+embedded(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+embedded (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a518415dc4a540df3bc46e42274c2670a}
+\hypertarget{mysql_8h_af4f9fb4fcb831a589c85191e00300fc1}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+eof@{mysql\+\_\+eof}}
+\index{mysql\+\_\+eof@{mysql\+\_\+eof}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+eof(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$res)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+eof (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af4f9fb4fcb831a589c85191e00300fc1}
+\hypertarget{mysql_8h_a11a4321c550a74672fe26f02996efa3f}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+errno@{mysql\+\_\+errno}}
+\index{mysql\+\_\+errno@{mysql\+\_\+errno}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+errno(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+errno (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a11a4321c550a74672fe26f02996efa3f}
+\hypertarget{mysql_8h_aa4f352a0ef888f350687c48d8acb6180}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+error@{mysql\+\_\+error}}
+\index{mysql\+\_\+error@{mysql\+\_\+error}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+error(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aa4f352a0ef888f350687c48d8acb6180}
+\hypertarget{mysql_8h_ab644bc560daf2ca6419df1cd66b48a7a}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+escape\+\_\+string@{mysql\+\_\+escape\+\_\+string}}
+\index{mysql\+\_\+escape\+\_\+string@{mysql\+\_\+escape\+\_\+string}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+escape\+\_\+string(char $\ast$to, const char $\ast$from, unsigned long from\+\_\+length)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+escape\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{to, }
+\item[{const char $\ast$}]{from, }
+\item[{unsigned long}]{from\+\_\+length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab644bc560daf2ca6419df1cd66b48a7a}
+\hypertarget{mysql_8h_a11e0509d2701b40b2219da9560761adc}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+fetch\+\_\+field@{mysql\+\_\+fetch\+\_\+field}}
+\index{mysql\+\_\+fetch\+\_\+field@{mysql\+\_\+fetch\+\_\+field}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+fetch\+\_\+field(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+fetch\+\_\+field (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a11e0509d2701b40b2219da9560761adc}
+\hypertarget{mysql_8h_a0408d163c5bfbebeb3671a38ff6ae1a3}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+fetch\+\_\+field\+\_\+direct@{mysql\+\_\+fetch\+\_\+field\+\_\+direct}}
+\index{mysql\+\_\+fetch\+\_\+field\+\_\+direct@{mysql\+\_\+fetch\+\_\+field\+\_\+direct}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+fetch\+\_\+field\+\_\+direct(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$res, unsigned int fieldnr)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+fetch\+\_\+field\+\_\+direct (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{res, }
+\item[{unsigned int}]{fieldnr}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a0408d163c5bfbebeb3671a38ff6ae1a3}
+\hypertarget{mysql_8h_a318dea46875c77798440629c2ea975ed}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+fetch\+\_\+fields@{mysql\+\_\+fetch\+\_\+fields}}
+\index{mysql\+\_\+fetch\+\_\+fields@{mysql\+\_\+fetch\+\_\+fields}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+fetch\+\_\+fields(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$res)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+fetch\+\_\+fields (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a318dea46875c77798440629c2ea975ed}
+\hypertarget{mysql_8h_ae2fd6ac97ac97a78a081e78387eeea54}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+fetch\+\_\+lengths@{mysql\+\_\+fetch\+\_\+lengths}}
+\index{mysql\+\_\+fetch\+\_\+lengths@{mysql\+\_\+fetch\+\_\+lengths}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+fetch\+\_\+lengths(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+fetch\+\_\+lengths (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ae2fd6ac97ac97a78a081e78387eeea54}
+\hypertarget{mysql_8h_a2b719aa756f05a972bce1eee22d701be}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+fetch\+\_\+row@{mysql\+\_\+fetch\+\_\+row}}
+\index{mysql\+\_\+fetch\+\_\+row@{mysql\+\_\+fetch\+\_\+row}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+fetch\+\_\+row(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+fetch\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a2b719aa756f05a972bce1eee22d701be}
+\hypertarget{mysql_8h_a2afbb4d8b80fba4581306007e72a00ee}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+field\+\_\+count@{mysql\+\_\+field\+\_\+count}}
+\index{mysql\+\_\+field\+\_\+count@{mysql\+\_\+field\+\_\+count}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+field\+\_\+count(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+field\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a2afbb4d8b80fba4581306007e72a00ee}
+\hypertarget{mysql_8h_a84f2ca4344a8f767afc83ea21842adf0}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+field\+\_\+seek@{mysql\+\_\+field\+\_\+seek}}
+\index{mysql\+\_\+field\+\_\+seek@{mysql\+\_\+field\+\_\+seek}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+field\+\_\+seek(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$result, M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+field\+\_\+seek (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{result, }
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T}}]{offset}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a84f2ca4344a8f767afc83ea21842adf0}
+\hypertarget{mysql_8h_a839d677a9588558a7983f510caa998f9}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+field\+\_\+tell@{mysql\+\_\+field\+\_\+tell}}
+\index{mysql\+\_\+field\+\_\+tell@{mysql\+\_\+field\+\_\+tell}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+field\+\_\+tell(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$res)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+O\+F\+F\+S\+E\+T} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+field\+\_\+tell (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a839d677a9588558a7983f510caa998f9}
+\hypertarget{mysql_8h_ada9e5d549970fb10d2fc862739717129}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+free\+\_\+result@{mysql\+\_\+free\+\_\+result}}
+\index{mysql\+\_\+free\+\_\+result@{mysql\+\_\+free\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+free\+\_\+result(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+free\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ada9e5d549970fb10d2fc862739717129}
+\hypertarget{mysql_8h_ab58306ec7636318711b2fc797a979b5b}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+character\+\_\+set\+\_\+info@{mysql\+\_\+get\+\_\+character\+\_\+set\+\_\+info}}
+\index{mysql\+\_\+get\+\_\+character\+\_\+set\+\_\+info@{mysql\+\_\+get\+\_\+character\+\_\+set\+\_\+info}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+character\+\_\+set\+\_\+info(\+M\+Y\+S\+Q\+L $\ast$mysql, M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O $\ast$charset)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+character\+\_\+set\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{{\bf M\+Y\+\_\+\+C\+H\+A\+R\+S\+E\+T\+\_\+\+I\+N\+F\+O} $\ast$}]{charset}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab58306ec7636318711b2fc797a979b5b}
+\hypertarget{mysql_8h_ab372dbc086fc98c0fa490011ac6939fe}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+client\+\_\+info@{mysql\+\_\+get\+\_\+client\+\_\+info}}
+\index{mysql\+\_\+get\+\_\+client\+\_\+info@{mysql\+\_\+get\+\_\+client\+\_\+info}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+client\+\_\+info(void)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+client\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab372dbc086fc98c0fa490011ac6939fe}
+\hypertarget{mysql_8h_ac4e40b0c2472ab94e74c1fad4dc4a9fd}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+client\+\_\+version@{mysql\+\_\+get\+\_\+client\+\_\+version}}
+\index{mysql\+\_\+get\+\_\+client\+\_\+version@{mysql\+\_\+get\+\_\+client\+\_\+version}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+client\+\_\+version(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+client\+\_\+version (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ac4e40b0c2472ab94e74c1fad4dc4a9fd}
+\hypertarget{mysql_8h_a60c3be23e8bca17dbf3a87c8b72f8bea}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+host\+\_\+info@{mysql\+\_\+get\+\_\+host\+\_\+info}}
+\index{mysql\+\_\+get\+\_\+host\+\_\+info@{mysql\+\_\+get\+\_\+host\+\_\+info}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+host\+\_\+info(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+host\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a60c3be23e8bca17dbf3a87c8b72f8bea}
+\hypertarget{mysql_8h_a87a2cd72ca7d0eead0f138d2d12d77f8}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+option@{mysql\+\_\+get\+\_\+option}}
+\index{mysql\+\_\+get\+\_\+option@{mysql\+\_\+get\+\_\+option}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+option(\+M\+Y\+S\+Q\+L $\ast$mysql, enum mysql\+\_\+option option, const void $\ast$arg)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+option (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{enum {\bf mysql\+\_\+option}}]{option, }
+\item[{const void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a87a2cd72ca7d0eead0f138d2d12d77f8}
+\hypertarget{mysql_8h_aa0c8dcb12ab1833d2e1dd6d5730e6e9b}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+parameters@{mysql\+\_\+get\+\_\+parameters}}
+\index{mysql\+\_\+get\+\_\+parameters@{mysql\+\_\+get\+\_\+parameters}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+parameters(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+parameters (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aa0c8dcb12ab1833d2e1dd6d5730e6e9b}
+\hypertarget{mysql_8h_a9e771505728b631d4409ab4ddcf626e3}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+proto\+\_\+info@{mysql\+\_\+get\+\_\+proto\+\_\+info}}
+\index{mysql\+\_\+get\+\_\+proto\+\_\+info@{mysql\+\_\+get\+\_\+proto\+\_\+info}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+proto\+\_\+info(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+proto\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a9e771505728b631d4409ab4ddcf626e3}
+\hypertarget{mysql_8h_af8d64a9f856b7a02ab8c056e30e1d1e0}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+server\+\_\+info@{mysql\+\_\+get\+\_\+server\+\_\+info}}
+\index{mysql\+\_\+get\+\_\+server\+\_\+info@{mysql\+\_\+get\+\_\+server\+\_\+info}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+server\+\_\+info(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+server\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af8d64a9f856b7a02ab8c056e30e1d1e0}
+\hypertarget{mysql_8h_a6075eb2aa12553e32ebacf057a5c443f}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+server\+\_\+version@{mysql\+\_\+get\+\_\+server\+\_\+version}}
+\index{mysql\+\_\+get\+\_\+server\+\_\+version@{mysql\+\_\+get\+\_\+server\+\_\+version}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+server\+\_\+version(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+server\+\_\+version (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a6075eb2aa12553e32ebacf057a5c443f}
+\hypertarget{mysql_8h_a42a29e12fbcb5890314a33c9c8ba4e1b}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+get\+\_\+ssl\+\_\+cipher@{mysql\+\_\+get\+\_\+ssl\+\_\+cipher}}
+\index{mysql\+\_\+get\+\_\+ssl\+\_\+cipher@{mysql\+\_\+get\+\_\+ssl\+\_\+cipher}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+get\+\_\+ssl\+\_\+cipher(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+get\+\_\+ssl\+\_\+cipher (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a42a29e12fbcb5890314a33c9c8ba4e1b}
+\hypertarget{mysql_8h_a19e20d21387fcd171c9809b642072fef}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+hex\+\_\+string@{mysql\+\_\+hex\+\_\+string}}
+\index{mysql\+\_\+hex\+\_\+string@{mysql\+\_\+hex\+\_\+string}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+hex\+\_\+string(char $\ast$to, const char $\ast$from, unsigned long from\+\_\+length)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+hex\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{to, }
+\item[{const char $\ast$}]{from, }
+\item[{unsigned long}]{from\+\_\+length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a19e20d21387fcd171c9809b642072fef}
+\hypertarget{mysql_8h_a6bf5a1bc75e654a767d76b4a7cde7a2c}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+info@{mysql\+\_\+info}}
+\index{mysql\+\_\+info@{mysql\+\_\+info}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+info(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a6bf5a1bc75e654a767d76b4a7cde7a2c}
+\hypertarget{mysql_8h_a57dd141bcf4441d66c1ef41cf1cb058b}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+init@{mysql\+\_\+init}}
+\index{mysql\+\_\+init@{mysql\+\_\+init}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+init(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a57dd141bcf4441d66c1ef41cf1cb058b}
+\hypertarget{mysql_8h_ad5431c16e4f6f8f1af3748ad732cca05}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+insert\+\_\+id@{mysql\+\_\+insert\+\_\+id}}
+\index{mysql\+\_\+insert\+\_\+id@{mysql\+\_\+insert\+\_\+id}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+insert\+\_\+id(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+insert\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ad5431c16e4f6f8f1af3748ad732cca05}
+\hypertarget{mysql_8h_a445f7a3c514f228a3b841813fee4f5cb}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+kill@{mysql\+\_\+kill}}
+\index{mysql\+\_\+kill@{mysql\+\_\+kill}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+kill(\+M\+Y\+S\+Q\+L $\ast$mysql, unsigned long pid)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+kill (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{unsigned long}]{pid}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a445f7a3c514f228a3b841813fee4f5cb}
+\hypertarget{mysql_8h_ab22b2082938c45d7dced3d89002d665f}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+list\+\_\+dbs@{mysql\+\_\+list\+\_\+dbs}}
+\index{mysql\+\_\+list\+\_\+dbs@{mysql\+\_\+list\+\_\+dbs}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+list\+\_\+dbs(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$wild)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+list\+\_\+dbs (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{wild}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab22b2082938c45d7dced3d89002d665f}
+\hypertarget{mysql_8h_a2732d5084f3e9a1628bae74b53c2692c}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+list\+\_\+fields@{mysql\+\_\+list\+\_\+fields}}
+\index{mysql\+\_\+list\+\_\+fields@{mysql\+\_\+list\+\_\+fields}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+list\+\_\+fields(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$table, const char $\ast$wild)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+list\+\_\+fields (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{table, }
+\item[{const char $\ast$}]{wild}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a2732d5084f3e9a1628bae74b53c2692c}
+\hypertarget{mysql_8h_ad33fb39588eab7dda02ead3176e480ed}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+list\+\_\+processes@{mysql\+\_\+list\+\_\+processes}}
+\index{mysql\+\_\+list\+\_\+processes@{mysql\+\_\+list\+\_\+processes}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+list\+\_\+processes(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+list\+\_\+processes (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ad33fb39588eab7dda02ead3176e480ed}
+\hypertarget{mysql_8h_a5edc31b6f6b705a0de87b279ba8153fe}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+list\+\_\+tables@{mysql\+\_\+list\+\_\+tables}}
+\index{mysql\+\_\+list\+\_\+tables@{mysql\+\_\+list\+\_\+tables}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+list\+\_\+tables(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$wild)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+list\+\_\+tables (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{wild}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a5edc31b6f6b705a0de87b279ba8153fe}
+\hypertarget{mysql_8h_a3233a9d225ce8a850427479802835f25}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+more\+\_\+results@{mysql\+\_\+more\+\_\+results}}
+\index{mysql\+\_\+more\+\_\+results@{mysql\+\_\+more\+\_\+results}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+more\+\_\+results(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+more\+\_\+results (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a3233a9d225ce8a850427479802835f25}
+\hypertarget{mysql_8h_a5498795c3bb494716a0c74e27f18aeec}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+next\+\_\+result@{mysql\+\_\+next\+\_\+result}}
+\index{mysql\+\_\+next\+\_\+result@{mysql\+\_\+next\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+next\+\_\+result(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+next\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a5498795c3bb494716a0c74e27f18aeec}
+\hypertarget{mysql_8h_afb587699269dcf289e0452564207b7f1}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+num\+\_\+fields@{mysql\+\_\+num\+\_\+fields}}
+\index{mysql\+\_\+num\+\_\+fields@{mysql\+\_\+num\+\_\+fields}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+num\+\_\+fields(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$res)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+num\+\_\+fields (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_afb587699269dcf289e0452564207b7f1}
+\hypertarget{mysql_8h_a0a0eddc4c9052c5d5d665d5b6ee929cd}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+num\+\_\+rows@{mysql\+\_\+num\+\_\+rows}}
+\index{mysql\+\_\+num\+\_\+rows@{mysql\+\_\+num\+\_\+rows}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+num\+\_\+rows(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$res)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+num\+\_\+rows (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a0a0eddc4c9052c5d5d665d5b6ee929cd}
+\hypertarget{mysql_8h_addcdda07a809daba4220a761ac390e54}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+options@{mysql\+\_\+options}}
+\index{mysql\+\_\+options@{mysql\+\_\+options}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+options(\+M\+Y\+S\+Q\+L $\ast$mysql, enum mysql\+\_\+option option, const void $\ast$arg)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+options (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{enum {\bf mysql\+\_\+option}}]{option, }
+\item[{const void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_addcdda07a809daba4220a761ac390e54}
+\hypertarget{mysql_8h_a4cc2b4252b62a9517b4b6b2ec2e95aac}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+options4@{mysql\+\_\+options4}}
+\index{mysql\+\_\+options4@{mysql\+\_\+options4}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+options4(\+M\+Y\+S\+Q\+L $\ast$mysql, enum mysql\+\_\+option option, const void $\ast$arg1, const void $\ast$arg2)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+options4 (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{enum {\bf mysql\+\_\+option}}]{option, }
+\item[{const void $\ast$}]{arg1, }
+\item[{const void $\ast$}]{arg2}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a4cc2b4252b62a9517b4b6b2ec2e95aac}
+\hypertarget{mysql_8h_afb52359ba100adf315c0b9b9be9943c3}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+ping@{mysql\+\_\+ping}}
+\index{mysql\+\_\+ping@{mysql\+\_\+ping}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+ping(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+ping (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_afb52359ba100adf315c0b9b9be9943c3}
+\hypertarget{mysql_8h_abc8edade534933593ab605741422b319}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+query@{mysql\+\_\+query}}
+\index{mysql\+\_\+query@{mysql\+\_\+query}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+query(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$q)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+query (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{q}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_abc8edade534933593ab605741422b319}
+\hypertarget{mysql_8h_aed679533dc26b0198734cecb0146a82b}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+read\+\_\+query\+\_\+result@{mysql\+\_\+read\+\_\+query\+\_\+result}}
+\index{mysql\+\_\+read\+\_\+query\+\_\+result@{mysql\+\_\+read\+\_\+query\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+read\+\_\+query\+\_\+result(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+read\+\_\+query\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aed679533dc26b0198734cecb0146a82b}
+\hypertarget{mysql_8h_a613a678e4a6940b415bdc3d0a4cd6def}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+real\+\_\+connect@{mysql\+\_\+real\+\_\+connect}}
+\index{mysql\+\_\+real\+\_\+connect@{mysql\+\_\+real\+\_\+connect}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+real\+\_\+connect(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$host, const char $\ast$user, const char $\ast$passwd, const char $\ast$db, unsigned int port, const char $\ast$unix\+\_\+socket, unsigned long clientflag)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+real\+\_\+connect (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{host, }
+\item[{const char $\ast$}]{user, }
+\item[{const char $\ast$}]{passwd, }
+\item[{const char $\ast$}]{db, }
+\item[{unsigned int}]{port, }
+\item[{const char $\ast$}]{unix\+\_\+socket, }
+\item[{unsigned long}]{clientflag}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a613a678e4a6940b415bdc3d0a4cd6def}
+\hypertarget{mysql_8h_ae271e862886c4b54c97e4c8a911f829f}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+real\+\_\+escape\+\_\+string@{mysql\+\_\+real\+\_\+escape\+\_\+string}}
+\index{mysql\+\_\+real\+\_\+escape\+\_\+string@{mysql\+\_\+real\+\_\+escape\+\_\+string}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+real\+\_\+escape\+\_\+string(\+M\+Y\+S\+Q\+L $\ast$mysql, char $\ast$to, const char $\ast$from, unsigned long length)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+real\+\_\+escape\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{char $\ast$}]{to, }
+\item[{const char $\ast$}]{from, }
+\item[{unsigned long}]{length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ae271e862886c4b54c97e4c8a911f829f}
+\hypertarget{mysql_8h_a20ef8a4b6bdcb0276708b85bd1edb2a6}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+real\+\_\+query@{mysql\+\_\+real\+\_\+query}}
+\index{mysql\+\_\+real\+\_\+query@{mysql\+\_\+real\+\_\+query}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+real\+\_\+query(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$q, unsigned long length)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+real\+\_\+query (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{q, }
+\item[{unsigned long}]{length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a20ef8a4b6bdcb0276708b85bd1edb2a6}
+\hypertarget{mysql_8h_a019789e8e18395ba49d7963f0a788530}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+refresh@{mysql\+\_\+refresh}}
+\index{mysql\+\_\+refresh@{mysql\+\_\+refresh}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+refresh(\+M\+Y\+S\+Q\+L $\ast$mysql, unsigned int refresh\+\_\+options)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+refresh (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{unsigned int}]{refresh\+\_\+options}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a019789e8e18395ba49d7963f0a788530}
+\hypertarget{mysql_8h_a13b3d55c0c2a20c57f5bd7fca17ef150}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+reset\+\_\+connection@{mysql\+\_\+reset\+\_\+connection}}
+\index{mysql\+\_\+reset\+\_\+connection@{mysql\+\_\+reset\+\_\+connection}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+reset\+\_\+connection(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+reset\+\_\+connection (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a13b3d55c0c2a20c57f5bd7fca17ef150}
+\hypertarget{mysql_8h_a4b1d96f8fd7153dbb249f490b2a4dc17}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+rollback@{mysql\+\_\+rollback}}
+\index{mysql\+\_\+rollback@{mysql\+\_\+rollback}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+rollback(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+rollback (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a4b1d96f8fd7153dbb249f490b2a4dc17}
+\hypertarget{mysql_8h_abcf44523dac8756b8c9252c742f87d79}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+row\+\_\+seek@{mysql\+\_\+row\+\_\+seek}}
+\index{mysql\+\_\+row\+\_\+seek@{mysql\+\_\+row\+\_\+seek}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+row\+\_\+seek(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$result, M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+row\+\_\+seek (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{result, }
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T}}]{offset}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_abcf44523dac8756b8c9252c742f87d79}
+\hypertarget{mysql_8h_ab53f65082bc67554fb1f46bcdcf47a70}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+row\+\_\+tell@{mysql\+\_\+row\+\_\+tell}}
+\index{mysql\+\_\+row\+\_\+tell@{mysql\+\_\+row\+\_\+tell}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+row\+\_\+tell(\+M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S $\ast$res)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+row\+\_\+tell (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab53f65082bc67554fb1f46bcdcf47a70}
+\hypertarget{mysql_8h_a573c9edfe7701b8cb346221aa437bd88}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+select\+\_\+db@{mysql\+\_\+select\+\_\+db}}
+\index{mysql\+\_\+select\+\_\+db@{mysql\+\_\+select\+\_\+db}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+select\+\_\+db(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$db)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+select\+\_\+db (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{db}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a573c9edfe7701b8cb346221aa437bd88}
+\hypertarget{mysql_8h_a1243de90b5a25d24bd69f7d929bf4863}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+send\+\_\+query@{mysql\+\_\+send\+\_\+query}}
+\index{mysql\+\_\+send\+\_\+query@{mysql\+\_\+send\+\_\+query}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+send\+\_\+query(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$q, unsigned long length)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+send\+\_\+query (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{q, }
+\item[{unsigned long}]{length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a1243de90b5a25d24bd69f7d929bf4863}
+\hypertarget{mysql_8h_ab65120b6e611702fad3e1c74c9a91924}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+server\+\_\+end@{mysql\+\_\+server\+\_\+end}}
+\index{mysql\+\_\+server\+\_\+end@{mysql\+\_\+server\+\_\+end}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+server\+\_\+end(void)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+server\+\_\+end (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab65120b6e611702fad3e1c74c9a91924}
+\hypertarget{mysql_8h_a724e1c14ad46e2aac8c39643eb8a96bb}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+server\+\_\+init@{mysql\+\_\+server\+\_\+init}}
+\index{mysql\+\_\+server\+\_\+init@{mysql\+\_\+server\+\_\+init}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+server\+\_\+init(int argc, char $\ast$$\ast$argv, char $\ast$$\ast$groups)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+server\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$$\ast$}]{groups}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a724e1c14ad46e2aac8c39643eb8a96bb}
+\hypertarget{mysql_8h_af3df95f14073f385163918cbf2e829bf}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+first@{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+first}}
+\index{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+first@{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+first}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+first(\+M\+Y\+S\+Q\+L $\ast$mysql, enum enum\+\_\+session\+\_\+state\+\_\+type type, const char $\ast$$\ast$data, size\+\_\+t $\ast$length)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+first (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{enum {\bf enum\+\_\+session\+\_\+state\+\_\+type}}]{type, }
+\item[{const char $\ast$$\ast$}]{data, }
+\item[{size\+\_\+t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af3df95f14073f385163918cbf2e829bf}
+\hypertarget{mysql_8h_aa5a73ac3bf9a383fcc8e141f86ff0b05}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+next@{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+next}}
+\index{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+next@{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+next}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+next(\+M\+Y\+S\+Q\+L $\ast$mysql, enum enum\+\_\+session\+\_\+state\+\_\+type type, const char $\ast$$\ast$data, size\+\_\+t $\ast$length)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+session\+\_\+track\+\_\+get\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{enum {\bf enum\+\_\+session\+\_\+state\+\_\+type}}]{type, }
+\item[{const char $\ast$$\ast$}]{data, }
+\item[{size\+\_\+t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aa5a73ac3bf9a383fcc8e141f86ff0b05}
+\hypertarget{mysql_8h_a4e5edde9a55264a1b937ca6eb7bd6497}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+set\+\_\+character\+\_\+set@{mysql\+\_\+set\+\_\+character\+\_\+set}}
+\index{mysql\+\_\+set\+\_\+character\+\_\+set@{mysql\+\_\+set\+\_\+character\+\_\+set}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+set\+\_\+character\+\_\+set(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$csname)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+set\+\_\+character\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{csname}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a4e5edde9a55264a1b937ca6eb7bd6497}
+\hypertarget{mysql_8h_ae7b8a414b4314da534597ba89f561c88}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+default@{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+default}}
+\index{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+default@{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+default}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+default(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}void mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+default (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ae7b8a414b4314da534597ba89f561c88}
+\hypertarget{mysql_8h_a8ba6f219194fce4e455ac5c47ca084bc}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+handler@{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+handler}}
+\index{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+handler@{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+handler}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+handler(\+M\+Y\+S\+Q\+L $\ast$mysql, int($\ast$local\+\_\+infile\+\_\+init)(void $\ast$$\ast$, const char $\ast$,                                                                                                       void $\ast$), int($\ast$local\+\_\+infile\+\_\+read)(void $\ast$, char $\ast$, unsigned int), void($\ast$local\+\_\+infile\+\_\+end)(void $\ast$), int($\ast$local\+\_\+infile\+\_\+error)(void $\ast$, char $\ast$, unsigned int), void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void mysql\+\_\+set\+\_\+local\+\_\+infile\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{int($\ast$)(void $\ast$$\ast$, const char $\ast$,                                                                                                                                                                                                                                                                                                                                                                                                                   void $\ast$)}]{local\+\_\+infile\+\_\+init, }
+\item[{int($\ast$)(void $\ast$, char $\ast$, unsigned int)}]{local\+\_\+infile\+\_\+read, }
+\item[{void($\ast$)(void $\ast$)}]{local\+\_\+infile\+\_\+end, }
+\item[{int($\ast$)(void $\ast$, char $\ast$, unsigned int)}]{local\+\_\+infile\+\_\+error, }
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a8ba6f219194fce4e455ac5c47ca084bc}
+\hypertarget{mysql_8h_a8b8952a491c9be146b33cb50237f6001}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+set\+\_\+server\+\_\+option@{mysql\+\_\+set\+\_\+server\+\_\+option}}
+\index{mysql\+\_\+set\+\_\+server\+\_\+option@{mysql\+\_\+set\+\_\+server\+\_\+option}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+set\+\_\+server\+\_\+option(\+M\+Y\+S\+Q\+L $\ast$mysql, enum enum\+\_\+mysql\+\_\+set\+\_\+option option)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+set\+\_\+server\+\_\+option (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{enum {\bf enum\+\_\+mysql\+\_\+set\+\_\+option}}]{option}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a8b8952a491c9be146b33cb50237f6001}
+\hypertarget{mysql_8h_a678473798bddfda6f1d001a4879d3477}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+shutdown@{mysql\+\_\+shutdown}}
+\index{mysql\+\_\+shutdown@{mysql\+\_\+shutdown}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+shutdown(\+M\+Y\+S\+Q\+L $\ast$mysql, enum mysql\+\_\+enum\+\_\+shutdown\+\_\+level shutdown\+\_\+level)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+shutdown (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{enum {\bf mysql\+\_\+enum\+\_\+shutdown\+\_\+level}}]{shutdown\+\_\+level}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a678473798bddfda6f1d001a4879d3477}
+\hypertarget{mysql_8h_a32dda733ec2257692163a66b7e24bc64}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+sqlstate@{mysql\+\_\+sqlstate}}
+\index{mysql\+\_\+sqlstate@{mysql\+\_\+sqlstate}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+sqlstate(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+sqlstate (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a32dda733ec2257692163a66b7e24bc64}
+\hypertarget{mysql_8h_acbf40f58cb494f4a64f0b016ae1fc67c}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+ssl\+\_\+set@{mysql\+\_\+ssl\+\_\+set}}
+\index{mysql\+\_\+ssl\+\_\+set@{mysql\+\_\+ssl\+\_\+set}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+ssl\+\_\+set(\+M\+Y\+S\+Q\+L $\ast$mysql, const char $\ast$key, const char $\ast$cert, const char $\ast$ca, const char $\ast$capath, const char $\ast$cipher)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+ssl\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql, }
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{cert, }
+\item[{const char $\ast$}]{ca, }
+\item[{const char $\ast$}]{capath, }
+\item[{const char $\ast$}]{cipher}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_acbf40f58cb494f4a64f0b016ae1fc67c}
+\hypertarget{mysql_8h_ac225a19e51a082f246c8d88517b58d04}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stat@{mysql\+\_\+stat}}
+\index{mysql\+\_\+stat@{mysql\+\_\+stat}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stat(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stat (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ac225a19e51a082f246c8d88517b58d04}
+\hypertarget{mysql_8h_a45849176553fbd39204f95227eeff6b1}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+affected\+\_\+rows@{mysql\+\_\+stmt\+\_\+affected\+\_\+rows}}
+\index{mysql\+\_\+stmt\+\_\+affected\+\_\+rows@{mysql\+\_\+stmt\+\_\+affected\+\_\+rows}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+affected\+\_\+rows(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+affected\+\_\+rows (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a45849176553fbd39204f95227eeff6b1}
+\hypertarget{mysql_8h_a5db8d743742d56b5a31d9ef645c17bb7}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+attr\+\_\+get@{mysql\+\_\+stmt\+\_\+attr\+\_\+get}}
+\index{mysql\+\_\+stmt\+\_\+attr\+\_\+get@{mysql\+\_\+stmt\+\_\+attr\+\_\+get}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+attr\+\_\+get(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, enum enum\+\_\+stmt\+\_\+attr\+\_\+type attr\+\_\+type, void $\ast$attr)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+attr\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{enum {\bf enum\+\_\+stmt\+\_\+attr\+\_\+type}}]{attr\+\_\+type, }
+\item[{void $\ast$}]{attr}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a5db8d743742d56b5a31d9ef645c17bb7}
+\hypertarget{mysql_8h_ac2e71a3bd524f15980cd7cac3cca142a}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+attr\+\_\+set@{mysql\+\_\+stmt\+\_\+attr\+\_\+set}}
+\index{mysql\+\_\+stmt\+\_\+attr\+\_\+set@{mysql\+\_\+stmt\+\_\+attr\+\_\+set}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+attr\+\_\+set(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, enum enum\+\_\+stmt\+\_\+attr\+\_\+type attr\+\_\+type, const void $\ast$attr)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+attr\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{enum {\bf enum\+\_\+stmt\+\_\+attr\+\_\+type}}]{attr\+\_\+type, }
+\item[{const void $\ast$}]{attr}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ac2e71a3bd524f15980cd7cac3cca142a}
+\hypertarget{mysql_8h_a1e5d700fce97945abfd8589db7b36115}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+bind\+\_\+param@{mysql\+\_\+stmt\+\_\+bind\+\_\+param}}
+\index{mysql\+\_\+stmt\+\_\+bind\+\_\+param@{mysql\+\_\+stmt\+\_\+bind\+\_\+param}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+bind\+\_\+param(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D $\ast$bnd)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+bind\+\_\+param (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$}]{bnd}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a1e5d700fce97945abfd8589db7b36115}
+\hypertarget{mysql_8h_a8d56e869f6251c9495e4906d8af3b44e}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+bind\+\_\+result@{mysql\+\_\+stmt\+\_\+bind\+\_\+result}}
+\index{mysql\+\_\+stmt\+\_\+bind\+\_\+result@{mysql\+\_\+stmt\+\_\+bind\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+bind\+\_\+result(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D $\ast$bnd)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+bind\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$}]{bnd}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a8d56e869f6251c9495e4906d8af3b44e}
+\hypertarget{mysql_8h_af12389cc413297bedb75432c5f9f09d2}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+close@{mysql\+\_\+stmt\+\_\+close}}
+\index{mysql\+\_\+stmt\+\_\+close@{mysql\+\_\+stmt\+\_\+close}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+close(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af12389cc413297bedb75432c5f9f09d2}
+\hypertarget{mysql_8h_a38dbfd9eb3b18c86b188d353a0904df1}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+data\+\_\+seek@{mysql\+\_\+stmt\+\_\+data\+\_\+seek}}
+\index{mysql\+\_\+stmt\+\_\+data\+\_\+seek@{mysql\+\_\+stmt\+\_\+data\+\_\+seek}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+data\+\_\+seek(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, my\+\_\+ulonglong offset)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+data\+\_\+seek (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{{\bf my\+\_\+ulonglong}}]{offset}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a38dbfd9eb3b18c86b188d353a0904df1}
+\hypertarget{mysql_8h_ac7f15052df439edb2381b4bbd96392a0}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+errno@{mysql\+\_\+stmt\+\_\+errno}}
+\index{mysql\+\_\+stmt\+\_\+errno@{mysql\+\_\+stmt\+\_\+errno}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+errno(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+errno (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ac7f15052df439edb2381b4bbd96392a0}
+\hypertarget{mysql_8h_abb60da2fb15e98f62ddd3e9b487e5995}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+error@{mysql\+\_\+stmt\+\_\+error}}
+\index{mysql\+\_\+stmt\+\_\+error@{mysql\+\_\+stmt\+\_\+error}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+error(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_abb60da2fb15e98f62ddd3e9b487e5995}
+\hypertarget{mysql_8h_ab4185cad2e81cb04d022cc1c7a552ac9}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+execute@{mysql\+\_\+stmt\+\_\+execute}}
+\index{mysql\+\_\+stmt\+\_\+execute@{mysql\+\_\+stmt\+\_\+execute}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+execute(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+execute (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab4185cad2e81cb04d022cc1c7a552ac9}
+\hypertarget{mysql_8h_a583682a3e86aba1275973342a5919e5d}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+fetch@{mysql\+\_\+stmt\+\_\+fetch}}
+\index{mysql\+\_\+stmt\+\_\+fetch@{mysql\+\_\+stmt\+\_\+fetch}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+fetch(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+fetch (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a583682a3e86aba1275973342a5919e5d}
+\hypertarget{mysql_8h_a608f8c875a7af0b5ce128394014a771e}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+fetch\+\_\+column@{mysql\+\_\+stmt\+\_\+fetch\+\_\+column}}
+\index{mysql\+\_\+stmt\+\_\+fetch\+\_\+column@{mysql\+\_\+stmt\+\_\+fetch\+\_\+column}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+fetch\+\_\+column(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D $\ast$bind\+\_\+arg, unsigned int column, unsigned long offset)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+fetch\+\_\+column (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+B\+I\+N\+D} $\ast$}]{bind\+\_\+arg, }
+\item[{unsigned int}]{column, }
+\item[{unsigned long}]{offset}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a608f8c875a7af0b5ce128394014a771e}
+\hypertarget{mysql_8h_a02569a1f2c5cd6142445556b0865003c}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+field\+\_\+count@{mysql\+\_\+stmt\+\_\+field\+\_\+count}}
+\index{mysql\+\_\+stmt\+\_\+field\+\_\+count@{mysql\+\_\+stmt\+\_\+field\+\_\+count}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+field\+\_\+count(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+field\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a02569a1f2c5cd6142445556b0865003c}
+\hypertarget{mysql_8h_ab218c0039546c12d77f2f0324cfdf679}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+free\+\_\+result@{mysql\+\_\+stmt\+\_\+free\+\_\+result}}
+\index{mysql\+\_\+stmt\+\_\+free\+\_\+result@{mysql\+\_\+stmt\+\_\+free\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+free\+\_\+result(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+free\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ab218c0039546c12d77f2f0324cfdf679}
+\hypertarget{mysql_8h_a9e7680dceaa2194919cadaefd13e5db9}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+init@{mysql\+\_\+stmt\+\_\+init}}
+\index{mysql\+\_\+stmt\+\_\+init@{mysql\+\_\+stmt\+\_\+init}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+init(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a9e7680dceaa2194919cadaefd13e5db9}
+\hypertarget{mysql_8h_a67a387c3b983ece6103f964b0105527d}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+insert\+\_\+id@{mysql\+\_\+stmt\+\_\+insert\+\_\+id}}
+\index{mysql\+\_\+stmt\+\_\+insert\+\_\+id@{mysql\+\_\+stmt\+\_\+insert\+\_\+id}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+insert\+\_\+id(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+insert\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a67a387c3b983ece6103f964b0105527d}
+\hypertarget{mysql_8h_a6acdabde7507a189a22a862e1406bd90}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+next\+\_\+result@{mysql\+\_\+stmt\+\_\+next\+\_\+result}}
+\index{mysql\+\_\+stmt\+\_\+next\+\_\+result@{mysql\+\_\+stmt\+\_\+next\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+next\+\_\+result(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+next\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a6acdabde7507a189a22a862e1406bd90}
+\hypertarget{mysql_8h_a55405a0e0c57bdb0072fbce3519fdd37}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+num\+\_\+rows@{mysql\+\_\+stmt\+\_\+num\+\_\+rows}}
+\index{mysql\+\_\+stmt\+\_\+num\+\_\+rows@{mysql\+\_\+stmt\+\_\+num\+\_\+rows}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+num\+\_\+rows(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+ulonglong} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+num\+\_\+rows (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a55405a0e0c57bdb0072fbce3519fdd37}
+\hypertarget{mysql_8h_a648e5e79bf40cebdc55e477450bcdc37}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+param\+\_\+count@{mysql\+\_\+stmt\+\_\+param\+\_\+count}}
+\index{mysql\+\_\+stmt\+\_\+param\+\_\+count@{mysql\+\_\+stmt\+\_\+param\+\_\+count}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+param\+\_\+count(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+param\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a648e5e79bf40cebdc55e477450bcdc37}
+\hypertarget{mysql_8h_af33147f7e4ae15e720e9d8b9df690aba}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+param\+\_\+metadata@{mysql\+\_\+stmt\+\_\+param\+\_\+metadata}}
+\index{mysql\+\_\+stmt\+\_\+param\+\_\+metadata@{mysql\+\_\+stmt\+\_\+param\+\_\+metadata}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+param\+\_\+metadata(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+param\+\_\+metadata (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af33147f7e4ae15e720e9d8b9df690aba}
+\hypertarget{mysql_8h_a8d797ee1e3542c9db8823b0e9c125470}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+prepare@{mysql\+\_\+stmt\+\_\+prepare}}
+\index{mysql\+\_\+stmt\+\_\+prepare@{mysql\+\_\+stmt\+\_\+prepare}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+prepare(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, const char $\ast$query, unsigned long length)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+prepare (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{const char $\ast$}]{query, }
+\item[{unsigned long}]{length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a8d797ee1e3542c9db8823b0e9c125470}
+\hypertarget{mysql_8h_aaba370e73bbe747467d04e65bcf1cdda}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+reset@{mysql\+\_\+stmt\+\_\+reset}}
+\index{mysql\+\_\+stmt\+\_\+reset@{mysql\+\_\+stmt\+\_\+reset}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+reset(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aaba370e73bbe747467d04e65bcf1cdda}
+\hypertarget{mysql_8h_af8e35f9132ae3809b7ced457a03a376e}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+result\+\_\+metadata@{mysql\+\_\+stmt\+\_\+result\+\_\+metadata}}
+\index{mysql\+\_\+stmt\+\_\+result\+\_\+metadata@{mysql\+\_\+stmt\+\_\+result\+\_\+metadata}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+result\+\_\+metadata(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+result\+\_\+metadata (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af8e35f9132ae3809b7ced457a03a376e}
+\hypertarget{mysql_8h_ae9a75d32c822dde18d99caa57988dfd5}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+row\+\_\+seek@{mysql\+\_\+stmt\+\_\+row\+\_\+seek}}
+\index{mysql\+\_\+stmt\+\_\+row\+\_\+seek@{mysql\+\_\+stmt\+\_\+row\+\_\+seek}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+row\+\_\+seek(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+row\+\_\+seek (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T}}]{offset}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_ae9a75d32c822dde18d99caa57988dfd5}
+\hypertarget{mysql_8h_a4a333f94f5bb2fea141e766716016dfe}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+row\+\_\+tell@{mysql\+\_\+stmt\+\_\+row\+\_\+tell}}
+\index{mysql\+\_\+stmt\+\_\+row\+\_\+tell@{mysql\+\_\+stmt\+\_\+row\+\_\+tell}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+row\+\_\+tell(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+O\+W\+\_\+\+O\+F\+F\+S\+E\+T} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+row\+\_\+tell (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a4a333f94f5bb2fea141e766716016dfe}
+\hypertarget{mysql_8h_a6b44cd9617dd1ab78cd7662ec8b5223a}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data@{mysql\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data}}
+\index{mysql\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data@{mysql\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt, unsigned int param\+\_\+number, const char $\ast$data, unsigned long length)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+send\+\_\+long\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt, }
+\item[{unsigned int}]{param\+\_\+number, }
+\item[{const char $\ast$}]{data, }
+\item[{unsigned long}]{length}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a6b44cd9617dd1ab78cd7662ec8b5223a}
+\hypertarget{mysql_8h_aef49d900cda67437951a90d2e8c5f87d}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+sqlstate@{mysql\+\_\+stmt\+\_\+sqlstate}}
+\index{mysql\+\_\+stmt\+\_\+sqlstate@{mysql\+\_\+stmt\+\_\+sqlstate}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+sqlstate(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+sqlstate (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_aef49d900cda67437951a90d2e8c5f87d}
+\hypertarget{mysql_8h_a88ba59ece2a241e79685188dbc8291fc}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+stmt\+\_\+store\+\_\+result@{mysql\+\_\+stmt\+\_\+store\+\_\+result}}
+\index{mysql\+\_\+stmt\+\_\+store\+\_\+result@{mysql\+\_\+stmt\+\_\+store\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+stmt\+\_\+store\+\_\+result(\+M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T $\ast$stmt)}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+stmt\+\_\+store\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L\+\_\+\+S\+T\+M\+T} $\ast$}]{stmt}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a88ba59ece2a241e79685188dbc8291fc}
+\hypertarget{mysql_8h_a11029d06cd3bf4fc76ce4be717146ea3}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+store\+\_\+result@{mysql\+\_\+store\+\_\+result}}
+\index{mysql\+\_\+store\+\_\+result@{mysql\+\_\+store\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+store\+\_\+result(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+store\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a11029d06cd3bf4fc76ce4be717146ea3}
+\hypertarget{mysql_8h_af521e01410f5e055352db9757ce7fe8e}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+thread\+\_\+end@{mysql\+\_\+thread\+\_\+end}}
+\index{mysql\+\_\+thread\+\_\+end@{mysql\+\_\+thread\+\_\+end}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+thread\+\_\+end(void)}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+thread\+\_\+end (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_af521e01410f5e055352db9757ce7fe8e}
+\hypertarget{mysql_8h_a4131fd3cb5041b6997010fbbddb0c866}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+thread\+\_\+id@{mysql\+\_\+thread\+\_\+id}}
+\index{mysql\+\_\+thread\+\_\+id@{mysql\+\_\+thread\+\_\+id}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+thread\+\_\+id(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+thread\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a4131fd3cb5041b6997010fbbddb0c866}
+\hypertarget{mysql_8h_a30b32d00bd5ac5691c4b7ff5b05067e8}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+thread\+\_\+init@{mysql\+\_\+thread\+\_\+init}}
+\index{mysql\+\_\+thread\+\_\+init@{mysql\+\_\+thread\+\_\+init}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+thread\+\_\+init(void)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf my\+\_\+bool} {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+thread\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a30b32d00bd5ac5691c4b7ff5b05067e8}
+\hypertarget{mysql_8h_a0e00463b751369a0e4587c3ea3e0315a}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+thread\+\_\+safe@{mysql\+\_\+thread\+\_\+safe}}
+\index{mysql\+\_\+thread\+\_\+safe@{mysql\+\_\+thread\+\_\+safe}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+thread\+\_\+safe(void)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+thread\+\_\+safe (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a0e00463b751369a0e4587c3ea3e0315a}
+\hypertarget{mysql_8h_a67951903960ca1cfab10c0f3482fc18a}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+use\+\_\+result@{mysql\+\_\+use\+\_\+result}}
+\index{mysql\+\_\+use\+\_\+result@{mysql\+\_\+use\+\_\+result}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+use\+\_\+result(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+Y\+S\+Q\+L\+\_\+\+R\+E\+S}$\ast$ {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+use\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a67951903960ca1cfab10c0f3482fc18a}
+\hypertarget{mysql_8h_a680fcc0848fb5287f5ba2e7178181572}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+warning\+\_\+count@{mysql\+\_\+warning\+\_\+count}}
+\index{mysql\+\_\+warning\+\_\+count@{mysql\+\_\+warning\+\_\+count}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+warning\+\_\+count(\+M\+Y\+S\+Q\+L $\ast$mysql)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf S\+T\+D\+C\+A\+L\+L} mysql\+\_\+warning\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+Y\+S\+Q\+L} $\ast$}]{mysql}
+\end{DoxyParamCaption}
+)}\label{mysql_8h_a680fcc0848fb5287f5ba2e7178181572}
+
+
+\subsection{Variable Documentation}
+\hypertarget{mysql_8h_a80816aeddad71ad988bd490a3a4020a5}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+port@{mysql\+\_\+port}}
+\index{mysql\+\_\+port@{mysql\+\_\+port}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+port}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int mysql\+\_\+port}\label{mysql_8h_a80816aeddad71ad988bd490a3a4020a5}
+\hypertarget{mysql_8h_ac53f2b5a4e5c09d4006e45c22865c279}{}\index{mysql.\+h@{mysql.\+h}!mysql\+\_\+unix\+\_\+port@{mysql\+\_\+unix\+\_\+port}}
+\index{mysql\+\_\+unix\+\_\+port@{mysql\+\_\+unix\+\_\+port}!mysql.\+h@{mysql.\+h}}
+\subsubsection[{mysql\+\_\+unix\+\_\+port}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ mysql\+\_\+unix\+\_\+port}\label{mysql_8h_ac53f2b5a4e5c09d4006e45c22865c279}

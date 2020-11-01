@@ -1,0 +1,5 @@
+<map id="UART_AbortReceive" name="UART_AbortReceive">
+<area shape="rect" id="node1" title="Stops the active data reception sequence." alt="" coords="5,35,144,61"/>
+<area shape="rect" id="node2" href="$group___u_a_r_t.html#ga87743034df2fe747615ce39a6b870a0c" title=" " alt="" coords="192,5,389,32"/>
+<area shape="rect" id="node3" href="$group___u_s_i_c.html#gaba3a2a1a0a12f9e238f672cda10bcefa" title=" " alt="" coords="209,57,372,98"/>
+</map>

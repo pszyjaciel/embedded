@@ -1,0 +1,68 @@
+.INCLUDE "M2560DEF.INC"
+
+delay: // the callee
+	PUSH R16 // The saving of the working registers
+	PUSH R17
+	PUSH R18
+	PUSH R19
+	PUSH R26
+	PUSH R27
+
+	IN R26, SPL
+	IN R27, SPH
+	ADIW R26, 10
+	LD R16, X // 1ST. PARAM (OUTER)
+	
+	EOR R18, R18
+	LDI R17, 0X84 // CORRESPONDS TO 100MILISEC
+	MOV R19, R17  // SAVE OF R17
+
+	LOOP:
+		DEC R18
+		BRNE LOOP
+		DEC R17
+		BRNE LOOP
+		MOV R17, R19 // RECOVERY OF R17
+		DEC R16
+		BRNE LOOP
+	POP R27
+	POP R26
+	POP R19
+	POP R18
+	POP R17
+	POP R16
+	RET 
+
+start:
+LDI R16, 0xFF // stack initialisation
+OUT SPL, R16
+LDI R16, 0x21
+OUT SPH, R16
+
+LDI R16, 0xFF
+OUT DDRB, R16
+LDI R16, 0xFF
+OUT DDRC, R16
+
+main_loop:
+LDI R16, 0xFF
+OUT PORTB, R16 // turn ON LEDs on port B
+OUT PORTC, R16 // turn ON LEDs on port B
+
+LDI R16, 8 // x10
+PUSH R16
+CALL delay
+POP R16
+
+LDI R16, 0x00
+OUT PORTB, R16 // turn OFF LEDs on port B
+OUT PORTC, R16 // turn ON LEDs on port B
+
+LDI R16, 2 // x10 delay
+PUSH R16
+CALL delay 
+POP R16
+
+JMP main_loop
+
+// VIACallingConventions.pdf 

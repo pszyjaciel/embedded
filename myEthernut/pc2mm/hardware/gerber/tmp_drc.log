@@ -1,0 +1,30 @@
+
+----------------------------------------------------
+Design rule check                               3.11
+--- --- --- --- --- --- --- --- --- --- --- --- ----
+Units          : mm
+Parameter file : U:\ucam-cfg\drc\DrillOuter.cfg
+Options        : Build-Netlist (Job-Netlist) 
+
+Layer Check (DRILL) : gerber-rs232-rs485_drill
+Use-Netlist
+Relative tolerance: 3.000000
+
+Pad to Pad                   <   0.2000      0
+Center to Center Overlap     >   0.0000      0
+Overlapping Pads                             4
+
+Layer/Layer Check (outer.drill) : gerber-rs232-rs485_top / gerber-rs232-rs485_drill
+Use-Netlist
+Relative tolerance: 3.000000
+
+Ring Lay2->Lay1    <   0.1500      0
+Center to Center   >   0.0000      0
+
+Layer/Layer Check (outer.drill) : gerber-rs232-rs485_bottom / gerber-rs232-rs485_drill
+Use-Netlist
+Relative tolerance: 3.000000
+
+Ring Lay2->Lay1    <   0.1500      0
+Center to Center   >   0.0000      0
+----------------------------------------------------

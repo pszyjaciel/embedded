@@ -1,0 +1,174 @@
+\hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r}{}\doxysection{x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+ER Struct Reference}
+\label{structx_s_t_r_e_a_m___b_u_f_f_e_r}\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+
+
+Collaboration diagram for x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+ER\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{structx_s_t_r_e_a_m___b_u_f_f_e_r__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_add6a93984bef69eda74c3779c15d3295}{x\+Tail}}
+\item 
+volatile size\+\_\+t \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_a6fbdda3881a3bbcd6ad366a484526971}{x\+Head}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_ae3986d655d5138bf1674eb5d57ee16ce}{x\+Length}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_ac2d391ae2521c8c94b4e0d12802dc34b}{x\+Trigger\+Level\+Bytes}}
+\item 
+volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2task_8h_ae95f44d4cfeb4a599c6cc258d241cb6b}{Task\+Handle\+\_\+t}} \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_a4c61e9654f24ac44aa7d3dd7dd02fe3d}{x\+Task\+Waiting\+To\+Receive}}
+\item 
+volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2task_8h_ae95f44d4cfeb4a599c6cc258d241cb6b}{Task\+Handle\+\_\+t}} \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_ada5585399db1983037386f271d9d45ae}{x\+Task\+Waiting\+To\+Send}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_a7572d42f1538f933661af028673d03f7}{puc\+Buffer}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_a0f8f79237cbab1b4c803675e49557efe}{uc\+Flags}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{structx_s_t_r_e_a_m___b_u_f_f_e_r_a1158b8f28de2af8e5b5a42f25a16a57e}{ux\+Stream\+Buffer\+Number}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 141 of file stream\+\_\+buffer.\+c.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_a7572d42f1538f933661af028673d03f7}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_a7572d42f1538f933661af028673d03f7}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!pucBuffer@{pucBuffer}}
+\index{pucBuffer@{pucBuffer}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{pucBuffer}{pucBuffer}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::puc\+Buffer}
+
+
+
+Definition at line 149 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by prv\+Read\+Bytes\+From\+Buffer(), prv\+Write\+Bytes\+To\+Buffer(), and x\+Stream\+Buffer\+Reset().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_a0f8f79237cbab1b4c803675e49557efe}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_a0f8f79237cbab1b4c803675e49557efe}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!ucFlags@{ucFlags}}
+\index{ucFlags@{ucFlags}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{ucFlags}{ucFlags}}
+{\footnotesize\ttfamily uint8\+\_\+t x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::uc\+Flags}
+
+
+
+Definition at line 150 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by prv\+Write\+Message\+To\+Buffer(), v\+Stream\+Buffer\+Delete(), x\+Stream\+Buffer\+Is\+Full(), x\+Stream\+Buffer\+Receive(), x\+Stream\+Buffer\+Receive\+From\+I\+S\+R(), x\+Stream\+Buffer\+Reset(), x\+Stream\+Buffer\+Send(), and x\+Stream\+Buffer\+Send\+From\+I\+S\+R().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_a1158b8f28de2af8e5b5a42f25a16a57e}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_a1158b8f28de2af8e5b5a42f25a16a57e}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!uxStreamBufferNumber@{uxStreamBufferNumber}}
+\index{uxStreamBufferNumber@{uxStreamBufferNumber}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{uxStreamBufferNumber}{uxStreamBufferNumber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::ux\+Stream\+Buffer\+Number}
+
+
+
+Definition at line 153 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by x\+Stream\+Buffer\+Reset().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_a6fbdda3881a3bbcd6ad366a484526971}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_a6fbdda3881a3bbcd6ad366a484526971}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!xHead@{xHead}}
+\index{xHead@{xHead}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{xHead}{xHead}}
+{\footnotesize\ttfamily volatile size\+\_\+t x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::x\+Head}
+
+
+
+Definition at line 144 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by prv\+Bytes\+In\+Buffer(), prv\+Write\+Bytes\+To\+Buffer(), x\+Stream\+Buffer\+Is\+Empty(), and x\+Stream\+Buffer\+Spaces\+Available().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_ae3986d655d5138bf1674eb5d57ee16ce}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_ae3986d655d5138bf1674eb5d57ee16ce}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!xLength@{xLength}}
+\index{xLength@{xLength}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{xLength}{xLength}}
+{\footnotesize\ttfamily size\+\_\+t x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::x\+Length}
+
+
+
+Definition at line 145 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by prv\+Bytes\+In\+Buffer(), prv\+Read\+Bytes\+From\+Buffer(), prv\+Write\+Bytes\+To\+Buffer(), x\+Stream\+Buffer\+Reset(), and x\+Stream\+Buffer\+Spaces\+Available().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_add6a93984bef69eda74c3779c15d3295}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_add6a93984bef69eda74c3779c15d3295}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!xTail@{xTail}}
+\index{xTail@{xTail}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{xTail}{xTail}}
+{\footnotesize\ttfamily volatile size\+\_\+t x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::x\+Tail}
+
+
+
+Definition at line 143 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by prv\+Bytes\+In\+Buffer(), prv\+Read\+Bytes\+From\+Buffer(), prv\+Read\+Message\+From\+Buffer(), x\+Stream\+Buffer\+Is\+Empty(), and x\+Stream\+Buffer\+Spaces\+Available().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_a4c61e9654f24ac44aa7d3dd7dd02fe3d}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_a4c61e9654f24ac44aa7d3dd7dd02fe3d}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!xTaskWaitingToReceive@{xTaskWaitingToReceive}}
+\index{xTaskWaitingToReceive@{xTaskWaitingToReceive}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{xTaskWaitingToReceive}{xTaskWaitingToReceive}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2task_8h_ae95f44d4cfeb4a599c6cc258d241cb6b}{Task\+Handle\+\_\+t}} x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::x\+Task\+Waiting\+To\+Receive}
+
+
+
+Definition at line 147 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by x\+Stream\+Buffer\+Receive(), and x\+Stream\+Buffer\+Reset().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_ada5585399db1983037386f271d9d45ae}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_ada5585399db1983037386f271d9d45ae}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!xTaskWaitingToSend@{xTaskWaitingToSend}}
+\index{xTaskWaitingToSend@{xTaskWaitingToSend}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{xTaskWaitingToSend}{xTaskWaitingToSend}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2task_8h_ae95f44d4cfeb4a599c6cc258d241cb6b}{Task\+Handle\+\_\+t}} x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::x\+Task\+Waiting\+To\+Send}
+
+
+
+Definition at line 148 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by x\+Stream\+Buffer\+Reset(), and x\+Stream\+Buffer\+Send().
+
+\mbox{\Hypertarget{structx_s_t_r_e_a_m___b_u_f_f_e_r_ac2d391ae2521c8c94b4e0d12802dc34b}\label{structx_s_t_r_e_a_m___b_u_f_f_e_r_ac2d391ae2521c8c94b4e0d12802dc34b}} 
+\index{xSTREAM\_BUFFER@{xSTREAM\_BUFFER}!xTriggerLevelBytes@{xTriggerLevelBytes}}
+\index{xTriggerLevelBytes@{xTriggerLevelBytes}!xSTREAM\_BUFFER@{xSTREAM\_BUFFER}}
+\doxysubsubsection{\texorpdfstring{xTriggerLevelBytes}{xTriggerLevelBytes}}
+{\footnotesize\ttfamily size\+\_\+t x\+S\+T\+R\+E\+A\+M\+\_\+\+B\+U\+F\+F\+E\+R\+::x\+Trigger\+Level\+Bytes}
+
+
+
+Definition at line 146 of file stream\+\_\+buffer.\+c.
+
+
+
+Referenced by x\+Stream\+Buffer\+Reset(), x\+Stream\+Buffer\+Send(), x\+Stream\+Buffer\+Send\+From\+I\+S\+R(), and x\+Stream\+Buffer\+Set\+Trigger\+Level().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dave/\+Generated/\+F\+R\+E\+E\+R\+T\+O\+S/\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2stream__buffer_8c}{stream\+\_\+buffer.\+c}}\end{DoxyCompactItemize}

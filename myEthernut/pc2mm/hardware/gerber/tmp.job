@@ -1,0 +1,223 @@
+version=4.7
+revision:1
+customer:cus
+layer
+  {
+  name:		gerber-rs232-rs485_top
+  class:	outer
+  material:	Cu17
+  thickness:	-0.017
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.front.gbr
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    uMatReference:FR4-1.55/17
+    uMatTolerance:0.01
+    uMatSupplier:
+    uNextPreNoDown:5
+    uNextPreNoUp:1
+    }
+  }
+layer
+  {
+  name:		gerber-rs232-rs485_bottom
+  class:	outer
+  material:	Cu17
+  readable:	bot
+  zpos:		1.584
+  thickness:	0.017
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.back.gbr
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    uMatReference:FR4-1.55/17
+    uMatTolerance:0.01
+    uMatSupplier:
+    }
+  }
+drill
+  {
+  name:		gerber-rs232-rs485_drill
+  class:	drill
+  top:		1
+  bot:		2
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.plated-drill.cnc
+  wheel:		C:\Users\tomek\AppData\Local\Temp\excellon2_tmp_merged_wheel2054124821668218652.whe
+  plot
+    {
+    polarity:	POSITIVE
+    emulsion:	UP
+    resolution:	2000
+    uscale:	10000000
+    xscale:	10000000
+    yscale:	10000000
+    film:	agfa
+    }
+  attributes
+    {
+    uImportGar:C:\mb\Ucam923\Ucam92\env\dat\setup\xar\toolheader.xar
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    }
+  }
+extra
+  {
+  name:		gerber-rs232-rs485.frontsilk
+  class:	silk
+  num:		1
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.frontsilk.gbr
+  attach:	top
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    }
+  }
+extra
+  {
+  name:		gerber-rs232-rs485_frontmask
+  class:	mask
+  num:		1
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.frontmask.gbr
+  attach:	top
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    }
+  }
+extra
+  {
+  name:		gerber-rs232-rs485.backmask
+  class:	mask
+  num:		1
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.backmask.gbr
+  attach:	bot
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    }
+  }
+extra
+  {
+  name:		dim
+  class:	help
+  num:		1
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.fab.gbr
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    }
+  }
+extra
+  {
+  name:		gerber-rs232-rs485.fab
+  class:	help
+  num:		1
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.fab.gbr
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    }
+  }
+extra
+  {
+  name:		outline2
+  class:	help
+  num:		1
+  data:		C:\!cam2\eagle\panel3_addOn\rs485\rs232-to-rs485-master\gerber\outline2.dpf
+  }
+extra
+  {
+  name:		outline
+  class:	outline
+  num:		1
+  data:		C:\08\rs232-to-rs485-master\gerber\gerber-rs232-rs485.fab.gbr
+  attributes
+    {
+    uImportUnit:inch
+    uImportIform:2
+    uImportDform:4
+    uImportZeroes:1
+    }
+  }
+extra
+  {
+  name:		gerber-rs232-rs485_drill_symbol
+  class:	symbols
+  num:		1
+  }
+core 
+  {
+  material:	core1.55
+  top:		1
+  bot:		2
+  thickness:	1.55
+  attach:	both
+  attributes
+    {
+    uMatReference:FR4-1.55/17
+    uMatTolerance:0.01
+    uMatErConstant:4.2
+    uMatSupplier:
+    uMatType:core
+    }
+  }
+datum
+  {
+  }
+ate
+  {
+  fixture:	DSA
+  machine:	
+  }
+attributes
+  {
+  uJobSize:mil,0.0,0.0
+  uJobFlow:
+  uTechnologycheck:
+  uAttributeset:
+  uBuildup:2Lags_standard
+  }
+drc:U:\ucam-cfg\drc\DrillOuter.cfg

@@ -1,0 +1,294 @@
+\hypertarget{struct_queue_definition}{}\doxysection{Queue\+Definition Struct Reference}
+\label{struct_queue_definition}\index{QueueDefinition@{QueueDefinition}}
+
+
+Collaboration diagram for Queue\+Definition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_queue_definition__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t $\ast$ \mbox{\hyperlink{struct_queue_definition_a1c8f1f3ca9262063902bbdd40c37bc65}{pc\+Head}}
+\item 
+int8\+\_\+t $\ast$ \mbox{\hyperlink{struct_queue_definition_ade2a76d6f78cf87806d0380ffa91bc58}{pc\+Tail}}
+\item 
+int8\+\_\+t $\ast$ \mbox{\hyperlink{struct_queue_definition_a724035e62425ba44001f7589091cacfd}{pc\+Write\+To}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int8\_t $\ast$ \mbox{\hyperlink{struct_queue_definition_a970cf73ab9c7382b581bc310b1d947d5}{pcReadFrom}}\\
+\>\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{UBaseType\_t}} \mbox{\hyperlink{struct_queue_definition_a2cf88e286477f6f89fe1009d722dc4cf}{uxRecursiveCallCount}}\\
+\} \mbox{\hyperlink{struct_queue_definition_a026466df9465a22741441e259aa985aa}{u}}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_ad14d7e3de1350e459c7c23c6f59c902a}{List\+\_\+t}} \mbox{\hyperlink{struct_queue_definition_aaab135c4345cb0393d6ff3cd5164c7b2}{x\+Tasks\+Waiting\+To\+Send}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_ad14d7e3de1350e459c7c23c6f59c902a}{List\+\_\+t}} \mbox{\hyperlink{struct_queue_definition_af6d61526f77beee659cd604a0c473359}{x\+Tasks\+Waiting\+To\+Receive}}
+\item 
+volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{struct_queue_definition_a12b07a40152d0f21488ca06d362d13d1}{ux\+Messages\+Waiting}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{struct_queue_definition_ae80d17a812c669d4d41265b7f693988c}{ux\+Length}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{struct_queue_definition_a81bb7d3826909244baa9debf5a55abb0}{ux\+Item\+Size}}
+\item 
+volatile int8\+\_\+t \mbox{\hyperlink{struct_queue_definition_ac750a3f75a6e174adbc697e473a0dd13}{c\+Rx\+Lock}}
+\item 
+volatile int8\+\_\+t \mbox{\hyperlink{struct_queue_definition_a24ac3f0707f098da2a22244d843fcf82}{c\+Tx\+Lock}}
+\item 
+struct \mbox{\hyperlink{struct_queue_definition}{Queue\+Definition}} $\ast$ \mbox{\hyperlink{struct_queue_definition_a92566f030fffb3cd72742be45e714926}{px\+Queue\+Set\+Container}}
+\item 
+\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} \mbox{\hyperlink{struct_queue_definition_a1b422cf046da7afa63a0646ed6a2e8c6}{ux\+Queue\+Number}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_queue_definition_a337a8dc6af8fc327a92412275e86fe81}{uc\+Queue\+Type}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int8\_t $\ast$ \mbox{\hyperlink{struct_queue_definition_a970cf73ab9c7382b581bc310b1d947d5}{pcReadFrom}}\\
+\>\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{UBaseType\_t}} \mbox{\hyperlink{struct_queue_definition_a2cf88e286477f6f89fe1009d722dc4cf}{uxRecursiveCallCount}}\\
+\} \mbox{\hyperlink{struct_queue_definition_a01794cfe1a3293124d3b03a94f48ee5a}{u}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 88 of file queue.\+c.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_queue_definition_ac750a3f75a6e174adbc697e473a0dd13}\label{struct_queue_definition_ac750a3f75a6e174adbc697e473a0dd13}} 
+\index{QueueDefinition@{QueueDefinition}!cRxLock@{cRxLock}}
+\index{cRxLock@{cRxLock}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{cRxLock}{cRxLock}}
+{\footnotesize\ttfamily volatile int8\+\_\+t Queue\+Definition\+::c\+Rx\+Lock}
+
+
+
+Definition at line 107 of file queue.\+c.
+
+
+
+Referenced by prv\+Unlock\+Queue(), x\+Queue\+Generic\+Reset(), and x\+Queue\+Receive\+From\+I\+S\+R().
+
+\mbox{\Hypertarget{struct_queue_definition_a24ac3f0707f098da2a22244d843fcf82}\label{struct_queue_definition_a24ac3f0707f098da2a22244d843fcf82}} 
+\index{QueueDefinition@{QueueDefinition}!cTxLock@{cTxLock}}
+\index{cTxLock@{cTxLock}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{cTxLock}{cTxLock}}
+{\footnotesize\ttfamily volatile int8\+\_\+t Queue\+Definition\+::c\+Tx\+Lock}
+
+
+
+Definition at line 108 of file queue.\+c.
+
+
+
+Referenced by prv\+Notify\+Queue\+Set\+Container(), prv\+Unlock\+Queue(), x\+Queue\+Generic\+Reset(), x\+Queue\+Generic\+Send\+From\+I\+S\+R(), and x\+Queue\+Give\+From\+I\+S\+R().
+
+\mbox{\Hypertarget{struct_queue_definition_a1c8f1f3ca9262063902bbdd40c37bc65}\label{struct_queue_definition_a1c8f1f3ca9262063902bbdd40c37bc65}} 
+\index{QueueDefinition@{QueueDefinition}!pcHead@{pcHead}}
+\index{pcHead@{pcHead}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{pcHead}{pcHead}}
+{\footnotesize\ttfamily int8\+\_\+t $\ast$ Queue\+Definition\+::pc\+Head}
+
+
+
+Definition at line 90 of file queue.\+c.
+
+
+
+Referenced by prv\+Copy\+Data\+From\+Queue(), prv\+Copy\+Data\+To\+Queue(), prv\+Initialise\+New\+Queue(), and x\+Queue\+Generic\+Reset().
+
+\mbox{\Hypertarget{struct_queue_definition_a970cf73ab9c7382b581bc310b1d947d5}\label{struct_queue_definition_a970cf73ab9c7382b581bc310b1d947d5}} 
+\index{QueueDefinition@{QueueDefinition}!pcReadFrom@{pcReadFrom}}
+\index{pcReadFrom@{pcReadFrom}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{pcReadFrom}{pcReadFrom}}
+{\footnotesize\ttfamily int8\+\_\+t$\ast$ Queue\+Definition\+::pc\+Read\+From}
+
+
+
+Definition at line 96 of file queue.\+c.
+
+
+
+Referenced by prv\+Copy\+Data\+From\+Queue(), prv\+Copy\+Data\+To\+Queue(), x\+Queue\+Generic\+Reset(), x\+Queue\+Peek(), and x\+Queue\+Peek\+From\+I\+S\+R().
+
+\mbox{\Hypertarget{struct_queue_definition_ade2a76d6f78cf87806d0380ffa91bc58}\label{struct_queue_definition_ade2a76d6f78cf87806d0380ffa91bc58}} 
+\index{QueueDefinition@{QueueDefinition}!pcTail@{pcTail}}
+\index{pcTail@{pcTail}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{pcTail}{pcTail}}
+{\footnotesize\ttfamily int8\+\_\+t $\ast$ Queue\+Definition\+::pc\+Tail}
+
+
+
+Definition at line 91 of file queue.\+c.
+
+
+
+Referenced by prv\+Copy\+Data\+From\+Queue(), prv\+Copy\+Data\+To\+Queue(), and x\+Queue\+Generic\+Reset().
+
+\mbox{\Hypertarget{struct_queue_definition_a724035e62425ba44001f7589091cacfd}\label{struct_queue_definition_a724035e62425ba44001f7589091cacfd}} 
+\index{QueueDefinition@{QueueDefinition}!pcWriteTo@{pcWriteTo}}
+\index{pcWriteTo@{pcWriteTo}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{pcWriteTo}{pcWriteTo}}
+{\footnotesize\ttfamily int8\+\_\+t $\ast$ Queue\+Definition\+::pc\+Write\+To}
+
+
+
+Definition at line 92 of file queue.\+c.
+
+
+
+Referenced by prv\+Copy\+Data\+To\+Queue(), and x\+Queue\+Generic\+Reset().
+
+\mbox{\Hypertarget{struct_queue_definition_a92566f030fffb3cd72742be45e714926}\label{struct_queue_definition_a92566f030fffb3cd72742be45e714926}} 
+\index{QueueDefinition@{QueueDefinition}!pxQueueSetContainer@{pxQueueSetContainer}}
+\index{pxQueueSetContainer@{pxQueueSetContainer}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{pxQueueSetContainer}{pxQueueSetContainer}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_queue_definition}{Queue\+Definition}}$\ast$ Queue\+Definition\+::px\+Queue\+Set\+Container}
+
+
+
+Definition at line 115 of file queue.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Queue(), prv\+Notify\+Queue\+Set\+Container(), prv\+Unlock\+Queue(), x\+Queue\+Generic\+Send(), x\+Queue\+Generic\+Send\+From\+I\+S\+R(), x\+Queue\+Give\+From\+I\+S\+R(), and x\+Queue\+Remove\+From\+Set().
+
+\mbox{\Hypertarget{struct_queue_definition_a01794cfe1a3293124d3b03a94f48ee5a}\label{struct_queue_definition_a01794cfe1a3293124d3b03a94f48ee5a}} 
+\index{QueueDefinition@{QueueDefinition}!u@{u}}
+\index{u@{u}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{u}{u}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily union \{ ... \}  Queue\+Definition\+::u}
+
+\mbox{\Hypertarget{struct_queue_definition_a026466df9465a22741441e259aa985aa}\label{struct_queue_definition_a026466df9465a22741441e259aa985aa}} 
+\index{QueueDefinition@{QueueDefinition}!u@{u}}
+\index{u@{u}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{u}{u}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily union \{ ... \}  Queue\+Definition\+::u}
+
+
+
+Referenced by prv\+Copy\+Data\+From\+Queue(), prv\+Copy\+Data\+To\+Queue(), prv\+Initialise\+Mutex(), x\+Queue\+Generic\+Reset(), x\+Queue\+Give\+Mutex\+Recursive(), x\+Queue\+Peek(), x\+Queue\+Peek\+From\+I\+S\+R(), and x\+Queue\+Take\+Mutex\+Recursive().
+
+\mbox{\Hypertarget{struct_queue_definition_a337a8dc6af8fc327a92412275e86fe81}\label{struct_queue_definition_a337a8dc6af8fc327a92412275e86fe81}} 
+\index{QueueDefinition@{QueueDefinition}!ucQueueType@{ucQueueType}}
+\index{ucQueueType@{ucQueueType}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{ucQueueType}{ucQueueType}}
+{\footnotesize\ttfamily uint8\+\_\+t Queue\+Definition\+::uc\+Queue\+Type}
+
+
+
+Definition at line 120 of file queue.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Queue().
+
+\mbox{\Hypertarget{struct_queue_definition_a81bb7d3826909244baa9debf5a55abb0}\label{struct_queue_definition_a81bb7d3826909244baa9debf5a55abb0}} 
+\index{QueueDefinition@{QueueDefinition}!uxItemSize@{uxItemSize}}
+\index{uxItemSize@{uxItemSize}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{uxItemSize}{uxItemSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} Queue\+Definition\+::ux\+Item\+Size}
+
+
+
+Definition at line 105 of file queue.\+c.
+
+
+
+Referenced by prv\+Copy\+Data\+From\+Queue(), prv\+Copy\+Data\+To\+Queue(), prv\+Initialise\+New\+Queue(), x\+Queue\+Generic\+Reset(), x\+Queue\+Generic\+Send(), x\+Queue\+Generic\+Send\+From\+I\+S\+R(), x\+Queue\+Give\+From\+I\+S\+R(), x\+Queue\+Peek\+From\+I\+S\+R(), x\+Queue\+Receive\+From\+I\+S\+R(), and x\+Queue\+Semaphore\+Take().
+
+\mbox{\Hypertarget{struct_queue_definition_ae80d17a812c669d4d41265b7f693988c}\label{struct_queue_definition_ae80d17a812c669d4d41265b7f693988c}} 
+\index{QueueDefinition@{QueueDefinition}!uxLength@{uxLength}}
+\index{uxLength@{uxLength}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{uxLength}{uxLength}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} Queue\+Definition\+::ux\+Length}
+
+
+
+Definition at line 104 of file queue.\+c.
+
+
+
+Referenced by prv\+Initialise\+New\+Queue(), prv\+Is\+Queue\+Full(), prv\+Notify\+Queue\+Set\+Container(), ux\+Queue\+Spaces\+Available(), x\+Queue\+Generic\+Reset(), x\+Queue\+Generic\+Send(), and x\+Queue\+Generic\+Send\+From\+I\+S\+R().
+
+\mbox{\Hypertarget{struct_queue_definition_a12b07a40152d0f21488ca06d362d13d1}\label{struct_queue_definition_a12b07a40152d0f21488ca06d362d13d1}} 
+\index{QueueDefinition@{QueueDefinition}!uxMessagesWaiting@{uxMessagesWaiting}}
+\index{uxMessagesWaiting@{uxMessagesWaiting}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{uxMessagesWaiting}{uxMessagesWaiting}}
+{\footnotesize\ttfamily volatile \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} Queue\+Definition\+::ux\+Messages\+Waiting}
+
+
+
+Definition at line 103 of file queue.\+c.
+
+
+
+Referenced by prv\+Copy\+Data\+To\+Queue(), prv\+Is\+Queue\+Empty(), prv\+Is\+Queue\+Full(), prv\+Notify\+Queue\+Set\+Container(), ux\+Queue\+Spaces\+Available(), v\+Queue\+Wait\+For\+Message\+Restricted(), x\+Queue\+Generic\+Reset(), x\+Queue\+Generic\+Send(), x\+Queue\+Generic\+Send\+From\+I\+S\+R(), x\+Queue\+Give\+From\+I\+S\+R(), x\+Queue\+Peek(), x\+Queue\+Peek\+From\+I\+S\+R(), x\+Queue\+Receive(), x\+Queue\+Receive\+From\+I\+S\+R(), x\+Queue\+Remove\+From\+Set(), and x\+Queue\+Semaphore\+Take().
+
+\mbox{\Hypertarget{struct_queue_definition_a1b422cf046da7afa63a0646ed6a2e8c6}\label{struct_queue_definition_a1b422cf046da7afa63a0646ed6a2e8c6}} 
+\index{QueueDefinition@{QueueDefinition}!uxQueueNumber@{uxQueueNumber}}
+\index{uxQueueNumber@{uxQueueNumber}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{uxQueueNumber}{uxQueueNumber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} Queue\+Definition\+::ux\+Queue\+Number}
+
+
+
+Definition at line 119 of file queue.\+c.
+
+\mbox{\Hypertarget{struct_queue_definition_a2cf88e286477f6f89fe1009d722dc4cf}\label{struct_queue_definition_a2cf88e286477f6f89fe1009d722dc4cf}} 
+\index{QueueDefinition@{QueueDefinition}!uxRecursiveCallCount@{uxRecursiveCallCount}}
+\index{uxRecursiveCallCount@{uxRecursiveCallCount}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{uxRecursiveCallCount}{uxRecursiveCallCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2portable_2_g_c_c_2portmacro_8h_a646f89d4298e4f5afd522202b11cb2e6}{U\+Base\+Type\+\_\+t}} Queue\+Definition\+::ux\+Recursive\+Call\+Count}
+
+
+
+Definition at line 97 of file queue.\+c.
+
+
+
+Referenced by prv\+Initialise\+Mutex(), x\+Queue\+Give\+Mutex\+Recursive(), and x\+Queue\+Take\+Mutex\+Recursive().
+
+\mbox{\Hypertarget{struct_queue_definition_af6d61526f77beee659cd604a0c473359}\label{struct_queue_definition_af6d61526f77beee659cd604a0c473359}} 
+\index{QueueDefinition@{QueueDefinition}!xTasksWaitingToReceive@{xTasksWaitingToReceive}}
+\index{xTasksWaitingToReceive@{xTasksWaitingToReceive}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{xTasksWaitingToReceive}{xTasksWaitingToReceive}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_ad14d7e3de1350e459c7c23c6f59c902a}{List\+\_\+t}} Queue\+Definition\+::x\+Tasks\+Waiting\+To\+Receive}
+
+
+
+Definition at line 101 of file queue.\+c.
+
+
+
+Referenced by prv\+Get\+Disinherit\+Priority\+After\+Timeout(), prv\+Notify\+Queue\+Set\+Container(), prv\+Unlock\+Queue(), v\+Queue\+Wait\+For\+Message\+Restricted(), x\+Queue\+Generic\+Reset(), x\+Queue\+Generic\+Send(), x\+Queue\+Generic\+Send\+From\+I\+S\+R(), x\+Queue\+Give\+From\+I\+S\+R(), x\+Queue\+Peek(), x\+Queue\+Receive(), and x\+Queue\+Semaphore\+Take().
+
+\mbox{\Hypertarget{struct_queue_definition_aaab135c4345cb0393d6ff3cd5164c7b2}\label{struct_queue_definition_aaab135c4345cb0393d6ff3cd5164c7b2}} 
+\index{QueueDefinition@{QueueDefinition}!xTasksWaitingToSend@{xTasksWaitingToSend}}
+\index{xTasksWaitingToSend@{xTasksWaitingToSend}!QueueDefinition@{QueueDefinition}}
+\doxysubsubsection{\texorpdfstring{xTasksWaitingToSend}{xTasksWaitingToSend}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2list_8h_ad14d7e3de1350e459c7c23c6f59c902a}{List\+\_\+t}} Queue\+Definition\+::x\+Tasks\+Waiting\+To\+Send}
+
+
+
+Definition at line 100 of file queue.\+c.
+
+
+
+Referenced by prv\+Unlock\+Queue(), x\+Queue\+Generic\+Reset(), x\+Queue\+Generic\+Send(), x\+Queue\+Receive(), x\+Queue\+Receive\+From\+I\+S\+R(), and x\+Queue\+Semaphore\+Take().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Dave/\+Generated/\+F\+R\+E\+E\+R\+T\+O\+S/\mbox{\hyperlink{_generated_2_f_r_e_e_r_t_o_s_2queue_8c}{queue.\+c}}\end{DoxyCompactItemize}

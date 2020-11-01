@@ -1,0 +1,131 @@
+version=4.7
+revision:1
+customer:999
+layer
+  {
+  name:		comp
+  class:	outer
+  thickness:	0.018
+  data:		U:\jobs\999\999-007\enut13h.5
+  }
+layer
+  {
+  name:		lag2
+  class:	inner
+  thickness:	0.035
+  data:		U:\jobs\999\999-007\enut13h.6
+  }
+layer
+  {
+  name:		lag3
+  class:	inner
+  readable:	bot
+  thickness:	-0.035
+  data:		U:\jobs\999\999-007\enut13h.7
+  }
+layer
+  {
+  name:		sold
+  class:	outer
+  readable:	bot
+  thickness:	-0.018
+  data:		U:\jobs\999\999-007\enut13h.8
+  }
+drill
+  {
+  name:		dr
+  class:	drill
+  top:		1
+  bot:		4
+  thickness:	1.5
+  data:		U:\jobs\999\999-007\enut13h.9
+  wheel:		C:\Documents and Settings\root\Ustawienia lokalne\Temp\excellon2_tmp_merged_wheel25537.whe
+  }
+extra
+  {
+  name:		ktcomp
+  class:	silk
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.7
+  attach:	top
+  }
+extra
+  {
+  name:		m1comp
+  class:	mask
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.1
+  attach:	top
+  }
+extra
+  {
+  name:		m1sold
+  class:	mask
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.2
+  attach:	bot
+  }
+extra
+  {
+  name:		fr
+  class:	rout
+  num:		1
+  }
+extra
+  {
+  name:		outline
+  class:	outline
+  num:		1
+  data:		U:\jobs\999\999-007\enut13h.9
+  }
+extra
+  {
+  name:		dr_drimap
+  class:	map
+  num:		1
+  }
+feedback 
+  {
+  name:		lag2_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+feedback 
+  {
+  name:		lag3_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+feedback 
+  {
+  name:		comp_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+feedback 
+  {
+  name:		sold_etchref
+  class:	REF
+  top:		1
+  bot:		0
+  zpos:		0
+  }
+datum
+  {
+  }
+ate
+  {
+  fixture:	DSA
+  machine:	
+  }
+attributes
+  {
+  uJobSize:mm,0,0
+  }
+drc:U:\ucam-cfg\cfg\setup\smartdrc\Standard.cfg

@@ -1,0 +1,133 @@
+\hypertarget{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g}{}\doxysection{X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+IG Struct Reference}
+\label{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g}\index{XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}}
+
+
+{\ttfamily \#include $<$xmc\+\_\+uart.\+h$>$}
+
+
+
+Collaboration diagram for X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+IG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a0b544ca6cc9401d92dc514a9dca721d5}{baudrate}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a578b5a76594dbef33a3cadeaa914735d}{data\+\_\+bits}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a974c81fa7147fcc23d692f1ae54f337b}{frame\+\_\+length}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_adf553f8679bac4b34c53fe7adc863882}{stop\+\_\+bits}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a0b0a0f1096f62f668f523204386aae12}{oversampling}}
+\item 
+\mbox{\hyperlink{group___u_s_i_c_gaf1ef26fac80dbeda4fbd5144d896e68f}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+M\+O\+D\+E\+\_\+t}} \mbox{\hyperlink{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a9929455309e39bb8bdbb88990f43c706}{parity\+\_\+mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_u_a_r_t}{U\+A\+RT}} initialization structure 
+
+Definition at line 219 of file xmc\+\_\+uart.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a0b544ca6cc9401d92dc514a9dca721d5}\label{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a0b544ca6cc9401d92dc514a9dca721d5}} 
+\index{XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}!baudrate@{baudrate}}
+\index{baudrate@{baudrate}!XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{baudrate}{baudrate}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::baudrate}
+
+Desired baudrate. {\bfseries{Range\+:}} minimum= 100, maximum= (f\+P\+E\+R\+I\+PH $\ast$ 1023)/(1024 $\ast$ oversampling) 
+
+Definition at line 223 of file xmc\+\_\+uart.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+Init().
+
+\mbox{\Hypertarget{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a578b5a76594dbef33a3cadeaa914735d}\label{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a578b5a76594dbef33a3cadeaa914735d}} 
+\index{XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}!data\_bits@{data\_bits}}
+\index{data\_bits@{data\_bits}!XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{data\_bits}{data\_bits}}
+{\footnotesize\ttfamily uint8\+\_\+t X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::data\+\_\+bits}
+
+Number of bits for the data field. Value configured as U\+S\+IC channel word length. ~\newline
+{\bfseries{Range\+:}} minimum= 1, maximum= 16 
+
+Definition at line 224 of file xmc\+\_\+uart.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+Init().
+
+\mbox{\Hypertarget{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a974c81fa7147fcc23d692f1ae54f337b}\label{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a974c81fa7147fcc23d692f1ae54f337b}} 
+\index{XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}!frame\_length@{frame\_length}}
+\index{frame\_length@{frame\_length}!XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{frame\_length}{frame\_length}}
+{\footnotesize\ttfamily uint8\+\_\+t X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::frame\+\_\+length}
+
+Indicates nmber of bits in a frame. Configured as U\+S\+IC channel frame length. ~\newline
+ {\bfseries{Range\+:}} minimum= 1, maximum= 63 
+
+Definition at line 226 of file xmc\+\_\+uart.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+Init().
+
+\mbox{\Hypertarget{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a0b0a0f1096f62f668f523204386aae12}\label{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a0b0a0f1096f62f668f523204386aae12}} 
+\index{XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}!oversampling@{oversampling}}
+\index{oversampling@{oversampling}!XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{oversampling}{oversampling}}
+{\footnotesize\ttfamily uint8\+\_\+t X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::oversampling}
+
+Number of samples for a symbol(\+D\+C\+T\+Q).{\bfseries{Range\+:}} minimum= 1, maximum= 32 
+
+Definition at line 229 of file xmc\+\_\+uart.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+Init().
+
+\mbox{\Hypertarget{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a9929455309e39bb8bdbb88990f43c706}\label{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_a9929455309e39bb8bdbb88990f43c706}} 
+\index{XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}!parity\_mode@{parity\_mode}}
+\index{parity\_mode@{parity\_mode}!XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{parity\_mode}{parity\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_s_i_c_gaf1ef26fac80dbeda4fbd5144d896e68f}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+M\+O\+D\+E\+\_\+t}} X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::parity\+\_\+mode}
+
+Parity mode. {\bfseries{Range\+:}} \mbox{\hyperlink{group___u_s_i_c_gga0bddbcae67106a67469b526b0e4c368ba41914c3176bcc9f17327bd7195dd39b6}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE}}, \mbox{\hyperlink{group___u_s_i_c_gga0bddbcae67106a67469b526b0e4c368ba1680b6d1bae664e1479de091cf8c61ea}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+M\+O\+D\+E\+\_\+\+E\+V\+EN}}, ~\newline
+ \mbox{\hyperlink{group___u_s_i_c_gga0bddbcae67106a67469b526b0e4c368ba59e6188e4d02d8d1ac50e8ade251093e}{X\+M\+C\+\_\+\+U\+S\+I\+C\+\_\+\+C\+H\+\_\+\+P\+A\+R\+I\+T\+Y\+\_\+\+M\+O\+D\+E\+\_\+\+O\+DD}} 
+
+Definition at line 230 of file xmc\+\_\+uart.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+Init().
+
+\mbox{\Hypertarget{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_adf553f8679bac4b34c53fe7adc863882}\label{struct_x_m_c___u_a_r_t___c_h___c_o_n_f_i_g_adf553f8679bac4b34c53fe7adc863882}} 
+\index{XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}!stop\_bits@{stop\_bits}}
+\index{stop\_bits@{stop\_bits}!XMC\_UART\_CH\_CONFIG@{XMC\_UART\_CH\_CONFIG}}
+\doxysubsubsection{\texorpdfstring{stop\_bits}{stop\_bits}}
+{\footnotesize\ttfamily uint8\+\_\+t X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+::stop\+\_\+bits}
+
+Number of stop bits. {\bfseries{Range\+:}} minimum= 1, maximum= 2 
+
+Definition at line 228 of file xmc\+\_\+uart.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+U\+A\+R\+T\+\_\+\+C\+H\+\_\+\+Init().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Libraries/\+X\+M\+C\+Lib/inc/\mbox{\hyperlink{xmc__uart_8h}{xmc\+\_\+uart.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\concat\labels.tmp" -fI -W+ie -C V3 -o "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\concat\concat.hex" -d "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\concat\concat.obj" -e "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\concat\concat.eep" -m "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\concat\concat.map" "C:\!Aspire\ICT\3th_semester\cali1\AVR_Asm\concat\memory.asm"

@@ -1,0 +1,1194 @@
+\hypertarget{group___r_t_c}{}\doxysection{R\+TC}
+\label{group___r_t_c}\index{RTC@{RTC}}
+
+
+R\+TC driver for X\+MC microcontroller family.  
+
+
+Collaboration diagram for R\+TC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{group___r_t_c}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+RM}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_c___r_t_c___t_i_m_e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+ME}}
+\item 
+struct \mbox{\hyperlink{struct_x_m_c___r_t_c___c_o_n_f_i_g}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+IG}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{group___r_t_c_gaeb49c9f2a2ab519fbd234d3f7957c5de}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}} \mbox{\hyperlink{group___r_t_c_ga9d64e56f87998f63c9db68d9ced6ec80}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+D\+E\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{group___r_t_c_ga3165c7ec15cd56809e05c3471c168303}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+US}} \mbox{\hyperlink{group___r_t_c_ga0f76a2f29edd0927dc6e68c4aca4c971}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{group___r_t_c_ga4e7dd38e73ad522c87ddf2ab60d73c17}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+NT}} \mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{group___r_t_c_gaa1aaf0b2d93ccea1d89838d6b4c9882d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+TH}} \mbox{\hyperlink{group___r_t_c_ga72044b907359a80c71df2052de44c8e3}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{group___r_t_c_gae14d1f8c25a200c05f0b23da6d855242}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+AY}} \mbox{\hyperlink{group___r_t_c_gabb47de743f64d53115bc1181e2733d22}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+RM}} \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_c___r_t_c___t_i_m_e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+ME}} \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_x_m_c___r_t_c___c_o_n_f_i_g}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+IG}} \mbox{\hyperlink{group___r_t_c_gacf41dad00e1edd0beadfda7a503f068f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___r_t_c_gaeb49c9f2a2ab519fbd234d3f7957c5de}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{group___r_t_c_ggaeb49c9f2a2ab519fbd234d3f7957c5dea8049e80e8fc6e7ef16eff40146b35b32}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+R\+U\+N\+\_\+\+I\+N\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}} = 0U, 
+\mbox{\hyperlink{group___r_t_c_ggaeb49c9f2a2ab519fbd234d3f7957c5dea04d4f989e6cc62e6b133999741d8a6a0}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+O\+P\+\_\+\+I\+N\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}} = 1U
+ \}
+\item 
+enum \mbox{\hyperlink{group___r_t_c_ga3165c7ec15cd56809e05c3471c168303}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+US}} \{ \mbox{\hyperlink{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303a47ea81dbacc888c447f4ed1a6069735c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}} = 0U, 
+\mbox{\hyperlink{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303a1e6887b4d065d4dc6c263e9ae46e3b6d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR}} = 1U, 
+\mbox{\hyperlink{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303ab80d53d7e1846c83bcbfb2071f90f302}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}} = 2U
+ \}
+\item 
+enum \mbox{\hyperlink{group___r_t_c_ga4e7dd38e73ad522c87ddf2ab60d73c17}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+NT}} \{ \newline
+\mbox{\hyperlink{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17abaf495d3fe42c40fe8ce9055db3d8bd6}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+S\+E\+C\+O\+N\+DS}} = R\+T\+C\+\_\+\+M\+S\+K\+S\+R\+\_\+\+M\+P\+S\+E\+\_\+\+Msk, 
+\mbox{\hyperlink{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a70134c3b9338fe6548649885e4b55056}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+M\+I\+N\+U\+T\+ES}} = R\+T\+C\+\_\+\+M\+S\+K\+S\+R\+\_\+\+M\+P\+M\+I\+\_\+\+Msk, 
+\mbox{\hyperlink{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17ab209cc2ec8a7edbb3230a3020d8104ed}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+H\+O\+U\+RS}} = R\+T\+C\+\_\+\+M\+S\+K\+S\+R\+\_\+\+M\+P\+H\+O\+\_\+\+Msk, 
+\mbox{\hyperlink{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17afa22d124a4d8ff86f9d8f7e324eddc2a}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+D\+A\+YS}} = R\+T\+C\+\_\+\+M\+S\+K\+S\+R\+\_\+\+M\+P\+D\+A\+\_\+\+Msk, 
+\newline
+\mbox{\hyperlink{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a317318fc7f639a462d8f42fea95f8031}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+M\+O\+N\+T\+HS}} = R\+T\+C\+\_\+\+M\+S\+K\+S\+R\+\_\+\+M\+P\+M\+O\+\_\+\+Msk, 
+\mbox{\hyperlink{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17ad4142a107e9a717b51cc93e52955bd06}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+Y\+E\+A\+RS}} = R\+T\+C\+\_\+\+M\+S\+K\+S\+R\+\_\+\+M\+P\+Y\+E\+\_\+\+Msk, 
+\mbox{\hyperlink{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a8113ac4db38433f2aab4bc993ef2a720}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+L\+A\+RM}} = R\+T\+C\+\_\+\+M\+S\+K\+S\+R\+\_\+\+M\+A\+I\+\_\+\+Msk
+ \}
+\item 
+enum \mbox{\hyperlink{group___r_t_c_gaa1aaf0b2d93ccea1d89838d6b4c9882d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+TH}} \{ \newline
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dad8f2fc3fbe4264245e0a3a351693ca3d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+J\+A\+N\+U\+A\+RY}} = 0U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da6a80979d89e754c12cb1395a037c7bee}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+F\+E\+B\+R\+U\+A\+RY}} = 1U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882daea8059b559d7616899ed301d93e17253}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+R\+CH}} = 2U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dadd6d73de5807a4d0a7ab74db8a06362c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+A\+P\+R\+IL}} = 3U, 
+\newline
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882daa8541aded1e25590b552ec84efb8b19f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AY}} = 4U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da65519d95936f7e356ffc4f039ba7f861}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+J\+U\+NE}} = 5U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da9a6edaf1be418719dd94e2ab61ab78ed}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+J\+U\+LY}} = 6U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dade38ab95923acc864cbdc942971133a1}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+A\+U\+G\+U\+ST}} = 7U, 
+\newline
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da832487de9cefac6de2c8dc69e01b45eb}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+S\+E\+P\+T\+E\+M\+B\+ER}} = 8U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da5880432fe809ad20dd78ff8fe0ee35dc}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+O\+C\+T\+O\+B\+ER}} = 9U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da695095c6dd6723ab5ae9851dccefdb8f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+N\+O\+V\+E\+M\+B\+ER}} = 10U, 
+\mbox{\hyperlink{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da9838a31b0a567cf2eb9707cdb82a7761}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+D\+E\+C\+E\+M\+B\+ER}} = 11U
+ \}
+\item 
+enum \mbox{\hyperlink{group___r_t_c_gae14d1f8c25a200c05f0b23da6d855242}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+AY}} \{ \newline
+\mbox{\hyperlink{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a9b892585415c78a69ec240502f3bf22f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+U\+N\+D\+AY}} = 0U, 
+\mbox{\hyperlink{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a7bba5f016fc9f26a7037515dce5d4db5}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+M\+O\+N\+D\+AY}} = 1U, 
+\mbox{\hyperlink{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242ab7654790267cdb946542c43a4cf2306a}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+T\+U\+E\+S\+D\+AY}} = 2U, 
+\mbox{\hyperlink{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242abf593867c0c2aa40c57ff4b71cf3ece5}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+W\+E\+D\+N\+E\+S\+D\+AY}} = 3U, 
+\newline
+\mbox{\hyperlink{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a669c2c3f4c8543392fc6c496abca4170}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+T\+H\+U\+R\+S\+D\+AY}} = 4U, 
+\mbox{\hyperlink{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a42d7b0aadf4f45718a8a36dbb197eada}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+F\+R\+I\+D\+AY}} = 5U, 
+\mbox{\hyperlink{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242abda72236fedf1377359043467d0f29ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+A\+T\+U\+R\+D\+AY}} = 6U
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___r_t_c_gafe70c1437b9b4af0c0c8ac85870d631c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Debug\+Mode}} (const \mbox{\hyperlink{group___r_t_c_ga9d64e56f87998f63c9db68d9ced6ec80}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+D\+E\+\_\+t}} debug\+\_\+mode)
+\item 
+\mbox{\hyperlink{group___r_t_c_ga0f76a2f29edd0927dc6e68c4aca4c971}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} \mbox{\hyperlink{group___r_t_c_ga6d21f3c6b2be1975f1593301c4ba9698}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init}} (const \mbox{\hyperlink{group___r_t_c_gacf41dad00e1edd0beadfda7a503f068f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em R\+TC driver for X\+MC microcontroller family. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable}} (void)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga304ac03dcebdf34bd64d8a4a55f68e7e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable}} (void)
+\item 
+bool \mbox{\hyperlink{group___r_t_c_gaa43757597d99d09440fe053536b380e3}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Is\+Enabled}} (void)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga154a51800df4635e2ab026b3c89b3678}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Start}} (void)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop}} (void)
+\item 
+void \mbox{\hyperlink{group___r_t_c_gae593067f20d83f3bfb78f9fbb55f2b66}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Prescaler}} (uint16\+\_\+t prescaler)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t \mbox{\hyperlink{group___r_t_c_gac0a3ceb3522feb6b6729afaf495cd0dc}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Prescaler}} (void)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time}} (const \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} $\ast$const timeval)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time}} (\mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} $\ast$const time)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga6ed60ac9d9ba537b8373be7c35cf7da2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Std\+Format}} (const struct tm $\ast$const stdtime)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga7ea79333ab81d7595d2d36f65d693c1c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time\+Std\+Format}} (struct tm $\ast$const stdtime)
+\item 
+void \mbox{\hyperlink{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm}} (const \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} $\ast$const alarm)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm}} (\mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} $\ast$const alarm)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga9b7300d074526315c349c4de2b655948}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format}} (const struct tm $\ast$const stdtime)
+\item 
+void \mbox{\hyperlink{group___r_t_c_gab7e150db371758a584a7efaf778ec65e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format}} (struct tm $\ast$const stdtime)
+\item 
+void \mbox{\hyperlink{group___r_t_c_gabb9181ef4ea092ce09bc8c80318fad23}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable\+Event}} (const uint32\+\_\+t event)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga9cdf252baa2e293e393b3bd75c1858a3}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable\+Event}} (const uint32\+\_\+t event)
+\item 
+void \mbox{\hyperlink{group___r_t_c_ga68d13bcb9a9312844cba39d7792cef6a}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Clear\+Event}} (const uint32\+\_\+t event)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___r_t_c_ga303f3ef19eaacd57fd05e4c65759c503}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Event\+Status}} (void)
+\item 
+\mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} bool \mbox{\hyperlink{group___r_t_c_ga675fc6bac62024c8c94f1cb2e1fe6949}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Is\+Running}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+R\+TC driver for X\+MC microcontroller family. 
+
+Real-\/time clock (R\+TC) is a clock that keeps track of the current time. Precise real time keeping is with a 32.\+768 K\+Hz external crystal clock or a 32.\+768 K\+Hz high precision internal clock. It provides a periodic time based interrupt and a programmable alarm interrupt on time match. It also supports wakeup from hibernate.
+
+The R\+TC low level driver provides functions to configure and initialize the R\+TC hardware peripheral. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}\label{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}} 
+\index{RTC@{RTC}!XMC\_RTC\_ALARM\_t@{XMC\_RTC\_ALARM\_t}}
+\index{XMC\_RTC\_ALARM\_t@{XMC\_RTC\_ALARM\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_ALARM\_t}{XMC\_RTC\_ALARM\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+RM}} \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}}}
+
+Alarm time values of R\+TC ~\newline
+
+
+The structure presents a convenient way to set/obtain the alarm time values for seconds, minutes, hours, days, month and year of R\+TC. The \mbox{\hyperlink{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm()}} and \mbox{\hyperlink{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm()}} can be used to populate the structure with the alarm time value of R\+TC \mbox{\Hypertarget{group___r_t_c_gacf41dad00e1edd0beadfda7a503f068f}\label{group___r_t_c_gacf41dad00e1edd0beadfda7a503f068f}} 
+\index{RTC@{RTC}!XMC\_RTC\_CONFIG\_t@{XMC\_RTC\_CONFIG\_t}}
+\index{XMC\_RTC\_CONFIG\_t@{XMC\_RTC\_CONFIG\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_CONFIG\_t}{XMC\_RTC\_CONFIG\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_x_m_c___r_t_c___c_o_n_f_i_g}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+IG}} \mbox{\hyperlink{group___r_t_c_gacf41dad00e1edd0beadfda7a503f068f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}}}
+
+R\+TC initialization with time, alarm and clock divider(prescaler) configurations ~\newline
+
+
+The structure presents a convenient way to set/obtain the time and alarm configurations ~\newline
+ for R\+TC. The \mbox{\hyperlink{group___r_t_c_ga6d21f3c6b2be1975f1593301c4ba9698}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init()}} can be used to populate the structure with the time and alarm values of R\+TC. \mbox{\Hypertarget{group___r_t_c_ga9d64e56f87998f63c9db68d9ced6ec80}\label{group___r_t_c_ga9d64e56f87998f63c9db68d9ced6ec80}} 
+\index{RTC@{RTC}!XMC\_RTC\_DEBUG\_MODE\_t@{XMC\_RTC\_DEBUG\_MODE\_t}}
+\index{XMC\_RTC\_DEBUG\_MODE\_t@{XMC\_RTC\_DEBUG\_MODE\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_DEBUG\_MODE\_t}{XMC\_RTC\_DEBUG\_MODE\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___r_t_c_gaeb49c9f2a2ab519fbd234d3f7957c5de}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}} \mbox{\hyperlink{group___r_t_c_ga9d64e56f87998f63c9db68d9ced6ec80}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+D\+E\+\_\+t}}}
+
+Debug mode status values \mbox{\Hypertarget{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}\label{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}} 
+\index{RTC@{RTC}!XMC\_RTC\_EVENT\_t@{XMC\_RTC\_EVENT\_t}}
+\index{XMC\_RTC\_EVENT\_t@{XMC\_RTC\_EVENT\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_EVENT\_t}{XMC\_RTC\_EVENT\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___r_t_c_ga4e7dd38e73ad522c87ddf2ab60d73c17}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+NT}} \mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}}
+
+Events which enables interrupt request generation \mbox{\Hypertarget{group___r_t_c_ga72044b907359a80c71df2052de44c8e3}\label{group___r_t_c_ga72044b907359a80c71df2052de44c8e3}} 
+\index{RTC@{RTC}!XMC\_RTC\_MONTH\_t@{XMC\_RTC\_MONTH\_t}}
+\index{XMC\_RTC\_MONTH\_t@{XMC\_RTC\_MONTH\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MONTH\_t}{XMC\_RTC\_MONTH\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___r_t_c_gaa1aaf0b2d93ccea1d89838d6b4c9882d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+TH}} \mbox{\hyperlink{group___r_t_c_ga72044b907359a80c71df2052de44c8e3}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+t}}}
+
+Months used to program the date ~\newline
+ \mbox{\Hypertarget{group___r_t_c_ga0f76a2f29edd0927dc6e68c4aca4c971}\label{group___r_t_c_ga0f76a2f29edd0927dc6e68c4aca4c971}} 
+\index{RTC@{RTC}!XMC\_RTC\_STATUS\_t@{XMC\_RTC\_STATUS\_t}}
+\index{XMC\_RTC\_STATUS\_t@{XMC\_RTC\_STATUS\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_STATUS\_t}{XMC\_RTC\_STATUS\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___r_t_c_ga3165c7ec15cd56809e05c3471c168303}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+US}} \mbox{\hyperlink{group___r_t_c_ga0f76a2f29edd0927dc6e68c4aca4c971}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}}}
+
+Status return values for R\+TC low level driver \mbox{\Hypertarget{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}\label{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}} 
+\index{RTC@{RTC}!XMC\_RTC\_TIME\_t@{XMC\_RTC\_TIME\_t}}
+\index{XMC\_RTC\_TIME\_t@{XMC\_RTC\_TIME\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_TIME\_t}{XMC\_RTC\_TIME\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_x_m_c___r_t_c___t_i_m_e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+ME}} \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}}}
+
+Time values of R\+TC ~\newline
+
+
+The structure presents a convenient way to set/obtain the time values for seconds, minutes, hours, days, month and year of R\+TC. The \mbox{\hyperlink{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time()}} and \mbox{\hyperlink{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time()}} can be used to populate the structure with the time value of R\+TC \mbox{\Hypertarget{group___r_t_c_gabb47de743f64d53115bc1181e2733d22}\label{group___r_t_c_gabb47de743f64d53115bc1181e2733d22}} 
+\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_t@{XMC\_RTC\_WEEKDAY\_t}}
+\index{XMC\_RTC\_WEEKDAY\_t@{XMC\_RTC\_WEEKDAY\_t}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_WEEKDAY\_t}{XMC\_RTC\_WEEKDAY\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group___r_t_c_gae14d1f8c25a200c05f0b23da6d855242}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+AY}} \mbox{\hyperlink{group___r_t_c_gabb47de743f64d53115bc1181e2733d22}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+t}}}
+
+Week days used program the date 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___r_t_c_gaeb49c9f2a2ab519fbd234d3f7957c5de}\label{group___r_t_c_gaeb49c9f2a2ab519fbd234d3f7957c5de}} 
+\index{RTC@{RTC}!XMC\_RTC\_DEBUG\_MODE@{XMC\_RTC\_DEBUG\_MODE}}
+\index{XMC\_RTC\_DEBUG\_MODE@{XMC\_RTC\_DEBUG\_MODE}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_DEBUG\_MODE}{XMC\_RTC\_DEBUG\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___r_t_c_gaeb49c9f2a2ab519fbd234d3f7957c5de}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE}}}
+
+Debug mode status values \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_RUN\_IN\_DEBUG\_MODE@{XMC\_RTC\_RUN\_IN\_DEBUG\_MODE}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_RUN\_IN\_DEBUG\_MODE@{XMC\_RTC\_RUN\_IN\_DEBUG\_MODE}}}\mbox{\Hypertarget{group___r_t_c_ggaeb49c9f2a2ab519fbd234d3f7957c5dea8049e80e8fc6e7ef16eff40146b35b32}\label{group___r_t_c_ggaeb49c9f2a2ab519fbd234d3f7957c5dea8049e80e8fc6e7ef16eff40146b35b32}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+R\+U\+N\+\_\+\+I\+N\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE&R\+TC is not stopped during halting mode debug \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_STOP\_IN\_DEBUG\_MODE@{XMC\_RTC\_STOP\_IN\_DEBUG\_MODE}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_STOP\_IN\_DEBUG\_MODE@{XMC\_RTC\_STOP\_IN\_DEBUG\_MODE}}}\mbox{\Hypertarget{group___r_t_c_ggaeb49c9f2a2ab519fbd234d3f7957c5dea04d4f989e6cc62e6b133999741d8a6a0}\label{group___r_t_c_ggaeb49c9f2a2ab519fbd234d3f7957c5dea04d4f989e6cc62e6b133999741d8a6a0}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+O\+P\+\_\+\+I\+N\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+DE&R\+TC is stopped during halting mode debug \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 69 of file xmc1\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{group___r_t_c_ga4e7dd38e73ad522c87ddf2ab60d73c17}\label{group___r_t_c_ga4e7dd38e73ad522c87ddf2ab60d73c17}} 
+\index{RTC@{RTC}!XMC\_RTC\_EVENT@{XMC\_RTC\_EVENT}}
+\index{XMC\_RTC\_EVENT@{XMC\_RTC\_EVENT}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_EVENT}{XMC\_RTC\_EVENT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___r_t_c_ga4e7dd38e73ad522c87ddf2ab60d73c17}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+NT}}}
+
+Events which enables interrupt request generation \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_EVENT\_PERIODIC\_SECONDS@{XMC\_RTC\_EVENT\_PERIODIC\_SECONDS}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_EVENT\_PERIODIC\_SECONDS@{XMC\_RTC\_EVENT\_PERIODIC\_SECONDS}}}\mbox{\Hypertarget{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17abaf495d3fe42c40fe8ce9055db3d8bd6}\label{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17abaf495d3fe42c40fe8ce9055db3d8bd6}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+S\+E\+C\+O\+N\+DS&Mask value to enable an event on periodic seconds \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_EVENT\_PERIODIC\_MINUTES@{XMC\_RTC\_EVENT\_PERIODIC\_MINUTES}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_EVENT\_PERIODIC\_MINUTES@{XMC\_RTC\_EVENT\_PERIODIC\_MINUTES}}}\mbox{\Hypertarget{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a70134c3b9338fe6548649885e4b55056}\label{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a70134c3b9338fe6548649885e4b55056}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+M\+I\+N\+U\+T\+ES&Mask value to enable an event on periodic seconds \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_EVENT\_PERIODIC\_HOURS@{XMC\_RTC\_EVENT\_PERIODIC\_HOURS}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_EVENT\_PERIODIC\_HOURS@{XMC\_RTC\_EVENT\_PERIODIC\_HOURS}}}\mbox{\Hypertarget{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17ab209cc2ec8a7edbb3230a3020d8104ed}\label{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17ab209cc2ec8a7edbb3230a3020d8104ed}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+H\+O\+U\+RS&Mask value to enable an event on periodic seconds \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_EVENT\_PERIODIC\_DAYS@{XMC\_RTC\_EVENT\_PERIODIC\_DAYS}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_EVENT\_PERIODIC\_DAYS@{XMC\_RTC\_EVENT\_PERIODIC\_DAYS}}}\mbox{\Hypertarget{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17afa22d124a4d8ff86f9d8f7e324eddc2a}\label{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17afa22d124a4d8ff86f9d8f7e324eddc2a}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+D\+A\+YS&Mask value to enable an event on periodic seconds \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_EVENT\_PERIODIC\_MONTHS@{XMC\_RTC\_EVENT\_PERIODIC\_MONTHS}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_EVENT\_PERIODIC\_MONTHS@{XMC\_RTC\_EVENT\_PERIODIC\_MONTHS}}}\mbox{\Hypertarget{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a317318fc7f639a462d8f42fea95f8031}\label{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a317318fc7f639a462d8f42fea95f8031}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+M\+O\+N\+T\+HS&Mask value to enable an event on periodic seconds \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_EVENT\_PERIODIC\_YEARS@{XMC\_RTC\_EVENT\_PERIODIC\_YEARS}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_EVENT\_PERIODIC\_YEARS@{XMC\_RTC\_EVENT\_PERIODIC\_YEARS}}}\mbox{\Hypertarget{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17ad4142a107e9a717b51cc93e52955bd06}\label{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17ad4142a107e9a717b51cc93e52955bd06}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+Y\+E\+A\+RS&Mask value to enable an event on periodic seconds \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_EVENT\_ALARM@{XMC\_RTC\_EVENT\_ALARM}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_EVENT\_ALARM@{XMC\_RTC\_EVENT\_ALARM}}}\mbox{\Hypertarget{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a8113ac4db38433f2aab4bc993ef2a720}\label{group___r_t_c_gga4e7dd38e73ad522c87ddf2ab60d73c17a8113ac4db38433f2aab4bc993ef2a720}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+L\+A\+RM&Mask value to enable an event on periodic seconds \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 110 of file xmc\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{group___r_t_c_gaa1aaf0b2d93ccea1d89838d6b4c9882d}\label{group___r_t_c_gaa1aaf0b2d93ccea1d89838d6b4c9882d}} 
+\index{RTC@{RTC}!XMC\_RTC\_MONTH@{XMC\_RTC\_MONTH}}
+\index{XMC\_RTC\_MONTH@{XMC\_RTC\_MONTH}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_MONTH}{XMC\_RTC\_MONTH}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___r_t_c_gaa1aaf0b2d93ccea1d89838d6b4c9882d}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+TH}}}
+
+Months used to program the date ~\newline
+ \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_JANUARY@{XMC\_RTC\_MONTH\_JANUARY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_JANUARY@{XMC\_RTC\_MONTH\_JANUARY}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dad8f2fc3fbe4264245e0a3a351693ca3d}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dad8f2fc3fbe4264245e0a3a351693ca3d}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+J\+A\+N\+U\+A\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_FEBRUARY@{XMC\_RTC\_MONTH\_FEBRUARY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_FEBRUARY@{XMC\_RTC\_MONTH\_FEBRUARY}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da6a80979d89e754c12cb1395a037c7bee}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da6a80979d89e754c12cb1395a037c7bee}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+F\+E\+B\+R\+U\+A\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_MARCH@{XMC\_RTC\_MONTH\_MARCH}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_MARCH@{XMC\_RTC\_MONTH\_MARCH}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882daea8059b559d7616899ed301d93e17253}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882daea8059b559d7616899ed301d93e17253}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+A\+R\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_APRIL@{XMC\_RTC\_MONTH\_APRIL}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_APRIL@{XMC\_RTC\_MONTH\_APRIL}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dadd6d73de5807a4d0a7ab74db8a06362c}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dadd6d73de5807a4d0a7ab74db8a06362c}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+A\+P\+R\+IL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_MAY@{XMC\_RTC\_MONTH\_MAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_MAY@{XMC\_RTC\_MONTH\_MAY}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882daa8541aded1e25590b552ec84efb8b19f}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882daa8541aded1e25590b552ec84efb8b19f}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+M\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_JUNE@{XMC\_RTC\_MONTH\_JUNE}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_JUNE@{XMC\_RTC\_MONTH\_JUNE}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da65519d95936f7e356ffc4f039ba7f861}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da65519d95936f7e356ffc4f039ba7f861}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+J\+U\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_JULY@{XMC\_RTC\_MONTH\_JULY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_JULY@{XMC\_RTC\_MONTH\_JULY}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da9a6edaf1be418719dd94e2ab61ab78ed}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da9a6edaf1be418719dd94e2ab61ab78ed}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+J\+U\+LY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_AUGUST@{XMC\_RTC\_MONTH\_AUGUST}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_AUGUST@{XMC\_RTC\_MONTH\_AUGUST}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dade38ab95923acc864cbdc942971133a1}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882dade38ab95923acc864cbdc942971133a1}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+A\+U\+G\+U\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_SEPTEMBER@{XMC\_RTC\_MONTH\_SEPTEMBER}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_SEPTEMBER@{XMC\_RTC\_MONTH\_SEPTEMBER}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da832487de9cefac6de2c8dc69e01b45eb}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da832487de9cefac6de2c8dc69e01b45eb}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+S\+E\+P\+T\+E\+M\+B\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_OCTOBER@{XMC\_RTC\_MONTH\_OCTOBER}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_OCTOBER@{XMC\_RTC\_MONTH\_OCTOBER}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da5880432fe809ad20dd78ff8fe0ee35dc}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da5880432fe809ad20dd78ff8fe0ee35dc}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+O\+C\+T\+O\+B\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_NOVEMBER@{XMC\_RTC\_MONTH\_NOVEMBER}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_NOVEMBER@{XMC\_RTC\_MONTH\_NOVEMBER}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da695095c6dd6723ab5ae9851dccefdb8f}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da695095c6dd6723ab5ae9851dccefdb8f}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+N\+O\+V\+E\+M\+B\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_MONTH\_DECEMBER@{XMC\_RTC\_MONTH\_DECEMBER}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_MONTH\_DECEMBER@{XMC\_RTC\_MONTH\_DECEMBER}}}\mbox{\Hypertarget{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da9838a31b0a567cf2eb9707cdb82a7761}\label{group___r_t_c_ggaa1aaf0b2d93ccea1d89838d6b4c9882da9838a31b0a567cf2eb9707cdb82a7761}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+T\+H\+\_\+\+D\+E\+C\+E\+M\+B\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 124 of file xmc\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{group___r_t_c_ga3165c7ec15cd56809e05c3471c168303}\label{group___r_t_c_ga3165c7ec15cd56809e05c3471c168303}} 
+\index{RTC@{RTC}!XMC\_RTC\_STATUS@{XMC\_RTC\_STATUS}}
+\index{XMC\_RTC\_STATUS@{XMC\_RTC\_STATUS}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_STATUS}{XMC\_RTC\_STATUS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___r_t_c_ga3165c7ec15cd56809e05c3471c168303}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+US}}}
+
+Status return values for R\+TC low level driver \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_STATUS\_OK@{XMC\_RTC\_STATUS\_OK}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_STATUS\_OK@{XMC\_RTC\_STATUS\_OK}}}\mbox{\Hypertarget{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303a47ea81dbacc888c447f4ed1a6069735c}\label{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303a47ea81dbacc888c447f4ed1a6069735c}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK&Operation successful \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_STATUS\_ERROR@{XMC\_RTC\_STATUS\_ERROR}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_STATUS\_ERROR@{XMC\_RTC\_STATUS\_ERROR}}}\mbox{\Hypertarget{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303a1e6887b4d065d4dc6c263e9ae46e3b6d}\label{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303a1e6887b4d065d4dc6c263e9ae46e3b6d}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR&Operation unsuccessful \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_STATUS\_BUSY@{XMC\_RTC\_STATUS\_BUSY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_STATUS\_BUSY@{XMC\_RTC\_STATUS\_BUSY}}}\mbox{\Hypertarget{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303ab80d53d7e1846c83bcbfb2071f90f302}\label{group___r_t_c_gga3165c7ec15cd56809e05c3471c168303ab80d53d7e1846c83bcbfb2071f90f302}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY&Busy with a previous request \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 100 of file xmc\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{group___r_t_c_gae14d1f8c25a200c05f0b23da6d855242}\label{group___r_t_c_gae14d1f8c25a200c05f0b23da6d855242}} 
+\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY@{XMC\_RTC\_WEEKDAY}}
+\index{XMC\_RTC\_WEEKDAY@{XMC\_RTC\_WEEKDAY}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_WEEKDAY}{XMC\_RTC\_WEEKDAY}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___r_t_c_gae14d1f8c25a200c05f0b23da6d855242}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+AY}}}
+
+Week days used program the date \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_WEEKDAY\_SUNDAY@{XMC\_RTC\_WEEKDAY\_SUNDAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_SUNDAY@{XMC\_RTC\_WEEKDAY\_SUNDAY}}}\mbox{\Hypertarget{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a9b892585415c78a69ec240502f3bf22f}\label{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a9b892585415c78a69ec240502f3bf22f}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+U\+N\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_WEEKDAY\_MONDAY@{XMC\_RTC\_WEEKDAY\_MONDAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_MONDAY@{XMC\_RTC\_WEEKDAY\_MONDAY}}}\mbox{\Hypertarget{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a7bba5f016fc9f26a7037515dce5d4db5}\label{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a7bba5f016fc9f26a7037515dce5d4db5}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+M\+O\+N\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_WEEKDAY\_TUESDAY@{XMC\_RTC\_WEEKDAY\_TUESDAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_TUESDAY@{XMC\_RTC\_WEEKDAY\_TUESDAY}}}\mbox{\Hypertarget{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242ab7654790267cdb946542c43a4cf2306a}\label{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242ab7654790267cdb946542c43a4cf2306a}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+T\+U\+E\+S\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_WEEKDAY\_WEDNESDAY@{XMC\_RTC\_WEEKDAY\_WEDNESDAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_WEDNESDAY@{XMC\_RTC\_WEEKDAY\_WEDNESDAY}}}\mbox{\Hypertarget{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242abf593867c0c2aa40c57ff4b71cf3ece5}\label{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242abf593867c0c2aa40c57ff4b71cf3ece5}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+W\+E\+D\+N\+E\+S\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_WEEKDAY\_THURSDAY@{XMC\_RTC\_WEEKDAY\_THURSDAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_THURSDAY@{XMC\_RTC\_WEEKDAY\_THURSDAY}}}\mbox{\Hypertarget{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a669c2c3f4c8543392fc6c496abca4170}\label{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a669c2c3f4c8543392fc6c496abca4170}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+T\+H\+U\+R\+S\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_WEEKDAY\_FRIDAY@{XMC\_RTC\_WEEKDAY\_FRIDAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_FRIDAY@{XMC\_RTC\_WEEKDAY\_FRIDAY}}}\mbox{\Hypertarget{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a42d7b0aadf4f45718a8a36dbb197eada}\label{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242a42d7b0aadf4f45718a8a36dbb197eada}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+F\+R\+I\+D\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XMC\_RTC\_WEEKDAY\_SATURDAY@{XMC\_RTC\_WEEKDAY\_SATURDAY}!RTC@{RTC}}\index{RTC@{RTC}!XMC\_RTC\_WEEKDAY\_SATURDAY@{XMC\_RTC\_WEEKDAY\_SATURDAY}}}\mbox{\Hypertarget{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242abda72236fedf1377359043467d0f29ea}\label{group___r_t_c_ggae14d1f8c25a200c05f0b23da6d855242abda72236fedf1377359043467d0f29ea}} 
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+A\+T\+U\+R\+D\+AY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 143 of file xmc\+\_\+rtc.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___r_t_c_ga68d13bcb9a9312844cba39d7792cef6a}\label{group___r_t_c_ga68d13bcb9a9312844cba39d7792cef6a}} 
+\index{RTC@{RTC}!XMC\_RTC\_ClearEvent@{XMC\_RTC\_ClearEvent}}
+\index{XMC\_RTC\_ClearEvent@{XMC\_RTC\_ClearEvent}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_ClearEvent()}{XMC\_RTC\_ClearEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Clear\+Event (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & A valid R\+TC event (\mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}) or a valid combination of logically OR\textquotesingle{}d events \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Clears periodic and alarm event(s) status ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the bitfields of C\+L\+R\+SR register to clear status bits in R\+A\+W\+S\+T\+AT and S\+T\+S\+SR registers. Setting the value for the the R\+TC event(s) containing in the \mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}} clears the corresponding status bits in R\+A\+W\+S\+T\+AT and S\+T\+S\+SR registers.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga303f3ef19eaacd57fd05e4c65759c503}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Event\+Status()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 147 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References R\+TC.
+
+\mbox{\Hypertarget{group___r_t_c_ga304ac03dcebdf34bd64d8a4a55f68e7e}\label{group___r_t_c_ga304ac03dcebdf34bd64d8a4a55f68e7e}} 
+\index{RTC@{RTC}!XMC\_RTC\_Disable@{XMC\_RTC\_Disable}}
+\index{XMC\_RTC\_Disable@{XMC\_RTC\_Disable}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_Disable()}{XMC\_RTC\_Disable()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Disables R\+TC peripheral for programming its registers ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable()}}, X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Assert\+Peripheral\+Reset() 
+\end{DoxyParagraph}
+
+
+Definition at line 113 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Gate\+Peripheral\+Clock().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ga304ac03dcebdf34bd64d8a4a55f68e7e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_ga9cdf252baa2e293e393b3bd75c1858a3}\label{group___r_t_c_ga9cdf252baa2e293e393b3bd75c1858a3}} 
+\index{RTC@{RTC}!XMC\_RTC\_DisableEvent@{XMC\_RTC\_DisableEvent}}
+\index{XMC\_RTC\_DisableEvent@{XMC\_RTC\_DisableEvent}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_DisableEvent()}{XMC\_RTC\_DisableEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable\+Event (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & A valid R\+TC event (\mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}) or a valid combination of logically OR\textquotesingle{}d events \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Disable R\+TC periodic and alarm event(s) ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function resets the bitfields of M\+S\+K\+SR register to disable interrupt generation for requested R\+TC event(s). Resetting the masking value for the the event(s) containing in the \mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}} blocks the generation of the interrupt.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gabb9181ef4ea092ce09bc8c80318fad23}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable\+Event()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 139 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References R\+TC.
+
+\mbox{\Hypertarget{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}\label{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}} 
+\index{RTC@{RTC}!XMC\_RTC\_Enable@{XMC\_RTC\_Enable}}
+\index{XMC\_RTC\_Enable@{XMC\_RTC\_Enable}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_Enable()}{XMC\_RTC\_Enable()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Enables R\+TC peripheral for programming its registers ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga304ac03dcebdf34bd64d8a4a55f68e7e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable()}}, X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Deassert\+Peripheral\+Reset() 
+\end{DoxyParagraph}
+
+
+Definition at line 105 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Ungate\+Peripheral\+Clock().
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_gabb9181ef4ea092ce09bc8c80318fad23}\label{group___r_t_c_gabb9181ef4ea092ce09bc8c80318fad23}} 
+\index{RTC@{RTC}!XMC\_RTC\_EnableEvent@{XMC\_RTC\_EnableEvent}}
+\index{XMC\_RTC\_EnableEvent@{XMC\_RTC\_EnableEvent}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_EnableEvent()}{XMC\_RTC\_EnableEvent()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable\+Event (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & A valid R\+TC event (\mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}) or a valid combination of logically OR\textquotesingle{}d events \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Enable R\+TC periodic and alarm event(s) ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the bitfields of M\+S\+K\+SR register to enable interrupt generation for requested R\+TC event(s). Setting the masking value for the event(s) containing in the \mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}} leads to a generation of the interrupt.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga9cdf252baa2e293e393b3bd75c1858a3}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable\+Event()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 131 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References R\+TC.
+
+\mbox{\Hypertarget{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}\label{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}} 
+\index{RTC@{RTC}!XMC\_RTC\_GetAlarm@{XMC\_RTC\_GetAlarm}}
+\index{XMC\_RTC\_GetAlarm@{XMC\_RTC\_GetAlarm}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_GetAlarm()}{XMC\_RTC\_GetAlarm()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} $\ast$const}]{alarm }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em alarm} & Pointer to a constant \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} structure containing the time parameters alarm seconds, alarm minutes, alarm hours, alarm days, alarm daysofweek, alarm month and alarm year. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Gets the R\+TC module alarm time value ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function gets the alarm time values from A\+T\+I\+M0, A\+T\+I\+M1 registers. See the structure \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} for the valid range of alarm time value parameters. ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 249 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw1, and R\+TC.
+
+\mbox{\Hypertarget{group___r_t_c_gab7e150db371758a584a7efaf778ec65e}\label{group___r_t_c_gab7e150db371758a584a7efaf778ec65e}} 
+\index{RTC@{RTC}!XMC\_RTC\_GetAlarmStdFormat@{XMC\_RTC\_GetAlarmStdFormat}}
+\index{XMC\_RTC\_GetAlarmStdFormat@{XMC\_RTC\_GetAlarmStdFormat}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_GetAlarmStdFormat()}{XMC\_RTC\_GetAlarmStdFormat()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format (\begin{DoxyParamCaption}\item[{struct tm $\ast$const}]{stdtime }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stdtime} & Pointer to a constant \+::tm structure containing the time parameters alarm seconds, alarm minutes, alarm hours, alarm days, alarm daysofweek, alarm month, ~\newline
+ alarm year(since 1900) and alarm days in a year in standard format. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Gets the R\+TC module alarm time value in standard format ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function gets the alarm time values from A\+T\+I\+M0, A\+T\+I\+M1 registers. See the structure \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} for the valid range of alarm time value parameters. ~\newline
+ For days the valid range is (1 -\/ Actual days of month), year (since 1900) and daysinyear (0 -\/365).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm()}}, \mbox{\hyperlink{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 277 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::days, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::hours, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::minutes, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::month, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw1, R\+TC, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::seconds, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+O\+F\+F\+S\+ET, and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::year.
+
+\mbox{\Hypertarget{group___r_t_c_ga303f3ef19eaacd57fd05e4c65759c503}\label{group___r_t_c_ga303f3ef19eaacd57fd05e4c65759c503}} 
+\index{RTC@{RTC}!XMC\_RTC\_GetEventStatus@{XMC\_RTC\_GetEventStatus}}
+\index{XMC\_RTC\_GetEventStatus@{XMC\_RTC\_GetEventStatus}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_GetEventStatus()}{XMC\_RTC\_GetEventStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Event\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Gets the R\+TC periodic and alarm event(s) status ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function reads the bitfields of S\+T\+S\+SR register to get the status of R\+TC events. Reading the value of the register S\+T\+S\+SR gives the status of the event(s) containing in the \mbox{\hyperlink{group___r_t_c_ga88dae817c733ee1bd9751fc0be01af39}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+t}}.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga68d13bcb9a9312844cba39d7792cef6a}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Clear\+Event()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 295 of file xmc\+\_\+rtc.\+c.
+
+
+
+References R\+TC.
+
+\mbox{\Hypertarget{group___r_t_c_gac0a3ceb3522feb6b6729afaf495cd0dc}\label{group___r_t_c_gac0a3ceb3522feb6b6729afaf495cd0dc}} 
+\index{RTC@{RTC}!XMC\_RTC\_GetPrescaler@{XMC\_RTC\_GetPrescaler}}
+\index{XMC\_RTC\_GetPrescaler@{XMC\_RTC\_GetPrescaler}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_GetPrescaler()}{XMC\_RTC\_GetPrescaler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Prescaler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Gets the R\+TC module prescaler value ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function reads the C\+T\+R.\+D\+IV bitfield to get the prescalar value. The default value for the prescalar with the 32.\+768k\+Hz crystal (or the internal clock) is 7F\+F\+FH for a time interval of 1 sec.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gae593067f20d83f3bfb78f9fbb55f2b66}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Prescaler()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 430 of file xmc\+\_\+rtc.\+h.
+
+
+
+References R\+TC, R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+D\+I\+V\+\_\+\+Msk, and R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+D\+I\+V\+\_\+\+Pos.
+
+\mbox{\Hypertarget{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}\label{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}} 
+\index{RTC@{RTC}!XMC\_RTC\_GetTime@{XMC\_RTC\_GetTime}}
+\index{XMC\_RTC\_GetTime@{XMC\_RTC\_GetTime}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_GetTime()}{XMC\_RTC\_GetTime()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} $\ast$const}]{time }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Pointer to a constant \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} structure containing the time parameters seconds, minutes, hours, days, daysofweek, month and year. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Gets the R\+TC module time value ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function gets the time values from T\+I\+M0, T\+I\+M1 registers. See the structure \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} for the valid range of time value parameters. ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 168 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw1, and R\+TC.
+
+\mbox{\Hypertarget{group___r_t_c_ga7ea79333ab81d7595d2d36f65d693c1c}\label{group___r_t_c_ga7ea79333ab81d7595d2d36f65d693c1c}} 
+\index{RTC@{RTC}!XMC\_RTC\_GetTimeStdFormat@{XMC\_RTC\_GetTimeStdFormat}}
+\index{XMC\_RTC\_GetTimeStdFormat@{XMC\_RTC\_GetTimeStdFormat}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_GetTimeStdFormat()}{XMC\_RTC\_GetTimeStdFormat()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time\+Std\+Format (\begin{DoxyParamCaption}\item[{struct tm $\ast$const}]{stdtime }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stdtime} & Pointer to a constant \+::tm structure containing the time parameters seconds, minutes, hours, days, daysofweek, month, year(since 1900) and days in a ~\newline
+ year in standard format. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Gets the R\+TC module time value in standard format ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function gets the time values from T\+I\+M0, T\+I\+M1 registers. See the structure \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} for the valid range of time value parameters. ~\newline
+ For days the valid range is (1 -\/ Actual days of month), year (since 1900) and daysinyear (0 -\/365).
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time()}}, \mbox{\hyperlink{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 196 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::days, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::daysofweek, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::hours, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::minutes, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::month, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw1, R\+TC, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::seconds, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+O\+F\+F\+S\+ET, and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::year.
+
+\mbox{\Hypertarget{group___r_t_c_ga6d21f3c6b2be1975f1593301c4ba9698}\label{group___r_t_c_ga6d21f3c6b2be1975f1593301c4ba9698}} 
+\index{RTC@{RTC}!XMC\_RTC\_Init@{XMC\_RTC\_Init}}
+\index{XMC\_RTC\_Init@{XMC\_RTC\_Init}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_Init()}{XMC\_RTC\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___r_t_c_ga0f76a2f29edd0927dc6e68c4aca4c971}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t}} X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___r_t_c_gacf41dad00e1edd0beadfda7a503f068f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} $\ast$const}]{config }\end{DoxyParamCaption})}
+
+
+
+R\+TC driver for X\+MC microcontroller family. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Constant pointer to a constant \mbox{\hyperlink{group___r_t_c_gacf41dad00e1edd0beadfda7a503f068f}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+t}} structure containing the time, alarm time and clock divider(prescaler) configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+t Always returns X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK (It contains only register assignment statements)
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Initialize the R\+TC peripheral ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+
+\end{DoxyParagraph}
+
+
+Definition at line 74 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+::alarm, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+::prescaler, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw1, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw1, R\+TC, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+A\+T\+I\+M0\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+A\+T\+I\+M1\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M0\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M1\+\_\+\+Msk, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+C\+O\+N\+F\+I\+G\+::time, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Is\+Enabled(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Is\+Running(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Prescaler(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK, and X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ga6d21f3c6b2be1975f1593301c4ba9698_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_gaa43757597d99d09440fe053536b380e3}\label{group___r_t_c_gaa43757597d99d09440fe053536b380e3}} 
+\index{RTC@{RTC}!XMC\_RTC\_IsEnabled@{XMC\_RTC\_IsEnabled}}
+\index{XMC\_RTC\_IsEnabled@{XMC\_RTC\_IsEnabled}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_IsEnabled()}{XMC\_RTC\_IsEnabled()}}
+{\footnotesize\ttfamily bool X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Is\+Enabled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Checks R\+TC peripheral is enabled for programming its registers ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable()}}, \mbox{\hyperlink{group___r_t_c_ga304ac03dcebdf34bd64d8a4a55f68e7e}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Disable()}}, X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Deassert\+Peripheral\+Reset(), X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Assert\+Peripheral\+Reset() 
+\end{DoxyParagraph}
+
+
+Definition at line 155 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+Is\+Peripheral\+Clock\+Gated().
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_gaa43757597d99d09440fe053536b380e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_ga675fc6bac62024c8c94f1cb2e1fe6949}\label{group___r_t_c_ga675fc6bac62024c8c94f1cb2e1fe6949}} 
+\index{RTC@{RTC}!XMC\_RTC\_IsRunning@{XMC\_RTC\_IsRunning}}
+\index{XMC\_RTC\_IsRunning@{XMC\_RTC\_IsRunning}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_IsRunning()}{XMC\_RTC\_IsRunning()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cmsis__gcc_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}{\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE}} bool X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Is\+Running (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+bool true if R\+TC is running false if R\+TC is not running
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Checks the running status of the R\+TC ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function reads the bitfield E\+NB of C\+TR register to get the running status of R\+TC.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga154a51800df4635e2ab026b3c89b3678}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Start()}}, \mbox{\hyperlink{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 666 of file xmc\+\_\+rtc.\+h.
+
+
+
+References R\+TC, and R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+E\+N\+B\+\_\+\+Msk.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init().
+
+\mbox{\Hypertarget{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}\label{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}} 
+\index{RTC@{RTC}!XMC\_RTC\_SetAlarm@{XMC\_RTC\_SetAlarm}}
+\index{XMC\_RTC\_SetAlarm@{XMC\_RTC\_SetAlarm}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_SetAlarm()}{XMC\_RTC\_SetAlarm()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} $\ast$const}]{alarm }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em alarm} & Constant pointer to a constant \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} structure containing the alarm time parameters alarm seconds, alarm minutes, alarm hours, alarm days, alarm daysofweek, alarm month and alarm year. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Sets the R\+TC module alarm time value ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the A\+T\+I\+M0, A\+T\+I\+M1 registers with alarm time values. See the structure \mbox{\hyperlink{group___r_t_c_ga9bc121a5c3cdd076e66390087c4ace34}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+t}} for the valid range of alarm time value parameters. ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 214 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::days, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::hours, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::minutes, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::month, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw1, R\+TC, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+A\+T\+I\+M0\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+A\+T\+I\+M1\+\_\+\+Msk, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::seconds, X\+M\+C\+\_\+\+A\+S\+S\+E\+RT, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+D\+A\+YS, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+H\+O\+U\+RS, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+I\+N\+U\+T\+ES, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+O\+N\+TH, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+S\+E\+C\+O\+N\+DS, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+Y\+E\+AR, X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::year.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_ga9b7300d074526315c349c4de2b655948}\label{group___r_t_c_ga9b7300d074526315c349c4de2b655948}} 
+\index{RTC@{RTC}!XMC\_RTC\_SetAlarmStdFormat@{XMC\_RTC\_SetAlarmStdFormat}}
+\index{XMC\_RTC\_SetAlarmStdFormat@{XMC\_RTC\_SetAlarmStdFormat}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_SetAlarmStdFormat()}{XMC\_RTC\_SetAlarmStdFormat()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format (\begin{DoxyParamCaption}\item[{const struct tm $\ast$const}]{stdtime }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stdtime} & Pointer to a \+::tm structure containing the time parameters alarm seconds, alarm minutes, alarm hours, alarm days, alarm daysofweek, alarm month, ~\newline
+ alarm year(since 1900) and alarm days in a year in standard format. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Sets the R\+TC module alarm time value in standard format ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the alarm time values from A\+T\+I\+M0, A\+T\+I\+M1 registers.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm()}}, \mbox{\hyperlink{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 259 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::days, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::hours, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::minutes, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::month, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::seconds, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+O\+F\+F\+S\+ET, and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::year.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ga9b7300d074526315c349c4de2b655948_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_gafe70c1437b9b4af0c0c8ac85870d631c}\label{group___r_t_c_gafe70c1437b9b4af0c0c8ac85870d631c}} 
+\index{RTC@{RTC}!XMC\_RTC\_SetDebugMode@{XMC\_RTC\_SetDebugMode}}
+\index{XMC\_RTC\_SetDebugMode@{XMC\_RTC\_SetDebugMode}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_SetDebugMode()}{XMC\_RTC\_SetDebugMode()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Debug\+Mode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___r_t_c_ga9d64e56f87998f63c9db68d9ced6ec80}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+D\+E\+\_\+t}}}]{debug\+\_\+mode }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em debug\+\_\+mode} & Debug mode value containing in (\mbox{\hyperlink{group___r_t_c_ga9d64e56f87998f63c9db68d9ced6ec80}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+M\+O\+D\+E\+\_\+t}}) to be set ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Configures the R\+TC into running or stopping mode during halting mode debug ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the C\+T\+R.\+S\+US bitfield to configure the R\+TC into running or stopping mode during halting mode debug. 
+\end{DoxyParagraph}
+
+
+Definition at line 121 of file xmc1\+\_\+rtc.\+c.
+
+
+
+References R\+TC, and R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+S\+U\+S\+\_\+\+Msk.
+
+\mbox{\Hypertarget{group___r_t_c_gae593067f20d83f3bfb78f9fbb55f2b66}\label{group___r_t_c_gae593067f20d83f3bfb78f9fbb55f2b66}} 
+\index{RTC@{RTC}!XMC\_RTC\_SetPrescaler@{XMC\_RTC\_SetPrescaler}}
+\index{XMC\_RTC\_SetPrescaler@{XMC\_RTC\_SetPrescaler}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_SetPrescaler()}{XMC\_RTC\_SetPrescaler()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Prescaler (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{prescaler }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em prescaler} & Prescaler value to be set ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Sets the R\+TC module prescaler value ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the C\+T\+R.\+D\+IV bitfield to configure the prescalar value. The default value for the prescalar with the 32.\+768k\+Hz crystal (or the internal clock) is 7F\+F\+FH for a time interval of 1 sec. Before setting the prescaler value R\+TC should be in stop mode and hibernate domain should be enabled.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop()}}, \mbox{\hyperlink{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable()}}, \mbox{\hyperlink{group___r_t_c_gac0a3ceb3522feb6b6729afaf495cd0dc}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Prescaler()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 117 of file xmc\+\_\+rtc.\+c.
+
+
+
+References R\+TC, R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+D\+I\+V\+\_\+\+Msk, R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+D\+I\+V\+\_\+\+Pos, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+Msk, X\+M\+C\+\_\+\+A\+S\+S\+E\+RT, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+P\+R\+E\+S\+C\+A\+L\+ER, and X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status().
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_gae593067f20d83f3bfb78f9fbb55f2b66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}\label{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}} 
+\index{RTC@{RTC}!XMC\_RTC\_SetTime@{XMC\_RTC\_SetTime}}
+\index{XMC\_RTC\_SetTime@{XMC\_RTC\_SetTime}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_SetTime()}{XMC\_RTC\_SetTime()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} $\ast$const}]{timeval }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeval} & Contstant pointer to a constant \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} structure containing the time parameters seconds, minutes, hours, days, daysofweek, month and year. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Sets the R\+TC module time values ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the T\+I\+M0, T\+I\+M1 registers with time values. The values can only be written when R\+TC is disabled. See the structure \mbox{\hyperlink{group___r_t_c_gaaf0121ca445814d8a26c88aa8a70a609}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+\_\+t}} for the valid range of time value parameters. ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time()}}, \mbox{\hyperlink{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 132 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::days, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::daysofweek, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::hours, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::minutes, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::month, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw0, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::raw1, R\+TC, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M0\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M1\+\_\+\+Msk, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::seconds, X\+M\+C\+\_\+\+A\+S\+S\+E\+RT, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+D\+A\+YS, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+D\+A\+Y\+S\+O\+F\+W\+E\+EK, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+H\+O\+U\+RS, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+I\+N\+U\+T\+ES, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+M\+O\+N\+TH, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+S\+E\+C\+O\+N\+DS, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+M\+A\+X\+Y\+E\+AR, X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::year.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Std\+Format().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ga05d0802f267b55eee877eb96707658b1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_ga6ed60ac9d9ba537b8373be7c35cf7da2}\label{group___r_t_c_ga6ed60ac9d9ba537b8373be7c35cf7da2}} 
+\index{RTC@{RTC}!XMC\_RTC\_SetTimeStdFormat@{XMC\_RTC\_SetTimeStdFormat}}
+\index{XMC\_RTC\_SetTimeStdFormat@{XMC\_RTC\_SetTimeStdFormat}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_SetTimeStdFormat()}{XMC\_RTC\_SetTimeStdFormat()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time\+Std\+Format (\begin{DoxyParamCaption}\item[{const struct tm $\ast$const}]{stdtime }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em stdtime} & Pointer to a \+::tm structure containing the time parameters seconds, minutes, hours, days, daysofweek, month, year(since 1900) and days in a ~\newline
+ year in standard format. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description\+: }
+Sets the R\+TC module time value in standard format ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function sets the time values from T\+I\+M0, T\+I\+M1 registers.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_ga05d0802f267b55eee877eb96707658b1}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time()}}, \mbox{\hyperlink{group___r_t_c_ga073e95cbaffd55d6f7c96557bb63cc9c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Time()}} 
+\end{DoxyParagraph}
+
+
+Definition at line 177 of file xmc\+\_\+rtc.\+c.
+
+
+
+References X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::days, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::daysofweek, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::hours, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::minutes, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::month, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::seconds, X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Time(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+A\+R\+\_\+\+O\+F\+F\+S\+ET, and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+T\+I\+M\+E\+::year.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ga6ed60ac9d9ba537b8373be7c35cf7da2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_ga154a51800df4635e2ab026b3c89b3678}\label{group___r_t_c_ga154a51800df4635e2ab026b3c89b3678}} 
+\index{RTC@{RTC}!XMC\_RTC\_Start@{XMC\_RTC\_Start}}
+\index{XMC\_RTC\_Start@{XMC\_RTC\_Start}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_Start()}{XMC\_RTC\_Start()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Enables R\+TC peripheral to start counting time ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function starts the R\+TC for counting time by setting C\+T\+R.\+E\+NB bit. Before starting the R\+TC, it should not be in running mode and also hibernate domain should be enabled.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable()}}, \mbox{\hyperlink{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop()}}, X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Deassert\+Peripheral\+Reset() 
+\end{DoxyParagraph}
+
+
+Definition at line 93 of file xmc\+\_\+rtc.\+c.
+
+
+
+References R\+TC, R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+E\+N\+B\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+Msk, and X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{group___r_t_c_ga154a51800df4635e2ab026b3c89b3678_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}\label{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b}} 
+\index{RTC@{RTC}!XMC\_RTC\_Stop@{XMC\_RTC\_Stop}}
+\index{XMC\_RTC\_Stop@{XMC\_RTC\_Stop}!RTC@{RTC}}
+\doxysubsubsection{\texorpdfstring{XMC\_RTC\_Stop()}{XMC\_RTC\_Stop()}}
+{\footnotesize\ttfamily void X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Description}
+Disables R\+TC peripheral to start counting time ~\newline
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The function stops the R\+TC for counting time by resetting C\+T\+R.\+E\+NB. Before stopping the R\+TC, hibernate domain should be enabled.
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Related A\+P\+Is\+:}
+\mbox{\hyperlink{group___r_t_c_gaff18bac4a49b34e5e75db30ad226a6e2}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Enable()}}, \mbox{\hyperlink{group___r_t_c_ga154a51800df4635e2ab026b3c89b3678}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Start()}}, X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+R\+E\+S\+E\+T\+\_\+\+Assert\+Peripheral\+Reset() 
+\end{DoxyParagraph}
+
+
+Definition at line 105 of file xmc\+\_\+rtc.\+c.
+
+
+
+References R\+TC, R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+E\+N\+B\+\_\+\+Msk, S\+C\+U\+\_\+\+G\+E\+N\+E\+R\+A\+L\+\_\+\+M\+I\+R\+R\+S\+T\+S\+\_\+\+R\+T\+C\+\_\+\+C\+T\+R\+\_\+\+Msk, and X\+M\+C\+\_\+\+S\+C\+U\+\_\+\+Get\+Mirror\+Status().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{group___r_t_c_ga12b8b8ec35283763356be6f42acad92b_cgraph}
+\end{center}
+\end{figure}

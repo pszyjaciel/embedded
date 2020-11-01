@@ -1,0 +1,56 @@
+\hypertarget{my__alloc_8h}{}\section{my\+\_\+alloc.\+h File Reference}
+\label{my__alloc_8h}\index{my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}}
+{\ttfamily \#include \char`\"{}../mysql/psi/psi\+\_\+memory.\+h\char`\"{}}\\*
+Include dependency graph for my\+\_\+alloc.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{my__alloc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{my__alloc_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structst__used__mem}{st\+\_\+used\+\_\+mem}
+\item 
+struct \hyperlink{structst__mem__root}{st\+\_\+mem\+\_\+root}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{my__alloc_8h_a86cee62dcc3de4c3ca52d41583603175}{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+O\+\_\+\+D\+R\+O\+P}~4096
+\item 
+\#define \hyperlink{my__alloc_8h_a567173e2e9814210374c5351959e349b}{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+R\+O\+P}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structst__used__mem}{st\+\_\+used\+\_\+mem} \hyperlink{my__alloc_8h_adcee356751476eb8212d707ab71a525c}{U\+S\+E\+D\+\_\+\+M\+E\+M}
+\item 
+typedef struct \hyperlink{structst__mem__root}{st\+\_\+mem\+\_\+root} \hyperlink{my__alloc_8h_ac59e289b254a2c5ac634ffcedda3f823}{M\+E\+M\+\_\+\+R\+O\+O\+T}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{my__alloc_8h_a86cee62dcc3de4c3ca52d41583603175}{}\index{my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}!A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+O\+\_\+\+D\+R\+O\+P@{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+O\+\_\+\+D\+R\+O\+P}}
+\index{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+O\+\_\+\+D\+R\+O\+P@{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+O\+\_\+\+D\+R\+O\+P}!my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}}
+\subsubsection[{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+O\+\_\+\+D\+R\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+O\+\_\+\+D\+R\+O\+P~4096}\label{my__alloc_8h_a86cee62dcc3de4c3ca52d41583603175}
+\hypertarget{my__alloc_8h_a567173e2e9814210374c5351959e349b}{}\index{my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}!A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+R\+O\+P@{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+R\+O\+P}}
+\index{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+R\+O\+P@{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+R\+O\+P}!my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}}
+\subsubsection[{A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+R\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+L\+O\+C\+\_\+\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+D\+R\+O\+P~10}\label{my__alloc_8h_a567173e2e9814210374c5351959e349b}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{my__alloc_8h_ac59e289b254a2c5ac634ffcedda3f823}{}\index{my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}!M\+E\+M\+\_\+\+R\+O\+O\+T@{M\+E\+M\+\_\+\+R\+O\+O\+T}}
+\index{M\+E\+M\+\_\+\+R\+O\+O\+T@{M\+E\+M\+\_\+\+R\+O\+O\+T}!my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}}
+\subsubsection[{M\+E\+M\+\_\+\+R\+O\+O\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+mem\+\_\+root}  {\bf M\+E\+M\+\_\+\+R\+O\+O\+T}}\label{my__alloc_8h_ac59e289b254a2c5ac634ffcedda3f823}
+\hypertarget{my__alloc_8h_adcee356751476eb8212d707ab71a525c}{}\index{my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}!U\+S\+E\+D\+\_\+\+M\+E\+M@{U\+S\+E\+D\+\_\+\+M\+E\+M}}
+\index{U\+S\+E\+D\+\_\+\+M\+E\+M@{U\+S\+E\+D\+\_\+\+M\+E\+M}!my\+\_\+alloc.\+h@{my\+\_\+alloc.\+h}}
+\subsubsection[{U\+S\+E\+D\+\_\+\+M\+E\+M}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st\+\_\+used\+\_\+mem}  {\bf U\+S\+E\+D\+\_\+\+M\+E\+M}}\label{my__alloc_8h_adcee356751476eb8212d707ab71a525c}

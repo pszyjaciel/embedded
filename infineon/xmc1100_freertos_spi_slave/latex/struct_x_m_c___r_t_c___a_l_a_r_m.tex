@@ -1,0 +1,227 @@
+\hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m}{}\doxysection{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+RM Struct Reference}
+\label{struct_x_m_c___r_t_c___a_l_a_r_m}\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+
+
+{\ttfamily \#include $<$xmc\+\_\+rtc.\+h$>$}
+
+
+
+Collaboration diagram for X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+RM\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{struct_x_m_c___r_t_c___a_l_a_r_m__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_aa4c3708affaf4f68e741ba5c01c51659}{raw0}}\\
+\>struct \{\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_af0decd1c457327716043c5c4ed266e94}{seconds}}: 6\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_a5258c5656bae5ef9954545ace8881ecf}{\_\_pad0\_\_}}: 2\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_ad8af65105639b2364eca86f93d9e5906}{minutes}}: 6\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_afcb533506f19fb5d8c532b9e3e93adbc}{\_\_pad1\_\_}}: 2\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_af233574ff87fa05186b2cf1b8cd9a997}{hours}}: 5\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_a8be54babde172d2fc31133caf2ea469e}{\_\_pad2\_\_}}: 3\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_ad519e2b8b61149c3fed0c84d1f671c52}{days}}: 5\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_ad5050b35b9e5e00ae6d70cac51b62ea4}{\_\_pad3\_\_}}: 3\\
+\>\} \\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_acffc63f085bf7fc4bf0d1414273bccd5}{raw1}}\\
+\>struct \{\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_a5258c5656bae5ef9954545ace8881ecf}{\_\_pad0\_\_}}: 8\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_a57010d07039df92a8897bc300855ab5d}{month}}: 4\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_afcb533506f19fb5d8c532b9e3e93adbc}{\_\_pad1\_\_}}: 4\\
+\>\>uint32\_t \mbox{\hyperlink{struct_x_m_c___r_t_c___a_l_a_r_m_af6c90b7a931814f821387fc694e15b48}{year}}: 16\\
+\>\} \\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Alarm time values of R\+TC ~\newline
+
+
+The structure presents a convenient way to set/obtain the alarm time values for seconds, minutes, hours, days, month and year of R\+TC. The \mbox{\hyperlink{group___r_t_c_gab729ddc6942f268a7775faf5b8dba8ea}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm()}} and \mbox{\hyperlink{group___r_t_c_ga59347e7f1a7647efca68561c97dc455c}{X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm()}} can be used to populate the structure with the alarm time value of R\+TC 
+
+Definition at line 175 of file xmc\+\_\+rtc.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_a60b1aac5459a9be0aafb8647a09b5b9a}\label{struct_x_m_c___r_t_c___a_l_a_r_m_a60b1aac5459a9be0aafb8647a09b5b9a}} 
+\doxysubsubsection{\texorpdfstring{"@33}{@33}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_a2c00600e520c91b32388d4b2f9ddae63}\label{struct_x_m_c___r_t_c___a_l_a_r_m_a2c00600e520c91b32388d4b2f9ddae63}} 
+\doxysubsubsection{\texorpdfstring{"@35}{@35}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_a5258c5656bae5ef9954545ace8881ecf}\label{struct_x_m_c___r_t_c___a_l_a_r_m_a5258c5656bae5ef9954545ace8881ecf}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!\_\_pad0\_\_@{\_\_pad0\_\_}}
+\index{\_\_pad0\_\_@{\_\_pad0\_\_}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{\_\_pad0\_\_}{\_\_pad0\_\_}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::\+\_\+\+\_\+pad0\+\_\+\+\_\+}
+
+
+
+Definition at line 187 of file xmc\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_afcb533506f19fb5d8c532b9e3e93adbc}\label{struct_x_m_c___r_t_c___a_l_a_r_m_afcb533506f19fb5d8c532b9e3e93adbc}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!\_\_pad1\_\_@{\_\_pad1\_\_}}
+\index{\_\_pad1\_\_@{\_\_pad1\_\_}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{\_\_pad1\_\_}{\_\_pad1\_\_}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::\+\_\+\+\_\+pad1\+\_\+\+\_\+}
+
+
+
+Definition at line 189 of file xmc\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_a8be54babde172d2fc31133caf2ea469e}\label{struct_x_m_c___r_t_c___a_l_a_r_m_a8be54babde172d2fc31133caf2ea469e}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!\_\_pad2\_\_@{\_\_pad2\_\_}}
+\index{\_\_pad2\_\_@{\_\_pad2\_\_}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{\_\_pad2\_\_}{\_\_pad2\_\_}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::\+\_\+\+\_\+pad2\+\_\+\+\_\+}
+
+
+
+Definition at line 191 of file xmc\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_ad5050b35b9e5e00ae6d70cac51b62ea4}\label{struct_x_m_c___r_t_c___a_l_a_r_m_ad5050b35b9e5e00ae6d70cac51b62ea4}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!\_\_pad3\_\_@{\_\_pad3\_\_}}
+\index{\_\_pad3\_\_@{\_\_pad3\_\_}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{\_\_pad3\_\_}{\_\_pad3\_\_}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::\+\_\+\+\_\+pad3\+\_\+\+\_\+}
+
+
+
+Definition at line 193 of file xmc\+\_\+rtc.\+h.
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_ad519e2b8b61149c3fed0c84d1f671c52}\label{struct_x_m_c___r_t_c___a_l_a_r_m_ad519e2b8b61149c3fed0c84d1f671c52}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!days@{days}}
+\index{days@{days}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{days}{days}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::days}
+
+Alarm days compare value (0-\/Actual days of month\+: Above this causes this bitfield to be set with 0) 
+
+Definition at line 192 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format().
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_af233574ff87fa05186b2cf1b8cd9a997}\label{struct_x_m_c___r_t_c___a_l_a_r_m_af233574ff87fa05186b2cf1b8cd9a997}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!hours@{hours}}
+\index{hours@{hours}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{hours}{hours}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::hours}
+
+Alarm hours compare value (0-\/23\+: Above this causes this bitfield to be set with 0) 
+
+Definition at line 190 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format().
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_ad8af65105639b2364eca86f93d9e5906}\label{struct_x_m_c___r_t_c___a_l_a_r_m_ad8af65105639b2364eca86f93d9e5906}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!minutes@{minutes}}
+\index{minutes@{minutes}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{minutes}{minutes}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::minutes}
+
+Alarm minutes compare value (0-\/59\+: Above this causes this bitfield to be set with 0) 
+
+Definition at line 188 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format().
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_a57010d07039df92a8897bc300855ab5d}\label{struct_x_m_c___r_t_c___a_l_a_r_m_a57010d07039df92a8897bc300855ab5d}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!month@{month}}
+\index{month@{month}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::month}
+
+Alarm month compare value (0-\/11\+: Above this causes this bitfield to be set with 0) 
+
+Definition at line 201 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format().
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_aa4c3708affaf4f68e741ba5c01c51659}\label{struct_x_m_c___r_t_c___a_l_a_r_m_aa4c3708affaf4f68e741ba5c01c51659}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!raw0@{raw0}}
+\index{raw0@{raw0}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{raw0}{raw0}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw0}
+
+
+
+Definition at line 183 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm().
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_acffc63f085bf7fc4bf0d1414273bccd5}\label{struct_x_m_c___r_t_c___a_l_a_r_m_acffc63f085bf7fc4bf0d1414273bccd5}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!raw1@{raw1}}
+\index{raw1@{raw1}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{raw1}{raw1}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::raw1}
+
+
+
+Definition at line 197 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Init(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm().
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_af0decd1c457327716043c5c4ed266e94}\label{struct_x_m_c___r_t_c___a_l_a_r_m_af0decd1c457327716043c5c4ed266e94}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!seconds@{seconds}}
+\index{seconds@{seconds}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{seconds}{seconds}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::seconds}
+
+Alarm seconds compare value (0-\/59\+: Above this causes this bitfield to be set with 0) 
+
+Definition at line 186 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format().
+
+\mbox{\Hypertarget{struct_x_m_c___r_t_c___a_l_a_r_m_af6c90b7a931814f821387fc694e15b48}\label{struct_x_m_c___r_t_c___a_l_a_r_m_af6c90b7a931814f821387fc694e15b48}} 
+\index{XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}!year@{year}}
+\index{year@{year}!XMC\_RTC\_ALARM@{XMC\_RTC\_ALARM}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily uint32\+\_\+t X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+::year}
+
+Alarm year compare value 
+
+Definition at line 203 of file xmc\+\_\+rtc.\+h.
+
+
+
+Referenced by X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Get\+Alarm\+Std\+Format(), X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm(), and X\+M\+C\+\_\+\+R\+T\+C\+\_\+\+Set\+Alarm\+Std\+Format().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Libraries/\+X\+M\+C\+Lib/inc/\mbox{\hyperlink{xmc__rtc_8h}{xmc\+\_\+rtc.\+h}}\end{DoxyCompactItemize}
