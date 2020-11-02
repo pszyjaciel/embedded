@@ -358,3 +358,688 @@ java.io.IOException: http://marketplace.eclipse.org/marketplace-client-intro?mpc
 
 !ENTRY SOLVER 1 0 2020-11-01 19:50:55.390
 !MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2020-11-02 18:32:31.939 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_PL
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.equinox.ds 1 0 2020-11-02 18:32:42.500
+!MESSAGE Could not bind a reference of component org.eclipse.fx.core.internal.JUtilLoggerFactory. The reference is: Reference[name = registerHandler, interface = java.util.logging.Handler, policy = dynamic, policy-option = greedy, cardinality = 0..n, target = null, bind = registerHandler, unbind = unregisterHandler, updated = null]
+
+!ENTRY SOLVER 1 0 2020-11-02 18:32:56.793
+!MESSAGE USER_ACTION : Default solver exe path is: C:\cp\DAVE442\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2020-11-02 18:32:56.996
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2020-11-02 18:32:57.012
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2020-11-02 18:32:57.824
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:32:58.387
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC1.1.00.Q024.ALL] is: 547 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:32:58.527
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 0 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:32:59.387
+!MESSAGE USER_ACTION : Active project:xmc1100_freertos_spi_slave[ Software ID:XMC1.1.00.Q024.ALL]
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.496
+!MESSAGE Removing part descriptor with the 'org.eclipse.mylyn.commons.repositories.ui.navigator.Repositories' id and the 'Team Repositories' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.511
+!MESSAGE Removing part descriptor with the 'org.eclipse.mylyn.tasks.ui.views.tasks' id and the 'Task List' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.527
+!MESSAGE Removing part descriptor with the 'org.eclipse.mylyn.tasks.ui.views.repositories' id and the 'Task Repositories' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.543
+!MESSAGE Removing part descriptor with the 'org.eclipse.team.ccvs.ui.RepositoriesView' id and the 'CVS Repositories' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.574
+!MESSAGE Removing part descriptor with the 'org.eclipse.team.ccvs.ui.EditorsView' id and the 'CVS Editors' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.590
+!MESSAGE Removing part descriptor with the 'org.eclipse.team.svn.ui.repository.RepositoriesView' id and the 'SVN Repositories' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.605
+!MESSAGE Removing part descriptor with the 'org.eclipse.team.svn.ui.properties.PropertiesView' id and the 'SVN Properties' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.621
+!MESSAGE Removing part descriptor with the 'org.eclipse.team.svn.ui.repository.browser.RepositoryBrowser' id and the 'SVN Repository Browser' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.636
+!MESSAGE Removing part descriptor with the 'org.eclipse.team.svn.ui.properties.RevPropertiesView' id and the 'Revision Properties' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2020-11-02 18:32:59.652
+!MESSAGE Removing part descriptor with the 'org.eclipse.team.svn.ui.lock.LocksView' id and the 'SVN Locks' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY COMMON 1 0 2020-11-02 18:33:02.511
+!MESSAGE Time Taken By De-Serialization  : 1906 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:33:02.589
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:33:02.964
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 3577 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:33:03.120
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 31 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:33:03.198
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 15 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:33:03.276
+!MESSAGE USER_ACTION : Time taken for updating views is: 15 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:33:05.979
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2687 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:33:06.932
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 8420 msec 
+
+!ENTRY CODEGEN 1 0 2020-11-02 18:44:14.487
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2020-11-02 18:44:19.095
+!MESSAGE Code generation completed...
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-11-02 18:45:08.075
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-11-02 18:45:08.091
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 18:45:12.035
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 18:45:12.865
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY org.eclipse.ui 4 4 2020-11-02 18:45:21.276
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.DebugLast: {ActionDelegateHandlerProxy(null,org.eclipse.debug.internal.ui.actions.DebugLastAction in org.eclipse.debug.ui)} vs {ActionDelegateHandlerProxy(null,com.dave.activeproject.ui.actions.ActiveProjDebugLastAction in com.dave.activeproject)}
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 18:51:45.202
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 18:51:45.615
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:41.012
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\XMC1.1.00.Q024.ALL\device\xmc1100\0\MANIFEST\xmc1100.dd
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:45.381
+!MESSAGE USER_ACTION : App Getting Added: DIGITAL_IO [4.0.16]
+
+!ENTRY SOLVER 1 0 2020-11-02 18:57:45.635
+!MESSAGE USER_ACTION : Creating an APP: DIGITAL_IO [4.0.16]
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:45.842
+!MESSAGE USER_ACTION : Created APP: DIGITAL_IO [4.0.16]-->http://resources/4.0.16/app/DIGITAL_IO/4
+
+!ENTRY SOLVER 1 0 2020-11-02 18:57:45.868
+!MESSAGE USER_ACTION : Library store ECO file :C:\cp\DAVE442\D_LibraryStore_4.4\resources\XMC1.1.00.Q024.ALL\device\xmc1100\0\MANIFEST\solver_data\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2020-11-02 18:57:45.933
+!MESSAGE USER_ACTION : Copied ECO file to temp location :C:\Workspaces\GitHub\embedded\infineon\.metadata\.plugins\solver_data\XMC1.1.00.Q024.ALL\xmc4500_solver.eco
+
+!ENTRY SOLVER 1 0 2020-11-02 18:57:48.564
+!MESSAGE USER_ACTION : Loaded ECO file :C:\Workspaces\GitHub\embedded\infineon\.metadata\.plugins\solver_data\XMC1.1.00.Q024.ALL\xmc4500_solver.eco
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:48.989
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\VQFN24.0.0\devicepackage\0\MANIFEST\devicepackage.dd
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:49.051
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\1.24.1\port\p\0\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:49.126
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\1.0.1\peripheral\scu\0\MANIFEST\scu.dd
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:49.178
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\1.24.1\port\p\1\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:49.241
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\1.0.2\peripheral\cpu\0\MANIFEST\cpu.dd
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:49.318
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\1.24.1\port\p\2\MANIFEST\p.dd
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:57:49.481
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\1.0.1\peripheral\usic\0\MANIFEST\usic.dd
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:49.523
+!MESSAGE Time taken for processing complete solver result is: 594 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:49.538
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:49.553
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:49.939
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:57:50.225
+!MESSAGE Time Taken By Serialization  : 271 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:50.356
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:50.534
+!MESSAGE Time taken for serialization in msec: 997
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:52.682
+!MESSAGE USER_ACTION : App Getting Added: DIGITAL_IO [4.0.16]
+
+!ENTRY SOLVER 1 0 2020-11-02 18:57:52.761
+!MESSAGE USER_ACTION : Creating an APP: DIGITAL_IO [4.0.16]
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:52.871
+!MESSAGE USER_ACTION : Created APP: DIGITAL_IO [4.0.16]-->http://resources/4.0.16/app/DIGITAL_IO/5
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:53.425
+!MESSAGE Time taken for processing complete solver result is: 61 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:53.492
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:53.508
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:53.843
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:57:54.069
+!MESSAGE Time Taken By Serialization  : 211 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:54.200
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:54.308
+!MESSAGE Time taken for serialization in msec: 817
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:56.226
+!MESSAGE USER_ACTION : App Getting Added: DIGITAL_IO [4.0.16]
+
+!ENTRY SOLVER 1 0 2020-11-02 18:57:56.277
+!MESSAGE USER_ACTION : Creating an APP: DIGITAL_IO [4.0.16]
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:56.360
+!MESSAGE USER_ACTION : Created APP: DIGITAL_IO [4.0.16]-->http://resources/4.0.16/app/DIGITAL_IO/6
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:56.805
+!MESSAGE Time taken for processing complete solver result is: 62 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:56.821
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:56.835
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:57.093
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:57:57.314
+!MESSAGE Time Taken By Serialization  : 207 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:57.446
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:57.583
+!MESSAGE Time taken for serialization in msec: 763
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:59.178
+!MESSAGE USER_ACTION : App Getting Added: DIGITAL_IO [4.0.16]
+
+!ENTRY SOLVER 1 0 2020-11-02 18:57:59.229
+!MESSAGE USER_ACTION : Creating an APP: DIGITAL_IO [4.0.16]
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 18:57:59.303
+!MESSAGE USER_ACTION : Created APP: DIGITAL_IO [4.0.16]-->http://resources/4.0.16/app/DIGITAL_IO/7
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:59.688
+!MESSAGE Time taken for processing complete solver result is: 48 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:59.702
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:59.715
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:57:59.962
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:58:00.171
+!MESSAGE Time Taken By Serialization  : 194 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:00.313
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:00.400
+!MESSAGE Time taken for serialization in msec: 697
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:19.654
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:19.671
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:19.764
+!MESSAGE Time taken for serialization in msec: 93
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:19.777
+!MESSAGE *****************************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:19.801
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:20.029
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:58:20.212
+!MESSAGE Time Taken By Serialization  : 170 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:20.335
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:25.551
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:25.562
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:25.610
+!MESSAGE Time taken for serialization in msec: 47
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:25.620
+!MESSAGE *****************************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:25.631
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:25.806
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:58:25.963
+!MESSAGE Time Taken By Serialization  : 143 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:26.079
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:37.466
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:37.477
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:37.525
+!MESSAGE Time taken for serialization in msec: 47
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:37.535
+!MESSAGE *****************************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:37.544
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:37.742
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:58:37.886
+!MESSAGE Time Taken By Serialization  : 134 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:37.985
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:47.534
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:47.544
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:47.625
+!MESSAGE Time taken for serialization in msec: 81
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:47.634
+!MESSAGE *****************************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:47.646
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:47.825
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:58:47.987
+!MESSAGE Time Taken By Serialization  : 150 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:48.090
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APP_CONFIGURATOR 1 0 2020-11-02 18:58:50.531
+!MESSAGE USER_ACTION : Time taken for opening editor is: 872 msec 
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:58:52.646
+!MESSAGE USER_ACTION : Setting value = "Input/Output" of "gcombo_io_function" in APP: DIGITAL_IO/4.0.16/4
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:53.196
+!MESSAGE Time taken for processing complete solver result is: 46 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:53.211
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:53.225
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:53.451
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:58:53.628
+!MESSAGE Time Taken By Serialization  : 166 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:53.760
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:58:53.827
+!MESSAGE Time taken for serialization in msec: 615
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:58:53.984
+!MESSAGE USER_ACTION : Time taken for refreshing DIGITAL_IO/4.0.16/4 editor is : 45
+
+!ENTRY SOLVER 1 0 2020-11-02 18:58:53.996
+!MESSAGE Time Taken By Solver for UI Action: 1272 ms
+
+!ENTRY APP_CONFIGURATOR 1 0 2020-11-02 18:58:58.118
+!MESSAGE USER_ACTION : Time taken for opening editor is: 413 msec 
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:58:59.552
+!MESSAGE USER_ACTION : Setting value = "Input/Output" of "gcombo_io_function" in APP: DIGITAL_IO/4.0.16/5
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:00.091
+!MESSAGE Time taken for processing complete solver result is: 44 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:00.105
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:00.120
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:00.397
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:59:00.581
+!MESSAGE Time Taken By Serialization  : 172 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:00.715
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:00.795
+!MESSAGE Time taken for serialization in msec: 690
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:59:00.955
+!MESSAGE USER_ACTION : Time taken for refreshing DIGITAL_IO/4.0.16/5 editor is : 55
+
+!ENTRY SOLVER 1 0 2020-11-02 18:59:00.970
+!MESSAGE Time Taken By Solver for UI Action: 1338 ms
+
+!ENTRY APP_CONFIGURATOR 1 0 2020-11-02 18:59:02.744
+!MESSAGE USER_ACTION : Time taken for opening editor is: 395 msec 
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:59:04.755
+!MESSAGE USER_ACTION : Setting value = "Input/Output" of "gcombo_io_function" in APP: DIGITAL_IO/4.0.16/6
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:05.240
+!MESSAGE Time taken for processing complete solver result is: 31 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:05.251
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:05.263
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:05.456
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:59:05.601
+!MESSAGE Time Taken By Serialization  : 135 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:05.737
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:05.815
+!MESSAGE Time taken for serialization in msec: 563
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:59:05.962
+!MESSAGE USER_ACTION : Time taken for refreshing DIGITAL_IO/4.0.16/6 editor is : 43
+
+!ENTRY SOLVER 1 0 2020-11-02 18:59:05.974
+!MESSAGE Time Taken By Solver for UI Action: 1145 ms
+
+!ENTRY APP_CONFIGURATOR 1 0 2020-11-02 18:59:06.988
+!MESSAGE USER_ACTION : Time taken for opening editor is: 394 msec 
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:59:08.606
+!MESSAGE USER_ACTION : Setting value = "Input/Output" of "gcombo_io_function" in APP: DIGITAL_IO/4.0.16/7
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:09.093
+!MESSAGE Time taken for processing complete solver result is: 30 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:09.102
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:09.110
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:09.292
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:59:09.441
+!MESSAGE Time Taken By Serialization  : 138 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:09.542
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:09.623
+!MESSAGE Time taken for serialization in msec: 521
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:59:09.784
+!MESSAGE USER_ACTION : Time taken for refreshing DIGITAL_IO/4.0.16/7 editor is : 62
+
+!ENTRY SOLVER 1 0 2020-11-02 18:59:09.803
+!MESSAGE Time Taken By Solver for UI Action: 1123 ms
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:13.175
+!MESSAGE USER_ACTION : Opening Manual Pin Allocator Dialog.!
+
+!ENTRY APPSTORE 1 0 2020-11-02 18:59:13.210
+!MESSAGE USER_ACTION : Loaded DD: C:\cp\DAVE442\D_LibraryStore_4.4\resources\1.24.0\port\power_port\0\MANIFEST\power_port.dd
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:18.767
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : IOp06 --> pin --> #17 ( P0.6 ) 
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:19.177
+!MESSAGE USER_ACTION : Pin Selection : 468
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:20.833
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : IOp07 --> pin --> #18 ( P0.7 ) 
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:21.237
+!MESSAGE USER_ACTION : Pin Selection : 465
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:24.667
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : IOp08 --> pin --> #19 ( P0.8 ) 
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:25.041
+!MESSAGE USER_ACTION : Pin Selection : 447
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:27.131
+!MESSAGE USER_ACTION : User selection (Pin Allocator) : IOp09 --> pin --> #20 ( P0.9 ) 
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:27.489
+!MESSAGE USER_ACTION : Pin Selection : 416
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:29.372
+!MESSAGE Time taken for processing complete solver result is: 31 msec 
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:29.380
+!MESSAGE *****Serialization is called after successful solver action*****
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:29.392
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:29.589
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 18:59:29.724
+!MESSAGE Time Taken By Serialization  : 126 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:29.829
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 18:59:29.909
+!MESSAGE Time taken for serialization in msec: 528
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 18:59:30.043
+!MESSAGE USER_ACTION : Time taken for refreshing DIGITAL_IO/4.0.16/7 editor is : 35
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:30.056
+!MESSAGE USER_ACTION : Saved User configured Pin Data.!
+
+!ENTRY SOLVER 1 0 2020-11-02 18:59:30.069
+!MESSAGE Time Taken By Solve and Save Manual PIN Configuration  : 765 ms
+
+!ENTRY PIN_CONFIG 1 0 2020-11-02 18:59:31.737
+!MESSAGE USER_ACTION : Manual Pin Allocator Dialog is closed..!
+
+!ENTRY CODEGEN 1 0 2020-11-02 18:59:38.810
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2020-11-02 18:59:42.700
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2020-11-02 19:00:22.355
+!MESSAGE Debug session 'xmc1100_freertos_spi_slave Debug' already started. Terminate the first one before restarting.
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:00:33.193
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:00:33.771
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:27:32.501
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:27:32.947
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:28:43.722
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:28:44.126
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:29:31.470
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:29:31.899
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:35:28.687
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:35:29.118
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:36:28.707
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:36:29.161
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:38:06.527
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:38:06.957
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:39:00.509
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:39:00.907
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY APP_CONFIGURATOR 1 0 2020-11-02 19:39:42.719
+!MESSAGE USER_ACTION : Time taken for opening editor is: 829 msec 
+
+!ENTRY UI_EDITOR 1 0 2020-11-02 19:39:51.932
+!MESSAGE USER_ACTION : Setting value = "1000.0" of "gfloat_configTICK_RATE_HZ" in APP: FREERTOS/4.1.2/0
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 19:39:51.997
+!MESSAGE **************Serialization is called for successful UI action without Solver*********
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 19:39:52.010
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 19:39:52.105
+!MESSAGE Time taken for serialization in msec: 96
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 19:39:52.115
+!MESSAGE *****************************
+
+!ENTRY CODEGEN 1 0 2020-11-02 19:39:52.412
+!MESSAGE Code generation started...
+
+!ENTRY CODEGEN 1 0 2020-11-02 19:39:56.160
+!MESSAGE Code generation completed...
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:40:27.157
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:40:27.563
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:41:29.891
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:41:30.294
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:42:25.312
+!MESSAGE C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe -if swd -device XMC1100-Q024x0064 -endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd -ir -localhostonly 1 -singlerun -strict -timeout 0
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.jlink 4 1 2020-11-02 19:42:25.731
+!MESSAGE C:\cp\DAVE442\eclipse\ARM-GCC-49/bin/arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 20:18:31.430
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 20:18:31.715
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2020-11-02 20:18:31.965
+!MESSAGE Time Taken By Serialization  : 238 ms :: C:\Workspaces\GitHub\embedded\infineon\xmc1100_freertos_spi_slave\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2020-11-02 20:18:32.136
+!MESSAGE ****************Cleaning project data:xmc1100_freertos_spi_slave*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2020-11-02 20:18:32.217
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 87 msec 
+
+!ENTRY SOLVER 1 0 2020-11-02 20:18:32.232
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2020-11-02 20:18:32.770
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-11-02 20:18:36.381
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-11-02 20:18:36.402
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$ErrorReadJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-11-02 20:18:36.419
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$ErrorReadJob

@@ -73,6 +73,14 @@ extern const DIGITAL_IO_t VDIOP0_0;
 	
 extern const DIGITAL_IO_t VDIOP0_5; 
 	
+extern const DIGITAL_IO_t IOp06; 
+	
+extern const DIGITAL_IO_t IOp07; 
+	
+extern const DIGITAL_IO_t IOp08; 
+	
+extern const DIGITAL_IO_t IOp09; 
+	
  
 #endif  /* DIGITAL_IO_EXTERN_H */
 

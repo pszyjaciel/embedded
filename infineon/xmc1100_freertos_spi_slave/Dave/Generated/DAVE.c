@@ -95,6 +95,26 @@ DAVE_STATUS_t DAVE_Init(void)
   {
 	 /**  Initialization of DIGITAL_IO APP instance VDIOP0_5 */
 	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&VDIOP0_5); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance IOp06 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&IOp06); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance IOp07 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&IOp07); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance IOp08 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&IOp08); 
+   } 
+  if (init_status == DAVE_STATUS_SUCCESS)
+  {
+	 /**  Initialization of DIGITAL_IO APP instance IOp09 */
+	 init_status = (DAVE_STATUS_t)DIGITAL_IO_Init(&IOp09); 
    }  
   return init_status;
 } /**  End of function DAVE_Init */

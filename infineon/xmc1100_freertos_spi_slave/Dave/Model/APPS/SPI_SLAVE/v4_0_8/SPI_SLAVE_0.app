@@ -56,7 +56,7 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port2/Port2_2.dd#//@provided.14"/>
   </hwResources>
   <hwResources name="Slave select pin" URI="http://resources/4.0.8/app/SPI_SLAVE/0/hwres_port_pad_spi_sel" resourceGroupUri="port/p/*/pad/*" mResGrpUri="port/p/*/pad/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.10"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/Port0/Port0_0.dd#//@provided.28"/>
   </hwResources>
   <hwResources name="NVIC Node Tx" URI="http://resources/4.0.8/app/SPI_SLAVE/0/hwres_nvic_node_tx" resourceGroupUri="peripheral/cpu/0/nvic/interrupt/*" mResGrpUri="peripheral/cpu/0/nvic/interrupt/*">
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/CPU/CPU_0.dd#//@provided.12"/>
@@ -95,7 +95,7 @@
     <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.6"/>
   </hwResources>
   <hwResources name="Slave select pin" URI="http://resources/4.0.8/app/SPI_SLAVE/0/__pin_hwres_port_pad_spi_sel" resourceGroupUri="devicepackage/0/*" mResGrpUri="devicepackage/0/*">
-    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.5"/>
+    <downwardMapList xsi:type="ResourceModel:ResourceGroup" href="../../../HW_RESOURCES/DEVICEPACKAGE/DEVICEPACKAGE_0.dd#//@provided.14"/>
   </hwResources>
   <connections URI="http://resources/4.0.8/app/SPI_SLAVE/0/http://resources/4.0.8/app/SPI_SLAVE/0/vs_spi_sl_dout0/http://resources/4.0.8/app/SPI_SLAVE/0/vs_spi_sl_mosi0" systemDefined="true" sourceSignal="dout0_output" targetSignal="mosi_pin" required="false" srcVirtualSignal="//@virtualSignals.6" targetVirtualSignal="//@virtualSignals.11"/>
   <connections URI="http://resources/4.0.8/app/SPI_SLAVE/0/http://resources/4.0.8/app/SPI_SLAVE/0/vs_spi_sl_dout0/http://resources/4.0.8/app/SPI_SLAVE/0/vs_spi_sl_miso_mosi1" systemDefined="true" sourceSignal="dout0_output" targetSignal="miso_pin" srcVirtualSignal="//@virtualSignals.6" targetVirtualSignal="//@virtualSignals.10"/>

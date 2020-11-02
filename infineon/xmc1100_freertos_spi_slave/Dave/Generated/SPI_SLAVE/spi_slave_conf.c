@@ -170,7 +170,7 @@ SPI_SLAVE_STATUS_t SPI_SLAVE_0_init()
   /*Configure SCLK pin*/
   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, 2U, &SPI_SLAVE_0_sclk_pin_config);
   /*Configure slave select pin*/
-  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT0_BASE, 9U, &SPI_SLAVE_0_slavesel_pin_config);
+  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT0_BASE, 13U, &SPI_SLAVE_0_slavesel_pin_config);
   /*Configure MOSI pin*/
   XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, 10U, &SPI_SLAVE_0_mosi_pin_config);
   /* Initialize USIC channel in SPI slave mode*/
@@ -186,7 +186,7 @@ SPI_SLAVE_STATUS_t SPI_SLAVE_0_init()
   XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, (XMC_SPI_CH_INPUT_t)XMC_USIC_CH_INPUT_DX4, 0U);
   XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, (XMC_SPI_CH_INPUT_t)XMC_USIC_CH_INPUT_DX5, 0U);
   XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, (XMC_SPI_CH_INPUT_t)XMC_USIC_CH_INPUT_DX1, 6U);
-  XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, (XMC_SPI_CH_INPUT_t)XMC_USIC_CH_INPUT_DX2, 1U);
+  XMC_SPI_CH_SetInputSource(XMC_SPI0_CH0, (XMC_SPI_CH_INPUT_t)XMC_USIC_CH_INPUT_DX2, 5U);
   XMC_SPI_CH_EnableInputInversion(XMC_SPI0_CH0, XMC_SPI_CH_INPUT_SLAVE_SELIN);
   /*Configure transmit FIFO*/
   XMC_USIC_CH_TXFIFO_Configure(XMC_SPI0_CH0,

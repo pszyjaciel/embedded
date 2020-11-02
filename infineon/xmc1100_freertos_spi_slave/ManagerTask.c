@@ -6,7 +6,7 @@ extern xQueueHandle Queue_id;
 
 void Manager_Task(void *pvParameters) {
 
-	static uint32_t Delay1 = 60000, Delay2 = 20000;
+	static uint32_t Delay1 = 60, Delay2 = 20;
 
 	/* Create the notification semaphore and set the initial state. */
 	vSemaphoreCreateBinary(notification_semaphore);
@@ -21,6 +21,7 @@ void Manager_Task(void *pvParameters) {
 			xQueueSend(Queue_id, &Delay2, 0);
 			vTaskResume(worker1_id);
 			vTaskResume(worker2_id);
+			setByValue(3);
 		}
 		/* The lock is only released in the Timer callback function
 		 * pacz myTimerCallback() w main.c:

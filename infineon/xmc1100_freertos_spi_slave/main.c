@@ -75,6 +75,121 @@ void myTimerCallback(xTimerHandle pxTimer) {
 
 // (void*)x is an expression that converts the int x to a pointer.
 
+
+// function may be used with voltage divider (max 4 bits)
+// connected to P0.6, P0.7, P0.8, P0.9
+void setByValue(uint8_t myValue) {
+	// 18.8.5 Port Output Modification Register
+	// 0..15: PSxx
+	// 16..31: PRxx
+	// PRx PSx Function
+	// 0   1   Bit Pn_OUT.Px is set.
+	// 1   0   Bit Pn_OUT.Px is reset.
+
+	switch (myValue) {
+	case 0x00:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x01:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x02:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x03:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x04:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x05:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x06:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x07:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x02000000\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x08:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x09:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x0A:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x0B:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x01000000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x0C:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x0D:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00800000\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x0E:
+		asm("ldr r0, =0x00400000\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+	case 0x0F:
+		asm("ldr r0, =0x00000040\n\t" "ldr r1, =0x40040004\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000080\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000100\n\t" "str r0, [r1]\n\t");
+		asm("ldr r0, =0x00000200\n\t" "str r0, [r1]\n\t");
+		break;
+
+	default:
+		break;
+	}
+}
+
+
 int main(void) {
 
 	DAVE_STATUS_t status;
@@ -88,7 +203,7 @@ int main(void) {
 		}
 	}
 
-	Timer_handle = xTimerCreate("Timer", 100, pdTRUE, 0, myTimerCallback);
+	Timer_handle = xTimerCreate("Timer", 1, pdTRUE, 0, myTimerCallback);
 	xTimerStart(Timer_handle, 0);
 
 	xQueue = xQueueCreate(8, sizeof(uint8_t));

@@ -12,6 +12,7 @@
 
 extern xQueueHandle Queue_id;
 extern xTaskHandle worker2_id;
+extern void setByValue(uint8_t myValue);
 
 void worker2_task(void *pvParameters);
 

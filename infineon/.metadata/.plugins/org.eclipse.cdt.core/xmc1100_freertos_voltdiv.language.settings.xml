@@ -4,13 +4,13 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="com.ifx.xmc4000.GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -1041,22 +1041,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/arm-none-eabi">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/arm-none-eabi">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/backward">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -2117,13 +2117,13 @@
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="com.ifx.xmc4000.GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
@@ -3154,22 +3154,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/arm-none-eabi">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/arm-none-eabi">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/backward">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include/c++/4.9.3/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/lib/gcc/arm-none-eabi/4.9.3/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/!CP/DAVE_4-4-2_64bit_2018-02-23/DAVE-IDE-4.4.2-64Bit/eclipse/ARM-GCC-49/arm-none-eabi/include">
+					<entry kind="includePath" name="C:/cp/DAVE442/eclipse/ARM-GCC-49/arm-none-eabi/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="__ACCUM_EPSILON__" value="0x1P-15K">
