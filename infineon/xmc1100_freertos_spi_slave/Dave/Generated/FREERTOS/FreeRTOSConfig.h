@@ -55,8 +55,8 @@
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION 0
 #define configUSE_TICKLESS_IDLE                 0
 #define configCPU_CLOCK_HZ                      ( SystemCoreClock )
-#define configTICK_RATE_HZ                      ( ( TickType_t ) 100.0 )
-#define configMAX_PRIORITIES                    ( 5 )
+#define configTICK_RATE_HZ                      ( ( TickType_t ) 50.0 )
+#define configMAX_PRIORITIES                    ( 10 )
 #define configMINIMAL_STACK_SIZE                ( ( unsigned short ) 60 )
 #define configMAX_TASK_NAME_LEN                 ( 16 )
 #define configUSE_16_BIT_TICKS                  0
@@ -82,12 +82,12 @@
 /* Hook function related definitions. */
 #define configUSE_IDLE_HOOK                     0
 #define configUSE_TICK_HOOK                     0
-#define configCHECK_FOR_STACK_OVERFLOW          0
-#define configUSE_MALLOC_FAILED_HOOK            0
+#define configCHECK_FOR_STACK_OVERFLOW          2
+#define configUSE_MALLOC_FAILED_HOOK            1
 
 /* Run time and task stats gathering related definitions. */
 #define configGENERATE_RUN_TIME_STATS           0
-#define configUSE_TRACE_FACILITY                1
+#define configUSE_TRACE_FACILITY                0
 #define configUSE_STATS_FORMATTING_FUNCTIONS    1
 
 /* Co-routine definitions. */

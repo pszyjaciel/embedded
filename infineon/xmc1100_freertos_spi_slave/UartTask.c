@@ -49,7 +49,8 @@ void fMyPrintf(const char* p) {
 	}
 
 	if (ucStringLength1 == ucStringLength2) {
-		UART_Transmit(&UART_0, (uint8_t*) helpStartTextPointer,	ucStringLength2);
+		UART_Transmit(&UART_0, (uint8_t*) helpStartTextPointer,
+				ucStringLength2);
 		while (bTransmitBusy) {
 			vTaskDelay(0); // czekaj asz przyjdzie pszerwanie od UARTa (pacz fEndOfTransmitCallback())
 		}
@@ -115,16 +116,20 @@ void UART_Task2(void *pvParameters) {
 }
 
 void vUART_Task(void *pvParameters) {
-	static uint32_t myValue;
+	static uint32_t myReceivedValue;
 
 	while (true) {
-		xQueueReceive(Queue_id, &myValue, 100);
-		sprintf(mb, "%d\r\n", (int)myValue);
+		xQueueReceive(Queue_id, &myReceivedValue, 100);
+		if (myReceivedValue % 10 == 0) {
+			sprintf(mb, "%d\r\n", (int) myReceivedValue);	// dodaj nowom linie
+		} else {
+			sprintf(mb, "%d ", (int) myReceivedValue);
+		}
 		fMyPrintf(mb);	// wyslij stringa na linie UART_TX
 
-		setByValue(4);
-		vTaskSuspend(UARTHandle); /* Suspend Task */
+		vTaskSuspend(UARTHandle_id); /* Suspend Task */
+		setByValue(8);
 	}
 	/* Should never go there */
-	vTaskDelete(UARTHandle);
+	vTaskDelete(UARTHandle_id);
 }
