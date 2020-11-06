@@ -81,7 +81,7 @@ const DIGITAL_IO_t LED1 =
 const DIGITAL_IO_t VDIOP0_0 =
 {
   .gpio_port = XMC_GPIO_PORT2,
-  .gpio_pin = 6U,
+  .gpio_pin = 9U,
   .gpio_config = {
     .mode = XMC_GPIO_MODE_INPUT_TRISTATE,
     .input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD
@@ -91,8 +91,8 @@ const DIGITAL_IO_t VDIOP0_0 =
 		
 const DIGITAL_IO_t VDIOP0_5 =
 {
-  .gpio_port = XMC_GPIO_PORT2,
-  .gpio_pin = 7U,
+  .gpio_port = XMC_GPIO_PORT0,
+  .gpio_pin = 0U,
   .gpio_config = {
     .mode = XMC_GPIO_MODE_INPUT_TRISTATE,
     .input_hysteresis = XMC_GPIO_INPUT_HYSTERESIS_STANDARD

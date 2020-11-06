@@ -11,11 +11,14 @@
 //makefile:63: recipe for target 'xmc1100_freertos_spi_slave.elf' failed
 //make: *** [xmc1100_freertos_spi_slave.elf] Error 1
 
+extern xTaskHandle UARTHandle;
+extern xQueueHandle Queue_id;
+extern void setByValue(uint8_t myValue);
 
 // Transmit:
 //void fMyPrintf(const char* p);
 void fEndOfTransmitCallback(void);
 
-void UART_Task(void *pvParameters);
+void vUART_Task(void *pvParameters);
 
 #endif /* UARTTASK_H_ */

@@ -70,13 +70,6 @@
  */
 extern void UART_lTransmitHandler(const UART_t * const handle);
 /*
- * Function implements the data reception. It is called from the receive interrupt service handler.
- * Function reads data from the receive block and updates the user's buffer. It is called again when the data is
- * received again. When receive FIFO is used, the function sets the trigger limit based on the size of data to be
- * received.
- */
-extern void UART_lReceiveHandler(const UART_t * const handle);
-/*
  * Function monitors the configured protocol interrupt flags. It is called from the protocol interrupt
  * service handler.
  * Function reads the status of the USIC channel and checks for configured flags in the APP UI.
@@ -103,16 +96,16 @@ const XMC_UART_CH_CONFIG_t UART_0_channel_config =
 /*Transmit pin configuration*/
 const XMC_GPIO_CONFIG_t UART_0_tx_pin_config   = 
 { 
-  .mode             = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT7, 
+  .mode             = XMC_GPIO_MODE_OUTPUT_PUSH_PULL_ALT6, 
   .output_level     = XMC_GPIO_OUTPUT_LEVEL_HIGH
 };
 
 /*Transmit pin configuration used for initializing*/
 const UART_TX_CONFIG_t UART_0_tx_pin = 
 {
-  .port = (XMC_GPIO_PORT_t *)PORT1_BASE,
+  .port = (XMC_GPIO_PORT_t *)PORT2_BASE,
   .config = &UART_0_tx_pin_config,
-  .pin = 2U
+  .pin = 1U
 };
 
 /*UART APP configuration structure*/
@@ -122,8 +115,7 @@ const UART_CONFIG_t UART_0_config =
 
 
   .fptr_uart_config = UART_0_init,
-  .tx_cbhandler = NULL,
-  .rx_cbhandler = NULL,  
+  .tx_cbhandler = fEndOfTransmitCallback,  
   .sync_error_cbhandler = NULL,  
   .rx_noise_error_cbhandler = NULL,  
   .format_error_bit0_cbhandler = NULL,  
@@ -132,10 +124,10 @@ const UART_CONFIG_t UART_0_config =
   .tx_pin_config    = &UART_0_tx_pin,
   .mode             = UART_MODE_FULLDUPLEX,
   .transmit_mode = UART_TRANSFER_MODE_INTERRUPT,
-  .receive_mode = UART_TRANSFER_MODE_INTERRUPT,
-  .tx_fifo_size     = XMC_USIC_CH_FIFO_SIZE_16WORDS,
-  .rx_fifo_size     = XMC_USIC_CH_FIFO_SIZE_16WORDS,
-  .tx_sr   = 0x3U,
+  .receive_mode = UART_TRANSFER_MODE_DIRECT,
+  .tx_fifo_size     = XMC_USIC_CH_FIFO_DISABLED,
+  .rx_fifo_size     = XMC_USIC_CH_FIFO_DISABLED,
+  .tx_sr   = 0x2U,
 };
 
 /*Runtime handler*/
@@ -148,7 +140,7 @@ UART_RUNTIME_t UART_0_runtime =
 /*APP handle structure*/
 UART_t UART_0 = 
 {
-  .channel = XMC_UART0_CH1,
+  .channel = XMC_UART0_CH0,
   .config  = &UART_0_config,
   .runtime = &UART_0_runtime
 };
@@ -166,47 +158,32 @@ const XMC_GPIO_CONFIG_t UART_0_rx_pin_config   = {
 UART_STATUS_t UART_0_init()
 {
   UART_STATUS_t status = UART_STATUS_SUCCESS;
+  /*Reset the runtime state variables*/
+  UART_0.runtime->tx_busy = false;
+  UART_0.runtime->rx_busy = false;
   /*Configure Receive pin*/
-  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 3U, &UART_0_rx_pin_config);
+  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, 2U, &UART_0_rx_pin_config);
   /* Initialize USIC channel in UART mode*/
-  XMC_UART_CH_Init(XMC_UART0_CH1, &UART_0_channel_config);
+  XMC_UART_CH_Init(XMC_UART0_CH0, &UART_0_channel_config);
   /*Set input source path*/
-  XMC_USIC_CH_SetInputSource(XMC_UART0_CH1, XMC_USIC_CH_INPUT_DX0, 0U);
-  XMC_USIC_CH_SetInputSource(XMC_UART0_CH1, XMC_USIC_CH_INPUT_DX3, 0U);
-  XMC_USIC_CH_SetInputSource(XMC_UART0_CH1, XMC_USIC_CH_INPUT_DX5, 0U);
-  /*Configure transmit FIFO*/
-  XMC_USIC_CH_TXFIFO_Configure(XMC_UART0_CH1,
-        48U,
-        XMC_USIC_CH_FIFO_SIZE_16WORDS,
-        1U);
-  /*Configure receive FIFO*/
-  XMC_USIC_CH_RXFIFO_Configure(XMC_UART0_CH1,
-        32U,
-        XMC_USIC_CH_FIFO_SIZE_16WORDS,
-        0U);
+  XMC_USIC_CH_SetInputSource(XMC_UART0_CH0, XMC_USIC_CH_INPUT_DX0, 6U);
+  XMC_USIC_CH_SetInputSource(XMC_UART0_CH0, XMC_USIC_CH_INPUT_DX3, 0U);
+  XMC_USIC_CH_SetInputSource(XMC_UART0_CH0, XMC_USIC_CH_INPUT_DX5, 0U);
   /* Start UART */
-  XMC_UART_CH_Start(XMC_UART0_CH1);
+  XMC_UART_CH_Start(XMC_UART0_CH0);
 
   /* Initialize UART TX pin */
-  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT1_BASE, 2U, &UART_0_tx_pin_config);
+  XMC_GPIO_Init((XMC_GPIO_PORT_t *)PORT2_BASE, 1U, &UART_0_tx_pin_config);
 
+  /*Set service request for transmit interrupt*/
+  XMC_USIC_CH_SetInterruptNodePointer(XMC_UART0_CH0, XMC_USIC_CH_INTERRUPT_NODE_POINTER_TRANSMIT_BUFFER,
+     2U);
   /*Set service request for UART protocol events*/
-  XMC_USIC_CH_SetInterruptNodePointer(XMC_UART0_CH1, XMC_USIC_CH_INTERRUPT_NODE_POINTER_PROTOCOL,
+  XMC_USIC_CH_SetInterruptNodePointer(XMC_UART0_CH0, XMC_USIC_CH_INTERRUPT_NODE_POINTER_PROTOCOL,
      0U);
-  /*Set service request for tx FIFO transmit interrupt*/
-  XMC_USIC_CH_TXFIFO_SetInterruptNodePointer(XMC_UART0_CH1, XMC_USIC_CH_TXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
-      3U);
-  /*Set service request for rx FIFO receive interrupt*/
-  XMC_USIC_CH_RXFIFO_SetInterruptNodePointer(XMC_UART0_CH1, XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_STANDARD,
-       0x1U);
-  XMC_USIC_CH_RXFIFO_SetInterruptNodePointer(XMC_UART0_CH1, XMC_USIC_CH_RXFIFO_INTERRUPT_NODE_POINTER_ALTERNATE,
-       0x1U);
   /*Set priority and enable NVIC node for transmit interrupt*/
-  NVIC_SetPriority((IRQn_Type)12, 3U);
-  NVIC_EnableIRQ((IRQn_Type)12);
-  /*Set priority and enable NVIC node for receive interrupt*/
-  NVIC_SetPriority((IRQn_Type)10, 3U);
-  NVIC_EnableIRQ((IRQn_Type)10);
+  NVIC_SetPriority((IRQn_Type)11, 3U);
+  NVIC_EnableIRQ((IRQn_Type)11);
   return status;
 }
 /*Interrupt handlers*/
@@ -214,12 +191,6 @@ UART_STATUS_t UART_0_init()
 void UART_0_TX_HANDLER()
 {
   UART_lTransmitHandler(&UART_0);
-}
-
-/*Receive ISR*/
-void UART_0_RX_HANDLER()
-{
-  UART_lReceiveHandler(&UART_0);
 }
 
 /*CODE_BLOCK_END*/

@@ -91,9 +91,6 @@
   <hwConnections href="APPS/SPI_SLAVE/v4_0_8/SPI_SLAVE_0.app#//@connections.27"/>
   <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.0"/>
   <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.1"/>
-  <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.7"/>
-  <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.8"/>
-  <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.9"/>
   <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.11"/>
   <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.12"/>
   <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.13"/>
@@ -110,4 +107,5 @@
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_6.app#//@connections.1"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_7.app#//@connections.0"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_7.app#//@connections.1"/>
+  <hwConnections href="APPS/UART/v4_1_10/UART_0.app#//@connections.4"/>
 </ApplicationModel:ApplicationData>

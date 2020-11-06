@@ -1,4 +1,4 @@
-19:42:03 **** Incremental Build of configuration Debug for project XMC1100_UART ****
+08:24:47 **** Incremental Build of configuration Debug for project XMC1100_UART ****
 "\"C:\\cp\\DAVE442\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j4 all 
 'Invoking: ARM-GCC Print Size'
 "C:/cp/DAVE442/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "XMC1100_UART.elf"
@@ -7,5 +7,5 @@
 'Finished building: XMC1100_UART.siz'
 
 
-19:42:04 Build Finished (took 1s.34ms)
+08:24:48 Build Finished (took 1s.143ms)
 

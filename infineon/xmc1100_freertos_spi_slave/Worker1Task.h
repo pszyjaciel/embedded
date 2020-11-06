@@ -7,7 +7,7 @@ extern xQueueHandle Queue_id;
 extern xTaskHandle worker1_id;
 extern void setByValue(uint8_t myValue);
 
-void worker1_task(void *pvParameters);
+void vWorker1_task(void *pvParameters);
 
 
 #endif /* WORKER1TASK_H_ */

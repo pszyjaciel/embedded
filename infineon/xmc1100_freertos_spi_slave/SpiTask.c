@@ -59,7 +59,7 @@ void SPI_Slave_Task(void *pvParameters) {
 	uint8_t slave_rx_data[DATA_COUNT];
 
 	uint32_t DataToSend = 0;
-	const TickType_t xBlockTime = pdMS_TO_TICKS(200);
+	//const TickType_t xBlockTime = pdMS_TO_TICKS(200);
 	BaseType_t rs;
 
 	while (1) {

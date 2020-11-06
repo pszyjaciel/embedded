@@ -1,7 +1,7 @@
 #include "Worker2Task.h"
 
 // gdy dam 'static' to undefined reference to `worker2_task'
-void worker2_task(void *pvParameters) {
+void vWorker2_task(void *pvParameters) {
 	static uint32_t idelay, Delay;
 	Delay = 0;
 	xQueueReceive(Queue_id, &Delay, 100);
