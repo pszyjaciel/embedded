@@ -3,10 +3,7 @@
 
 void vManager_Task(void *pvParameters) {
 
-//	static uint32_t Delay1 = 0xa5, Delay2 = 20;
-//	static uint32_t Delay3 = 0x35, Delay4 = 40;
-//	static uint32_t Delay5 = 0x65, Delay6 = 60;
-//	static uint32_t Delay7 = 0x55;
+// jak dziala komunikacja mjendzy taskami?
 
 	static uint32_t someValue = 120;
 

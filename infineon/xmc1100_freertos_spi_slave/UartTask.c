@@ -115,6 +115,9 @@ void UART_Task2(void *pvParameters) {
 	}
 }
 
+
+// zrobic taki error handler, ze w zaleznosci od oczszymanego kodu (myReceivedValue)
+// wysle na UARTa stringa z opisem tego bledu
 void vUART_Task(void *pvParameters) {
 	static uint32_t myReceivedValue;
 

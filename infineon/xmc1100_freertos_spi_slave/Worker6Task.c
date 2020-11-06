@@ -8,17 +8,18 @@
 #include "Worker6Task.h"
 
 void vWorker6_task(void *pvParameters) {
-	static uint32_t Delay;
-	Delay = 0;
-	xQueueReceive(Queue_id, &Delay, 100);
+	static uint32_t receivedFromQueue;
 
 	/* Worker task Loop. */
 	while (true) {
-		//DIGITAL_IO_ToggleOutput(&LED1);
+		xQueueReceive(Queue_id, &receivedFromQueue, 100);
+		receivedFromQueue++;
+		xQueueSend(Queue_id, &receivedFromQueue, 0);
+
+		setByValue(6);
 
 		/* Suspend Task */
 		vTaskSuspend(worker6_id);
-		setByValue(6);
 	}
 	/* Should never go there */
 	vTaskDelete(worker6_id);
