@@ -69,6 +69,14 @@ extern const DIGITAL_IO_t LED0;
 	
 extern const DIGITAL_IO_t LED1; 
 	
+extern const DIGITAL_IO_t DIGITAL_IO_0; 
+	
+extern const DIGITAL_IO_t DIGITAL_IO_1; 
+	
+extern const DIGITAL_IO_t DIGITAL_IO_2; 
+	
+extern const DIGITAL_IO_t DIGITAL_IO_3; 
+	
  
 #endif  /* DIGITAL_IO_EXTERN_H */
 
