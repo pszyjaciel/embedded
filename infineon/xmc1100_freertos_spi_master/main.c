@@ -40,7 +40,7 @@ typedef enum {
 } Color_t;
 
 void vWorker1_task(void *pvParameters) {
-	Color_t tempColor;
+	Color_t tempColor = BLUE;
 	BaseType_t bt;
 	while (true) {
 		DIGITAL_IO_ToggleOutput(&LED0);
@@ -48,14 +48,14 @@ void vWorker1_task(void *pvParameters) {
 		if (bt != pdTRUE) {
 			// error
 		}
-		setByValue(1);
+		setByValue(0);
 	}
 	/* Should never go there */
 	vTaskDelete(worker1_id);
 }
 
 void vWorker2_task(void *pvParameters) {
-	Color_t currentColor = GREEN;
+	Color_t currentColor;
 	while (true) {
 		DIGITAL_IO_ToggleOutput(&LED1);
 
@@ -63,7 +63,7 @@ void vWorker2_task(void *pvParameters) {
 			//RED_Write(1);
 			//BLUE_Write(1);
 			//GREEN_Write(1);
-			setByValue(3);
+			//setByValue(3);
 		}
 
 		if (currentColor == RED) {
@@ -72,12 +72,13 @@ void vWorker2_task(void *pvParameters) {
 		else if (currentColor == BLUE) {
 		}
 		//BLUE_Write(~BLUE_Read());
-		else {
+		else if (currentColor == GREEN) {
+
 		}
 		//GREEN_Write(~GREEN_Read());
 
-		setByValue(2);
-		vTaskDelay(500);
+		setByValue(currentColor);
+		vTaskDelay(1);
 	}
 	/* Should never go there */
 	vTaskDelete(worker2_id);
