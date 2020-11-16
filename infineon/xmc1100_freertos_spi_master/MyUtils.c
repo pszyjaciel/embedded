@@ -7,7 +7,6 @@
 
 #include "MyUtils.h"
 
-
 void MyLEDsToggling(uint8_t tyleRazy) {
 	for (int var = 0; var < tyleRazy; ++var) {
 		DIGITAL_IO_ToggleOutput(&LED0);
@@ -129,9 +128,9 @@ void setByValue(uint8_t myValue) {
 	}
 }
 
-void MyErrorHandler(TaskHandle_t xUARTHandle) {
-	if (xUARTHandle != NULL) {
-		vTaskDelete(xUARTHandle);
+void MyErrorHandler(TaskHandle_t myTaskErrorHandle) {
+	if (myTaskErrorHandle != NULL) {
+		vTaskDelete(myTaskErrorHandle);
 	}
 
 	while (true) {
@@ -139,4 +138,30 @@ void MyErrorHandler(TaskHandle_t xUARTHandle) {
 		DIGITAL_IO_ToggleOutput(&LED1);
 		vTaskDelay(pdMS_TO_TICKS(3000));
 	}
+}
+
+void vApplicationStackOverflowHook(xTaskHandle *pxTask, signed char *pcTaskName) {
+	TaskHandle_t bad_task_handle = pxTask; // this seems to give me the crashed task handle
+	signed char *bad_task_name = pcTaskName;
+
+	while (true) {
+		MyLEDsToggling(8);
+		vTaskDelay(pdMS_TO_TICKS(4500));
+	}
+}
+
+void vApplicationMallocFailedHook() {
+	while (true) {
+		MyLEDsToggling(9);
+		vTaskDelay(pdMS_TO_TICKS(5500));
+	}
+}
+
+void vApplicationIdleHook() {
+	MyLEDsToggling(10);
+	vTaskDelay(pdMS_TO_TICKS(10000));
+}
+
+void vApplicationTickHook() {
+	taskYIELD();
 }

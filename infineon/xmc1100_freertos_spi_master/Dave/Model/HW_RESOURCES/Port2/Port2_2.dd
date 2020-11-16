@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ResourceModel:Port xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ResourceModel="http://www.infineon.com/Davex/Resource.ecore" URI="http://resources/1.24.1/port/p/2" description="Port 2" baseAddress="0x40040200">
   <provided xsi:type="ResourceModel:ResourceGroup" name="P2.2 / #3" URI="http://resources/1.24.1/port/p/2/pad/2">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_10/UART_0.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/1.24.1/port/p/2/out/p2"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/ps2"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/pr2"/>
@@ -208,6 +209,7 @@
   <provided xsi:type="ResourceModel:BitField" name="PC2_2_0" URI="http://resources/1.24.1/port/p/2/iocr0/pc2_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="19" stopPos="21" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC2_4" URI="http://resources/1.24.1/port/p/2/iocr0/pc2_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="23" stopPos="23" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P2.6 / #4" URI="http://resources/1.24.1/port/p/2/pad/6">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_22/SPI_MASTER_0.app#//@hwResources.2"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/1.24.1/port/p/2/out/p6"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/ps6"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/pr6"/>
@@ -251,7 +253,6 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC6_2_0" URI="http://resources/1.24.1/port/p/2/iocr4/pc6_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 4 to 7" defaultValue="0" startPos="19" stopPos="21" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P2.10 / #7" URI="http://resources/1.24.1/port/p/2/pad/10">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_22/SPI_MASTER_0.app#//@hwResources.2"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/1.24.1/port/p/2/out/p10"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/ps10"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/pr10"/>
@@ -309,7 +310,7 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P2.1 / #2" URI="http://resources/1.24.1/port/p/2/pad/1">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_22/SPI_MASTER_0.app#//@hwResources.1"/>
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_10/UART_0.app#//@hwResources.2"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/1.24.1/port/p/2/out/p1"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/ps1"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/pr1"/>
@@ -353,7 +354,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P2.0 / #1" URI="http://resources/1.24.1/port/p/2/pad/0">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_22/SPI_MASTER_0.app#//@hwResources.5"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/1.24.1/port/p/2/out/p0"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/ps0"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/1.24.1/port/p/2/omr/pr0"/>

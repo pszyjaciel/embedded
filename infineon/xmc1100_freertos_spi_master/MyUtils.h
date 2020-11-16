@@ -12,7 +12,11 @@
 
 void MyLEDsToggling(uint8_t tyleRazy);
 void setByValue(uint8_t myValue);
-void MyErrorHandler(TaskHandle_t xUARTHandle);
+void MyErrorHandler(TaskHandle_t myTaskErrorHandle);
 
+void vApplicationStackOverflowHook(xTaskHandle *pxTask, signed char *pcTaskName);
+void vApplicationMallocFailedHook();
+void vApplicationIdleHook();
+void vApplicationTickHook();
 
 #endif /* MYUTILS_H_ */

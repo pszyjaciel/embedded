@@ -67,7 +67,7 @@
 #define SPI_MASTER_MINOR_VERSION (3U)
 #define SPI_MASTER_PATCH_VERSION (22U)
 
-#define SPI_MASTER_0_tx_handler     IRQ_Hdlr_11
+#define SPI_MASTER_0_tx_handler     IRQ_Hdlr_12
           
 #define SPI_MASTER_0_rx_handler     IRQ_Hdlr_10
           

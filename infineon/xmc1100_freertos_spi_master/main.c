@@ -3,9 +3,16 @@
 
 // stont:
 // https://github.com/iotexpert/PSoC-FreeRTOS-Examples/blob/master/3-Queue.cydsn/main.c
+// https://community.nxp.com/t5/MQX-Software-Solutions-Knowledge/How-to-use-mutex-and-semaphores-in-a-FreeRTOS-and-SDK2-0-Project/ta-p/1114196
+// dzielnik napiecia ten ze szkoly; 0.2V na dzialke.
+
+// semafory: https://visualgdb.com/tutorials/freertos/mutexes/
 
 #include <DAVE.h>                 //Declarations from DAVE Code Generation (includes SFR declaration)
 #include "MyUtils.h"
+#include "MyMutex.h"
+#include "UartTask.h"
+
 
 /* Data and buffers used */
 #define DATA_COUNT 100
@@ -16,75 +23,38 @@
 xTimerHandle Timer_handle;
 xTaskHandle worker1_id;
 xTaskHandle worker2_id;
+xTaskHandle UARTHandle_id;
+
 QueueHandle_t Queue_id;
 QueueHandle_t xStructQueue = NULL;
-QueueHandle_t colorQueue;
+QueueHandle_t counterQueue;
+
+SemaphoreHandle_t xMutex;
 
 uint8_t master_send_data[] = { 0x55, 0xaa, 0xa5, 0x5a, 0x0f, 0xf0, 0x11, 0x22, 0x33, 0x44 };
 uint16_t slave_send_data[BUFFER_SIZE];
 uint32_t slave_send_index = 0;
 
-typedef struct parameter_struct {
-	const char Parameter1;
-	const uint32_t Parameter2;
-/*...*/
-} parameter_struct_t;
-
 struct AMessage {
 	char ucMessageID;
 	char ucData[20];
-} xMessage;
+} AMessage_t;
+
+typedef struct parameter_struct {
+	const char Parameter1;
+	const uint32_t Parameter2;
+	//AMessage_t myStruct;	// jucha-kucha.
+/*...*/
+} parameter_struct_t;
+
+
 
 typedef enum {
 	RED, GREEN, BLUE
 } Color_t;
 
-void vWorker1_task(void *pvParameters) {
-	Color_t tempColor = BLUE;
-	BaseType_t bt;
-	while (true) {
-		DIGITAL_IO_ToggleOutput(&LED0);
-		bt = xQueueSend(colorQueue, &tempColor, 0);
-		if (bt != pdTRUE) {
-			// error
-		}
-		setByValue(0);
-	}
-	/* Should never go there */
-	vTaskDelete(worker1_id);
-}
 
-void vWorker2_task(void *pvParameters) {
-	Color_t currentColor;
-	while (true) {
-		DIGITAL_IO_ToggleOutput(&LED1);
-
-		if (xQueueReceive(colorQueue, &currentColor, 0) == pdTRUE) {
-			//RED_Write(1);
-			//BLUE_Write(1);
-			//GREEN_Write(1);
-			//setByValue(3);
-		}
-
-		if (currentColor == RED) {
-		}
-		//RED_Write(~RED_Read());
-		else if (currentColor == BLUE) {
-		}
-		//BLUE_Write(~BLUE_Read());
-		else if (currentColor == GREEN) {
-
-		}
-		//GREEN_Write(~GREEN_Read());
-
-		setByValue(currentColor);
-		vTaskDelay(1);
-	}
-	/* Should never go there */
-	vTaskDelete(worker2_id);
-}
-
-void SPI_Master_Task(void *pvParameters) {
+void vSPI_Master_Task(void *pvParameters) {
 
 	/* Placeholder for user application code. The while loop below can be replaced with user application code. */
 	while (1U) {
@@ -104,10 +74,10 @@ void SPI_Master_Task(void *pvParameters) {
 	}
 }
 
-void myTimerCallback(xTimerHandle pxTimer) {
-	/* Notify Manager task to start data processing. */
-	//xSemaphoreGive(notification_semaphore);
-}
+//void vMyTimerCallback(xTimerHandle pxTimer) {
+//	/* Notify Manager task to start data processing. */
+//	//xSemaphoreGive(notification_semaphore);
+//}
 
 int main(void) {
 
@@ -124,30 +94,35 @@ int main(void) {
 	}
 
 	// timer dostal prio4 : pacz ustawienia dla freertos_0 w dave ce
-	Timer_handle = xTimerCreate("Timer", pdMS_TO_TICKS(250), pdTRUE, 0, myTimerCallback);
-	xTimerStart(Timer_handle, 0);
+	//Timer_handle = xTimerCreate("Timer", pdMS_TO_TICKS(250), pdTRUE, 0, vMyTimerCallback);
+	//xTimerStart(Timer_handle, 0);
 
-	xMessage.ucMessageID = 0xab;
-	memset(&(xMessage.ucData), 0x12, 20);
-	xStructQueue = xQueueCreate(10, sizeof(xMessage));
+	AMessage_t.ucMessageID = 0xab;
+	memset(&(AMessage_t.ucData), 0x12, 20);
+	xStructQueue = xQueueCreate(10, sizeof(AMessage_t));
 
 	// 1 item queue that can hold colors
-	colorQueue = xQueueCreate(1, sizeof(Color_t));
-	if (colorQueue == NULL) {
-		while (1)
+	//colorQueue = xQueueCreate(1, sizeof(Color_t));
+	//counterQueue = xQueueCreate(1, sizeof(uint8_t));
+	Queue_id = xQueueCreate(1, sizeof(uint8_t));
+
+	if ((counterQueue == NULL) || (Queue_id == NULL)) {
+		//while (1)
 			;
 	}
 
 	void* pxParameterStruct = pvPortMalloc(sizeof(parameter_struct_t));
-	/* Create Worker 1 task, im wieksza cyfra tskIDLE_PRIORITY + 4, tym wiekszy priorytet */
-	xTaskCreate(vWorker1_task, "Worker 1", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 1, &worker1_id);
-	/* Create Worker 2 task */
-	xTaskCreate(vWorker2_task, "Worker 2", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 1, &worker2_id);
 
-	/* Create SPI_Master task */
-	BaseType_t rs = xTaskCreate(SPI_Master_Task, "SPI", configMINIMAL_STACK_SIZE + 100U, NULL, (tskIDLE_PRIORITY + 0), &xSPIMasterHandle);
+	xMutex = xSemaphoreCreateMutex();
+
+	//xTaskCreate(vSPI_Master_Task, "SPI", configMINIMAL_STACK_SIZE + 100U, NULL, tskIDLE_PRIORITY + 2, &xSPIMasterHandle);
+	xTaskCreate(vWorker1_task, "Worker 1", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 1, &worker1_id);
+	xTaskCreate(vWorker2_task, "Worker 2", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 2, &worker2_id);
+
+	// uart ma miec najwyzszy priorytet, inaczej nie dziala
+	BaseType_t rs = xTaskCreate(vUART_task, "UART", configMINIMAL_STACK_SIZE + 100U, NULL, tskIDLE_PRIORITY + 3, &UARTHandle_id);
 	if (rs != pdPASS) {
-		MyErrorHandler(xSPIMasterHandle);
+		MyErrorHandler(UARTHandle_id);
 	}
 
 	vTaskStartScheduler();

@@ -189,6 +189,7 @@
   <provided xsi:type="ResourceModel:BitField" name="PC1_2_0" URI="http://resources/1.24.1/port/p/1/iocr0/pc1_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="11" stopPos="13" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:BitField" name="PC1_4" URI="http://resources/1.24.1/port/p/1/iocr0/pc1_4" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="15" stopPos="15" accessPermission="rw" maxValue="1" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P1.2 / #12" URI="http://resources/1.24.1/port/p/1/pad/2">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_22/SPI_MASTER_0.app#//@hwResources.1"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/1.24.1/port/p/1/out/p2"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/1.24.1/port/p/1/omr/ps2"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/1.24.1/port/p/1/omr/pr2"/>
@@ -227,6 +228,7 @@
   </provided>
   <provided xsi:type="ResourceModel:BitField" name="PC2_2_0" URI="http://resources/1.24.1/port/p/1/iocr0/pc2_2_0" value="0" toolTipHelpDescription="Port Control for Port n Pin 0 to 3" defaultValue="0" startPos="19" stopPos="21" accessPermission="rw" maxValue="7" minValue="0"/>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P1.3 / #11" URI="http://resources/1.24.1/port/p/1/pad/3">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/SPI_MASTER/v4_3_22/SPI_MASTER_0.app#//@hwResources.5"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/1.24.1/port/p/1/out/p3"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/1.24.1/port/p/1/omr/ps3"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/1.24.1/port/p/1/omr/pr3"/>

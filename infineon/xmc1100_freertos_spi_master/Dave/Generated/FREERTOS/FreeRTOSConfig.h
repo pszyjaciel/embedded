@@ -56,7 +56,7 @@
 #define configUSE_TICKLESS_IDLE                 0
 #define configCPU_CLOCK_HZ                      ( SystemCoreClock )
 #define configTICK_RATE_HZ                      ( ( TickType_t ) 1000.0 )
-#define configMAX_PRIORITIES                    ( 5 )
+#define configMAX_PRIORITIES                    ( 6 )
 #define configMINIMAL_STACK_SIZE                ( ( unsigned short ) 60 )
 #define configMAX_TASK_NAME_LEN                 ( 16 )
 #define configUSE_16_BIT_TICKS                  0
@@ -80,10 +80,10 @@
 #define configAPPLICATION_ALLOCATED_HEAP        0
 
 /* Hook function related definitions. */
-#define configUSE_IDLE_HOOK                     0
-#define configUSE_TICK_HOOK                     0
-#define configCHECK_FOR_STACK_OVERFLOW          0
-#define configUSE_MALLOC_FAILED_HOOK            0
+#define configUSE_IDLE_HOOK                     1
+#define configUSE_TICK_HOOK                     1
+#define configCHECK_FOR_STACK_OVERFLOW          2
+#define configUSE_MALLOC_FAILED_HOOK            1
 
 /* Run time and task stats gathering related definitions. */
 #define configGENERATE_RUN_TIME_STATS           0
@@ -96,7 +96,7 @@
 
 /* Software timer definitions. */
 #define configUSE_TIMERS                        1
-#define configTIMER_TASK_PRIORITY               ( 4 )
+#define configTIMER_TASK_PRIORITY               ( 5 )
 #define configTIMER_QUEUE_LENGTH                5
 #define configTIMER_TASK_STACK_DEPTH            ( 120 )
 
