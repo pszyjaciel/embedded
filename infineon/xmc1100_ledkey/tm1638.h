@@ -3,7 +3,7 @@
 #define TM1638_H_
 
 #include <DAVE.h>
-//#include "MyUtils.h"
+#include "TM16XXFonts.h"
 
 uint32_t event_count;
 
@@ -18,5 +18,7 @@ void sendData(uint8_t address, uint8_t data);
 
 void clearDisplay();
 void myInitLEDKey();
+void printChar(uint8_t myChar);
+
 
 #endif /* TM1638_H_ */

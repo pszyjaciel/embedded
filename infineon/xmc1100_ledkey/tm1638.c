@@ -73,3 +73,24 @@ void myInitLEDKey() {
 	setupDisplay(true, 0);
 	clearDisplay();
 }
+
+void printChar(uint8_t myChar) {
+	sendData(0, FONT_DEFAULT[myChar + 0]);
+	sendData(1, 0);
+	sendData(2, FONT_DEFAULT[myChar + 1]);
+	sendData(3, 0);
+	sendData(4, FONT_DEFAULT[myChar + 2]);
+	sendData(5, 0);
+	sendData(6, FONT_DEFAULT[myChar + 3]);
+	sendData(7, 0);
+	sendData(8, FONT_DEFAULT[myChar + 4]);
+	sendData(9, 0);
+	sendData(10, FONT_DEFAULT[myChar + 5]);
+	sendData(11, 0);
+	sendData(12, FONT_DEFAULT[myChar + 6]);
+	sendData(13, 0);
+	sendData(14, FONT_DEFAULT[myChar + 7]);
+	sendData(15, 0);
+
+
+}

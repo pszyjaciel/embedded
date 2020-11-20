@@ -31,7 +31,7 @@ The bits are displayed by mapping bellow
 #define TM16XXFonts_h
 
 // definition for standard hexadecimal numbers
-const byte NUMBER_FONT[] = {
+static const uint8_t NUMBER_FONT[] = {
   0b00111111, // 0
   0b00000110, // 1
   0b01011011, // 2
@@ -50,10 +50,10 @@ const byte NUMBER_FONT[] = {
   0b01110001  // F
 };
 
-const byte MINUS = 0b01000000;
+static const uint8_t MINUS = 0b01000000;
 
 // definition for error
-const byte ERROR_DATA[] = {
+static const uint8_t ERROR_DATA[] = {
   0b01111001, // E
   0b01010000, // r
   0b01010000, // r
@@ -65,7 +65,7 @@ const byte ERROR_DATA[] = {
 };
 
 // definition for the displayable ASCII chars
-const byte FONT_DEFAULT[] = {
+static const uint8_t FONT_DEFAULT[] = {
   0b00000000, // (32)  <space>
   0b10000110, // (33)	!
   0b00100010, // (34)	"
