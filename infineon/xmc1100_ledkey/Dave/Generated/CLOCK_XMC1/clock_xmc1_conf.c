@@ -71,10 +71,10 @@ void SystemCoreClockSetup(void)
 /* LOCAL DATA STRUCTURES */
 const XMC_SCU_CLOCK_CONFIG_t CLOCK_XMC1_0_CONFIG =
 {
-  .pclk_src = XMC_SCU_CLOCK_PCLKSRC_MCLK, 
+  .pclk_src = XMC_SCU_CLOCK_PCLKSRC_DOUBLE_MCLK, 
   .rtc_src = XMC_SCU_CLOCK_RTCCLKSRC_DCO2,    
   .fdiv = 0U,  /**< 8/10 Bit Fractional divider */
-  .idiv = 32U,  /**< 8 Bit integer divider */
+  .idiv = 8U,  /**< 8 Bit integer divider */
 
 };
 

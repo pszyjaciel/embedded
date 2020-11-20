@@ -73,7 +73,7 @@
 #define TIMER_0_PRESCALER_SH_MSK  XMC_CCU4_SHADOW_TRANSFER_PRESCALER_SLICE_0
 
 /** This is used to calculate the time in GetTime API */
-#define TIMER_CLK_CONST_SCALED (429496729600U)
+#define TIMER_CLK_CONST_SCALED (53687091200U)
 
 /** This enables the functionality for the CCU4 timer */
 #define TIMER_CCU4_USED

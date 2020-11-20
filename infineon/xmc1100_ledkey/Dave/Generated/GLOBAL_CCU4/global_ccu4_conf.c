@@ -61,7 +61,7 @@
 /**< Configuration for HandleGLOBAL_CCU4_0 */
 GLOBAL_CCU4_t GLOBAL_CCU4_0 =
 {
-  .module_frequency = 1000000U,  /**< CCU4 input clock frequency */
+  .module_frequency = 8000000U,  /**< CCU4 input clock frequency */
   .syncstart_trigger_msk = XMC_SCU_CCU_TRIGGER_CCU40, 
   .module_ptr = (XMC_CCU4_MODULE_t*) CCU40,      /**< CCU4 Module Pointer */
   .mcs_action = (XMC_CCU4_SLICE_MCMS_ACTION_t)XMC_CCU4_SLICE_MCMS_ACTION_TRANSFER_PR_CR,

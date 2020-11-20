@@ -88,14 +88,14 @@ TIMER_t TIMER_0 =
   .ccu4_slice_number      = 0U,
   .time_interval_value_us = 100U,
   .timer_max_value_us     = 4294967200U,
-  .timer_min_value_us     = 100U,
+  .timer_min_value_us     = 13U,
   .global_ccu4_handler    = (GLOBAL_CCU4_t*)&GLOBAL_CCU4_0, 
   .ccu4_slice_config_ptr  = (XMC_CCU4_SLICE_COMPARE_CONFIG_t*)&TIMER_0_config,
   .shadow_mask            = (uint32_t)((uint32_t)XMC_CCU4_SHADOW_TRANSFER_SLICE_0 | 
                                        (uint32_t)XMC_CCU4_SHADOW_TRANSFER_PRESCALER_SLICE_0),
   .ccu4_period_match_node = XMC_CCU4_SLICE_SR_ID_0,
   .timer_module           = TIMER_MODULE_CCU4,
-  .period_value           = 1U,
+  .period_value           = 7U,
   .start_control          = false,
   .period_match_enable    = true,
   .initialized            = false
