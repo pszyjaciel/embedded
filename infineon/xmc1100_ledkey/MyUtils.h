@@ -31,8 +31,9 @@
 #define SETOSCIBIT2 asm("ldr r0, =0x00000800\n\t" "ldr r1, =0x40040204\n\t" "str r0, [r1]\n\t")
 #define SETOSCIBIT3 asm("ldr r0, =0x00000400\n\t" "ldr r1, =0x40040204\n\t" "str r0, [r1]\n\t")
 
+volatile bool czasMinou;
+
 void TrackSignalByValue(volatile uint8_t myValue);
-
-
+void myDelayMS(uint32_t milliSec);
 
 #endif /* MYUTILS_H_ */

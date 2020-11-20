@@ -127,3 +127,26 @@ void TrackSignalByValue(volatile uint8_t myValue) {
 	__asm__ __volatile__ ( "pop {r1}");
 }
 
+// czas obslugi tego przerwania dla MCLK 1MHz to ok 320microsec
+// Aby uniknąć opóźnień, funkcja obsługi przerwania jest wykonywana z pamięci SRAM,
+// która jest wystarczająco szybka i nie wprowadza żadnych cykli oczekiwania.
+void __attribute__((section(".ISRAMCode"))) Time_Interval_Event(void) {
+	TrackSignalByValue(1);
+	czasMinou = true;
+	/* Acknowledge Period Match interrupt generated on TIMER_CCU_1 */
+	TIMER_ClearEvent(&TIMER_0);	// czy ma byc?
+	TIMER_Stop(&TIMER_0);
+	TrackSignalByValue(0);
+}
+
+void myDelayMS(uint32_t milliSec) {
+	TrackSignalByValue(2);
+	czasMinou = false;
+	TIMER_SetTimeInterval(&TIMER_0, milliSec * 100000);
+	TIMER_Start(&TIMER_0);
+	while (!czasMinou) {
+		;
+	}
+	TrackSignalByValue(0);
+}
+
