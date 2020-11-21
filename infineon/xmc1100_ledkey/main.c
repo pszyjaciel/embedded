@@ -9,6 +9,7 @@
 void myCase1();
 void myCase2();
 void myCase3();
+void myCase4();
 
 // https://blog.3d-logic.com/2015/01/10/using-a-tm1638-based-board-with-arduino/
 int main(void) {
@@ -18,7 +19,6 @@ int main(void) {
 	if (status != DAVE_STATUS_SUCCESS) {
 		/* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
 		XMC_DEBUG("DAVE APPs initialization failed\n");
-
 		while (1U) {
 		}
 	}
@@ -35,9 +35,10 @@ int main(void) {
 
 	//myCase1();
 	//myCase2();
-	myCase3();
-}
+	//myCase3();
+	myCase4();
 
+}
 
 void myCase1() {
 	while (1U) {
@@ -192,3 +193,16 @@ void myCase3() {
 		}
 	}
 }
+
+void myCase4() {
+	while (1U) {
+		for (uint16_t i = 9990, j = 10010; i < 10010; i++, j--) {
+			DIGITAL_IO_ToggleOutput(&LED0);
+			print1stNumber(i);
+			print2ndNumber(j);
+			myDelayMS(500);
+			//SEGGER_RTT_printf(0, "%d : %d \r\n", i, j);
+		}
+	}
+}
+

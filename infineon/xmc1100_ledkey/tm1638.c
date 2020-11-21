@@ -30,17 +30,30 @@ void sendData(uint8_t address, uint8_t data) {
 	set_STB_High;
 }
 
+// sie mi nie podoba.. - hiba jest ok
 void clearDisplay() {
 	for (int i = 0; i < 8; i++) {
 		sendData(i << 1, 0);
-		//		1 << 1: 00000010
-		//		2 << 1: 00000100
-		//		3 << 1: 00000110
-		//		4 << 1: 00001000
-		//		5 << 1: 00001010
-		//		6 << 1: 00001100
-		//		7 << 1: 00001110
+		//		0 << 1: 00000000 (0)
+		//		1 << 1: 00000010 (2)
+		//		2 << 1: 00000100 (4)
+		//		3 << 1: 00000110 (6)
+		//		4 << 1: 00001000 (8)
+		//		5 << 1: 00001010 (10)
+		//		6 << 1: 00001100 (12)
+		//		7 << 1: 00001110 (14)
+	}
+}
 
+void clear1stDisplayModule() {
+	for (int i = 0; i < 4; i++) {
+		sendData(i << 1, 0);
+	}
+}
+
+void clear2ndDisplayModule() {
+	for (int i = 4; i < 8; i++) {
+		sendData(i << 1, 0);
 	}
 }
 
@@ -182,8 +195,7 @@ void printNumber(uint32_t myNumber) {
 		sendData(13, 0);
 		sendData(14, NUMBER_FONT[myNumber % 10]);
 		sendData(15, 0);
-	}
-	else {
+	} else {
 		// too big
 		sendData(0, FONT_DEFAULT[34]);	// T
 		sendData(1, 0);
@@ -200,5 +212,89 @@ void printNumber(uint32_t myNumber) {
 		sendData(12, FONT_DEFAULT[71]);	// g
 		sendData(13, 0);
 	}
+}
+
+// wyswietlacz pjerszy ot prawej
+void print1stNumber(uint16_t myNumber) {
+	bool cleared;
+	if (myNumber < 10) {
+		sendData(14, NUMBER_FONT[myNumber]);
+		sendData(15, 0);
+	} else if (myNumber > 9 && myNumber < 100) {
+		sendData(12, NUMBER_FONT[myNumber / 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 99 && myNumber < 1000) {
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 999 && myNumber < 10000) {
+		sendData(8, NUMBER_FONT[(myNumber / 1000) % 10]);
+		sendData(9, 0);
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber == 10000) {
+		clear1stDisplayModule();
+	} else {
+		sendData(8, FONT_DEFAULT[0]);	// ' '
+		sendData(9, 0);
+		sendData(10, FONT_DEFAULT[37]);	// E
+		sendData(11, 0);
+		sendData(12, FONT_DEFAULT[82]);	// r
+		sendData(13, 0);
+		sendData(14, FONT_DEFAULT[82]);	// r
+		sendData(15, 3);
+	}
+}
+
+// pjerszy ot lewej
+void print2ndNumber(uint16_t myNumber) {
+	bool cleared;
+
+	if (myNumber < 10) {
+		sendData(6, NUMBER_FONT[myNumber]);
+		sendData(7, 0);
+	} else if (myNumber > 9 && myNumber < 100) {
+		sendData(4, NUMBER_FONT[myNumber / 10]);
+		sendData(5, 0);
+		sendData(6, NUMBER_FONT[myNumber % 10]);
+		sendData(7, 0);
+	} else if (myNumber > 99 && myNumber < 1000) {
+		sendData(2, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(3, 0);
+		sendData(4, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(5, 0);
+		sendData(6, NUMBER_FONT[myNumber % 10]);
+		sendData(7, 0);
+	} else if (myNumber > 999 && myNumber < 10000) {
+		sendData(0, NUMBER_FONT[(myNumber / 1000) % 10]);
+		sendData(1, 0);
+		sendData(2, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(3, 0);
+		sendData(4, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(5, 0);
+		sendData(6, NUMBER_FONT[myNumber % 10]);
+		sendData(7, 0);
+	} else if (myNumber == 10000) {
+		clear2ndDisplayModule();
+	} else {
+		sendData(0, FONT_DEFAULT[0]);	// ' '
+		sendData(1, 0);
+		sendData(2, FONT_DEFAULT[37]);	// E
+		sendData(3, 0);
+		sendData(4, FONT_DEFAULT[82]);	// r
+		sendData(5, 0);
+		sendData(6, FONT_DEFAULT[82]);	// r
+		sendData(7, 3);
+	}
+
 }
 

@@ -20,5 +20,7 @@ void clearDisplay();
 void myInitLEDKey();
 void printChar(uint8_t myChar);
 void printNumber(uint32_t myNumber);
+void print1stNumber(uint16_t myNumber);
+void print2ndNumber(uint16_t myNumber);
 
 #endif /* TM1638_H_ */
