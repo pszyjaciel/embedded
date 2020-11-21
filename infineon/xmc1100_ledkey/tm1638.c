@@ -91,6 +91,114 @@ void printChar(uint8_t myChar) {
 	sendData(13, 0);
 	sendData(14, FONT_DEFAULT[myChar + 7]);
 	sendData(15, 0);
-
-
 }
+
+// 0xffff: 65535
+// 0x000fffff: 1048575
+// 0x00ffffff: 16777215
+// 0x0fffffff: 268435455
+// 0xffffffff: 4294967295
+
+void printNumber(uint32_t myNumber) {
+	if (myNumber < 10) {
+		sendData(14, NUMBER_FONT[myNumber]);
+		sendData(15, 0);
+	} else if (myNumber > 9 && myNumber < 100) {
+		//SEGGER_RTT_printf(0, "myNumber / 10: \r\n", myNumber / 10);
+		//SEGGER_RTT_printf(0, "myNumber % 10: \r\n", myNumber % 10);
+		sendData(12, NUMBER_FONT[myNumber / 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 99 && myNumber < 1000) {
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 999 && myNumber < 10000) {
+		sendData(8, NUMBER_FONT[(myNumber / 1000) % 10]);
+		sendData(9, 0);
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 9999 && myNumber < 100000) {
+		sendData(6, NUMBER_FONT[(myNumber / 10000) % 10]);
+		sendData(7, 0);
+		sendData(8, NUMBER_FONT[(myNumber / 1000) % 10]);
+		sendData(9, 0);
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 99999 && myNumber < 1000000) {
+		sendData(4, NUMBER_FONT[(myNumber / 100000) % 10]);
+		sendData(5, 0);
+		sendData(6, NUMBER_FONT[(myNumber / 10000) % 10]);
+		sendData(7, 0);
+		sendData(8, NUMBER_FONT[(myNumber / 1000) % 10]);
+		sendData(9, 0);
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 999999 && myNumber < 10000000) {
+		sendData(2, NUMBER_FONT[(myNumber / 1000000) % 10]);
+		sendData(3, 0);
+		sendData(4, NUMBER_FONT[(myNumber / 100000) % 10]);
+		sendData(5, 0);
+		sendData(6, NUMBER_FONT[(myNumber / 10000) % 10]);
+		sendData(7, 0);
+		sendData(8, NUMBER_FONT[(myNumber / 1000) % 10]);
+		sendData(9, 0);
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	} else if (myNumber > 9999999 && myNumber < 100000000) {
+		sendData(0, NUMBER_FONT[(myNumber / 10000000) % 10]);
+		sendData(1, 0);
+		sendData(2, NUMBER_FONT[(myNumber / 1000000) % 10]);
+		sendData(3, 0);
+		sendData(4, NUMBER_FONT[(myNumber / 100000) % 10]);
+		sendData(5, 0);
+		sendData(6, NUMBER_FONT[(myNumber / 10000) % 10]);
+		sendData(7, 0);
+		sendData(8, NUMBER_FONT[(myNumber / 1000) % 10]);
+		sendData(9, 0);
+		sendData(10, NUMBER_FONT[(myNumber / 100) % 10]);
+		sendData(11, 0);
+		sendData(12, NUMBER_FONT[(myNumber / 10) % 10]);
+		sendData(13, 0);
+		sendData(14, NUMBER_FONT[myNumber % 10]);
+		sendData(15, 0);
+	}
+	else {
+		// too big
+		sendData(0, FONT_DEFAULT[34]);	// T
+		sendData(1, 0);
+		sendData(2, FONT_DEFAULT[79]);	// o
+		sendData(3, 0);
+		sendData(4, FONT_DEFAULT[79]);	// o
+		sendData(5, 0);
+		sendData(6, FONT_DEFAULT[0]);	// ' '
+		sendData(7, 0);
+		sendData(8, FONT_DEFAULT[66]);	// b
+		sendData(9, 0);
+		sendData(10, FONT_DEFAULT[73]);	// i
+		sendData(11, 0);
+		sendData(12, FONT_DEFAULT[71]);	// g
+		sendData(13, 0);
+	}
+}
+

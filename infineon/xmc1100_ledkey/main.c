@@ -6,11 +6,40 @@
 #include "tm1638.h"
 #include "MyUtils.h"
 
+void myCase1();
+void myCase2();
+void myCase3();
+
+// https://blog.3d-logic.com/2015/01/10/using-a-tm1638-based-board-with-arduino/
+int main(void) {
+	DAVE_STATUS_t status;
+	status = DAVE_Init(); /* Initialization of DAVE APPs  */
+
+	if (status != DAVE_STATUS_SUCCESS) {
+		/* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
+		XMC_DEBUG("DAVE APPs initialization failed\n");
+
+		while (1U) {
+		}
+	}
+
+	SEGGER_RTT_ConfigUpBuffer(0, NULL, NULL, 0, SEGGER_RTT_MODE_BLOCK_IF_FIFO_FULL);
+
+	// str. 253 akapit 12.9.5 RCU Registers (SCU) w XMC1100_AA-Step_v11.pdf
+	unsigned int reset_status;
+	reset_status = SCU_RESET->RSTSTAT & 0x000003FF; /* get the cause of reset */
+	SCU_RESET->RSTCLR = 1U; /* clear status field */
+	SEGGER_RTT_printf(0, "reset_status: %d \r\n", reset_status);
+
+	myInitLEDKey();
+
+	//myCase1();
+	//myCase2();
+	myCase3();
+}
+
+
 void myCase1() {
-
-	uint8_t i = 0;
-	uint8_t const max_intensity = 7;
-
 	while (1U) {
 		DIGITAL_IO_ToggleOutput(&LED0);
 
@@ -138,12 +167,12 @@ void myCase1() {
 
 		DIGITAL_IO_ToggleOutput(&LED0);
 
-		//			SEGGER_RTT_printf(0, "%02x \r\n", i);
+		//SEGGER_RTT_printf(0, "%02x \r\n", i);
 	}
 }
 
+// scrolluje wszystkie znaki
 void myCase2() {
-
 	while (1U) {
 		for (int i = 0; i < 94; i++) {
 			DIGITAL_IO_ToggleOutput(&LED0);
@@ -154,30 +183,12 @@ void myCase2() {
 	}
 }
 
-
-// https://blog.3d-logic.com/2015/01/10/using-a-tm1638-based-board-with-arduino/
-int main(void) {
-	DAVE_STATUS_t status;
-	status = DAVE_Init(); /* Initialization of DAVE APPs  */
-
-	if (status != DAVE_STATUS_SUCCESS) {
-		/* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
-		XMC_DEBUG("DAVE APPs initialization failed\n");
-
-		while (1U) {
+void myCase3() {
+	while (1U) {
+		for (uint32_t i = 0; i < 16777216; i++) {
+			DIGITAL_IO_ToggleOutput(&LED0);
+			printNumber(i);
+			//myDelayMS(100);
 		}
 	}
-
-	SEGGER_RTT_ConfigUpBuffer(0, NULL, NULL, 0, SEGGER_RTT_MODE_BLOCK_IF_FIFO_FULL);
-
-	// str. 253 akapit 12.9.5 RCU Registers (SCU) w XMC1100_AA-Step_v11.pdf
-	unsigned int reset_status;
-	reset_status = SCU_RESET->RSTSTAT & 0x000003FF; /* get the cause of reset */
-	SCU_RESET->RSTCLR = 1U; /* clear status field */
-	SEGGER_RTT_printf(0, "reset_status: %d \r\n", reset_status);
-
-	myInitLEDKey();
-
-	//myCase1();
-	myCase2();
 }

@@ -19,6 +19,6 @@ void sendData(uint8_t address, uint8_t data);
 void clearDisplay();
 void myInitLEDKey();
 void printChar(uint8_t myChar);
-
+void printNumber(uint32_t myNumber);
 
 #endif /* TM1638_H_ */
