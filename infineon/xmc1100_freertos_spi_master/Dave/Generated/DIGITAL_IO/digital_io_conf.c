@@ -78,7 +78,7 @@ const DIGITAL_IO_t LED1 =
   .hwctrl = XMC_GPIO_HWCTRL_DISABLED
 };
 		
-const DIGITAL_IO_t DIGITAL_IO_0 =
+const DIGITAL_IO_t IOp06 =
 {
   .gpio_port = XMC_GPIO_PORT0,
   .gpio_pin = 6U,
@@ -90,7 +90,7 @@ const DIGITAL_IO_t DIGITAL_IO_0 =
   .hwctrl = XMC_GPIO_HWCTRL_DISABLED
 };
 		
-const DIGITAL_IO_t DIGITAL_IO_1 =
+const DIGITAL_IO_t IOp07 =
 {
   .gpio_port = XMC_GPIO_PORT0,
   .gpio_pin = 7U,
@@ -102,7 +102,7 @@ const DIGITAL_IO_t DIGITAL_IO_1 =
   .hwctrl = XMC_GPIO_HWCTRL_DISABLED
 };
 		
-const DIGITAL_IO_t DIGITAL_IO_2 =
+const DIGITAL_IO_t IOp08 =
 {
   .gpio_port = XMC_GPIO_PORT0,
   .gpio_pin = 8U,
@@ -114,7 +114,7 @@ const DIGITAL_IO_t DIGITAL_IO_2 =
   .hwctrl = XMC_GPIO_HWCTRL_DISABLED
 };
 		
-const DIGITAL_IO_t DIGITAL_IO_3 =
+const DIGITAL_IO_t IOp09 =
 {
   .gpio_port = XMC_GPIO_PORT0,
   .gpio_pin = 9U,

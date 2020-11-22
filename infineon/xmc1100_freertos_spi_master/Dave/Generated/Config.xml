@@ -112,6 +112,31 @@
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
+                <File_Name>SEGGER_RTT.c</File_Name>
+                <Path>\Dave\Generated\SEGGER_RTT\SEGGER_RTT.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>SEGGER_RTT_printf.c</File_Name>
+                <Path>\Dave\Generated\SEGGER_RTT\SEGGER_RTT_printf.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>SEGGER_RTT_Syscalls_GCC.c</File_Name>
+                <Path>\Dave\Generated\SEGGER_RTT\SEGGER_RTT_Syscalls_GCC.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>SEGGER_RTT_Syscalls_IAR.c</File_Name>
+                <Path>\Dave\Generated\SEGGER_RTT\SEGGER_RTT_Syscalls_IAR.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
+                <File_Name>SEGGER_RTT_Syscalls_KEIL.c</File_Name>
+                <Path>\Dave\Generated\SEGGER_RTT\SEGGER_RTT_Syscalls_KEIL.c</Path>
+                <Type>C File</Type>
+            </Source_File>
+            <Source_File>
                 <File_Name>spi_master.c</File_Name>
                 <Path>\Dave\Generated\SPI_MASTER\spi_master.c</Path>
                 <Type>C File</Type>
@@ -316,6 +341,16 @@
             <Header_File>
                 <File_Name>timers.h</File_Name>
                 <Path>\Dave\Generated\FREERTOS\timers.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>SEGGER_RTT.h</File_Name>
+                <Path>\Dave\Generated\SEGGER_RTT\SEGGER_RTT.h</Path>
+                <Type>H File</Type>
+            </Header_File>
+            <Header_File>
+                <File_Name>SEGGER_RTT_Conf.h</File_Name>
+                <Path>\Dave\Generated\SEGGER_RTT\SEGGER_RTT_Conf.h</Path>
                 <Type>H File</Type>
             </Header_File>
             <Header_File>

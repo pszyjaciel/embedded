@@ -92,6 +92,11 @@ int main(void) {
 		while (1U) {
 		}
 	}
+	// RTT viewer blokujoncy
+	SEGGER_RTT_ConfigUpBuffer(0, NULL, NULL, 0, SEGGER_RTT_MODE_BLOCK_IF_FIFO_FULL);
+	uint32_t reset_status = SCU_RESET->RSTSTAT & 0x000003FF; /* get the cause of reset */
+	SCU_RESET->RSTCLR = 1U; /* clear status field */
+	SEGGER_RTT_printf(0, "reset_status: %d \r\n", reset_status);
 
 	// timer dostal prio4 : pacz ustawienia dla freertos_0 w dave ce
 	//Timer_handle = xTimerCreate("Timer", pdMS_TO_TICKS(250), pdTRUE, 0, vMyTimerCallback);
@@ -100,30 +105,35 @@ int main(void) {
 	AMessage_t.ucMessageID = 0xab;
 	memset(&(AMessage_t.ucData), 0x12, 20);
 	xStructQueue = xQueueCreate(10, sizeof(AMessage_t));
+	SEGGER_RTT_printf(0, "xQueueCreate(): %d \r\n", xStructQueue);
 
 	// 1 item queue that can hold colors
 	//colorQueue = xQueueCreate(1, sizeof(Color_t));
 	//counterQueue = xQueueCreate(1, sizeof(uint8_t));
+//	if ((counterQueue == NULL) || (Queue_id == NULL)) {
+//		//while (1)
+//			;
+//	}
+
 	Queue_id = xQueueCreate(1, sizeof(uint8_t));
-
-	if ((counterQueue == NULL) || (Queue_id == NULL)) {
-		//while (1)
-			;
-	}
-
-	void* pxParameterStruct = pvPortMalloc(sizeof(parameter_struct_t));
+	SEGGER_RTT_printf(0, "xQueueCreate(): %d \r\n", Queue_id);
 
 	xMutex = xSemaphoreCreateMutex();
 
+	void* pxParameterStruct = pvPortMalloc(sizeof(parameter_struct_t));
 	//xTaskCreate(vSPI_Master_Task, "SPI", configMINIMAL_STACK_SIZE + 100U, NULL, tskIDLE_PRIORITY + 2, &xSPIMasterHandle);
-	xTaskCreate(vWorker1_task, "Worker 1", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 1, &worker1_id);
-	xTaskCreate(vWorker2_task, "Worker 2", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 2, &worker2_id);
+	BaseType_t rs = xTaskCreate(vWorker1_task, "Worker 1", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 1, &worker1_id);
+	SEGGER_RTT_printf(0, "xTaskCreate(vWorker1_task): %d \r\n", rs);
+
+	rs = xTaskCreate(vWorker2_task, "Worker 2", configMINIMAL_STACK_SIZE + 100, pxParameterStruct, tskIDLE_PRIORITY + 2, &worker2_id);
+	SEGGER_RTT_printf(0, "xTaskCreate(vWorker2_task): %d \r\n", rs);
 
 	// uart ma miec najwyzszy priorytet, inaczej nie dziala
-	BaseType_t rs = xTaskCreate(vUART_task, "UART", configMINIMAL_STACK_SIZE + 100U, NULL, tskIDLE_PRIORITY + 3, &UARTHandle_id);
+	rs = xTaskCreate(vUART_task, "UART", configMINIMAL_STACK_SIZE + 100U, NULL, tskIDLE_PRIORITY + 3, &UARTHandle_id);
 	if (rs != pdPASS) {
 		MyErrorHandler(UARTHandle_id);
 	}
+	SEGGER_RTT_printf(0, "xTaskCreate(vUART_task): %d \r\n", rs);	// pdPASS = 1
 
 	vTaskStartScheduler();
 

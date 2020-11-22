@@ -1,10 +1,3 @@
-/*
- * MyUtils.c
- *
- *  Created on: Nov 6, 2020
- *      Author: arleta
- */
-
 #include "MyUtils.h"
 
 void MyLEDsToggling(uint8_t tyleRazy) {
@@ -136,30 +129,33 @@ void MyErrorHandler(TaskHandle_t myTaskErrorHandle) {
 	while (true) {
 		DIGITAL_IO_ToggleOutput(&LED0);
 		DIGITAL_IO_ToggleOutput(&LED1);
-		vTaskDelay(pdMS_TO_TICKS(3000));
+		vTaskDelay(pdMS_TO_TICKS(300));
 	}
 }
 
 void vApplicationStackOverflowHook(xTaskHandle *pxTask, signed char *pcTaskName) {
 	TaskHandle_t bad_task_handle = pxTask; // this seems to give me the crashed task handle
+	SEGGER_RTT_printf(0, "bad_task_handle: %d \r\n", bad_task_handle);
+
 	signed char *bad_task_name = pcTaskName;
+	SEGGER_RTT_printf(0, "bad_task_handle: %s \r\n", bad_task_name);
 
 	while (true) {
 		MyLEDsToggling(8);
-		vTaskDelay(pdMS_TO_TICKS(4500));
+		vTaskDelay(pdMS_TO_TICKS(45));
 	}
 }
 
 void vApplicationMallocFailedHook() {
 	while (true) {
 		MyLEDsToggling(9);
-		vTaskDelay(pdMS_TO_TICKS(5500));
+		vTaskDelay(pdMS_TO_TICKS(55));
 	}
 }
 
 void vApplicationIdleHook() {
 	MyLEDsToggling(10);
-	vTaskDelay(pdMS_TO_TICKS(10000));
+	vTaskDelay(pdMS_TO_TICKS(100));
 }
 
 void vApplicationTickHook() {

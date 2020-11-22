@@ -55,7 +55,7 @@
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION 0
 #define configUSE_TICKLESS_IDLE                 0
 #define configCPU_CLOCK_HZ                      ( SystemCoreClock )
-#define configTICK_RATE_HZ                      ( ( TickType_t ) 1000.0 )
+#define configTICK_RATE_HZ                      ( ( TickType_t ) 100.0 )
 #define configMAX_PRIORITIES                    ( 6 )
 #define configMINIMAL_STACK_SIZE                ( ( unsigned short ) 60 )
 #define configMAX_TASK_NAME_LEN                 ( 16 )

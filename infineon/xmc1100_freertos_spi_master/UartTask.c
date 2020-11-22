@@ -121,9 +121,11 @@ void vUART_task(void *pvParameters) {
 	uint32_t myReceivedValue = 0;
 	BaseType_t bt;
 	while (true) {
-		bt = xQueueReceive(Queue_id, &myReceivedValue, 0);
+		SEGGER_RTT_printf(0, "vUART_task: %d (pszet) \r\n", Queue_id);
+		bt = xQueueReceive(Queue_id, &myReceivedValue, 50);
+		SEGGER_RTT_printf(0, "vUART_task:xQueueReceive(): %d \r\n", bt);
 		if (bt != pdTRUE) {
-			taskYIELD();
+			vTaskDelay(pdMS_TO_TICKS(10));
 			continue;
 		}
 
@@ -136,7 +138,8 @@ void vUART_task(void *pvParameters) {
 		setByValue(2);
 
 		//taskYIELD();
-		vTaskDelay(pdMS_TO_TICKS(200));
+		SEGGER_RTT_printf(0, "vUART_task: ipo \r\n");
+		vTaskDelay(pdMS_TO_TICKS(20));
 	}
 	/* Should never go there */
 	vTaskDelete(UARTHandle_id);
