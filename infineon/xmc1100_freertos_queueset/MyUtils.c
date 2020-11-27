@@ -1,5 +1,32 @@
 #include "MyUtils.h"
 
+// function to convert decimal to hexadecimal
+void myPutHexByte(uint8_t n) {
+	char hexaDeciNum[100] = { };
+	int i = 0, temp = 0;
+	while (n != 0) {
+		temp = n % 16;
+		if (temp < 10) {
+			hexaDeciNum[i] = temp + 48;
+			i++;
+		} else {
+			hexaDeciNum[i] = temp + 55;
+			i++;
+		}
+		n = n / 16;
+		if ((n == 0) && (i % 2 != 0)) {
+			hexaDeciNum[i] = '0';
+			i++;
+		}
+	}
+	// printing hexadecimal number array in reverse order
+	for (int j = i - 1; j >= 0; j--) {
+		SEGGER_RTT_PutChar(0, hexaDeciNum[j]);
+	}
+	SEGGER_RTT_PutChar(0, '\r');
+	SEGGER_RTT_PutChar(0, '\n');
+}
+
 void MyLEDsToggling(uint8_t tyleRazy) {
 	for (int var = 0; var < tyleRazy; ++var) {
 		DIGITAL_IO_ToggleOutput(&LED0);

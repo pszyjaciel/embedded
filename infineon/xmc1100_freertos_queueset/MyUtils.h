@@ -10,6 +10,7 @@
 
 #include <DAVE.h>
 
+void myPutHexByte(uint8_t n);
 void MyLEDsToggling(uint8_t tyleRazy);
 void setByValue(uint8_t myValue);
 void MyErrorHandler(TaskHandle_t myTaskErrorHandle);

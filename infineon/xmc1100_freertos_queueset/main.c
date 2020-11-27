@@ -21,38 +21,6 @@
 static QueueSetHandle_t xQueueSet;
 QueueHandle_t xQueue1, xQueue2, xQueue3, xQueue4;
 
-// function to convert decimal to hexadecimal
-void myPutHexByte(uint8_t n) {
-// char array to store hexadecimal number
-	char hexaDeciNum[100];
-
-// counter for hexadecimal number array
-	int i = 0;
-	while (n != 0) {
-		// temporary variable to store remainder
-		int temp = 0;
-
-		// storing remainder in temp variable.
-		temp = n % 16;
-
-		// check if temp < 10
-		if (temp < 10) {
-			hexaDeciNum[i] = temp + 48;
-			i++;
-		} else {
-			hexaDeciNum[i] = temp + 55;
-			i++;
-		}
-		n = n / 16;
-	}
-	// printing hexadecimal number array in reverse order
-	for (int j = i - 1; j >= 0; j--) {
-		SEGGER_RTT_PutChar(0, hexaDeciNum[j]);
-	}
-	SEGGER_RTT_PutChar(0, '\r');
-	SEGGER_RTT_PutChar(0, '\n');
-}
-
 void vProcessValueFromQueue4(uint8_t xReceivedFromQueue4) {
 	setByValue(4);
 //	SEGGER_RTT_WriteString(0, "vProcessValueFromQueue4()\r\n");	// 42-44 µsec
@@ -118,7 +86,7 @@ static void myUARTTask(void *pvParameters) {
 		} else {
 			// nic nie rup
 		}
-		vTaskDelay(pdMS_TO_TICKS(500));
+		vTaskDelay(pdMS_TO_TICKS(1500));
 	}
 }
 
@@ -127,19 +95,18 @@ static void myTask1(void *pvParameters) {
 	uint8_t myKey;
 	BaseType_t bt;
 
-	myKey = 0x80;
+	myKey = 0x20;
 	while (1) {
 		//setByValue(2);
 		DIGITAL_IO_SetOutputLow(&LED0);
 		DIGITAL_IO_SetOutputHigh(&LED1);
 
-		myKey++;
-		if (myKey < 0x80) {
-			myKey = 0x80;
+		if (myKey < 0x01) {
+			myKey = 0x20;
 		}
 		bt = xQueueSend(xQueue1, &myKey, 0);
-		if (bt != pdTRUE) {
-			// kucha
+		if (bt == pdTRUE) {
+			myKey--;
 		}
 		//setByValue(0);
 		vTaskDelay(pdMS_TO_TICKS(100));
@@ -150,16 +117,15 @@ static void myTask2(void *pvParameters) {
 	uint8_t myKey;
 	BaseType_t bt;
 
-	myKey = 0x00;
+	myKey = 0x40;
 	while (1) {
 
-		myKey++;
-		if (myKey > 0x80) {
-			myKey = 0x00;
+		if (myKey > 0x60) {
+			myKey = 0x40;
 		}
 		bt = xQueueSend(xQueue2, &myKey, 0);
-		if (bt != pdTRUE) {
-			// kucha
+		if (bt == pdTRUE) {
+			myKey++;
 		}
 
 		vTaskDelay(pdMS_TO_TICKS(50));
@@ -170,18 +136,16 @@ static void myTask3(void *pvParameters) {
 	uint8_t myKey;
 	BaseType_t bt;
 
-	myKey = 0x00;
+	myKey = 0x80;
 	while (1) {
 
-		myKey++;
-		if (myKey > 0x80) {
-			myKey = 0x00;
+		if (myKey < 0x60) {
+			myKey = 0x80;
 		}
 		bt = xQueueSend(xQueue3, &myKey, 0);
-		if (bt != pdTRUE) {
-			// kucha
+		if (bt == pdTRUE) {
+			myKey--;
 		}
-
 		vTaskDelay(pdMS_TO_TICKS(150));
 	}
 }
@@ -190,18 +154,15 @@ static void myTask4(void *pvParameters) {
 	uint8_t myKey;
 	BaseType_t bt;
 
-	myKey = 0x00;
+	myKey = 0x80;
 	while (1) {
-
-		myKey++;
-		if (myKey > 0x80) {
-			myKey = 0x00;
+		if (myKey > 0xa0) {
+			myKey = 0x80;
 		}
 		bt = xQueueSend(xQueue4, &myKey, 0);
-		if (bt != pdTRUE) {
-			// kucha
+		if (bt == pdTRUE) {
+			myKey++;
 		}
-
 		vTaskDelay(pdMS_TO_TICKS(250));
 	}
 }
@@ -227,8 +188,8 @@ int main(void) {
 	xQueueSet = xQueueCreateSet(COMBINED_LENGTH);
 
 	/* Create the queues and semaphores that will be contained in the set. */
-	xQueue1 = xQueueCreate( QUEUE_LENGTH_1, ITEM_SIZE_QUEUE_1);
-	xQueue2 = xQueueCreate( QUEUE_LENGTH_2, ITEM_SIZE_QUEUE_2);
+	xQueue1 = xQueueCreate(QUEUE_LENGTH_1, ITEM_SIZE_QUEUE_1);
+	xQueue2 = xQueueCreate(QUEUE_LENGTH_2, ITEM_SIZE_QUEUE_2);
 	xQueue3 = xQueueCreate(QUEUE_LENGTH_3, ITEM_SIZE_QUEUE_3);
 	xQueue4 = xQueueCreate(QUEUE_LENGTH_4, ITEM_SIZE_QUEUE_4);
 
