@@ -24,29 +24,29 @@ QueueHandle_t xQueue1, xQueue2, xQueue3, xQueue4;
 void vProcessValueFromQueue4(uint8_t xReceivedFromQueue4) {
 	setByValue(4);
 //	SEGGER_RTT_WriteString(0, "vProcessValueFromQueue4()\r\n");	// 42-44 µsec
-	myPutHexByte(xReceivedFromQueue4);
-	setByValue(0);
+//	myPutHexByte(xReceivedFromQueue4);
+//	setByValue(0);
 }
 
 void vProcessValueFromQueue3(uint8_t xReceivedFromQueue3) {
 	setByValue(3);
 //	SEGGER_RTT_WriteString(0, "vProcessValueFromQueue3()\r\n");	// 42-44 µsec
-	myPutHexByte(xReceivedFromQueue3);
-	setByValue(0);
+//	myPutHexByte(xReceivedFromQueue3);
+//	setByValue(0);
 }
 
 void vProcessValueFromQueue2(uint8_t xReceivedFromQueue2) {
 	setByValue(2);
 //	SEGGER_RTT_WriteString(0, "vProcessValueFromQueue2()\r\n");	// 42-44 µsec
-	myPutHexByte(xReceivedFromQueue2);
-	setByValue(0);
+//	myPutHexByte(xReceivedFromQueue2);
+//	setByValue(0);
 }
 
 void vProcessValueFromQueue1(uint8_t xReceivedFromQueue1) {
 	setByValue(1);
 //	SEGGER_RTT_WriteString(0, "vProcessValueFromQueue1()\r\n");
-	myPutHexByte(xReceivedFromQueue1);
-	setByValue(0);
+//	myPutHexByte(xReceivedFromQueue1);
+//	setByValue(0);
 }
 
 // https://www.freertos.org/Embedded-RTOS-Queues.html
@@ -86,7 +86,7 @@ static void myUARTTask(void *pvParameters) {
 		} else {
 			// nic nie rup
 		}
-		vTaskDelay(pdMS_TO_TICKS(1500));
+		vTaskDelay(pdMS_TO_TICKS(30));
 	}
 }
 
@@ -109,7 +109,7 @@ static void myTask1(void *pvParameters) {
 			myKey--;
 		}
 		//setByValue(0);
-		vTaskDelay(pdMS_TO_TICKS(100));
+		vTaskDelay(pdMS_TO_TICKS(10));
 	}
 }
 
@@ -128,7 +128,7 @@ static void myTask2(void *pvParameters) {
 			myKey++;
 		}
 
-		vTaskDelay(pdMS_TO_TICKS(50));
+		vTaskDelay(pdMS_TO_TICKS(20));
 	}
 }
 
@@ -146,7 +146,7 @@ static void myTask3(void *pvParameters) {
 		if (bt == pdTRUE) {
 			myKey--;
 		}
-		vTaskDelay(pdMS_TO_TICKS(150));
+		vTaskDelay(pdMS_TO_TICKS(15));
 	}
 }
 
@@ -163,7 +163,7 @@ static void myTask4(void *pvParameters) {
 		if (bt == pdTRUE) {
 			myKey++;
 		}
-		vTaskDelay(pdMS_TO_TICKS(250));
+		vTaskDelay(pdMS_TO_TICKS(25));
 	}
 }
 
