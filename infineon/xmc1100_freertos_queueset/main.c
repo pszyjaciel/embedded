@@ -18,8 +18,9 @@
 #define ITEM_SIZE_QUEUE_4	sizeof( uint8_t )
 #define COMBINED_LENGTH ( QUEUE_LENGTH_1 + QUEUE_LENGTH_2 + QUEUE_LENGTH_3 + QUEUE_LENGTH_4 )
 
+
 static QueueSetHandle_t xQueueSet;
-QueueHandle_t xQueue1, xQueue2, xQueue3, xQueue4;
+QueueHandle_t xQueue1, xQueue2, xQueue3, xQueue4, xQueue5;
 
 void vProcessValueFromQueue4(uint8_t xReceivedFromQueue4) {
 	setByValue(4);
@@ -192,6 +193,10 @@ int main(void) {
 	xQueue2 = xQueueCreate(QUEUE_LENGTH_2, ITEM_SIZE_QUEUE_2);
 	xQueue3 = xQueueCreate(QUEUE_LENGTH_3, ITEM_SIZE_QUEUE_3);
 	xQueue4 = xQueueCreate(QUEUE_LENGTH_4, ITEM_SIZE_QUEUE_4);
+
+	char myCharQueue[20]= "";
+	xQueue5 = xQueueCreate(1, sizeof(myCharQueue));
+
 
 	/* Check everything was created. */
 	//configASSERT(xQueueSet);	// to makro to wielka hujnia
