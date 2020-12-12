@@ -48,9 +48,17 @@
   <nodes xsi:type="ApplicationModel:AppNode">
     <resource xsi:type="ResourceModel:App" href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_5.app#/"/>
   </nodes>
+  <nodes xsi:type="ApplicationModel:AppNode">
+    <resource xsi:type="ResourceModel:App" href="APPS/UART/v4_1_12/UART_0.app#/"/>
+  </nodes>
+  <nodes xsi:type="ApplicationModel:PeripheralNode">
+    <resource xsi:type="ResourceModel:Peripheral" href="HW_RESOURCES/USIC0/USIC0_0.dd#/"/>
+  </nodes>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.2" target="//@nodes.1"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.2" target="//@nodes.0"/>
   <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.10" target="//@nodes.0"/>
+  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.16" target="//@nodes.1"/>
+  <connections xsi:type="ApplicationModel:NodeConnection" source="//@nodes.16" target="//@nodes.0"/>
   <hwConnections href="APPS/CLOCK_XMC1/v4_0_20/CLOCK_XMC1_0.app#//@connections.0"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_0.app#//@connections.0"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_0.app#//@connections.1"/>
@@ -64,4 +72,11 @@
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_4.app#//@connections.1"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_5.app#//@connections.0"/>
   <hwConnections href="APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_5.app#//@connections.1"/>
+  <hwConnections href="APPS/UART/v4_1_12/UART_0.app#//@connections.0"/>
+  <hwConnections href="APPS/UART/v4_1_12/UART_0.app#//@connections.1"/>
+  <hwConnections href="APPS/UART/v4_1_12/UART_0.app#//@connections.7"/>
+  <hwConnections href="APPS/UART/v4_1_12/UART_0.app#//@connections.11"/>
+  <hwConnections href="APPS/UART/v4_1_12/UART_0.app#//@connections.12"/>
+  <hwConnections href="APPS/UART/v4_1_12/UART_0.app#//@connections.13"/>
+  <hwConnections href="APPS/UART/v4_1_12/UART_0.app#//@connections.14"/>
 </ApplicationModel:ApplicationData>

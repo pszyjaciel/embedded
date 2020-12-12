@@ -23,8 +23,8 @@ void myPutHexByte(uint8_t n) {
 	for (int j = i - 1; j >= 0; j--) {
 		SEGGER_RTT_PutChar(0, hexaDeciNum[j]);
 	}
-	SEGGER_RTT_PutChar(0, '\r');
-	SEGGER_RTT_PutChar(0, '\n');
+	SEGGER_RTT_PutChar(0, ' ');
+	//SEGGER_RTT_PutChar(0, '\n');
 }
 
 void MyLEDsToggling(uint8_t tyleRazy) {

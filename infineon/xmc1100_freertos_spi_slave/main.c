@@ -1,6 +1,11 @@
 // SN 591096897 (slave) piny pionowe prostopadle do plytki
 
 // (!)http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42247-Introduction-to-Basic%20RTOS-Features-using-SAM4L-EK-FreeRTOS-Port_Training-Manual.pdf
+// zamiast "Start GDB server localy" uzyj zewnetrznego servera:
+// "c:\Program Files (x86)\SEGGER\JLink\JLinkGDBServer.exe"
+
+// eclipse problem with jlink:
+// https://eclipse-embed-cdt.github.io/debug/jlink/
 
 //USE_PREEMPTION:
 //Kernel will be used in Preemption mode which means that task with lower priority can be

@@ -15,6 +15,7 @@
     <resourcesList name="pin" requiredResourceUri="http://resources/VQFN24.0.0/devicepackage/0/pin11"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="3" URI="http://resources/vqfn24.0.0/devicepackage/0/3">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_12/UART_0.app#//@hwResources.10"/>
     <resourcesList name="pin" requiredResourceUri="http://resources/VQFN24.0.0/devicepackage/0/pin3"/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="4" URI="http://resources/vqfn24.0.0/devicepackage/0/4">
@@ -41,5 +42,15 @@
   <provided xsi:type="ResourceModel:ResourceGroup" name="20" URI="http://resources/vqfn24.0.0/devicepackage/0/20">
     <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_5.app#//@hwResources.1"/>
     <resourcesList name="pin" requiredResourceUri="http://resources/VQFN24.0.0/devicepackage/0/pin20"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="1" URI="http://resources/vqfn24.0.0/devicepackage/0/1">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN24.0.0/devicepackage/0/pin1"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="7" URI="http://resources/vqfn24.0.0/devicepackage/0/7">
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN24.0.0/devicepackage/0/pin7"/>
+  </provided>
+  <provided xsi:type="ResourceModel:ResourceGroup" name="2" URI="http://resources/vqfn24.0.0/devicepackage/0/2">
+    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/UART/v4_1_12/UART_0.app#//@hwResources.11"/>
+    <resourcesList name="pin" requiredResourceUri="http://resources/VQFN24.0.0/devicepackage/0/pin2"/>
   </provided>
 </ResourceModel:DevicePackage>
